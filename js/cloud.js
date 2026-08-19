@@ -9,8 +9,8 @@
  * ===================================================== */
 const CLOUD = {
   /* ---- Supabase 配置（部署时填写）---- */
-  SUPABASE_URL: '',  // 例: https://abcdefgh.supabase.co
-  SUPABASE_KEY: '',  // anon key（在 Supabase Dashboard > Settings > API 获取）
+  SUPABASE_URL: 'https://woutedgxmovxjnrfylpr.supabase.co',
+  SUPABASE_KEY: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndvdXRlZGd4bW92eGpucmZ5bHByIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODcxMzk5MTIsImV4cCI6MjEwMjcxNTkxMn0.NfmGbkuWHHnEJ6vZ4Zy7IFdFY4Z6hF_AlZOud2SrAac',
 
   /* ---- 检测是否处于云端模式 ---- */
   isCloudMode() {
