@@ -53,7 +53,11 @@ function seedState(){
       { id:'S7', name:'阿禾',  role:'intern',   position:'运营实习生', phone:'133-0000-0007', joinDate:'2026-08-03', status:'active', leaveDate:null, username:'s7', passwordHash:DEFAULT_PWD_HASH }
     ],
     scheduleDays: calendarAtRev(0),   // date -> {type, manual, matches[]}
-    shifts: {},                       // date -> { staffId: 'early'|'late' }
+    shifts: {},                       // date -> { staffId: shiftKey }
+    shiftTypes: [                     // 可扩展的班次类型注册表
+      { key: 'early', label: '早班', short: '早', start: '09:00', end: '17:00', color: '#4D7FCC', bg: 'rgba(32,72,142,.25)' },
+      { key: 'late',  label: '晚班', short: '晚', start: '17:00', end: '01:00', color: '#9B7DE0', bg: 'rgba(111,74,204,.22)' }
+    ],
     leave: [
       { id:'L1', staffId:'S3', start: D.addDays(today, 10), end: D.addDays(today, 11), reason:'年假出行', status:'approved', createdAt: Date.now()-86400000*3, decidedBy:'S1', decidedAt: Date.now()-86400000*2, comment:'批准，注意交接' },
       { id:'L2', staffId:'S2', start: D.addDays(today, 5),  end: D.addDays(today, 7),  reason:'家中事务', status:'pending', createdAt: Date.now()-3600000*5, decidedBy:null, decidedAt:null, comment:'' }
@@ -71,6 +75,24 @@ function seedState(){
   };
   return st;
 }
+
+/* 获取班次类型定义，未找到时返回兜底对象 */
+App.getShiftType = function(key){
+  const t = (App.state.shiftTypes || []).find(s => s.key === key);
+  if(t) return t;
+  return { key, label: key, short: key.charAt(0).toUpperCase(), start: '', end: '', color: '#888', bg: 'rgba(136,136,136,.15)' };
+};
+
+/* 获取所有班次类型（保证至少有早班/晚班） */
+App.getShiftTypes = function(){
+  if(!App.state.shiftTypes || !App.state.shiftTypes.length){
+    return [
+      { key: 'early', label: '早班', short: '早', start: '09:00', end: '17:00', color: '#4D7FCC', bg: 'rgba(32,72,142,.25)' },
+      { key: 'late',  label: '晚班', short: '晚', start: '17:00', end: '01:00', color: '#9B7DE0', bg: 'rgba(111,74,204,.22)' }
+    ];
+  }
+  return App.state.shiftTypes;
+};
 
 function seedContent(){
   const today = D.today();
@@ -406,12 +428,13 @@ App.syncSchedule = function(){
 
 /* ---------- 智能排班 ----------
  * 规则：比赛日 4 人值守、休赛日 2 人；已批准休假者不排；
- * 按累计班次均衡轮转；连续工作超 5 天尽量回避；早/晚班交替分配。
+ * 按累计班次均衡轮转；连续工作超 5 天尽量回避；多班次交替分配。
  */
 App.autoSchedule = function(y, m, silent){
   const st = App.state;
   const days = D.monthDays(y, m);
   const active = st.staff.filter(s => s.status === 'active');
+  const shiftTypes = App.getShiftTypes();
   const counts = {};    // 本月累计班次（均衡用）
   const streak = {};    // 连续工作天数
   for(const day of days){
@@ -425,9 +448,14 @@ App.autoSchedule = function(y, m, silent){
     const picked = pool.slice(0, need);
     const map = {};
     picked.forEach((s, i) => {
-      let sh = i % 2 === 0 ? 'early' : 'late';
+      /* 按班次类型数量循环分配 */
+      let sh = shiftTypes[i % shiftTypes.length].key;
       const prev = (st.shifts[D.addDays(day, -1)] || {})[s.id];
-      if(prev === sh) sh = sh === 'early' ? 'late' : 'early';   // 与前一日同班则对调
+      if(prev === sh && shiftTypes.length > 1){
+        /* 与前一日同班则切换到下一个班次 */
+        const idx = shiftTypes.findIndex(t => t.key === sh);
+        sh = shiftTypes[(idx + 1) % shiftTypes.length].key;
+      }
       map[s.id] = sh;
       counts[s.id] = (counts[s.id] || 0) + 1;
       streak[s.id] = (streak[s.id] || 0) + 1;
@@ -453,7 +481,7 @@ App.detectConflicts = function(y, m){
       if(!s || s.status !== 'active'){
         list.push({ level:'error', text: `${D.dateCN(day)}：${name(sid)} 已离职/不存在，但仍排在班表中` });
       } else if(App.onApprovedLeave(sid, day)){
-        list.push({ level:'error', text: `${D.dateCN(day)}：${s.name} 已批准休假，但仍排有${working[sid] === 'early' ? '早' : '晚'}班` });
+        list.push({ level:'error', text: `${D.dateCN(day)}：${s.name} 已批准休假，但仍排有${App.getShiftType(working[sid]).label}班` });
       }
     }
     const type = App.dayType(day);

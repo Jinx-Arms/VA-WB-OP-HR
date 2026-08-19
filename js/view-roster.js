@@ -37,6 +37,9 @@ function rosterGrid(){
   }
   const rows = st.staff.filter(s => s.status === 'active' || App.ui.showLeft);
   const isAdmin = App.can('manage');
+  const shiftTypes = App.getShiftTypes();
+  const shiftMap = {};
+  shiftTypes.forEach(t => { shiftMap[t.key] = t; });
 
   const head = days.map(ds => {
     const t = App.dayType(ds);
@@ -50,14 +53,18 @@ function rosterGrid(){
     const cells = days.map(ds => {
       const sh = (st.shifts[ds] || {})[s.id];
       const lv = App.onApprovedLeave(s.id, ds);
-      let cls = 'cell', txt = '·';
+      let cls = 'cell', txt = '·', style = '';
       if(lv){ cls += ' leave-cell'; txt = '假'; }
-      else if(sh === 'early'){ cls += ' early'; txt = '早'; }
-      else if(sh === 'late'){ cls += ' late'; txt = '晚'; }
-      if(isAdmin && s.status === 'active') cls += ' editable';
+      else if(sh && shiftMap[sh]){
+        const t = shiftMap[sh];
+        cls += ' editable';
+        txt = t.short;
+        style = `style="color:${t.color};background:${t.bg};font-weight:700"`;
+      }
+      if(isAdmin && s.status === 'active' && !lv) cls += ' editable';
       const click = isAdmin && s.status === 'active' ? `onclick="App.cycleShift('${ds}','${s.id}')"` : '';
-      const tip = lv ? '休假中（点击可临时加班）' : sh === 'early' ? '早班（点击调整）' : sh === 'late' ? '晚班（点击调整）' : '休息（点击排班）';
-      return `<td class="${cls}" title="${s.name} ${D.dateCN(ds)}：${tip}" ${click}>${txt}</td>`;
+      const tip = lv ? '休假中（点击可临时加班）' : (sh && shiftMap[sh]) ? shiftMap[sh].label + '（点击调整）' : '休息（点击排班）';
+      return `<td class="${cls}" ${style} title="${s.name} ${D.dateCN(ds)}：${tip}" ${click}>${txt}</td>`;
     }).join('');
     return `<tr class="${s.status==='left'?'left':''}"><td class="name-col">${s.name} <span class="badge role-${s.role}">${roleCN(s.role)}</span></td>${cells}</tr>`;
   }).join('');
@@ -70,7 +77,8 @@ function rosterGrid(){
         <button class="btn sm" onclick="App.redoRoster()" ${!App.canRedo('roster')?'disabled':''} title="重做">↷ 重做</button>
         <button class="btn sm" onclick="App.resetRoster()" ${!App.canReset('roster')?'disabled':''} title="重置到进入页面时的状态">↺ 重置</button>
       </div>
-      <button class="btn sm danger" onclick="App.clearRoster()" title="清空当前时段全部排班">🗑 清空</button>` : ''}
+      <button class="btn sm danger" onclick="App.clearRoster()" title="清空当前时段全部排班">🗑 清空</button>
+      <button class="btn sm" onclick="App.shiftTypesOpen()" title="管理班次类型（名称/时间/颜色）">⚙ 班次设置</button>` : ''}
       <div class="tabs" style="margin:0">
         <div class="tab ${r.mode==='month'?'active':''}" onclick="App.ui.roster.mode='month';App.renderView()">月视图</div>
         <div class="tab ${r.mode==='week'?'active':''}" onclick="App.ui.roster.mode='week';App.renderView()">周视图</div>
@@ -94,10 +102,10 @@ function rosterGrid(){
       </table>
     </div>
     <div class="legend">
-      <span><i class="lg-early"></i>早班</span><span><i class="lg-late"></i>晚班</span>
+      ${shiftTypes.map(t => `<span><i style="background:${t.bg};border:1px solid ${t.color}"></i>${t.label}${t.start ? ` ${t.start}-${t.end}` : ''}</span>`).join('')}
       <span><i class="lg-leave"></i>休假</span><span>· 休息</span>
       <span><i class="lg-match"></i>比赛日（需 4 人）</span><span><i class="lg-rest"></i>休赛日（需 2 人）</span>
-      ${App.can('manage')?'<span class="hint">｜管理员可点击单元格循环调整：休息 → 早班 → 晚班 → 休息</span>':''}
+      ${App.can('manage')?'<span class="hint">｜管理员可点击单元格循环调整班次</span>':''}
     </div>
   </div>`;
 }
@@ -116,14 +124,22 @@ App._rosterScrollKeep = function(fn){
   if(nw){ nw.scrollLeft = sl; nw.scrollTop = st; }
 };
 
-/* 手动调整：循环 休 → 早 → 晚 → 休 */
+/* 手动调整：循环 休 → type[0] → type[1] → ... → 休 */
 App.cycleShift = function(date, staffId){
   const st = App.state;
   if(!App.can('manage')) return;
+  const types = App.getShiftTypes();
   App.pushHistory('roster');
   st.shifts[date] = st.shifts[date] || {};
   const cur = st.shifts[date][staffId];
-  const next = cur === 'early' ? 'late' : cur === 'late' ? undefined : 'early';
+  let next;
+  if(!cur){
+    next = types.length ? types[0].key : 'early';
+  } else {
+    const idx = types.findIndex(t => t.key === cur);
+    if(idx >= 0 && idx < types.length - 1) next = types[idx + 1].key;
+    else next = undefined;  // 回到休息
+  }
   if(next) st.shifts[date][staffId] = next;
   else delete st.shifts[date][staffId];
   App.save();
@@ -143,7 +159,8 @@ App.regenSchedule = function(){
     const { y, m } = D.ym(r.ref);
     App.autoSchedule(y, m);
   }
-  App.toast('智能排班已生成：比赛日 4 人 / 休赛日 2 人，休假者已排除，早/晚班均衡轮转', 'ok', 5000);
+  const shiftTypes = App.getShiftTypes();
+  App.toast(`智能排班已生成：比赛日 4 人 / 休赛日 2 人，休假者已排除，${shiftTypes.map(t=>t.label).join('/')}均衡轮转`, 'ok', 5000);
   App._rosterScrollKeep(() => App.renderView());
 };
 
@@ -209,11 +226,108 @@ App.exportRoster = function(){
       staff.map(s => {
         if(App.onApprovedLeave(s.id, ds)) return '休假';
         const sh = (st.shifts[ds] || {})[s.id];
-        return sh === 'early' ? '早班' : sh === 'late' ? '晚班' : '休息';
+        return sh ? App.getShiftType(sh).label : '休息';
       })));
   });
   App.exportCSV(name + '.csv', rows);
   App.toast('已导出 ' + name + '.csv', 'ok');
+};
+
+/* ---------- 班次类型管理 ---------- */
+App.shiftTypesOpen = function(){
+  if(!App.can('manage')) return;
+  if(!App.state.shiftTypes || !App.state.shiftTypes.length){
+    App.state.shiftTypes = App.getShiftTypes();
+  }
+  App._renderShiftTypesModal();
+};
+
+App._renderShiftTypesModal = function(){
+  const types = App.state.shiftTypes;
+  const PRESET_COLORS = ['#4D7FCC','#9B7DE0','#E5AE15','#0D9093','#DC3030','#3CB371','#E85D75','#5B8DEF'];
+
+  const rowsHTML = types.map((t, i) => `
+    <div class="tpl-row" data-idx="${i}">
+      <input type="text" value="${t.label}" class="st-label" placeholder="如：中班" style="width:80px">
+      <input type="text" value="${t.short}" class="st-short" placeholder="如：中" style="width:40px;text-align:center">
+      <input type="time" value="${t.start}" class="st-start" style="width:80px">
+      <span style="color:var(--dim)">~</span>
+      <input type="time" value="${t.end}" class="st-end" style="width:80px">
+      <input type="color" value="${t.color}" class="st-color" style="width:36px;height:32px;padding:2px;border-radius:6px">
+      <button class="btn sm danger" onclick="App.shiftTypeDelRow(${i})" title="删除此班次">✕</button>
+    </div>`).join('');
+
+  App.modal('班次类型设置', `
+    <div class="hint" style="margin-bottom:12px;line-height:1.7">
+      定义排班系统中使用的班次类型。管理员可按赛事时区灵活添加中班等自定义班次。<br>
+      点击单元格时会按顺序循环：休息 → ${types.map(t=>t.label).join(' → ')} → 休息。<br>
+      <b style="color:var(--warn)">注意</b>：删除已有排班数据正在使用的班次类型，那些排班会显示为未知。
+    </div>
+    <div style="font-size:13px;font-weight:600;margin-bottom:8px;color:var(--sub)">班次列表</div>
+    <div style="display:flex;gap:6px;font-size:11px;color:var(--dim);margin-bottom:4px;padding-left:2px">
+      <span style="width:80px">名称</span><span style="width:40px">简称</span><span style="width:80px">开始</span><span style="width:20px"></span><span style="width:80px">结束</span><span style="width:36px">颜色</span>
+    </div>
+    <div id="st-rows">${rowsHTML}</div>
+    <button class="btn sm" onclick="App.shiftTypeAddRow()" style="margin-top:4px">+ 添加班次</button>
+  `, `
+    <button class="btn" onclick="App.closeModal()">取消</button>
+    <button class="btn primary" onclick="App.shiftTypeSave()">💾 保存</button>
+  `);
+};
+
+App._shiftTypeReadFromDOM = function(){
+  const rows = document.querySelectorAll('#st-rows .tpl-row');
+  const types = [];
+  rows.forEach(r => {
+    const label = r.querySelector('.st-label').value.trim();
+    if(!label) return;
+    const short = r.querySelector('.st-short').value.trim() || label.charAt(0);
+    const start = r.querySelector('.st-start').value || '';
+    const end   = r.querySelector('.st-end').value || '';
+    const color = r.querySelector('.st-color').value || '#888';
+    const bg    = color + '28';  // hex alpha ~16% 透明度
+    const oldKey = App.state.shiftTypes[parseInt(r.dataset.idx)] ?
+      App.state.shiftTypes[parseInt(r.dataset.idx)].key : null;
+    types.push({ key: oldKey || ('shift_' + Date.now() + '_' + types.length), label, short, start, end, color, bg });
+  });
+  App.state.shiftTypes = types;
+};
+
+App.shiftTypeAddRow = function(){
+  App._shiftTypeReadFromDOM();
+  App.state.shiftTypes.push({
+    key: 'shift_' + Date.now(), label: '新班次', short: '新',
+    start: '12:00', end: '20:00', color: '#3CB371', bg: 'rgba(60,179,113,.18)'
+  });
+  App._renderShiftTypesModal();
+};
+
+App.shiftTypeDelRow = function(idx){
+  App._shiftTypeReadFromDOM();
+  if(App.state.shiftTypes.length <= 1){
+    App.toast('至少保留一个班次类型', 'warn');
+    return;
+  }
+  const t = App.state.shiftTypes[idx];
+  if(!confirm(`确认删除班次「${t.label}」？`)) return;
+  App.state.shiftTypes.splice(idx, 1);
+  App._renderShiftTypesModal();
+};
+
+App.shiftTypeSave = function(){
+  App._shiftTypeReadFromDOM();
+  if(!App.state.shiftTypes.length){
+    App.toast('至少需要一个班次类型', 'err');
+    return;
+  }
+  if(App.state.shiftTypes.some(t => !t.label)){
+    App.toast('存在未填写名称的班次', 'err');
+    return;
+  }
+  App.save();
+  App.closeModal();
+  App.toast('班次类型已保存，共 ' + App.state.shiftTypes.length + ' 个班次', 'ok');
+  App.renderView();
 };
 
 /* ---------- 休假审批 ---------- */

@@ -491,7 +491,11 @@ App.renderDash = function(){
         <h3><span class="left">今日状态</span></h3>
         <div class="day-line"><span class="dt">${today} 周${D.weekdayCN(today)}</span>
           ${todayInfo && todayInfo.type === 'match' ? '<span class="badge match">比赛日</span>' : '<span class="badge rest">休赛日</span>'}
-          <span style="margin-left:auto"><span class="shift-tag ${myShift || 'off'}">${myShift === 'early' ? '早班' : myShift === 'late' ? '晚班' : '休息'}</span></span>
+          <span style="margin-left:auto">${(() => {
+            if(!myShift) return '<span class="shift-tag off">休息</span>';
+            const t = App.getShiftType(myShift);
+            return `<span class="shift-tag" style="color:${t.color};background:${t.bg}">${t.label}</span>`;
+          })()}</span>
         </div>
         ${(todayInfo && todayInfo.matches || []).map(mt => `
           <div class="match-row"><span class="when">${mt.time}</span><span class="vs">${mt.teams}</span><span class="stage">${mt.stage}</span></div>`).join('')}
@@ -602,6 +606,14 @@ App.init = function(){
         { id: 'evolution',    label: '进化者系列赛',      keywords: ['进化者'] },
         { id: 'source',       label: '源能邀请赛',        keywords: ['源能'] },
         { id: 'vct-intl',     label: 'VCT 国际联赛',      keywords: ['VCT 2026', 'VCT'] }
+      ];
+      App.save();
+    }
+    // 旧数据迁移：补班次类型注册表
+    if(!App.state.shiftTypes || !App.state.shiftTypes.length){
+      App.state.shiftTypes = [
+        { key: 'early', label: '早班', short: '早', start: '09:00', end: '17:00', color: '#4D7FCC', bg: 'rgba(32,72,142,.25)' },
+        { key: 'late',  label: '晚班', short: '晚', start: '17:00', end: '01:00', color: '#9B7DE0', bg: 'rgba(111,74,204,.22)' }
       ];
       App.save();
     }

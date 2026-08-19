@@ -29,8 +29,10 @@ App.renderAssign = function(){
       </select>`;
     const statusBadge = !cur ? '<span class="badge st-rejected">未分配</span>'
       : !curOnDuty ? '<span class="badge st-in_progress">负责人不在班</span>'
-      : (st.shifts[c.date] || {})[cur.id] === 'early' ? '<span class="badge role-admin">早班当班</span>'
-      : '<span class="badge role-employee">晚班当班</span>';
+      : (() => {
+          const st2 = App.getShiftType((st.shifts[c.date] || {})[cur.id]);
+          return `<span class="badge" style="color:${st2.color};background:${st2.bg}">${st2.label}当班</span>`;
+        })();
     return `<tr>
       <td>${c.date}<span class="hint"> 周${D.weekdayCN(c.date)}</span></td>
       <td>${c.time}</td>

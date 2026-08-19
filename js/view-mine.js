@@ -21,7 +21,9 @@ App.renderMine = function(){
 /* ---------- 我的排班 ---------- */
 function mineScheduleCard(me){
   const st = App.state;
-  let early = 0, late = 0, off = 0, leaveDays = 0;
+  const shiftTypes = App.getShiftTypes();
+  const shiftCounts = {};
+  let off = 0, leaveDays = 0;
   const lines = [];
   for(let i=0;i<14;i++){
     const ds = D.addDays(D.today(), i);
@@ -30,15 +32,19 @@ function mineScheduleCard(me){
     const type = App.dayType(ds) === 'match' ? '<span class="badge match">赛</span>' : '<span class="badge rest">休赛</span>';
     let tag;
     if(lv){ tag = '<span class="shift-tag leave">休假中</span>'; leaveDays++; }
-    else if(sh === 'early'){ tag = '<span class="shift-tag early">早班</span>'; early++; }
-    else if(sh === 'late'){ tag = '<span class="shift-tag late">晚班</span>'; late++; }
+    else if(sh){
+      const t = App.getShiftType(sh);
+      tag = `<span class="shift-tag" style="color:${t.color};background:${t.bg}">${t.label}</span>`;
+      shiftCounts[t.key] = (shiftCounts[t.key] || 0) + 1;
+    }
     else { tag = '<span class="shift-tag off">休息</span>'; off++; }
     lines.push(`<div class="day-line"><span class="dt">${ds} 周${D.weekdayCN(ds)}</span>${type}<span style="margin-left:auto">${tag}</span></div>`);
   }
+  const summary = shiftTypes.map(t => `${t.label} ${shiftCounts[t.key]||0}`).join(' · ') + ` · 休息 ${off} · 休假 ${leaveDays}`;
   return `
   <div class="card">
     <h3><span class="left">我的排班 · 未来 14 天</span>
-      <span class="hint">早班 ${early} · 晚班 ${late} · 休息 ${off} · 休假 ${leaveDays}</span></h3>
+      <span class="hint">${summary}</span></h3>
     <div style="max-height:420px;overflow:auto">${lines.join('')}</div>
     <div class="hint" style="margin-top:8px">班表由主管统一安排，如有问题请在休假申请中说明或联系主管。</div>
   </div>`;
