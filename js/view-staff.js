@@ -13,12 +13,14 @@ App.renderStaff = function(){
       <td><span class="badge role-${s.role}">${roleCN(s.role)}</span></td>
       <td>${s.position}</td>
       <td>${s.phone}</td>
+      <td><code class="uname">${s.username || s.id.toLowerCase()}</code></td>
       <td>${s.joinDate}</td>
       <td>${s.status === 'active'
         ? '<span class="badge st-approved">在职</span>'
         : `<span class="badge st-cancelled">已离职（${s.leaveDate}）</span>`}</td>
       <td>${s.status === 'active' ? `
         <button class="btn sm" onclick="App.staffFormOpen('${s.id}')">编辑</button>
+        <button class="btn sm" onclick="App.resetPasswordOpen('${s.id}')" title="重置密码">🔑</button>
         <button class="btn sm danger" onclick="App.staffLeaveOpen('${s.id}')">离职办理</button>` : '<span class="hint">已归档</span>'}
       </td>
     </tr>`).join('');
@@ -32,8 +34,8 @@ App.renderStaff = function(){
       </div>
     </h3>
     <div class="tbl-wrap"><table class="tbl">
-      <thead><tr><th>姓名</th><th>角色</th><th>职位</th><th>联系电话</th><th>入职日期</th><th>状态</th><th>操作</th></tr></thead>
-      <tbody>${rows || '<tr><td colspan="7"><div class="empty">暂无成员</div></td></tr>'}</tbody>
+      <thead><tr><th>姓名</th><th>角色</th><th>职位</th><th>联系电话</th><th>用户名</th><th>入职日期</th><th>状态</th><th>操作</th></tr></thead>
+      <tbody>${rows || '<tr><td colspan="8"><div class="empty">暂无成员</div></td></tr>'}</tbody>
     </table></div>
     <div class="hint" style="margin-top:10px">离职办理后：账号立即停用、未来排班自动移除；历史排班与任务记录全部保留，可在排班总览勾选「显示已离职」查看，便于交接。</div>
   </div>`;
@@ -57,7 +59,11 @@ App.staffFormOpen = function(id){
       <div><label>职位</label><input id="sf-pos" value="${s ? s.position : ''}" placeholder="如：内容运营"></div>
       <div><label>联系电话</label><input id="sf-phone" value="${s ? s.phone : ''}" placeholder="手机号"></div>
     </div>
-    <div class="form-row single"><label>入职日期 *</label><input type="date" id="sf-join" value="${s ? s.joinDate : D.today()}"></div>
+    <div class="form-row">
+      <div><label>用户名 ${s ? '' : '（留空自动生成）'}</label><input id="sf-username" value="${s ? (s.username || '') : ''}" placeholder="登录用户名"></div>
+      <div><label>入职日期 *</label><input type="date" id="sf-join" value="${s ? s.joinDate : D.today()}"></div>
+    </div>
+    ${s ? '<div class="hint">如需修改密码，请使用 🔑 按钮重置。</div>' : '<div class="hint">新成员初始密码为 vct2026，首次登录后请提醒修改。</div>'}
   `, `
     <button class="btn" onclick="App.closeModal()">取消</button>
     <button class="btn primary" onclick="App.staffSave('${id || ''}')">${s ? '保存修改' : '确认入职'}</button>
@@ -67,6 +73,7 @@ App.staffFormOpen = function(id){
 App.staffSave = function(id){
   const name = document.getElementById('sf-name').value.trim();
   if(!name){ App.toast('请填写姓名', 'err'); return; }
+  const username = document.getElementById('sf-username').value.trim().toLowerCase();
   const data = {
     name,
     role: document.getElementById('sf-role').value,
@@ -75,17 +82,59 @@ App.staffSave = function(id){
     joinDate: document.getElementById('sf-join').value
   };
   if(id){
+    // 编辑：检查用户名唯一性
+    if(username){
+      const dup = App.state.staff.find(s => s.id !== id && s.username === username);
+      if(dup){ App.toast('用户名已被占用：' + dup.name, 'err'); return; }
+    }
     Object.assign(App.staffById(id), data);
+    if(username) App.staffById(id).username = username;
     App.toast('成员信息已更新', 'ok');
   } else {
+    // 新入职
+    const newId = App.uid('S');
+    const finalUsername = username || newId.toLowerCase();
+    // 检查用户名唯一性
+    const dup = App.state.staff.find(s => s.username === finalUsername);
+    if(dup){ App.toast('用户名已被占用：' + dup.name, 'err'); return; }
     App.state.staff.push({
-      id: App.uid('S'), status:'active', leaveDate:null, ...data
+      id: newId, status:'active', leaveDate:null,
+      username: finalUsername, passwordHash: DEFAULT_PWD_HASH,
+      ...data
     });
-    App.toast(`${name} 已入职，可参与后续智能排班`, 'ok');
+    App.toast(`${name} 已入职（用户名：${finalUsername}，初始密码：vct2026）`, 'ok', 5000);
   }
   App.save();
   App.closeModal();
   App.renderView();
+};
+
+/* ---------- 管理员重置密码 ---------- */
+App.resetPasswordOpen = function(id){
+  const s = App.staffById(id);
+  App.modal(`重置密码 · ${s.name}`, `
+    <div class="form-row single"><label>新密码</label><input type="password" id="rp-pwd" placeholder="至少 6 位" autocomplete="new-password"></div>
+    <div class="form-row single"><label>确认新密码</label><input type="password" id="rp-confirm" placeholder="再次输入新密码" autocomplete="new-password"></div>
+    <div class="hint">重置后请将新密码告知 ${s.name}，建议登录后自行修改。</div>
+  `, `
+    <button class="btn" onclick="App.closeModal()">取消</button>
+    <button class="btn primary" onclick="App.resetPasswordConfirm('${id}')">确认重置</button>
+  `);
+  setTimeout(() => { const el = document.getElementById('rp-pwd'); if(el) el.focus(); }, 100);
+};
+
+App.resetPasswordConfirm = async function(id){
+  const newPwd = document.getElementById('rp-pwd').value;
+  const confirmPwd = document.getElementById('rp-confirm').value;
+  if(!newPwd){ App.toast('请输入新密码', 'err'); return; }
+  if(newPwd.length < 6){ App.toast('密码至少 6 位', 'err'); return; }
+  if(newPwd !== confirmPwd){ App.toast('两次输入不一致', 'err'); return; }
+
+  const s = App.staffById(id);
+  s.passwordHash = await sha256(newPwd);
+  App.save();
+  App.closeModal();
+  App.toast(`${s.name} 的密码已重置`, 'ok');
 };
 
 /* ---------- 离职办理 ---------- */

@@ -6,7 +6,23 @@
  * 服务器不可用时自动降级到 localStorage。
  * ===================================================== */
 const LS_KEY = 'vct-ops-hr-v1';  // 降级用 localStorage key
+const DEFAULT_PWD_HASH = 'b5a557a3cd3d0259f4908630a9df88b081cf9a42a56728371ced9f370460ce5c'; // SHA-256('vct2026')
 const App = window.App = { state: null, ui: {}, _serverOK: null, _pendingSave: null };
+
+/* ---------- 密码哈希（浏览器 Web Crypto API） ---------- */
+async function sha256(text){
+  const buf = new TextEncoder().encode(text);
+  const hash = await crypto.subtle.digest('SHA-256', buf);
+  return Array.from(new Uint8Array(hash)).map(b => b.toString(16).padStart(2,'0')).join('');
+}
+
+/* ---------- 认证字段迁移（旧数据兼容） ---------- */
+function migrateAuth(staff){
+  staff.forEach(s => {
+    if(!s.username) s.username = s.id.toLowerCase();
+    if(!s.passwordHash) s.passwordHash = DEFAULT_PWD_HASH;
+  });
+}
 
 /* ---------- 种子数据 ---------- */
 function seedState(){
@@ -18,13 +34,13 @@ function seedState(){
     lastSync: Date.now(),
     syncLog: [{ time: Date.now(), changes: [], note: '系统初始化：导入 VCT CN 联赛与上海全球冠军赛赛程' }],
     staff: [
-      { id:'S1', name:'陈默',  role:'admin',    position:'运营主管', phone:'138-0000-0001', joinDate:'2024-03-01', status:'active', leaveDate:null },
-      { id:'S2', name:'林小满', role:'employee', position:'内容运营', phone:'139-0000-0002', joinDate:'2024-06-15', status:'active', leaveDate:null },
-      { id:'S3', name:'王锐',  role:'employee', position:'社媒运营', phone:'137-0000-0003', joinDate:'2025-01-10', status:'active', leaveDate:null },
-      { id:'S4', name:'周舟',  role:'employee', position:'视频运营', phone:'136-0000-0004', joinDate:'2025-02-20', status:'active', leaveDate:null },
-      { id:'S5', name:'苏晴',  role:'employee', position:'社群运营', phone:'135-0000-0005', joinDate:'2025-05-06', status:'active', leaveDate:null },
-      { id:'S6', name:'小新',  role:'intern',   position:'运营实习生', phone:'134-0000-0006', joinDate:'2026-07-01', status:'active', leaveDate:null },
-      { id:'S7', name:'阿禾',  role:'intern',   position:'运营实习生', phone:'133-0000-0007', joinDate:'2026-08-03', status:'active', leaveDate:null }
+      { id:'S1', name:'陈默',  role:'admin',    position:'运营主管', phone:'138-0000-0001', joinDate:'2024-03-01', status:'active', leaveDate:null, username:'s1', passwordHash:DEFAULT_PWD_HASH },
+      { id:'S2', name:'林小满', role:'employee', position:'内容运营', phone:'139-0000-0002', joinDate:'2024-06-15', status:'active', leaveDate:null, username:'s2', passwordHash:DEFAULT_PWD_HASH },
+      { id:'S3', name:'王锐',  role:'employee', position:'社媒运营', phone:'137-0000-0003', joinDate:'2025-01-10', status:'active', leaveDate:null, username:'s3', passwordHash:DEFAULT_PWD_HASH },
+      { id:'S4', name:'周舟',  role:'employee', position:'视频运营', phone:'136-0000-0004', joinDate:'2025-02-20', status:'active', leaveDate:null, username:'s4', passwordHash:DEFAULT_PWD_HASH },
+      { id:'S5', name:'苏晴',  role:'employee', position:'社群运营', phone:'135-0000-0005', joinDate:'2025-05-06', status:'active', leaveDate:null, username:'s5', passwordHash:DEFAULT_PWD_HASH },
+      { id:'S6', name:'小新',  role:'intern',   position:'运营实习生', phone:'134-0000-0006', joinDate:'2026-07-01', status:'active', leaveDate:null, username:'s6', passwordHash:DEFAULT_PWD_HASH },
+      { id:'S7', name:'阿禾',  role:'intern',   position:'运营实习生', phone:'133-0000-0007', joinDate:'2026-08-03', status:'active', leaveDate:null, username:'s7', passwordHash:DEFAULT_PWD_HASH }
     ],
     scheduleDays: calendarAtRev(0),   // date -> {type, manual, matches[]}
     shifts: {},                       // date -> { staffId: 'early'|'late' }

@@ -42,7 +42,7 @@ App.toggleTheme = function(){
   App.toast(next === 'light' ? '已切换到亮色主题' : '已切换到深色主题', 'info', 1800);
 };
 
-/* ---------- 登录 ---------- */
+/* ---------- 登录（账号密码模式） ---------- */
 const AVATAR_COLORS = ['#DC3030','#6305A0','#0D9093','#20488E','#6F4ACC','#E5AE15','#FD2659'];
 function avatarColor(id){
   const i = (id || 'x').split('').reduce((a, c) => a + c.charCodeAt(0), 0);
@@ -53,28 +53,49 @@ function avatarHTML(s, size){
 }
 
 App.renderLogin = function(){
-  const active = App.state.staff.filter(s => s.status === 'active');
   const ti = (localStorage.getItem('vct-theme')||'dark')==='light' ? '🌙' : '☀️';
   document.getElementById('app').innerHTML = `
   <div class="login-wrap">
     <button class="theme-toggle" style="position:fixed;top:18px;right:18px" onclick="App.toggleTheme()" title="切换亮色/深色主题"><span id="theme-icon">${ti}</span></button>
     <div class="login-logo">瓦电 <b>赛事运营中台</b></div>
     <div class="login-sub">${LEAGUE} · 官方运营账号人员管理系统</div>
-    <div class="login-grid">
-      ${active.map(s => `
-      <div class="login-card" onclick="App.login('${s.id}')">
-        ${avatarHTML(s, 52)}
-        <div class="login-name">${s.name}</div>
-        <div class="login-pos">${s.position}</div>
-        <div style="margin-top:8px"><span class="badge role-${s.role}">${roleCN(s.role)}</span></div>
-      </div>`).join('')}
+    <div class="login-form">
+      <div class="login-field">
+        <label>用户名</label>
+        <input id="login-user" type="text" placeholder="请输入用户名" autocomplete="username"
+          onkeydown="if(event.key==='Enter'){event.preventDefault();document.getElementById('login-pwd').focus()}">
+      </div>
+      <div class="login-field">
+        <label>密码</label>
+        <input id="login-pwd" type="password" placeholder="请输入密码" autocomplete="current-password"
+          onkeydown="if(event.key==='Enter'){event.preventDefault();App.doLogin()}">
+      </div>
+      <button class="login-btn" onclick="App.doLogin()">登 录</button>
+      <div class="login-tip">首次登录默认密码：vct2026　·　登录后请及时修改密码</div>
     </div>
-    <div class="login-tip">演示模式：点击成员卡片直接进入对应权限的工作台（数据持久化保存在本机磁盘文件）</div>
   </div>`;
+  setTimeout(() => { const el = document.getElementById('login-user'); if(el) el.focus(); }, 100);
 };
 
-App.login = function(id){
-  App.state.user = id;
+App.doLogin = async function(){
+  const username = document.getElementById('login-user').value.trim().toLowerCase();
+  const password = document.getElementById('login-pwd').value;
+  if(!username || !password){ App.toast('请输入用户名和密码', 'err'); return; }
+
+  const staff = App.state.staff.find(s => s.username === username && s.status === 'active');
+  if(!staff){
+    App.toast('用户名不存在或已停用', 'err');
+    return;
+  }
+
+  const hash = await sha256(password);
+  if(hash !== staff.passwordHash){
+    App.toast('密码错误', 'err');
+    return;
+  }
+
+  /* 登录成功 */
+  App.state.user = staff.id;
   App.save();
   App.ui = { rosterTab:'grid', roster:{ mode:'month', ref: D.today() } };
   App.renderShell();
@@ -91,7 +112,54 @@ App.login = function(id){
   }
 };
 
+/* ---------- 修改密码 ---------- */
+App.changePasswordOpen = function(){
+  App.closeUserMenu();
+  App.modal('修改密码', `
+    <div class="form-row single"><label>当前密码</label><input type="password" id="cp-old" placeholder="请输入当前密码" autocomplete="current-password"></div>
+    <div class="form-row">
+      <div><label>新密码</label><input type="password" id="cp-new" placeholder="至少 6 位" autocomplete="new-password"></div>
+      <div><label>确认新密码</label><input type="password" id="cp-confirm" placeholder="再次输入新密码" autocomplete="new-password"></div>
+    </div>
+  `, `
+    <button class="btn" onclick="App.closeModal()">取消</button>
+    <button class="btn primary" onclick="App.changePasswordConfirm()">确认修改</button>
+  `);
+  setTimeout(() => { const el = document.getElementById('cp-old'); if(el) el.focus(); }, 100);
+};
+
+App.changePasswordConfirm = async function(){
+  const me = App.me();
+  const oldPwd = document.getElementById('cp-old').value;
+  const newPwd = document.getElementById('cp-new').value;
+  const confirmPwd = document.getElementById('cp-confirm').value;
+
+  if(!oldPwd || !newPwd || !confirmPwd){ App.toast('请填写完整', 'err'); return; }
+  if(newPwd.length < 6){ App.toast('新密码至少 6 位', 'err'); return; }
+  if(newPwd !== confirmPwd){ App.toast('两次输入的新密码不一致', 'err'); return; }
+
+  const oldHash = await sha256(oldPwd);
+  if(oldHash !== me.passwordHash){ App.toast('当前密码错误', 'err'); return; }
+
+  const newHash = await sha256(newPwd);
+  me.passwordHash = newHash;
+  App.save();
+  App.closeModal();
+  App.toast('密码修改成功', 'ok');
+};
+
+/* ---------- 用户菜单 ---------- */
+App.toggleUserMenu = function(){
+  const menu = document.getElementById('user-menu');
+  if(menu) menu.style.display = menu.style.display === 'none' ? 'block' : 'none';
+};
+App.closeUserMenu = function(){
+  const menu = document.getElementById('user-menu');
+  if(menu) menu.style.display = 'none';
+};
+
 App.logout = function(){
+  App.closeUserMenu();
   App.state.user = null;
   App.save();
   App.closeModal();
@@ -133,8 +201,14 @@ App.renderShell = function(){
           <div id="bell-panel" style="display:none"></div>
         </div>
         <button class="theme-toggle" onclick="App.toggleTheme()" title="切换亮色/深色主题"><span id="theme-icon">${(localStorage.getItem('vct-theme')||'dark')==='light'?'🌙':'☀️'}</span></button>
-        <div class="user-chip" onclick="App.logout()" title="点击退出登录">
-          ${avatarHTML(me)}<span>${me.name} · ${roleCN(me.role)}</span>
+        <div class="user-chip-wrap">
+          <div class="user-chip" onclick="App.toggleUserMenu()" title="账户操作">
+            ${avatarHTML(me)}<span>${me.name} · ${roleCN(me.role)}</span>
+          </div>
+          <div id="user-menu" class="user-menu" style="display:none">
+            <div class="user-menu-item" onclick="App.changePasswordOpen()">🔑 修改密码</div>
+            <div class="user-menu-item danger" onclick="App.logout()">🚪 退出登录</div>
+          </div>
         </div>
       </header>
       <main class="content" id="view"></main>
@@ -268,6 +342,8 @@ App.init = function(){
       <div class="loading-text">正在加载数据…</div>
     </div>`;
   App.load().then(() => {
+    // 旧数据迁移：补认证字段
+    if(App.state && App.state.staff) migrateAuth(App.state.staff);
     if(App.state.user && App.staffById(App.state.user) && App.staffById(App.state.user).status === 'active'){
       App.renderShell();
       App.nav(App.can('manage') ? 'dash' : 'mine');
