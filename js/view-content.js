@@ -61,7 +61,8 @@ App.renderContentMonth = function(){
         <button class="btn sm" onclick="App.redoContent()" ${!App.canRedo('content')?'disabled':''} title="重做">↷ 重做</button>
         <button class="btn sm" onclick="App.resetContent()" ${!App.canReset('content')?'disabled':''} title="重置到进入页面时的状态">↺ 重置</button>
       </div>
-      <button class="btn sm danger" onclick="App.clearContent()" title="清空当月全部内容排期">🗑 清空</button>` : ''}
+      <button class="btn sm danger" onclick="App.clearContent()" title="清空当月全部内容排期">🗑 清空</button>
+      <button class="btn sm" onclick="App.contentTemplateOpen()" title="编辑比赛日内容模板并一键部署">📋 模板</button>` : ''}
       <input type="month" value="${monthStr}" style="width:150px" onchange="App.ui.contentMonth=this.value;App.renderView()">
       <select style="width:120px" onchange="App.ui.contentFType=this.value;App.renderView()">
         <option value="">全部类型</option>
@@ -273,5 +274,172 @@ App.clearContent = function(){
   App.state.content = App.state.content.filter(filterFn);
   App.save();
   App.toast(label + '内容排期已清空', 'ok');
+  App.renderView();
+};
+
+/* ---------- 比赛日内容模板（可编辑 + 一键部署） ---------- */
+
+App.getDefaultContentTemplate = function(){
+  return [
+    { time: '15:00', title: '赛前预热：今日对阵前瞻', type: '赛前预热', note: '' },
+    { time: '23:30', title: '赛果战报：今日比赛速递', type: '赛果战报', note: '' }
+  ];
+};
+
+App.contentTemplateOpen = function(){
+  if(!App.can('manage')) return;
+  /* 兼容旧数据：无模板时初始化默认模板 */
+  if(!App.state.contentTemplate || !App.state.contentTemplate.length){
+    App.state.contentTemplate = App.getDefaultContentTemplate();
+  }
+  App._renderContentTemplateModal();
+};
+
+App._renderContentTemplateModal = function(){
+  const tpl = App.state.contentTemplate;
+  const monthStr = App.ui.contentMonth || D.today().slice(0, 7);
+  const matchDays = Object.keys(App.state.scheduleDays)
+    .filter(ds => ds.slice(0,7) === monthStr && App.state.scheduleDays[ds].type === 'match')
+    .sort();
+
+  const rowsHTML = tpl.map((item, i) => `
+    <div class="tpl-row" data-idx="${i}">
+      <input type="time" value="${item.time}" class="tpl-time" style="width:85px">
+      <input type="text" value="${item.title}" class="tpl-title" placeholder="如：赛前预热：今日对阵前瞻" style="flex:1;min-width:120px">
+      <select class="tpl-type" style="width:110px">
+        ${CONTENT_TYPES.map(t=>`<option value="${t}" ${item.type===t?'selected':''}>${t}</option>`).join('')}
+      </select>
+      <button class="btn sm danger" onclick="App.contentTemplateDelRow(${i})" title="删除此行">✕</button>
+    </div>`).join('');
+
+  App.modal('比赛日内容模板', `
+    <div class="hint" style="margin-bottom:12px;line-height:1.7">
+      定义比赛日的标准内容排期模板。点击「一键部署」可将模板批量应用到当月所有比赛日，
+      无需逐条手动添加。模板会自动保存到云端，所有管理员共享。
+    </div>
+    <div style="font-size:13px;font-weight:600;margin-bottom:8px;color:var(--sub)">模板条目（每条 = 每个比赛日发布的一条内容）</div>
+    <div id="tpl-rows">${rowsHTML}</div>
+    <button class="btn sm" onclick="App.contentTemplateAddRow()" style="margin-top:4px">+ 添加模板项</button>
+    <div style="border-top:1px solid var(--line);margin:16px 0;padding-top:14px">
+      <div style="font-size:13px;font-weight:600;margin-bottom:10px;color:var(--sub)">部署选项</div>
+      <label style="display:flex;align-items:center;gap:8px;cursor:pointer;font-size:13px">
+        <input type="checkbox" id="tpl-overwrite" checked style="width:16px;height:16px">
+        覆盖已有内容（取消勾选则仅向无内容的空白比赛日部署）
+      </label>
+      <div class="hint" style="margin-top:8px">
+        当月（${monthStr.replace('-','年')}月）共有 <b style="color:var(--txt)">${matchDays.length}</b> 个比赛日${matchDays.length ? '：' + matchDays.slice(0,5).map(d=>D.dateCN(d)).join('、') + (matchDays.length>5?' 等':'') : ''}
+      </div>
+    </div>
+  `, `
+    <button class="btn" onclick="App.closeModal()">取消</button>
+    <button class="btn" onclick="App.contentTemplateSave()">💾 保存模板</button>
+    <button class="btn primary" onclick="App.contentTemplateDeploy()">⚡ 一键部署到当月比赛日</button>
+  `);
+};
+
+/* 从弹窗 DOM 读取当前编辑的模板 */
+App.contentTemplateReadFromDOM = function(){
+  const rows = document.querySelectorAll('.tpl-row');
+  const tpl = [];
+  rows.forEach(row => {
+    tpl.push({
+      time: row.querySelector('.tpl-time').value || '20:00',
+      title: row.querySelector('.tpl-title').value.trim(),
+      type: row.querySelector('.tpl-type').value,
+      note: ''
+    });
+  });
+  App.state.contentTemplate = tpl;
+};
+
+App.contentTemplateAddRow = function(){
+  App.contentTemplateReadFromDOM();
+  App.state.contentTemplate.push({ time: '20:00', title: '', type: '互动话题', note: '' });
+  App._renderContentTemplateModal();
+};
+
+App.contentTemplateDelRow = function(idx){
+  App.contentTemplateReadFromDOM();
+  App.state.contentTemplate.splice(idx, 1);
+  App._renderContentTemplateModal();
+};
+
+App.contentTemplateSave = function(){
+  App.contentTemplateReadFromDOM();
+  if(!App.state.contentTemplate.length){
+    App.toast('模板不能为空', 'err'); return;
+  }
+  if(App.state.contentTemplate.some(t => !t.title)){
+    App.toast('存在未填写标题的模板项', 'err'); return;
+  }
+  App.save();
+  App.toast('内容模板已保存', 'ok');
+  App.closeModal();
+};
+
+App.contentTemplateDeploy = function(){
+  App.contentTemplateReadFromDOM();
+  const tpl = App.state.contentTemplate;
+  if(!tpl.length){ App.toast('模板不能为空', 'err'); return; }
+  if(tpl.some(t => !t.title)){ App.toast('存在未填写标题的模板项', 'err'); return; }
+
+  const monthStr = App.ui.contentMonth || D.today().slice(0, 7);
+  const matchDays = Object.keys(App.state.scheduleDays)
+    .filter(ds => ds.slice(0,7) === monthStr && App.state.scheduleDays[ds].type === 'match')
+    .sort();
+  if(!matchDays.length){ App.toast('当月没有比赛日', 'info'); return; }
+
+  const overwrite = document.getElementById('tpl-overwrite').checked;
+  let targetDays = matchDays;
+  if(!overwrite){
+    targetDays = matchDays.filter(ds => !App.state.content.some(c => c.date === ds));
+  }
+  if(!targetDays.length){
+    App.toast(overwrite ? '没有可部署的比赛日' : '所有比赛日已有内容，取消勾选「覆盖」可跳过已有内容的日期', 'info', 5000);
+    return;
+  }
+
+  const totalNew = targetDays.length * tpl.length;
+  let removedCount = 0;
+  if(overwrite){
+    removedCount = App.state.content.filter(c => targetDays.includes(c.date)).length;
+  }
+
+  const msg = `确认向 ${targetDays.length} 个比赛日部署模板？\n\n` +
+    `每 ${tpl.length} 条模板 × ${targetDays.length} 天 = ${totalNew} 条新内容` +
+    (overwrite && removedCount ? `\n覆盖模式：将先删除这些比赛日的 ${removedCount} 条已有内容` : '') +
+    `\n\n此操作可通过 ↶ 撤销恢复。`;
+  if(!confirm(msg)) return;
+
+  /* 保存模板到云端 */
+  App.save();
+
+  /* 推入历史，支持撤销 */
+  App.pushHistory('content');
+
+  /* 覆盖模式：先删除目标比赛日的已有内容 */
+  if(overwrite){
+    App.state.content = App.state.content.filter(c => !targetDays.includes(c.date));
+  }
+
+  /* 部署模板 */
+  for(const ds of targetDays){
+    for(const item of tpl){
+      App.state.content.push({
+        id: App.uid('C'),
+        date: ds,
+        time: item.time,
+        title: item.title,
+        type: item.type,
+        status: 'planned',
+        note: item.note || '',
+        assigneeId: null
+      });
+    }
+  }
+
+  App.save();
+  App.closeModal();
+  App.toast('已部署模板到 ' + targetDays.length + ' 个比赛日，新增 ' + totalNew + ' 条内容', 'ok', 5000);
   App.renderView();
 };

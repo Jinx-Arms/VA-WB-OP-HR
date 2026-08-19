@@ -100,6 +100,12 @@ a{color:var(--accent);text-decoration:none}
 .btn:disabled{opacity:.45;cursor:not-allowed}
 .undo-group{display:flex;gap:4px;align-items:center;padding:2px;background:var(--panel2);border-radius:9px}
 .undo-group .btn.sm{padding:4px 8px;font-size:12px}
+
+/* 模板编辑行 */
+.tpl-row{display:flex;gap:8px;align-items:center;margin-bottom:8px}
+.tpl-row input,.tpl-row select{padding:7px 10px;border-radius:8px;border:1px solid var(--line);background:var(--bg);color:var(--txt);font-size:13px}
+.tpl-row input:focus,.tpl-row select:focus{border-color:var(--rest);outline:none}
+@media(max-width:640px){.tpl-row{flex-wrap:wrap}.tpl-row .tpl-title{flex-basis:100%}}
 .icon-btn{color:var(--sub);padding:4px 8px;border-radius:7px}
 .icon-btn:hover{background:var(--panel2);color:var(--txt)}
 
