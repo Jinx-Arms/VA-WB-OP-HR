@@ -173,6 +173,9 @@ App.logout = function(){
 App.manualSync = async function(){
   const icon = document.getElementById('sync-icon');
   if(icon) icon.classList.add('spinning');
+  /* 同步前关闭通知面板和用户菜单，避免 renderShell 后状态不一致 */
+  App.closeBell();
+  App.closeUserMenu();
 
   try {
     /* 先保存本地待写数据到云端 */
@@ -218,6 +221,9 @@ App._doAutoSync = async function(){
   if(App._syncing) return;                             // 正在同步中
   if(document.hidden) return;                          // 标签页不可见
   if(document.querySelector('.modal-wrap')) return;    // 有弹窗（正在编辑）
+  // 通知面板/用户菜单展开时跳过，避免 renderShell 重置面板状态
+  const bellPanel = document.getElementById('bell-panel');
+  if(bellPanel && bellPanel.style.display !== 'none') return;
   // 用户正在输入时跳过，避免打断
   const ae = document.activeElement;
   if(ae && ['INPUT','TEXTAREA','SELECT'].includes(ae.tagName)) return;
@@ -348,7 +354,7 @@ App.renderShell = function(){
         </span>
         <div style="position:relative">
           <button class="bell" onclick="App.toggleBell()">🔔${unread ? `<span class="dot">${unread}</span>` : ''}</button>
-          <div id="bell-panel" style="display:none"></div>
+          <div id="bell-panel" class="bell-panel" style="display:none"></div>
         </div>
         <span id="storage-indicator" class="storage-indicator" title="数据存储状态"></span>
         <button class="theme-toggle" onclick="App.toggleTheme()" title="切换亮色/深色主题"><span id="theme-icon">${(localStorage.getItem('vct-theme')||'dark')==='light'?'🌙':'☀️'}</span></button>
@@ -426,15 +432,11 @@ App.renderView = function(){
 /* ---------- 通知中心 ---------- */
 App.toggleBell = function(){
   const panel = document.getElementById('bell-panel');
+  if(!panel) return;
   if(panel.style.display === 'none'){
-    const mine = App.state.notifications.filter(n => n.userId === App.state.user).slice(0, 30);
-    panel.innerHTML = `
-      <h4>通知 <button class="btn sm" onclick="App.readAll()">全部已读</button></h4>
-      ${mine.length ? mine.map(n => `
-        <div class="notif ${n.read ? '' : 'unread'}">${n.text}<time>${new Date(n.time).toLocaleString('zh-CN',{month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit'})}</time></div>`).join('')
-        : '<div class="empty">暂无通知</div>'}`;
+    App._renderBellPanel();
     panel.style.display = 'block';
-    // 标记已读
+    /* 标记已读 */
     App.state.notifications.forEach(n => { if(n.userId === App.state.user) n.read = true; });
     App.save();
     setTimeout(() => { const bell = document.querySelector('.bell'); if(bell){ const dot = bell.querySelector('.dot'); if(dot) dot.remove(); } }, 100);
@@ -442,10 +444,25 @@ App.toggleBell = function(){
     panel.style.display = 'none';
   }
 };
+App.closeBell = function(){
+  const panel = document.getElementById('bell-panel');
+  if(panel) panel.style.display = 'none';
+};
+/* 渲染通知面板内容（供 toggleBell 和 readAll 复用） */
+App._renderBellPanel = function(){
+  const panel = document.getElementById('bell-panel');
+  if(!panel) return;
+  const mine = App.state.notifications.filter(n => n.userId === App.state.user).slice(0, 30);
+  panel.innerHTML = `
+    <h4>通知 <button class="btn sm" onclick="App.readAll()">全部已读</button></h4>
+    ${mine.length ? mine.map(n => `
+      <div class="notif ${n.read ? '' : 'unread'}">${n.text}<time>${new Date(n.time).toLocaleString('zh-CN',{month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit'})}</time></div>`).join('')
+      : '<div class="empty">暂无通知</div>'}`;
+};
 App.readAll = function(){
   App.state.notifications.forEach(n => { if(n.userId === App.state.user) n.read = true; });
   App.save();
-  App.toggleBell(); App.toggleBell();
+  App._renderBellPanel();   /* 直接刷新面板内容，不再用双 toggle hack */
 };
 
 /* ---------- 管理员仪表盘 ---------- */
@@ -625,6 +642,26 @@ App.init = function(){
       if(App._autoSyncOn) App.startAutoSync();
     } else {
       App.renderLogin();
+    }
+    /* 全局点击外部关闭：通知面板 & 用户菜单 */
+    if(!App._outsideClickInit){
+      App._outsideClickInit = true;
+      document.addEventListener('click', (e) => {
+        /* 通知面板：点击 bell 按钮和面板以外时关闭 */
+        const bellPanel = document.getElementById('bell-panel');
+        if(bellPanel && bellPanel.style.display !== 'none'){
+          if(!e.target.closest('.bell') && !e.target.closest('#bell-panel')){
+            bellPanel.style.display = 'none';
+          }
+        }
+        /* 用户菜单：点击 user-chip 和菜单以外时关闭 */
+        const userMenu = document.getElementById('user-menu');
+        if(userMenu && userMenu.style.display !== 'none'){
+          if(!e.target.closest('.user-chip') && !e.target.closest('#user-menu')){
+            userMenu.style.display = 'none';
+          }
+        }
+      });
     }
     // 服务器不可用时警告（仅本地模式）
     if(!CLOUD.isCloudMode() && App._serverOK === false){
