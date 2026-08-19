@@ -286,26 +286,32 @@ App.getDefaultContentTemplate = function(){
   ];
 };
 
-/* 扫描全部赛程，按赛事名 + 阶段前缀分组比赛日
- * 返回: { eventName: { days:[], stages: { stagePrefix: [] } } } */
+/* 扫描全部赛程，按赛事分类 + 阶段前缀分组比赛日
+ * 使用 App.state.eventCategories 中的 keywords 做关键词匹配
+ * 未匹配的自动归入"其他赛事"
+ * 返回: { categoryLabel: { days:[], stages: { stagePrefix: [] } } } */
 App._getEventGroups = function(){
   const days = App.state.scheduleDays;
+  const cats = App.state.eventCategories || [];
   const map = {};
   for(const ds of Object.keys(days)){
     const info = days[ds];
     if(!info || info.type !== 'match' || !info.matches || !info.matches.length) continue;
     const firstName = info.matches[0].name || '';
-    let event;
-    if(firstName.startsWith(CN_LEAGUE))      event = CN_LEAGUE;
-    else if(firstName.startsWith(INTL_EVENT)) event = INTL_EVENT;
-    else if(firstName.startsWith(LEAGUE))     event = LEAGUE;
-    else                                       event = '其他赛事';
+    /* 按 eventCategories 顺序匹配，首个命中即归属 */
+    let label = '其他赛事';
+    for(const cat of cats){
+      if(cat.keywords && cat.keywords.some(kw => firstName.includes(kw))){
+        label = cat.label;
+        break;
+      }
+    }
     const stage = info.matches[0].stage || '';
     const stagePrefix = stage.split('·')[0] || '未分类';
-    if(!map[event]) map[event] = { days: [], stages: {} };
-    map[event].days.push(ds);
-    if(!map[event].stages[stagePrefix]) map[event].stages[stagePrefix] = [];
-    map[event].stages[stagePrefix].push(ds);
+    if(!map[label]) map[label] = { days: [], stages: {} };
+    map[label].days.push(ds);
+    if(!map[label].stages[stagePrefix]) map[label].stages[stagePrefix] = [];
+    map[label].stages[stagePrefix].push(ds);
   }
   for(const ev of Object.keys(map)){
     map[ev].days.sort();
@@ -394,6 +400,28 @@ App._renderContentTemplateModal = function(){
       </label>
       <div class="hint" id="tpl-scope-info" style="margin-top:8px"></div>
     </div>
+    <details style="border-top:1px solid var(--line);margin-top:16px;padding-top:14px">
+      <summary style="font-size:13px;font-weight:600;color:var(--sub);cursor:pointer;user-select:none">
+        赛事分类管理（${(App.state.eventCategories||[]).length} 个分类）— 点击展开
+      </summary>
+      <div class="hint" style="margin:10px 0;line-height:1.6">
+        关键词用于自动识别赛程数据中的赛事名称。系统按分类顺序匹配，首个命中的关键词决定比赛日归属。
+        添加新赛事时，填入赛事名称中出现的 distinctive 关键词即可（支持中英文）。
+      </div>
+      <div id="event-cat-list"></div>
+      <div style="display:flex;gap:6px;align-items:flex-end;margin-top:8px;flex-wrap:wrap">
+        <div style="display:flex;flex-direction:column;gap:2px">
+          <label style="font-size:11px;color:var(--sub)">分类名称</label>
+          <input type="text" id="ec-label" placeholder="如：晋升赛" style="width:130px;padding:4px 8px;font-size:13px">
+        </div>
+        <div style="display:flex;flex-direction:column;gap:2px;flex:1;min-width:180px">
+          <label style="font-size:11px;color:var(--sub)">关键词（逗号分隔，支持多个）</label>
+          <input type="text" id="ec-keywords" placeholder="如：晋升赛, Ascension" style="flex:1;min-width:180px;padding:4px 8px;font-size:13px">
+        </div>
+        <button class="btn sm" onclick="App.eventCatAdd()">+ 添加</button>
+      </div>
+      <button class="btn sm" onclick="App.eventCatSave()" style="margin-top:8px">💾 保存分类到云端</button>
+    </details>
   `, `
     <button class="btn" onclick="App.closeModal()">取消</button>
     <button class="btn" onclick="App.contentTemplateSave()">💾 保存模板</button>
@@ -401,6 +429,8 @@ App._renderContentTemplateModal = function(){
   `);
   /* 初始化范围信息 */
   App._updateTplScopeInfo();
+  /* 渲染赛事分类列表 */
+  App._renderEventCatList();
 };
 
 /* 更新部署范围提示信息 */
@@ -415,6 +445,73 @@ App._updateTplScopeInfo = function(){
         days.slice(0,6).map(d => D.dateCN(d)).join('、') + (days.length > 6 ? ' 等' : '')
       : '所选范围内没有比赛日';
   }
+};
+
+/* ---------- 赛事分类管理（CRUD） ---------- */
+
+/* 渲染赛事分类列表（弹窗内） */
+App._renderEventCatList = function(){
+  const box = document.getElementById('event-cat-list');
+  if(!box) return;
+  const cats = App.state.eventCategories || [];
+  if(!cats.length){
+    box.innerHTML = '<div class="hint" style="padding:8px 0">暂无分类，所有比赛日将归入"其他赛事"</div>';
+    return;
+  }
+  box.innerHTML = cats.map((cat, i) => `
+    <div style="display:flex;align-items:center;gap:8px;padding:6px 0;border-bottom:1px dashed var(--line);font-size:13px">
+      <span style="font-weight:600;min-width:100px;color:var(--txt)">${cat.label}</span>
+      <span style="color:var(--sub);flex:1;font-size:12px">关键词：${(cat.keywords||[]).join('、')}</span>
+      <button class="btn sm danger" onclick="App.eventCatDel(${i})" title="删除此分类">✕</button>
+    </div>`).join('');
+};
+
+/* 添加赛事分类 */
+App.eventCatAdd = function(){
+  const labelInput = document.getElementById('ec-label');
+  const kwInput    = document.getElementById('ec-keywords');
+  if(!labelInput || !kwInput) return;
+  const label = labelInput.value.trim();
+  const keywords = kwInput.value.split(/[,，]/).map(s => s.trim()).filter(Boolean);
+  if(!label){ App.toast('请填写分类名称', 'err'); return; }
+  if(!keywords.length){ App.toast('请至少填写一个关键词', 'err'); return; }
+  if(!App.state.eventCategories) App.state.eventCategories = [];
+  /* 检查重名 */
+  if(App.state.eventCategories.some(c => c.label === label)){
+    App.toast('分类名称已存在', 'err'); return;
+  }
+  App.state.eventCategories.push({
+    id: 'ec-' + Date.now(),
+    label: label,
+    keywords: keywords
+  });
+  labelInput.value = '';
+  kwInput.value = '';
+  App._renderEventCatList();
+  /* 更新折叠标题计数 */
+  const summary = document.querySelector('.modal-body details summary');
+  if(summary) summary.textContent = `赛事分类管理（${App.state.eventCategories.length} 个分类）— 点击展开`;
+  App.toast('已添加分类「' + label + '」，记得点击保存', 'ok');
+};
+
+/* 删除赛事分类 */
+App.eventCatDel = function(idx){
+  if(!App.state.eventCategories || !App.state.eventCategories[idx]) return;
+  const cat = App.state.eventCategories[idx];
+  if(!confirm('确认删除分类「' + cat.label + '」？\n删除后，对应赛事的比赛日将归入"其他赛事"。')) return;
+  App.state.eventCategories.splice(idx, 1);
+  App._renderEventCatList();
+  const summary = document.querySelector('.modal-body details summary');
+  if(summary) summary.textContent = `赛事分类管理（${App.state.eventCategories.length} 个分类）— 点击展开`;
+  App.toast('已删除分类「' + cat.label + '」，记得点击保存', 'ok');
+};
+
+/* 保存赛事分类到云端 */
+App.eventCatSave = function(){
+  App.save();
+  App.toast('赛事分类已保存到云端', 'ok');
+  /* 刷新部署范围下拉（新分类可能影响分组） */
+  App._renderContentTemplateModal();
 };
 
 /* 从弹窗 DOM 读取当前编辑的模板 */

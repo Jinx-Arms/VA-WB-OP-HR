@@ -58,6 +58,14 @@ function seedState(){
       { id:'L1', staffId:'S3', start: D.addDays(today, 10), end: D.addDays(today, 11), reason:'年假出行', status:'approved', createdAt: Date.now()-86400000*3, decidedBy:'S1', decidedAt: Date.now()-86400000*2, comment:'批准，注意交接' },
       { id:'L2', staffId:'S2', start: D.addDays(today, 5),  end: D.addDays(today, 7),  reason:'家中事务', status:'pending', createdAt: Date.now()-3600000*5, decidedBy:null, decidedAt:null, comment:'' }
     ],
+    eventCategories: [
+      { id: 'vct-cn',       label: 'VCT CN 联赛',      keywords: ['VCT CN'] },
+      { id: 'champions',    label: '全球冠军赛',        keywords: ['全球冠军赛', 'Champions'] },
+      { id: 'promotion',    label: '晋升赛',            keywords: ['晋升赛', 'Ascension'] },
+      { id: 'evolution',    label: '进化者系列赛',      keywords: ['进化者'] },
+      { id: 'source',       label: '源能邀请赛',        keywords: ['源能'] },
+      { id: 'vct-intl',     label: 'VCT 国际联赛',      keywords: ['VCT 2026', 'VCT'] }
+    ],
     content: seedContent(),
     notifications: []
   };

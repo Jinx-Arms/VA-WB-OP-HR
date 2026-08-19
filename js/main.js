@@ -590,6 +590,18 @@ App.init = function(){
     if(App.state && App.state.staff){
       if(migrateAuth(App.state.staff)) App.save();
     }
+    // 旧数据迁移：补赛事分类注册表
+    if(!App.state.eventCategories || !App.state.eventCategories.length){
+      App.state.eventCategories = [
+        { id: 'vct-cn',       label: 'VCT CN 联赛',      keywords: ['VCT CN'] },
+        { id: 'champions',    label: '全球冠军赛',        keywords: ['全球冠军赛', 'Champions'] },
+        { id: 'promotion',    label: '晋升赛',            keywords: ['晋升赛', 'Ascension'] },
+        { id: 'evolution',    label: '进化者系列赛',      keywords: ['进化者'] },
+        { id: 'source',       label: '源能邀请赛',        keywords: ['源能'] },
+        { id: 'vct-intl',     label: 'VCT 国际联赛',      keywords: ['VCT 2026', 'VCT'] }
+      ];
+      App.save();
+    }
     // 从本设备 localStorage 恢复登录会话（不依赖云端共享数据）
     App.restoreSession();
     if(App.state.user && App.staffById(App.state.user) && App.staffById(App.state.user).status === 'active'){
