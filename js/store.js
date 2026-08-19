@@ -537,13 +537,17 @@ App.exportImage = function(filename){
   const bgColor = isDark ? '#120A0B' : '#F5EFF0';
 
   const doCapture = () => {
-    /* 测量最宽滚动区域，用于展开父容器宽度 */
-    let maxScrollW = 0;
-    document.querySelectorAll('.roster-wrap, .tbl-wrap').forEach(el => {
-      maxScrollW = Math.max(maxScrollW, el.scrollWidth);
+    /* 测量最宽表格的实际像素宽度 */
+    let tableW = 0;
+    document.querySelectorAll('.roster-wrap table.roster, .tbl-wrap table.tbl').forEach(t => {
+      tableW = Math.max(tableW, t.scrollWidth, t.offsetWidth);
     });
-    /* 额外 80px 留白：card padding(36) + 两侧呼吸间距(44) */
-    const targetW = Math.max(target.offsetWidth, maxScrollW + 80);
+    /* 画布宽度 = 表格宽度 + 卡片左右内边距(36) + 表格容器左右外边距(40) + 额外留白(24)
+       确保表格左右两侧有完全对称的舒适间距 */
+    const wrapH = 40;        // .roster-wrap/.tbl-wrap 左右 margin
+    const cardP = 36;        // .card 左右 padding (14*2 + 边框)
+    const extra = 24;        // 额外安全留白
+    const targetW = tableW + wrapH + cardP + extra;
 
     html2canvas(target, {
       backgroundColor: bgColor,
@@ -559,49 +563,49 @@ App.exportImage = function(filename){
           clonedTarget.style.width = targetW + 'px';
           clonedTarget.style.maxWidth = 'none';
           clonedTarget.style.overflow = 'visible';
+          clonedTarget.style.margin = '0';
         }
         doc.querySelectorAll('.content').forEach(el => {
           el.style.maxWidth = 'none';
           el.style.width = targetW + 'px';
           el.style.overflow = 'visible';
+          el.style.padding = '20px';
         });
-        /* 展开滚动区域，加 margin 留出呼吸空间避免表格紧贴卡片边界 */
+        /* 让卡片撑满内容区，表格居中显示 */
+        doc.querySelectorAll('#view .card').forEach(el => {
+          el.style.width = '100%';
+          el.style.boxSizing = 'border-box';
+          el.style.padding = '16px 20px';
+          el.style.marginBottom = '0';
+        });
+        /* 展开滚动区域，margin: auto 居中，左右各 20px */
         doc.querySelectorAll('.roster-wrap, .tbl-wrap').forEach(el => {
           el.style.overflow = 'visible';
           el.style.maxHeight = 'none';
           el.style.width = 'max-content';
-          el.style.margin = '4px 20px 12px';
+          el.style.margin = '0 auto';
         });
-        /* 隐藏交互元素，使导出图片更干净 */
+        /* 隐藏交互元素 */
         doc.querySelectorAll('#view button, #view input, #view select, #view .undo-group, #view .spacer').forEach(el => {
           el.style.display = 'none';
         });
-        /* 隐藏顶部子导航标签（排班总览/休假审批/冲突检测 等） */
+        /* 隐藏顶部子导航标签 */
         doc.querySelectorAll('#view > .tabs').forEach(el => {
           el.style.display = 'none';
         });
-        /* 隐藏整个工具栏（按钮已隐藏但容器仍占空间），改为内联在标题旁的紧凑样式 */
+        /* 隐藏整个工具栏 */
         doc.querySelectorAll('#view .toolbar').forEach(el => {
           el.style.display = 'none';
         });
-        /* 隐藏管理员操作提示文字 */
+        /* 隐藏管理员操作提示 */
         doc.querySelectorAll('#view .hint').forEach(el => {
           if(/管理员可点击|点击单元格/.test(el.textContent)){
             el.style.display = 'none';
           }
         });
-        /* 隐藏弹窗（防止意外截到） */
+        /* 隐藏弹窗/toast */
         doc.querySelectorAll('.modal, .modal-mask, .toast').forEach(el => {
           el.style.display = 'none';
-        });
-        /* 收缩所有 card 的 padding 让表格更紧凑 */
-        doc.querySelectorAll('#view .card').forEach(el => {
-          el.style.padding = '14px 18px';
-          el.style.marginBottom = '0';
-        });
-        /* 表格容器顶部去掉额外间距 */
-        doc.querySelectorAll('#view .roster-wrap, #view .tbl-wrap').forEach(el => {
-          el.style.marginTop = '0';
         });
       }
     }).then(canvas => {
