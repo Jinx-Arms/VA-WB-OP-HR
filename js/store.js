@@ -537,16 +537,38 @@ App.exportImage = function(filename){
   const bgColor = isDark ? '#120A0B' : '#F5EFF0';
 
   const doCapture = () => {
+    /* 测量最宽滚动区域，用于展开父容器宽度 */
+    let maxScrollW = 0;
+    document.querySelectorAll('.roster-wrap, .tbl-wrap').forEach(el => {
+      maxScrollW = Math.max(maxScrollW, el.scrollWidth);
+    });
+    const targetW = Math.max(target.offsetWidth, maxScrollW + 48);
+
     html2canvas(target, {
       backgroundColor: bgColor,
       scale: 2,
       useCORS: true,
       logging: false,
+      width: targetW,
+      windowWidth: targetW,
       onclone: (doc) => {
-        /* 展开滚动区域，确保完整捕获宽表格 */
+        /* 展开所有父级宽度限制，确保宽表格完整捕获 */
+        const clonedTarget = doc.getElementById('view');
+        if(clonedTarget){
+          clonedTarget.style.width = targetW + 'px';
+          clonedTarget.style.maxWidth = 'none';
+          clonedTarget.style.overflow = 'visible';
+        }
+        doc.querySelectorAll('.content').forEach(el => {
+          el.style.maxWidth = 'none';
+          el.style.width = targetW + 'px';
+          el.style.overflow = 'visible';
+        });
+        /* 展开滚动区域 */
         doc.querySelectorAll('.roster-wrap, .tbl-wrap').forEach(el => {
           el.style.overflow = 'visible';
           el.style.maxHeight = 'none';
+          el.style.width = 'max-content';
         });
         /* 隐藏交互元素，使导出图片更干净 */
         doc.querySelectorAll('#view button, #view input, #view select, #view .undo-group, #view .spacer').forEach(el => {
