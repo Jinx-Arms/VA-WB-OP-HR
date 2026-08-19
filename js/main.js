@@ -325,6 +325,7 @@ const NAV = [
   { key:'staff',   label:'人员管理',    ico:'👥', admin:true },
   { key:'content', label:'内容排期',    ico:'📝' },
   { key:'assign',  label:'责任分配',    ico:'🎯', admin:true },
+  { key:'kb',      label:'知识库',      ico:'📚' },
   { key:'mine',    label:'我的面板',    ico:'🙋', hideForAdmin:false }
 ];
 
@@ -425,6 +426,7 @@ App.renderView = function(){
   else if(App.currentView === 'staff') v.innerHTML = App.renderStaff();
   else if(App.currentView === 'content') v.innerHTML = App.renderContent();
   else if(App.currentView === 'assign') v.innerHTML = App.renderAssign();
+  else if(App.currentView === 'kb') v.innerHTML = App.renderKB();
   else if(App.currentView === 'mine') v.innerHTML = App.renderMine();
   else v.innerHTML = App.renderDash();
 };
