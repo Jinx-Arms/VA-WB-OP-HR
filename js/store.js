@@ -542,7 +542,8 @@ App.exportImage = function(filename){
     document.querySelectorAll('.roster-wrap, .tbl-wrap').forEach(el => {
       maxScrollW = Math.max(maxScrollW, el.scrollWidth);
     });
-    const targetW = Math.max(target.offsetWidth, maxScrollW + 48);
+    /* 额外 80px 留白：card padding(36) + 两侧呼吸间距(44) */
+    const targetW = Math.max(target.offsetWidth, maxScrollW + 80);
 
     html2canvas(target, {
       backgroundColor: bgColor,
@@ -564,11 +565,12 @@ App.exportImage = function(filename){
           el.style.width = targetW + 'px';
           el.style.overflow = 'visible';
         });
-        /* 展开滚动区域 */
+        /* 展开滚动区域，加 margin 留出呼吸空间避免表格紧贴卡片边界 */
         doc.querySelectorAll('.roster-wrap, .tbl-wrap').forEach(el => {
           el.style.overflow = 'visible';
           el.style.maxHeight = 'none';
           el.style.width = 'max-content';
+          el.style.margin = '4px 20px 12px';
         });
         /* 隐藏交互元素，使导出图片更干净 */
         doc.querySelectorAll('#view button, #view input, #view select, #view .undo-group, #view .spacer').forEach(el => {
