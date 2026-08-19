@@ -576,6 +576,33 @@ App.exportImage = function(filename){
         doc.querySelectorAll('#view button, #view input, #view select, #view .undo-group, #view .spacer').forEach(el => {
           el.style.display = 'none';
         });
+        /* 隐藏顶部子导航标签（排班总览/休假审批/冲突检测 等） */
+        doc.querySelectorAll('#view > .tabs').forEach(el => {
+          el.style.display = 'none';
+        });
+        /* 隐藏整个工具栏（按钮已隐藏但容器仍占空间），改为内联在标题旁的紧凑样式 */
+        doc.querySelectorAll('#view .toolbar').forEach(el => {
+          el.style.display = 'none';
+        });
+        /* 隐藏管理员操作提示文字 */
+        doc.querySelectorAll('#view .hint').forEach(el => {
+          if(/管理员可点击|点击单元格/.test(el.textContent)){
+            el.style.display = 'none';
+          }
+        });
+        /* 隐藏弹窗（防止意外截到） */
+        doc.querySelectorAll('.modal, .modal-mask, .toast').forEach(el => {
+          el.style.display = 'none';
+        });
+        /* 收缩所有 card 的 padding 让表格更紧凑 */
+        doc.querySelectorAll('#view .card').forEach(el => {
+          el.style.padding = '14px 18px';
+          el.style.marginBottom = '0';
+        });
+        /* 表格容器顶部去掉额外间距 */
+        doc.querySelectorAll('#view .roster-wrap, #view .tbl-wrap').forEach(el => {
+          el.style.marginTop = '0';
+        });
       }
     }).then(canvas => {
       const link = document.createElement('a');
