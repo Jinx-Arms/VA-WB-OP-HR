@@ -33,7 +33,13 @@ App.renderStory = function(){
   else if(st.tab === 'gen')   body = App.renderStoryGen();
   else if(st.tab === 'teams') body = App.renderStoryTeams();
 
-  return toolbar + body;
+  const wipBanner = `
+    <div class="st-wip">
+      <span class="st-wip-tag">WIP</span>
+      <span>本模块为开发中版本（Work In Progress）。战队数据/恩怨检测/看点生成均为初始状态，VLR 自动抓取尚未接入线上 workflow，数据可能不完整。</span>
+    </div>`;
+
+  return wipBanner + toolbar + body;
 };
 
 /* ---------- Tab 切换 ---------- */
