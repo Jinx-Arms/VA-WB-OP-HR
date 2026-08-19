@@ -165,6 +165,47 @@ App.logout = function(){
   App.renderLogin();
 };
 
+/* ---------- 手动同步云端数据 ---------- */
+App.manualSync = async function(){
+  const icon = document.getElementById('sync-icon');
+  if(icon) icon.classList.add('spinning');
+
+  try {
+    /* 先保存本地待写数据到云端 */
+    if(App._pendingSave){
+      clearTimeout(App._pendingSave);
+      App._pendingSave = null;
+    }
+    App.flush();
+    await new Promise(r => setTimeout(r, 500));
+
+    /* 从云端重新加载最新数据 */
+    await App.load();
+
+    /* 恢复本设备会话 */
+    App.restoreSession();
+
+    /* 检查登录态是否仍然有效 */
+    if(!App.state.user || !App.staffById(App.state.user) || App.staffById(App.state.user).status !== 'active'){
+      App.clearSession();
+      App.renderLogin();
+      App.toast('登录状态已失效，请重新登录', 'warn');
+      return;
+    }
+
+    /* 重新渲染当前页面 */
+    App.closeModal();
+    App.renderShell();
+    App.nav(App.currentView || (App.can('manage') ? 'dash' : 'mine'));
+    App.toast('数据同步完成', 'ok');
+  } catch(e){
+    console.error('[同步] 失败:', e);
+    App.toast('同步失败，请稍后重试', 'err');
+  } finally {
+    if(icon) icon.classList.remove('spinning');
+  }
+};
+
 /* ---------- 框架 & 路由 ---------- */
 const NAV = [
   { key:'dash',    label:'运营概览',    ico:'📊', admin:true },
@@ -195,6 +236,7 @@ App.renderShell = function(){
     <div class="main">
       <header class="topbar">
         <h1 id="page-title"></h1>
+        <button class="sync-btn" onclick="App.manualSync()" title="同步云端最新数据"><span id="sync-icon">🔄</span></button>
         <div style="position:relative">
           <button class="bell" onclick="App.toggleBell()">🔔${unread ? `<span class="dot">${unread}</span>` : ''}</button>
           <div id="bell-panel" style="display:none"></div>
