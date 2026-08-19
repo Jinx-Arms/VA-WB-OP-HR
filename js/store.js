@@ -526,3 +526,52 @@ App.exportCSV = function(filename, rows){
   a.click();
   a.remove();
 };
+
+/* 将当前视图导出为 PNG 图片（懒加载 html2canvas） */
+App.exportImage = function(filename){
+  const target = document.getElementById('view');
+  if(!target) return;
+  App.toast('正在生成图片…', 'info', 3000);
+
+  const isDark = document.documentElement.dataset.theme !== 'light';
+  const bgColor = isDark ? '#120A0B' : '#F5EFF0';
+
+  const doCapture = () => {
+    html2canvas(target, {
+      backgroundColor: bgColor,
+      scale: 2,
+      useCORS: true,
+      logging: false,
+      onclone: (doc) => {
+        /* 展开滚动区域，确保完整捕获宽表格 */
+        doc.querySelectorAll('.roster-wrap, .tbl-wrap').forEach(el => {
+          el.style.overflow = 'visible';
+          el.style.maxHeight = 'none';
+        });
+        /* 隐藏交互元素，使导出图片更干净 */
+        doc.querySelectorAll('#view button, #view input, #view select, #view .undo-group, #view .spacer').forEach(el => {
+          el.style.display = 'none';
+        });
+      }
+    }).then(canvas => {
+      const link = document.createElement('a');
+      link.download = filename + '.png';
+      link.href = canvas.toDataURL('image/png');
+      link.click();
+      App.toast('图片已导出：' + filename + '.png', 'ok');
+    }).catch(err => {
+      App.toast('导出失败：' + (err.message || '未知错误'), 'err', 5000);
+    });
+  };
+
+  /* 懒加载 html2canvas */
+  if(typeof html2canvas === 'undefined'){
+    const script = document.createElement('script');
+    script.src = 'https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js';
+    script.onload = doCapture;
+    script.onerror = () => App.toast('图片导出库加载失败，请检查网络连接', 'err');
+    document.head.appendChild(script);
+  } else {
+    doCapture();
+  }
+};

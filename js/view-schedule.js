@@ -55,6 +55,7 @@ App.renderSchedule = function(){
         <button class="btn sm" onclick="App.resetSchedule()" ${!App.canReset('schedule')?'disabled':''} title="重置到进入页面时的状态">↺ 重置</button>
       </div>
       <button class="btn sm danger" onclick="App.clearSchedule()" title="清空当月全部赛程数据">🗑 清空</button>` : ''}
+      <button class="btn sm" onclick="App.exportImage('赛程日历_${monthStr}')" title="导出当前视图为 PNG 图片">📷 导出图片</button>
       <span class="legend">
         <span><i class="lg-match"></i>比赛日</span>
         <span><i class="lg-rest"></i>休赛日</span>

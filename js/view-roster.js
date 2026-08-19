@@ -84,6 +84,7 @@ function rosterGrid(){
       <div class="spacer"></div>
       <button class="btn" onclick="App.ui.showLeft=!App.ui.showLeft;App.renderView()">${App.ui.showLeft?'隐藏':'显示'}已离职（历史记录）</button>
       <button class="btn" onclick="App.exportRoster()">⤓ 导出 CSV</button>
+      <button class="btn sm" onclick="App.exportImage('排班表_${r.ref.slice(0,7)}')" title="导出当前视图为 PNG 图片">📷 导出图片</button>
       <button class="btn primary" onclick="App.regenSchedule()">⚡ 一键智能排班（当${r.mode==='week'?'周':'月'}）</button>
     </div>
     <div class="roster-wrap">

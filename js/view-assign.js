@@ -46,6 +46,7 @@ App.renderAssign = function(){
   <div class="card">
     <h3><span class="left">责任分配 <span class="hint">仅显示今天及以后的内容</span></span>
       <div style="display:flex;gap:10px">
+        <button class="btn sm" onclick="App.exportImage('责任分配_${D.today()}')" title="导出当前视图为 PNG 图片">📷 导出图片</button>
         <button class="btn" onclick="App.autoAssignAll()">🔔 智能分配并通知全部</button>
         <button class="btn primary" onclick="App.autoAssignAll(false)">⚡ 智能分配（暂不通知）</button>
       </div>

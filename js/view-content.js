@@ -63,6 +63,7 @@ App.renderContentMonth = function(){
       </div>
       <button class="btn sm danger" onclick="App.clearContent()" title="清空当月全部内容排期">🗑 清空</button>
       <button class="btn sm" onclick="App.contentTemplateOpen()" title="编辑比赛日内容模板并一键部署">📋 模板</button>` : ''}
+      <button class="btn sm" onclick="App.exportImage('内容排期_${monthStr}')" title="导出当前视图为 PNG 图片">📷 导出图片</button>
       <input type="month" value="${monthStr}" style="width:150px" onchange="App.ui.contentMonth=this.value;App.renderView()">
       <select style="width:120px" onchange="App.ui.contentFType=this.value;App.renderView()">
         <option value="">全部类型</option>
@@ -154,6 +155,7 @@ App.renderContentDay = function(){
         <button class="btn sm" onclick="App.resetContent()" ${!App.canReset('content')?'disabled':''} title="重置到进入页面时的状态">↺ 重置</button>
       </div>
       <button class="btn sm danger" onclick="App.clearContent()" title="清空当日全部内容排期">🗑 清空</button>` : ''}
+      <button class="btn sm" onclick="App.exportImage('内容排期_${ds}')" title="导出当前视图为 PNG 图片">📷 导出图片</button>
       <span class="badge ${type}" style="pointer-events:none">${type === 'match' ? '比赛日' : '休赛日'}${info && info.manual ? '·手' : ''}</span>
       <span class="hint">${items.length} 条内容 · ${items.filter(c=>!c.assigneeId&&c.status!=='cancelled').length} 条未分配</span>
     </div>
