@@ -105,6 +105,16 @@ function roleCN(role){
   return { admin:'管理员', employee:'员工', intern:'实习生' }[role] || role;
 }
 
+/* 保存 .roster-wrap 滚动位置 → renderView → 恢复滚动位置 */
+App._rosterScrollKeep = function(fn){
+  const wrap = document.querySelector('.roster-wrap');
+  const sl = wrap ? wrap.scrollLeft : 0;
+  const st = wrap ? wrap.scrollTop  : 0;
+  fn();
+  const nw = document.querySelector('.roster-wrap');
+  if(nw){ nw.scrollLeft = sl; nw.scrollTop = st; }
+};
+
 /* 手动调整：循环 休 → 早 → 晚 → 休 */
 App.cycleShift = function(date, staffId){
   const st = App.state;
@@ -116,7 +126,7 @@ App.cycleShift = function(date, staffId){
   if(next) st.shifts[date][staffId] = next;
   else delete st.shifts[date][staffId];
   App.save();
-  App.renderView();
+  App._rosterScrollKeep(() => App.renderView());
 };
 
 App.regenSchedule = function(){
@@ -133,26 +143,26 @@ App.regenSchedule = function(){
     App.autoSchedule(y, m);
   }
   App.toast('智能排班已生成：比赛日 4 人 / 休赛日 2 人，休假者已排除，早/晚班均衡轮转', 'ok', 5000);
-  App.renderView();
+  App._rosterScrollKeep(() => App.renderView());
 };
 
 App.undoRoster = function(){
   if(App.undoSection('roster')){
     App.toast('已撤销', 'info', 1500);
-    App.renderView();
+    App._rosterScrollKeep(() => App.renderView());
   }
 };
 App.redoRoster = function(){
   if(App.redoSection('roster')){
     App.toast('已重做', 'info', 1500);
-    App.renderView();
+    App._rosterScrollKeep(() => App.renderView());
   }
 };
 App.resetRoster = function(){
   if(!confirm('确定重置到进入排班页面时的状态？当前所有未同步的排班修改将被撤销。')) return;
   if(App.resetSection('roster')){
     App.toast('已重置到初始状态', 'ok', 2000);
-    App.renderView();
+    App._rosterScrollKeep(() => App.renderView());
   }
 };
 
@@ -175,7 +185,7 @@ App.clearRoster = function(){
   days.forEach(ds => { delete App.state.shifts[ds]; });
   App.save();
   App.toast(label + '排班已清空', 'ok');
-  App.renderView();
+  App._rosterScrollKeep(() => App.renderView());
 };
 
 App.exportRoster = function(){
