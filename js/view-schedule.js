@@ -49,6 +49,12 @@ App.renderSchedule = function(){
       <button class="btn primary" id="btn-sync" onclick="App.doSync()">⟳ 同步官方赛程</button>
       <span class="hint">上次同步：${fmtSyncTime(st.lastSync)} · 已同步 ${st.remoteRev} 次${st.syncLog[0] && st.syncLog[0].source === 'vlr' ? '（VLR）' : ''}</span>
       <div class="spacer"></div>
+      ${isAdmin ? `<div class="undo-group">
+        <button class="btn sm" onclick="App.undoSchedule()" ${!App.canUndo('schedule')?'disabled':''} title="撤销上次操作">↶ 撤销</button>
+        <button class="btn sm" onclick="App.redoSchedule()" ${!App.canRedo('schedule')?'disabled':''} title="重做">↷ 重做</button>
+        <button class="btn sm" onclick="App.resetSchedule()" ${!App.canReset('schedule')?'disabled':''} title="重置到进入页面时的状态">↺ 重置</button>
+      </div>
+      <button class="btn sm danger" onclick="App.clearSchedule()" title="清空当月全部赛程数据">🗑 清空</button>` : ''}
       <span class="legend">
         <span><i class="lg-match"></i>比赛日</span>
         <span><i class="lg-rest"></i>休赛日</span>
@@ -74,6 +80,7 @@ function fmtSyncTime(t){
 App.doSync = async function(){
   const btn = document.getElementById('btn-sync');
   if(btn){ btn.disabled = true; btn.textContent = '正在抓取 VLR 赛程…'; }
+  App.pushHistory('schedule');
   const { changes, affected } = await App.syncSchedule();
   if(!changes.length){
     App.toast('VLR 赛程已是最新，无变更', 'ok');
@@ -133,6 +140,7 @@ App.scheduleDaySave = function(date){
   info.manual = true;                      // 手动修正优先
   info.matches.forEach(mt => { if(!mt.name) mt.name = LEAGUE + ' ' + (mt.stage || '比赛'); });
   const old = st.scheduleDays[date];
+  App.pushHistory('schedule');
   st.scheduleDays[date] = info;
   // 当日类型变化且已有排班 → 提示冲突
   if(old && old.type !== info.type && st.shifts[date] && Object.keys(st.shifts[date]).length){
@@ -148,6 +156,7 @@ App.scheduleDaySave = function(date){
 App.scheduleDayReset = function(date){
   const remote = calendarAtRev(App.state.remoteRev);
   if(remote[date]){
+    App.pushHistory('schedule');
     App.state.scheduleDays[date] = JSON.parse(JSON.stringify(remote[date]));
     App.save();
     App.toast('已恢复为官方赛程', 'ok');
@@ -155,5 +164,41 @@ App.scheduleDayReset = function(date){
     App.toast('官方赛程中暂无该日数据', 'warn');
   }
   App.closeModal();
+  App.renderView();
+};
+
+/* ---------- 撤销 / 重做 / 重置 / 清空 ---------- */
+App.undoSchedule = function(){
+  if(App.undoSection('schedule')){
+    App.toast('已撤销', 'info', 1500);
+    App.renderView();
+  }
+};
+App.redoSchedule = function(){
+  if(App.redoSection('schedule')){
+    App.toast('已重做', 'info', 1500);
+    App.renderView();
+  }
+};
+App.resetSchedule = function(){
+  if(!confirm('确定重置到进入赛程日历页时的状态？当前所有未同步的赛程修改将被撤销。')) return;
+  if(App.resetSection('schedule')){
+    App.toast('已重置到初始状态', 'ok', 2000);
+    App.renderView();
+  }
+};
+
+App.clearSchedule = function(){
+  const monthStr = App.ui.scheduleMonth || D.today().slice(0, 7);
+  const { y, m } = D.ym(monthStr + '-01');
+  const days = D.monthDays(y, m);
+  const label = y + '年' + m + '月';
+  const hasData = days.some(ds => App.state.scheduleDays[ds]);
+  if(!hasData){ App.toast('当前' + label + '没有赛程数据', 'info'); return; }
+  if(!confirm('确定清空' + label + '全部赛程数据？\n\n此操作将删除当月所有比赛日/休赛日定义及场次信息。\n排班数据不受影响，但已排班的比赛日将失去赛程依据。\n\n此操作可通过 ↶ 撤销恢复。')) return;
+  App.pushHistory('schedule');
+  days.forEach(ds => { delete App.state.scheduleDays[ds]; });
+  App.save();
+  App.toast(label + '赛程数据已清空', 'ok');
   App.renderView();
 };

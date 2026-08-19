@@ -398,6 +398,7 @@ App.nav = function(key){
   /* 切换页面或历史被清空时，初始化对应的历史快照 */
   if(key === 'roster'  && !App._history['roster'])  App.initHistory('roster');
   if(key === 'content' && !App._history['content']) App.initHistory('content');
+  if(key === 'schedule' && !App._history['schedule']) App.initHistory('schedule');
   document.querySelectorAll('.nav-item').forEach(e => e.classList.remove('active'));
   const el = document.getElementById('nav-' + key);
   if(el) el.classList.add('active');
