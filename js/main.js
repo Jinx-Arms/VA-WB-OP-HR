@@ -357,8 +357,77 @@ App.renderDash = function(){
   </div>`;
 };
 
+/* ---------- 云端配置引导（GitHub Pages 未配置 Supabase 时显示）---------- */
+App.renderSetupGuide = function(){
+  document.getElementById('app').innerHTML = `
+  <div class="login-wrap">
+    <div class="login-logo">瓦电 <b>赛事运营中台</b></div>
+    <div class="login-sub">云端部署配置引导</div>
+    <div class="setup-guide">
+      <div class="setup-alert">
+        <h3>🔧 需要配置数据库才能使用</div>
+        <p>当前部署在 GitHub Pages（纯静态托管），没有后端服务器。需要连接一个免费的 Supabase 数据库来存储数据。</p>
+        <p class="hint">全程免费，不需要银行卡，用 GitHub 账号即可注册。</p>
+      </div>
+      <div class="setup-steps">
+        <div class="setup-step">
+          <div class="step-num">1</div>
+          <div class="step-body">
+            <b>注册 Supabase</b><br>
+            打开 <a href="https://supabase.com" target="_blank">supabase.com</a> → 用 GitHub 账号登录 → New Project → 名称填 <code>vct-ops</code> → Region 选 <code>Southeast Asia (Singapore)</code> → 设个数据库密码 → 创建
+          </div>
+        </div>
+        <div class="setup-step">
+          <div class="step-num">2</div>
+          <div class="step-body">
+            <b>执行建表 SQL</b><br>
+            创建完成后，左侧点 SQL Editor → New query → 粘贴以下 SQL → 点 Run：
+            <pre class="sql-block">CREATE TABLE IF NOT EXISTS kv_store (
+  key   TEXT PRIMARY KEY,
+  value JSONB NOT NULL,
+  updated_at TIMESTAMP WITH TIME ZONE DEFAULT NOW()
+);
+ALTER TABLE kv_store ENABLE ROW LEVEL SECURITY;
+CREATE POLICY "Allow anon read"  ON kv_store FOR SELECT TO anon USING (true);
+CREATE POLICY "Allow anon write" ON kv_store FOR ALL    TO anon USING (true);</pre>
+          </div>
+        </div>
+        <div class="setup-step">
+          <div class="step-num">3</div>
+          <div class="step-body">
+            <b>获取连接信息</b><br>
+            左侧点 Project Settings（齿轮）→ API，找到：<br>
+            • <b>Project URL</b>：<code>https://xxxxxxxx.supabase.co</code><br>
+            • <b>anon public key</b>：<code>eyJhbGci...</code> 一长串
+          </div>
+        </div>
+        <div class="setup-step">
+          <div class="step-num">4</div>
+          <div class="step-body">
+            <b>填入配置</b><br>
+            把 URL 和 Key 告诉管理员，管理员填入 <code>js/cloud.js</code> 的 <code>SUPABASE_URL</code> 和 <code>SUPABASE_KEY</code>，提交到 GitHub 即可生效。
+          </div>
+        </div>
+      </div>
+      <div class="setup-foot">
+        <b>本地开发？</b> 在本机运行 <code>node server.js</code> 访问 <code>http://localhost:3000</code> 即可，无需配置 Supabase。
+      </div>
+    </div>
+  </div>`;
+};
+
 /* ---------- 启动 ---------- */
 App.init = function(){
+  /* 云端部署但未配置 Supabase → 显示配置引导 */
+  if(typeof window !== 'undefined'){
+    const h = window.location.hostname;
+    const isLocal = h === 'localhost' || h === '127.0.0.1' || h === '';
+    if(!isLocal && (CLOUD.SUPABASE_URL === '' || CLOUD.SUPABASE_KEY === '')){
+      App.renderSetupGuide();
+      return;
+    }
+  }
+
   // 显示加载占位
   document.getElementById('app').innerHTML = `
     <div class="loading-screen">
@@ -376,7 +445,7 @@ App.init = function(){
     } else {
       App.renderLogin();
     }
-    // 服务器不可用时警告（非云端模式）
+    // 服务器不可用时警告（仅本地模式）
     if(!CLOUD.isCloudMode() && App._serverOK === false){
       setTimeout(() => {
         App.toast('⚠️ 服务器未运行，数据仅存于当前浏览器！请先启动 server.js 再使用', 'warn', 8000);
