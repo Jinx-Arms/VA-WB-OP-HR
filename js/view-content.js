@@ -60,7 +60,8 @@ App.renderContentMonth = function(){
         <button class="btn sm" onclick="App.undoContent()" ${!App.canUndo('content')?'disabled':''} title="撤销上次操作">↶ 撤销</button>
         <button class="btn sm" onclick="App.redoContent()" ${!App.canRedo('content')?'disabled':''} title="重做">↷ 重做</button>
         <button class="btn sm" onclick="App.resetContent()" ${!App.canReset('content')?'disabled':''} title="重置到进入页面时的状态">↺ 重置</button>
-      </div>` : ''}
+      </div>
+      <button class="btn sm danger" onclick="App.clearContent()" title="清空当月全部内容排期">🗑 清空</button>` : ''}
       <input type="month" value="${monthStr}" style="width:150px" onchange="App.ui.contentMonth=this.value;App.renderView()">
       <select style="width:120px" onchange="App.ui.contentFType=this.value;App.renderView()">
         <option value="">全部类型</option>
@@ -150,7 +151,8 @@ App.renderContentDay = function(){
         <button class="btn sm" onclick="App.undoContent()" ${!App.canUndo('content')?'disabled':''} title="撤销上次操作">↶ 撤销</button>
         <button class="btn sm" onclick="App.redoContent()" ${!App.canRedo('content')?'disabled':''} title="重做">↷ 重做</button>
         <button class="btn sm" onclick="App.resetContent()" ${!App.canReset('content')?'disabled':''} title="重置到进入页面时的状态">↺ 重置</button>
-      </div>` : ''}
+      </div>
+      <button class="btn sm danger" onclick="App.clearContent()" title="清空当日全部内容排期">🗑 清空</button>` : ''}
       <span class="badge ${type}" style="pointer-events:none">${type === 'match' ? '比赛日' : '休赛日'}${info && info.manual ? '·手' : ''}</span>
       <span class="hint">${items.length} 条内容 · ${items.filter(c=>!c.assigneeId&&c.status!=='cancelled').length} 条未分配</span>
     </div>
@@ -249,4 +251,27 @@ App.resetContent = function(){
     App.toast('已重置到初始状态', 'ok', 2000);
     App.renderView();
   }
+};
+
+App.clearContent = function(){
+  const mode = App.ui.contentView || 'month';
+  let items, label, filterFn;
+  if(mode === 'day'){
+    const ds = App.ui.contentDay || D.today();
+    items = App.state.content.filter(c => c.date === ds);
+    label = D.dateCN(ds);
+    filterFn = c => c.date !== ds;
+  } else {
+    const monthStr = App.ui.contentMonth || D.today().slice(0, 7);
+    items = App.state.content.filter(c => c.date.slice(0,7) === monthStr);
+    label = monthStr.replace('-','年') + '月';
+    filterFn = c => c.date.slice(0,7) !== monthStr;
+  }
+  if(!items.length){ App.toast(label + '没有内容排期数据', 'info'); return; }
+  if(!confirm('确定清空' + label + '的全部内容排期（共 ' + items.length + ' 条）？此操作可通过撤销恢复。')) return;
+  App.pushHistory('content');
+  App.state.content = App.state.content.filter(filterFn);
+  App.save();
+  App.toast(label + '内容排期已清空', 'ok');
+  App.renderView();
 };

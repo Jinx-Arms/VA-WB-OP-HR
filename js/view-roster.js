@@ -69,7 +69,8 @@ function rosterGrid(){
         <button class="btn sm" onclick="App.undoRoster()" ${!App.canUndo('roster')?'disabled':''} title="撤销上次操作">↶ 撤销</button>
         <button class="btn sm" onclick="App.redoRoster()" ${!App.canRedo('roster')?'disabled':''} title="重做">↷ 重做</button>
         <button class="btn sm" onclick="App.resetRoster()" ${!App.canReset('roster')?'disabled':''} title="重置到进入页面时的状态">↺ 重置</button>
-      </div>` : ''}
+      </div>
+      <button class="btn sm danger" onclick="App.clearRoster()" title="清空当前时段全部排班">🗑 清空</button>` : ''}
       <div class="tabs" style="margin:0">
         <div class="tab ${r.mode==='month'?'active':''}" onclick="App.ui.roster.mode='month';App.renderView()">月视图</div>
         <div class="tab ${r.mode==='week'?'active':''}" onclick="App.ui.roster.mode='week';App.renderView()">周视图</div>
@@ -153,6 +154,28 @@ App.resetRoster = function(){
     App.toast('已重置到初始状态', 'ok', 2000);
     App.renderView();
   }
+};
+
+App.clearRoster = function(){
+  const r = App.ui.roster;
+  let days, label;
+  if(r.mode === 'week'){
+    const mon = D.addDays(r.ref, -((D.parse(r.ref).getDay() + 6) % 7));
+    days = []; for(let i=0;i<7;i++) days.push(D.addDays(mon, i));
+    label = '本周';
+  } else {
+    const { y, m } = D.ym(r.ref);
+    days = D.monthDays(y, m);
+    label = y + '年' + m + '月';
+  }
+  const hasShifts = days.some(ds => App.state.shifts[ds] && Object.keys(App.state.shifts[ds]).length);
+  if(!hasShifts){ App.toast('当前' + label + '没有排班数据', 'info'); return; }
+  if(!confirm('确定清空' + label + '全部排班数据？此操作可通过撤销恢复。')) return;
+  App.pushHistory('roster');
+  days.forEach(ds => { delete App.state.shifts[ds]; });
+  App.save();
+  App.toast(label + '排班已清空', 'ok');
+  App.renderView();
 };
 
 App.exportRoster = function(){
