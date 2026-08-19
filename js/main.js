@@ -4,6 +4,8 @@
 
 /* ---------- 弹窗 & 轻提示 ---------- */
 App.modal = function(title, bodyHTML, footHTML){
+  /* 每次打开弹窗前先关闭已有弹窗，避免叠加导致 DOM 重复读取 */
+  App.closeModal();
   const wrap = document.createElement('div');
   wrap.className = 'modal-wrap';
   wrap.innerHTML = `<div class="modal">
