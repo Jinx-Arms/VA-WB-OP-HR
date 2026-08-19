@@ -19,13 +19,15 @@
 const http  = require('http');
 const fs    = require('fs');
 const path  = require('path');
-const { fetchVLRSchedule } = require('./js/vlr-scraper.js');
+const { fetchVLRSchedule, fetchVLRTeams } = require('./js/vlr-scraper.js');
+const { VCT_TEAMS } = require('./js/vct-teams.js');
 
 const PORT = process.env.PORT || 3000;
 const ROOT = __dirname;
 const DATA_DIR    = path.join(ROOT, 'data');
 const STATE_FILE  = path.join(DATA_DIR, 'state.json');
 const FETCH_FILE  = path.join(DATA_DIR, 'fetched-schedule.json');
+const FETCH_TEAMS_FILE = path.join(DATA_DIR, 'fetched-teams.json');
 
 /* =====================================================
  * 存储抽象层
@@ -115,6 +117,7 @@ async function dbDelete(key) {
 function keyToFile(key) {
   if (key === 'state') return STATE_FILE;
   if (key === 'vlr_schedule') return FETCH_FILE;
+  if (key === 'vlr_teams') return FETCH_TEAMS_FILE;
   return path.join(DATA_DIR, key + '.json');
 }
 
@@ -264,6 +267,44 @@ const server = http.createServer(async (req, res) => {
     return;
   }
 
+  /* ---------- API: VLR 战队数据抓取 ---------- */
+  if(p === '/api/teams-fetch') {
+    if(req.method !== 'POST' && req.method !== 'GET') {
+      res.writeHead(405); res.end(); return;
+    }
+    try {
+      const result = await fetchVLRTeams(VCT_TEAMS);
+      await dbSet('vlr_teams', result);
+      const teamCount = Object.keys(result.teams).length;
+      console.log('[VLR Teams] 抓取完成: %d 队, %d 个错误', teamCount, result.errors.length);
+      res.writeHead(200, { 'Content-Type':'application/json; charset=utf-8' });
+      res.end(JSON.stringify(result));
+    } catch(e) {
+      console.error('[VLR Teams] 抓取异常:', e.message);
+      res.writeHead(502, { 'Content-Type':'application/json; charset=utf-8' });
+      res.end(JSON.stringify({ ok:false, error:e.message, teams:{}, errors:[] }));
+    }
+    return;
+  }
+
+  /* ---------- API: 读取 VLR 战队缓存 ---------- */
+  if(p === '/api/teams-cache' && req.method === 'GET') {
+    try {
+      const cached = await dbGet('vlr_teams');
+      if(cached) {
+        res.writeHead(200, { 'Content-Type':'application/json; charset=utf-8' });
+        res.end(JSON.stringify(cached));
+      } else {
+        res.writeHead(200, { 'Content-Type':'application/json; charset=utf-8' });
+        res.end(JSON.stringify({ teams:{}, errors:[], fetchedAt:null }));
+      }
+    } catch(e) {
+      res.writeHead(500, { 'Content-Type':'application/json; charset=utf-8' });
+      res.end(JSON.stringify({ ok:false, error:e.message }));
+    }
+    return;
+  }
+
   /* ---------- 静态资源 ---------- */
   if(req.method === 'GET') {
     serveStatic(req, res, p);
@@ -289,6 +330,7 @@ async function start() {
     if(!USE_DB) {
       console.log(`  数据文件：${STATE_FILE}`);
       console.log(`  赛程缓存：${FETCH_FILE}`);
+      console.log(`  战队缓存：${FETCH_TEAMS_FILE}`);
     }
     console.log(`  按 Ctrl+C 停止\n`);
 
@@ -321,6 +363,16 @@ function scheduleDailyFetch() {
       }
     } catch(e) {
       console.error('[定时] 抓取失败:', e.message);
+    }
+    /* 每日同时抓取战队数据 */
+    try {
+      console.log('[定时] 开始抓取战队数据...');
+      const teamsResult = await fetchVLRTeams(VCT_TEAMS);
+      await dbSet('vlr_teams', teamsResult);
+      const teamCount = Object.keys(teamsResult.teams).length;
+      console.log('[定时] 战队抓取完成: %d 队, %d 个错误', teamCount, teamsResult.errors.length);
+    } catch(e) {
+      console.error('[定时] 战队抓取失败:', e.message);
     }
     scheduleDailyFetch();
   }, ms);

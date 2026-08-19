@@ -185,4 +185,177 @@ async function fetchVLRSchedule(){
   return { days: allDays, errors, fetchedAt: new Date().toISOString() };
 }
 
-module.exports = { fetchVLRSchedule, VLR_EVENTS, parseVLRPage, parseDate, parseTime };
+module.exports = { fetchVLRSchedule, fetchVLRTeams, VLR_EVENTS, parseVLRPage, parseDate, parseTime };
+
+/* =====================================================
+ * VLR 战队页面抓取（roster + 完赛记录）
+ * ===================================================== */
+
+/* ---------- 战队页 URL 构造 ---------- */
+function teamMatchesUrl(vlrId){
+  return `https://www.vlr.gg/team/matches/${vlrId}/?group=completed`;
+}
+function teamPageUrl(vlrId){
+  return `https://www.vlr.gg/team/${vlrId}/`;
+}
+
+/* ---------- 国家旗标 CSS class → ISO 国家码 ---------- */
+const FLAG_MAP = {
+  'mod-flag-us':'us','mod-flag-ca':'ca','mod-flag-br':'br','mod-flag-ar':'ar',
+  'mod-flag-cl':'cl','mod-flag-mx':'mx','mod-flag-co':'co','mod-flag-pe':'pe',
+  'mod-flag-gb':'gb','mod-flag-fi':'fi','mod-flag-se':'se','mod-flag-no':'no',
+  'mod-flag-dk':'dk','mod-flag-de':'de','mod-flag-fr':'fr','mod-flag-es':'es',
+  'mod-flag-it':'it','mod-flag-nl':'nl','mod-flag-pl':'pl','mod-flag-tr':'tr',
+  'mod-flag-ru':'ru','mod-flag-ua':'ua','mod-flag-kr':'kr','mod-flag-jp':'jp',
+  'mod-flag-cn':'cn','mod-flag-th':'th','mod-flag-id':'id','mod-flag-ph':'ph',
+  'mod-flag-vn':'vn','mod-flag-in':'in','mod-flag-au':'au','mod-flag-my':'my',
+  'mod-flag-sg':'sg','mod-flag-tw':'tw','mod-flag-pt':'pt','mod-flag-lt':'lt',
+};
+
+/* ---------- 解析战队页 roster ---------- */
+function parseTeamRoster(html){
+  const players = [];
+  /* VLR roster 区域：wf-card 内 player-row / player-name / flag / role */
+  const rowRegex = /player-row[\s\S]*?<\/div>\s*<\/div>/g;
+  const rows = html.match(rowRegex) || [];
+
+  for(const row of rows){
+    /* 选手名 */
+    const nameMatch = row.match(/player-name[\s\S]*?text-of[^>]*>([\s\S]*?)<\//);
+    const name = nameMatch ? stripTags(nameMatch[1]).trim() : '';
+    if(!name) continue;
+
+    /* 国籍（flag CSS class） */
+    let country = '';
+    const flagMatch = row.match(/mod-flag\s+(\S+)/);
+    if(flagMatch){
+      const flagCls = flagMatch[0].trim();
+      country = FLAG_MAP[flagCls] || '';
+    }
+
+    /* 角色（role 文本） */
+    let role = '';
+    const roleMatch = row.match(/player-role[\s\S]*?>([\s\S]*?)<\//);
+    if(roleMatch){
+      const roleText = stripTags(roleMatch[1]).toLowerCase().trim();
+      if(roleText.includes('igl') || roleText.includes('指挥')) role = 'igl';
+      else if(roleText.includes('duel') || roleText.includes('突破')) role = 'duelist';
+      else if(roleText.includes('init') || roleText.includes('先锋')) role = 'initiator';
+      else if(roleText.includes('controller') || roleText.includes('控场')) role = 'controller';
+      else if(roleText.includes('sentinel') || roleText.includes('哨位')) role = 'sentinel';
+    }
+
+    players.push({
+      id: 'p-' + name.toLowerCase().replace(/[^a-z0-9]/g, ''),
+      name, country: country || 'unknown', role: role || '',
+      joined: '', formerTeams: [], source: 'vlr'
+    });
+  }
+  return players;
+}
+
+/* ---------- 解析战队完赛记录 ---------- */
+function parseTeamMatches(html){
+  const matches = [];
+  /* 按日期标题分割 */
+  const sections = html.split('wf-label mod-large');
+
+  for(let i = 1; i < sections.length; i++){
+    const section = sections[i];
+    const dateText = section.split('</div>')[0];
+    const dateStr = parseDate(stripTags(dateText));
+    if(!dateStr) continue;
+
+    /* 匹配比赛条目 */
+    const matchRegex = /<a\s+href="([^"]+)"[^>]*class="[^"]*wf-module-item match-item[^"]*"[^>]*>([\s\S]*?)<\/a>/g;
+    let m;
+    while((m = matchRegex.exec(section)) !== null){
+      const matchHTML = m[2];
+
+      /* 对手名 */
+      const teamRegex = /match-item-vs-team-name[^>]*>[\s\S]*?text-of[^>]*>([\s\S]*?)<\/div>/g;
+      const teams = [];
+      let tm;
+      while((tm = teamRegex.exec(matchHTML)) !== null){
+        const name = stripTags(tm[1]);
+        if(name) teams.push(name);
+      }
+      if(teams.length < 2) continue;
+
+      /* 比分（score: "2:1"） */
+      const scoreMatch = matchHTML.match(/match-item-vs-team-score[^>]*>[\s\S]*?<div[^>]*>([\s\S]*?)<\/div>/);
+      const score = scoreMatch ? stripTags(scoreMatch[1]).replace(/\s/g,'') : '';
+
+      /* 赛事名 */
+      const eventMatch = matchHTML.match(/match-item-event\s+text-of[^>]*>([\s\S]*?)<\/div>/);
+      const event = eventMatch ? stripTags(eventMatch[1]).trim() : '';
+
+      /* 轮次 */
+      const seriesMatch = matchHTML.match(/match-item-event-series[^>]*>([\s\S]*?)<\/div>/);
+      const stage = seriesMatch ? stripTags(seriesMatch[1]).trim() : '';
+
+      /* BO 赛制 */
+      const bo = detectBO('', stage + ' ' + event);
+
+      /* 胜负（第一队是自己 = win，第二队是对手） */
+      const result = score ? (parseInt(score.split(':')[0]) > parseInt(score.split(':')[1]) ? 'win' : 'loss') : '';
+
+      matches.push({
+        date: dateStr,
+        event,
+        stage,
+        opponent: teams[1],
+        oppShort: teams[1].replace(/\s/g,''),
+        score,
+        result,
+        bo
+      });
+    }
+  }
+  return matches;
+}
+
+/* ---------- 主入口：抓取所有战队数据 ----------
+ * teamList: [{ id, vlrId, name, short }]（vlrId 为空的跳过）
+ * 带限速 800ms 防封禁
+ */
+async function fetchVLRTeams(teamList){
+  const teams = {};
+  const errors = [];
+  const valid = teamList.filter(t => t.vlrId);
+  const skipped = teamList.length - valid.length;
+
+  if(skipped > 0){
+    console.log('[VLR Teams] 跳过 %d 个无 vlrId 的战队', skipped);
+  }
+
+  for(const team of valid){
+    try{
+      /* 先抓 roster 页 */
+      const rosterHtml = await fetchPage(teamPageUrl(team.vlrId));
+      const roster = parseTeamRoster(rosterHtml);
+      await sleep(800);
+
+      /* 再抓完赛记录页 */
+      const matchesHtml = await fetchPage(teamMatchesUrl(team.vlrId));
+      const matches = parseTeamMatches(matchesHtml);
+      await sleep(800);
+
+      teams[team.id] = {
+        name: team.name,
+        vlrId: team.vlrId,
+        roster,
+        matches
+      };
+      console.log('[VLR Teams] %s: roster %d 人, 完赛 %d 场', team.short || team.id, roster.length, matches.length);
+    }catch(e){
+      console.error('[VLR Teams] %s 抓取失败: %s', team.short || team.id, e.message);
+      errors.push({ team: team.short || team.id, error: e.message });
+    }
+  }
+
+  return { teams, errors, fetchedAt: new Date().toISOString() };
+}
+
+/* ---------- 限速辅助 ---------- */
+function sleep(ms){ return new Promise(r => setTimeout(r, ms)); }

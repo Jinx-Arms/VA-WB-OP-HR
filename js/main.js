@@ -99,7 +99,7 @@ App.doLogin = async function(){
   /* 登录成功：会话仅存本设备 localStorage，不写入云端 */
   App.state.user = staff.id;
   App.saveSession(staff.id);
-  App.ui = { rosterTab:'grid', roster:{ mode:'month', ref: D.today() } };
+  App.ui = { rosterTab:'grid', roster:{ mode:'month', ref: D.today() }, story:{ tab:'h2h', matchKey:'' } };
   App.renderShell();
   App.nav(App.can('manage') ? 'dash' : 'mine');
   if(App._autoSyncOn) App.startAutoSync();
@@ -325,6 +325,7 @@ const NAV = [
   { key:'staff',   label:'人员管理',    ico:'👥', admin:true },
   { key:'content', label:'内容排期',    ico:'📝' },
   { key:'assign',  label:'责任分配',    ico:'🎯', admin:true },
+  { key:'story',   label:'看点挖掘',    ico:'🧠' },
   { key:'kb',      label:'知识库',      ico:'📚' },
   { key:'mine',    label:'我的面板',    ico:'🙋', hideForAdmin:false }
 ];
@@ -406,6 +407,7 @@ App.nav = function(key){
   if(key === 'roster'  && !App._history['roster'])  App.initHistory('roster');
   if(key === 'content' && !App._history['content']) App.initHistory('content');
   if(key === 'schedule' && !App._history['schedule']) App.initHistory('schedule');
+  if(key === 'story' && !App._history['story']) App.initHistory('story');
   document.querySelectorAll('.nav-item').forEach(e => e.classList.remove('active'));
   const el = document.getElementById('nav-' + key);
   if(el) el.classList.add('active');
@@ -427,6 +429,7 @@ App.renderView = function(){
   else if(App.currentView === 'content') v.innerHTML = App.renderContent();
   else if(App.currentView === 'assign') v.innerHTML = App.renderAssign();
   else if(App.currentView === 'kb') v.innerHTML = App.renderKB();
+  else if(App.currentView === 'story') v.innerHTML = App.renderStory();
   else if(App.currentView === 'mine') v.innerHTML = App.renderMine();
   else v.innerHTML = App.renderDash();
 };
@@ -636,6 +639,14 @@ App.init = function(){
       ];
       App.save();
     }
+    // 旧数据迁移：补看点挖掘模块字段
+    if(!App.state.teams || !Object.keys(App.state.teams).length){
+      if(typeof VCT_TEAMS_SEED !== 'undefined') App.state.teams = VCT_TEAMS_SEED();
+      else App.state.teams = {};
+      App.save();
+    }
+    if(!App.state.matchups){ App.state.matchups = {}; App.save(); }
+    if(!App.state.highlights){ App.state.highlights = []; App.save(); }
     // 从本设备 localStorage 恢复登录会话（不依赖云端共享数据）
     App.restoreSession();
     if(App.state.user && App.staffById(App.state.user) && App.staffById(App.state.user).status === 'active'){

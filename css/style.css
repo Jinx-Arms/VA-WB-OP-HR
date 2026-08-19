@@ -530,3 +530,120 @@ table.roster{border-collapse:collapse;font-size:12px;width:max-content;min-width
 [data-theme="light"] .kb-tbl td{color:var(--sub)}
 [data-theme="light"] .kb-list li{border-bottom-color:rgba(0,0,0,.05)}
 [data-theme="light"] .kb-nav-item.active{background:rgba(220,48,48,.08)}
+
+/* ====== 看点挖掘 story ====== */
+.st-picker{flex:1;max-width:400px;margin-right:8px}
+.st-h2h-summary{
+  display:grid;grid-template-columns:1fr auto 1fr;gap:0;align-items:center;
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+  padding:20px;margin-bottom:14px
+}
+.st-team-side{text-align:center}
+.st-team-name{font-size:16px;font-weight:700;margin-bottom:4px}
+.st-team-wins{font-size:22px;font-weight:800}
+.st-vs-core{font-family:monospace;font-weight:800;color:var(--accent);text-align:center;padding:0 30px}
+.st-vs-core > div:first-child{font-size:28px}
+.st-trend{display:flex;gap:4px;justify-content:center;margin-top:6px}
+.st-trend .w{color:var(--ok);font-weight:700}
+.st-trend .l{color:var(--danger);font-weight:700}
+
+.st-table{width:100%;border-collapse:collapse;font-size:12.5px;margin-top:8px}
+.st-table th{
+  background:var(--panel2);color:var(--sub);text-align:left;padding:8px 10px;
+  border-bottom:1px solid var(--line);font-size:11.5px;font-weight:600
+}
+.st-table td{padding:8px 10px;border-bottom:1px solid var(--line);color:var(--sub)}
+.st-table tr:hover td{background:var(--panel2)}
+
+.st-key-match{
+  display:grid;grid-template-columns:auto auto 1fr;gap:10px;align-items:center;
+  padding:10px 14px;background:var(--panel2);border-radius:8px;margin-bottom:8px
+}
+.st-key-date{font-size:12px;color:var(--dim)}
+.st-key-score{font-family:monospace;font-weight:700;font-size:16px;color:var(--accent)}
+.st-key-bo{font-size:11px;color:var(--dim);margin-left:4px}
+.st-key-winner{font-size:13px;color:var(--ok)}
+.st-key-stage{font-size:12px;color:var(--sub);grid-column:1/-1}
+
+.st-note{
+  display:flex;justify-content:space-between;align-items:center;gap:10px;
+  padding:8px 12px;background:var(--panel2);border-radius:8px;margin-bottom:6px
+}
+.st-note-text{color:var(--sub);font-size:13px}
+
+.st-roster-grid{display:grid;grid-template-columns:1fr 40px 1fr;gap:8px;margin-top:10px}
+.st-roster-head{font-weight:700;font-size:14px;padding:6px 0}
+.st-player{
+  display:flex;gap:6px;align-items:center;padding:8px 10px;
+  border:1px solid var(--line);border-radius:8px;background:var(--panel);
+  font-size:13px;min-height:38px
+}
+.st-player.linked{border-color:var(--accent2);background:rgba(253,38,89,.06)}
+.st-flag{font-size:10px;color:var(--dim);margin-left:auto;text-transform:uppercase}
+
+.st-link-card{
+  background:var(--panel);border:1px solid var(--line);border-left:3px solid var(--accent);
+  border-radius:0 10px 10px 0;padding:12px 14px;margin-bottom:10px
+}
+.st-link-card.reunion{border-left-color:var(--early)}
+.st-link-card.revenge{border-left-color:var(--accent2)}
+.st-link-card.compatriot{border-left-color:var(--ok)}
+.st-link-card.duel{border-left-color:var(--warn)}
+.st-link-card.manual{border-left-color:var(--late)}
+.st-link-type{font-size:11px;color:var(--dim);margin-bottom:4px;text-transform:uppercase;letter-spacing:1px}
+.st-link-text{font-size:13px;color:var(--txt);line-height:1.6}
+
+.st-tag{
+  display:inline-block;font-size:11px;padding:2px 8px;border-radius:10px;
+  background:rgba(220,48,48,.1);color:var(--accent);border:1px solid rgba(220,48,48,.3);
+  margin:2px 3px 2px 0
+}
+
+.st-hl-card{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+  padding:14px 16px;margin-bottom:12px
+}
+.st-hl-card.approved{border-color:rgba(73,255,211,.35)}
+.st-hl-card.used{border-color:rgba(220,48,48,.35)}
+.st-hl-head{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.st-hl-status{font-size:11px;padding:2px 8px;border-radius:5px;font-weight:600}
+.st-hl-status.draft{background:rgba(229,174,21,.12)}
+.st-hl-status.approved{background:rgba(73,255,211,.12)}
+.st-hl-status.rejected{background:var(--panel2)}
+.st-hl-status.used{background:rgba(220,48,48,.12)}
+.st-hl-date{font-size:12px;color:var(--dim)}
+.st-hl-teams{font-size:13px;font-weight:600;color:var(--sub)}
+.st-hl-title{font-size:15px;font-weight:700;margin:8px 0 6px}
+.st-hl-tags{margin-bottom:8px}
+.st-hl-summary{font-size:13px;color:var(--sub);line-height:1.7}
+.st-hl-actions{display:flex;gap:6px;margin-top:10px}
+
+.st-team-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px;margin-bottom:16px}
+.st-region-head{margin:16px 0 8px;font-size:13px;font-weight:650;color:var(--sub)}
+.st-team-card{
+  background:var(--panel);border:1px solid var(--line);border-radius:10px;
+  padding:12px 14px;transition:border-color .2s
+}
+.st-team-card:hover{border-color:var(--accent)}
+.st-team-card-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:6px}
+.st-team-short{font-weight:800;font-size:16px;color:var(--accent)}
+.st-team-fullname{font-size:12px;color:var(--sub);margin-bottom:4px}
+.st-team-roster-count{font-size:11px;color:var(--dim)}
+.st-src-badge{font-size:10px;padding:1px 6px;border-radius:4px}
+
+/* 编辑弹窗内行 */
+.st-edit-row{display:grid;grid-template-columns:1fr 80px 60px 1fr 30px;gap:6px;margin-bottom:6px;align-items:center}
+.st-edit-row input,.st-edit-row select{font-size:12px;padding:6px 8px}
+
+/* 响应式 */
+@media(max-width:900px){
+  .st-h2h-summary{grid-template-columns:1fr;text-align:center}
+  .st-vs-core{padding:10px 0}
+  .st-roster-grid{grid-template-columns:1fr 30px 1fr;font-size:12px}
+  .st-edit-row{grid-template-columns:1fr 70px 50px 1fr 30px}
+}
+@media(max-width:640px){
+  .st-team-grid{grid-template-columns:repeat(auto-fill,minmax(140px,1fr))}
+  .st-table{font-size:11px}
+  .st-table th,.st-table td{padding:6px}
+}

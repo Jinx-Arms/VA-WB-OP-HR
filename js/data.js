@@ -234,3 +234,48 @@ function fetchRemoteSchedule(rev){
   // Node 环境（无 fetch）直接用模拟
   return fetchRemoteScheduleMock(rev);
 }
+
+/* ---------- 战队数据接口（双模式） ----------
+ * 云端模式（GitHub Pages）→ 读 data/fetched-teams.json（由 GitHub Actions 定时更新）
+ * 本地模式 → 从服务器拉取 VLR 抓取结果，失败返回 null
+ */
+function fetchRemoteTeams(){
+  /* 云端模式：读取 GitHub Actions 提交的静态战队数据文件 */
+  if(typeof window !== 'undefined' && CLOUD.isCloudMode()){
+    return fetch('data/fetched-teams.json')
+      .then(r => r.json())
+      .then(result => {
+        if(!result || !result.teams) return null;
+        return result;
+      })
+      .catch(err => {
+        console.warn('[战队数据] 静态文件加载失败:', err.message);
+        return null;
+      });
+  }
+
+  /* 本地模式：先读缓存，失败再触发抓取 */
+  if(typeof window !== 'undefined' && window.fetch){
+    return fetch('/api/teams-cache')
+      .then(r => r.json())
+      .then(result => {
+        if(!result || !result.teams || !Object.keys(result.teams).length){
+          /* 缓存为空，尝试触发抓取 */
+          return fetch('/api/teams-fetch', { method:'POST' })
+            .then(r => r.json())
+            .then(result => {
+              if(!result || !result.teams) return null;
+              return result;
+            })
+            .catch(() => null);
+        }
+        return result;
+      })
+      .catch(err => {
+        console.warn('[战队数据] 服务器获取失败:', err.message);
+        return null;
+      });
+  }
+
+  return Promise.resolve(null);
+}

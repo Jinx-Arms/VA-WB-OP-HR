@@ -71,7 +71,11 @@ function seedState(){
       { id: 'vct-intl',     label: 'VCT 国际联赛',      keywords: ['VCT 2026', 'VCT'] }
     ],
     content: seedContent(),
-    notifications: []
+    notifications: [],
+    /* 看点挖掘模块 */
+    teams: (typeof VCT_TEAMS_SEED !== 'undefined') ? VCT_TEAMS_SEED() : {},
+    matchups: {},     // key 'a-vs-b' -> {teams, history[], notes[], updatedAt}
+    highlights: []    // [{id, matchKey, date, teams, tags, title, summary, status, edited, ...}]
   };
   return st;
 }
@@ -309,12 +313,24 @@ App._history = {};
 App._snap = function(section){
   if(section === 'roster')  return JSON.parse(JSON.stringify(App.state.shifts));
   if(section === 'content') return JSON.parse(JSON.stringify(App.state.content));
+  if(section === 'schedule') return JSON.parse(JSON.stringify(App.state.scheduleDays));
+  if(section === 'story')  return {
+    teams: JSON.parse(JSON.stringify(App.state.teams)),
+    matchups: JSON.parse(JSON.stringify(App.state.matchups)),
+    highlights: JSON.parse(JSON.stringify(App.state.highlights))
+  };
   return null;
 };
 /* 恢复：将快照写回 state */
 App._restore = function(section, snap){
   if(section === 'roster')  App.state.shifts  = snap;
   if(section === 'content') App.state.content = snap;
+  if(section === 'schedule') App.state.scheduleDays = snap;
+  if(section === 'story'){
+    App.state.teams = snap.teams;
+    App.state.matchups = snap.matchups;
+    App.state.highlights = snap.highlights;
+  }
 };
 
 /* 进入页面时调用，建立 baseline */
