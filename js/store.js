@@ -6,6 +6,7 @@
  * 服务器不可用时自动降级到 localStorage。
  * ===================================================== */
 const LS_KEY = 'vct-ops-hr-v1';  // 降级用 localStorage key
+const SESSION_KEY = 'wb-session';  // 本设备登录会话（各设备独立，不写入云端）
 const DEFAULT_PWD_HASH = 'b5a557a3cd3d0259f4908630a9df88b081cf9a42a56728371ced9f370460ce5c'; // SHA-256('vct2026')
 const App = window.App = { state: null, ui: {}, _serverOK: null, _pendingSave: null };
 
@@ -79,18 +80,42 @@ function seedContent(){
   return arr;
 }
 
+/* ---------- 会话管理（本设备独立，不共享到云端） ---------- */
+App.saveSession = function(staffId){
+  try{ localStorage.setItem(SESSION_KEY, staffId || ''); }catch(e){}
+};
+App.restoreSession = function(){
+  if(!App.state) return;
+  try{
+    const sid = localStorage.getItem(SESSION_KEY);
+    if(sid && App.staffById(sid) && App.staffById(sid).status === 'active'){
+      App.state.user = sid;
+    } else {
+      App.state.user = null;
+    }
+  }catch(e){ App.state.user = null; }
+};
+App.clearSession = function(){
+  try{ localStorage.removeItem(SESSION_KEY); }catch(e){}
+  if(App.state) App.state.user = null;
+};
+
 /* ---------- 持久化 ---------- */
 
-/* 后台异步写入（云端模式 → Supabase，本地模式 → 服务器磁盘 / localStorage） */
+/* 后台异步写入（云端模式 → Supabase，本地模式 → 服务器磁盘 / localStorage）
+ * 注意：user（登录会话）仅存本设备 localStorage，不写入共享存储，避免串号 */
 App.save = function(){
   if(!App.state) return;
-  const json = JSON.stringify(App.state);
+  /* 剥离会话字段：不写入云端/服务器共享存储 */
+  const persistState = Object.assign({}, App.state);
+  delete persistState.user;
+  const json = JSON.stringify(persistState);
 
   /* 云端模式：写入 Supabase */
   if(CLOUD.isCloudMode()){
     if(App._pendingSave) clearTimeout(App._pendingSave);
     App._pendingSave = setTimeout(() => {
-      CLOUD.setState(App.state).then(() => {
+      CLOUD.setState(persistState).then(() => {
         App._serverOK = true;
       }).catch(e => {
         console.warn('[存储] Supabase 保存失败，降级 localStorage:', e.message);
@@ -112,7 +137,7 @@ App.save = function(){
     fetch('/api/state', {
       method:'POST',
       headers:{ 'Content-Type':'application/json' },
-      body: JSON.stringify(App.state)
+      body: json
     }).then(r => { App._serverOK = r.ok; })
       .catch(() => { App._serverOK = false; try{ localStorage.setItem(LS_KEY, json); }catch(e){} })
       .finally(() => { App._pendingSave = null; if(App.updateStorageIndicator) App.updateStorageIndicator(); });
@@ -190,13 +215,17 @@ App.flush = function(){
   }
   if(!App.state) return;
 
+  /* 剥离会话字段，不写入共享存储 */
+  const persistState = Object.assign({}, App.state);
+  delete persistState.user;
+
   /* 云端模式：fetch keepalive 刷写 Supabase */
   if(CLOUD.isCloudMode()){
-    CLOUD.setStateBeacon(App.state);
+    CLOUD.setStateBeacon(persistState);
     return;
   }
 
-  const json = JSON.stringify(App.state);
+  const json = JSON.stringify(persistState);
   if(App._serverOK === false){
     try{ localStorage.setItem(LS_KEY, json); }catch(e){}
     return;

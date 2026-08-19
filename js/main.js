@@ -94,9 +94,9 @@ App.doLogin = async function(){
     return;
   }
 
-  /* 登录成功 */
+  /* 登录成功：会话仅存本设备 localStorage，不写入云端 */
   App.state.user = staff.id;
-  App.save();
+  App.saveSession(staff.id);
   App.ui = { rosterTab:'grid', roster:{ mode:'month', ref: D.today() } };
   App.renderShell();
   App.nav(App.can('manage') ? 'dash' : 'mine');
@@ -160,8 +160,7 @@ App.closeUserMenu = function(){
 
 App.logout = function(){
   App.closeUserMenu();
-  App.state.user = null;
-  App.save();
+  App.clearSession();
   App.closeModal();
   App.renderLogin();
 };
@@ -439,6 +438,8 @@ App.init = function(){
     if(App.state && App.state.staff){
       if(migrateAuth(App.state.staff)) App.save();
     }
+    // 从本设备 localStorage 恢复登录会话（不依赖云端共享数据）
+    App.restoreSession();
     if(App.state.user && App.staffById(App.state.user) && App.staffById(App.state.user).status === 'active'){
       App.renderShell();
       App.nav(App.can('manage') ? 'dash' : 'mine');
