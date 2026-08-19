@@ -286,9 +286,58 @@ App.getDefaultContentTemplate = function(){
   ];
 };
 
+/* 扫描全部赛程，按赛事名 + 阶段前缀分组比赛日
+ * 返回: { eventName: { days:[], stages: { stagePrefix: [] } } } */
+App._getEventGroups = function(){
+  const days = App.state.scheduleDays;
+  const map = {};
+  for(const ds of Object.keys(days)){
+    const info = days[ds];
+    if(!info || info.type !== 'match' || !info.matches || !info.matches.length) continue;
+    const firstName = info.matches[0].name || '';
+    let event;
+    if(firstName.startsWith(CN_LEAGUE))      event = CN_LEAGUE;
+    else if(firstName.startsWith(INTL_EVENT)) event = INTL_EVENT;
+    else if(firstName.startsWith(LEAGUE))     event = LEAGUE;
+    else                                       event = '其他赛事';
+    const stage = info.matches[0].stage || '';
+    const stagePrefix = stage.split('·')[0] || '未分类';
+    if(!map[event]) map[event] = { days: [], stages: {} };
+    map[event].days.push(ds);
+    if(!map[event].stages[stagePrefix]) map[event].stages[stagePrefix] = [];
+    map[event].stages[stagePrefix].push(ds);
+  }
+  for(const ev of Object.keys(map)){
+    map[ev].days.sort();
+    for(const sp of Object.keys(map[ev].stages)) map[ev].stages[sp].sort();
+  }
+  return map;
+};
+
+/* 根据下拉选项值获取目标比赛日列表
+ * scope 格式: "month" | "event:EventName" | "event:EventName|StagePrefix" */
+App._getTargetDays = function(scope){
+  if(scope === 'month'){
+    const monthStr = App.ui.contentMonth || D.today().slice(0, 7);
+    return Object.keys(App.state.scheduleDays)
+      .filter(ds => ds.slice(0,7) === monthStr && App.state.scheduleDays[ds].type === 'match')
+      .sort();
+  }
+  if(scope && scope.indexOf('event:') === 0){
+    const rest = scope.slice(6);
+    const idx = rest.indexOf('|');
+    const ev  = idx >= 0 ? rest.slice(0, idx) : rest;
+    const sp  = idx >= 0 ? rest.slice(idx + 1) : null;
+    const groups = App._getEventGroups();
+    if(!groups[ev]) return [];
+    if(sp && groups[ev].stages[sp]) return groups[ev].stages[sp];
+    return groups[ev].days;
+  }
+  return [];
+};
+
 App.contentTemplateOpen = function(){
   if(!App.can('manage')) return;
-  /* 兼容旧数据：无模板时初始化默认模板 */
   if(!App.state.contentTemplate || !App.state.contentTemplate.length){
     App.state.contentTemplate = App.getDefaultContentTemplate();
   }
@@ -298,9 +347,20 @@ App.contentTemplateOpen = function(){
 App._renderContentTemplateModal = function(){
   const tpl = App.state.contentTemplate;
   const monthStr = App.ui.contentMonth || D.today().slice(0, 7);
-  const matchDays = Object.keys(App.state.scheduleDays)
+  const monthMatchDays = Object.keys(App.state.scheduleDays)
     .filter(ds => ds.slice(0,7) === monthStr && App.state.scheduleDays[ds].type === 'match')
     .sort();
+  const eventGroups = App._getEventGroups();
+
+  /* 构建部署范围下拉选项 */
+  let scopeOpts = `<option value="month">当月比赛日（${monthMatchDays.length} 天）</option>`;
+  for(const ev of Object.keys(eventGroups)){
+    const g = eventGroups[ev];
+    scopeOpts += `<option value="event:${ev}">${ev} — 全部（${g.days.length} 天）</option>`;
+    for(const sp of Object.keys(g.stages)){
+      scopeOpts += `<option value="event:${ev}|${sp}">　 └ ${sp}（${g.stages[sp].length} 天）</option>`;
+    }
+  }
 
   const rowsHTML = tpl.map((item, i) => `
     <div class="tpl-row" data-idx="${i}">
@@ -314,27 +374,47 @@ App._renderContentTemplateModal = function(){
 
   App.modal('比赛日内容模板', `
     <div class="hint" style="margin-bottom:12px;line-height:1.7">
-      定义比赛日的标准内容排期模板。点击「一键部署」可将模板批量应用到当月所有比赛日，
+      定义比赛日的标准内容排期模板。选择部署范围后点击「一键部署」可将模板批量应用到对应比赛日，
       无需逐条手动添加。模板会自动保存到云端，所有管理员共享。
     </div>
     <div style="font-size:13px;font-weight:600;margin-bottom:8px;color:var(--sub)">模板条目（每条 = 每个比赛日发布的一条内容）</div>
     <div id="tpl-rows">${rowsHTML}</div>
     <button class="btn sm" onclick="App.contentTemplateAddRow()" style="margin-top:4px">+ 添加模板项</button>
     <div style="border-top:1px solid var(--line);margin:16px 0;padding-top:14px">
-      <div style="font-size:13px;font-weight:600;margin-bottom:10px;color:var(--sub)">部署选项</div>
+      <div style="font-size:13px;font-weight:600;margin-bottom:10px;color:var(--sub)">部署范围与选项</div>
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:10px">
+        <label style="font-size:13px;white-space:nowrap">目标范围</label>
+        <select id="tpl-scope" style="flex:1;min-width:200px" onchange="App._updateTplScopeInfo()">
+          ${scopeOpts}
+        </select>
+      </div>
       <label style="display:flex;align-items:center;gap:8px;cursor:pointer;font-size:13px">
         <input type="checkbox" id="tpl-overwrite" checked style="width:16px;height:16px">
         覆盖已有内容（取消勾选则仅向无内容的空白比赛日部署）
       </label>
-      <div class="hint" style="margin-top:8px">
-        当月（${monthStr.replace('-','年')}月）共有 <b style="color:var(--txt)">${matchDays.length}</b> 个比赛日${matchDays.length ? '：' + matchDays.slice(0,5).map(d=>D.dateCN(d)).join('、') + (matchDays.length>5?' 等':'') : ''}
-      </div>
+      <div class="hint" id="tpl-scope-info" style="margin-top:8px"></div>
     </div>
   `, `
     <button class="btn" onclick="App.closeModal()">取消</button>
     <button class="btn" onclick="App.contentTemplateSave()">💾 保存模板</button>
-    <button class="btn primary" onclick="App.contentTemplateDeploy()">⚡ 一键部署到当月比赛日</button>
+    <button class="btn primary" onclick="App.contentTemplateDeploy()">⚡ 一键部署</button>
   `);
+  /* 初始化范围信息 */
+  App._updateTplScopeInfo();
+};
+
+/* 更新部署范围提示信息 */
+App._updateTplScopeInfo = function(){
+  const sel = document.getElementById('tpl-scope');
+  if(!sel) return;
+  const days = App._getTargetDays(sel.value);
+  const info = document.getElementById('tpl-scope-info');
+  if(info){
+    info.innerHTML = days.length
+      ? `目标范围共 <b style="color:var(--txt)">${days.length}</b> 个比赛日：` +
+        days.slice(0,6).map(d => D.dateCN(d)).join('、') + (days.length > 6 ? ' 等' : '')
+      : '所选范围内没有比赛日';
+  }
 };
 
 /* 从弹窗 DOM 读取当前编辑的模板 */
@@ -383,30 +463,34 @@ App.contentTemplateDeploy = function(){
   if(!tpl.length){ App.toast('模板不能为空', 'err'); return; }
   if(tpl.some(t => !t.title)){ App.toast('存在未填写标题的模板项', 'err'); return; }
 
-  const monthStr = App.ui.contentMonth || D.today().slice(0, 7);
-  const matchDays = Object.keys(App.state.scheduleDays)
-    .filter(ds => ds.slice(0,7) === monthStr && App.state.scheduleDays[ds].type === 'match')
-    .sort();
-  if(!matchDays.length){ App.toast('当月没有比赛日', 'info'); return; }
+  const scopeSel = document.getElementById('tpl-scope');
+  const scope = scopeSel ? scopeSel.value : 'month';
+  const targetDays = App._getTargetDays(scope);
+  if(!targetDays.length){ App.toast('所选范围内没有比赛日', 'info'); return; }
 
   const overwrite = document.getElementById('tpl-overwrite').checked;
-  let targetDays = matchDays;
+  let deployDays = targetDays;
   if(!overwrite){
-    targetDays = matchDays.filter(ds => !App.state.content.some(c => c.date === ds));
+    deployDays = targetDays.filter(ds => !App.state.content.some(c => c.date === ds));
   }
-  if(!targetDays.length){
+  if(!deployDays.length){
     App.toast(overwrite ? '没有可部署的比赛日' : '所有比赛日已有内容，取消勾选「覆盖」可跳过已有内容的日期', 'info', 5000);
     return;
   }
 
-  const totalNew = targetDays.length * tpl.length;
+  const totalNew = deployDays.length * tpl.length;
   let removedCount = 0;
   if(overwrite){
-    removedCount = App.state.content.filter(c => targetDays.includes(c.date)).length;
+    removedCount = App.state.content.filter(c => deployDays.includes(c.date)).length;
   }
 
-  const msg = `确认向 ${targetDays.length} 个比赛日部署模板？\n\n` +
-    `每 ${tpl.length} 条模板 × ${targetDays.length} 天 = ${totalNew} 条新内容` +
+  const scopeLabel = scopeSel
+    ? scopeSel.options[scopeSel.selectedIndex].text.replace(/（\d+ 天）/, '').trim()
+    : '所选范围';
+
+  const msg = `确认向 ${deployDays.length} 个比赛日部署模板？\n\n` +
+    `部署范围：${scopeLabel}\n` +
+    `每 ${tpl.length} 条模板 × ${deployDays.length} 天 = ${totalNew} 条新内容` +
     (overwrite && removedCount ? `\n覆盖模式：将先删除这些比赛日的 ${removedCount} 条已有内容` : '') +
     `\n\n此操作可通过 ↶ 撤销恢复。`;
   if(!confirm(msg)) return;
@@ -419,11 +503,11 @@ App.contentTemplateDeploy = function(){
 
   /* 覆盖模式：先删除目标比赛日的已有内容 */
   if(overwrite){
-    App.state.content = App.state.content.filter(c => !targetDays.includes(c.date));
+    App.state.content = App.state.content.filter(c => !deployDays.includes(c.date));
   }
 
   /* 部署模板 */
-  for(const ds of targetDays){
+  for(const ds of deployDays){
     for(const item of tpl){
       App.state.content.push({
         id: App.uid('C'),
@@ -440,6 +524,6 @@ App.contentTemplateDeploy = function(){
 
   App.save();
   App.closeModal();
-  App.toast('已部署模板到 ' + targetDays.length + ' 个比赛日，新增 ' + totalNew + ' 条内容', 'ok', 5000);
+  App.toast('已部署模板到 ' + deployDays.length + ' 个比赛日（' + scopeLabel + '），新增 ' + totalNew + ' 条内容', 'ok', 5000);
   App.renderView();
 };
