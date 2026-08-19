@@ -98,6 +98,8 @@ a{color:var(--accent);text-decoration:none}
 .btn.danger:hover{background:rgba(253,38,89,.1)}
 .btn.sm{padding:4px 10px;font-size:12px;border-radius:7px}
 .btn:disabled{opacity:.45;cursor:not-allowed}
+.undo-group{display:flex;gap:4px;align-items:center;padding:2px;background:var(--panel2);border-radius:9px}
+.undo-group .btn.sm{padding:4px 8px;font-size:12px}
 .icon-btn{color:var(--sub);padding:4px 8px;border-radius:7px}
 .icon-btn:hover{background:var(--panel2);color:var(--txt)}
 

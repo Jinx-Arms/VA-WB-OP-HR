@@ -183,6 +183,7 @@ App.manualSync = async function(){
 
     /* 从云端重新加载最新数据 */
     await App.load();
+    App.clearHistory();
 
     /* 恢复本设备会话 */
     App.restoreSession();
@@ -244,6 +245,7 @@ App._doAutoSync = async function(){
     /* 4. 有变化 → 更新状态、恢复会话、重新渲染 */
     const prevView = App.currentView;
     App.state = remote;
+    App.clearHistory();  /* 云端数据已更新，清除本地撤销/重做历史 */
     App.restoreSession();
 
     /* 5. 检查登录态 */
@@ -391,6 +393,9 @@ App.nav = function(key){
   const item = NAV.find(n => n.key === key);
   if(item && item.admin && !App.can('manage')) key = 'mine';
   App.currentView = key;
+  /* 切换页面或历史被清空时，初始化对应的历史快照 */
+  if(key === 'roster'  && !App._history['roster'])  App.initHistory('roster');
+  if(key === 'content' && !App._history['content']) App.initHistory('content');
   document.querySelectorAll('.nav-item').forEach(e => e.classList.remove('active'));
   const el = document.getElementById('nav-' + key);
   if(el) el.classList.add('active');

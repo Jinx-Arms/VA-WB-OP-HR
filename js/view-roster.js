@@ -65,6 +65,11 @@ function rosterGrid(){
   return `
   <div class="card">
     <div class="toolbar">
+      ${isAdmin ? `<div class="undo-group">
+        <button class="btn sm" onclick="App.undoRoster()" ${!App.canUndo('roster')?'disabled':''} title="撤销上次操作">↶ 撤销</button>
+        <button class="btn sm" onclick="App.redoRoster()" ${!App.canRedo('roster')?'disabled':''} title="重做">↷ 重做</button>
+        <button class="btn sm" onclick="App.resetRoster()" ${!App.canReset('roster')?'disabled':''} title="重置到进入页面时的状态">↺ 重置</button>
+      </div>` : ''}
       <div class="tabs" style="margin:0">
         <div class="tab ${r.mode==='month'?'active':''}" onclick="App.ui.roster.mode='month';App.renderView()">月视图</div>
         <div class="tab ${r.mode==='week'?'active':''}" onclick="App.ui.roster.mode='week';App.renderView()">周视图</div>
@@ -103,6 +108,7 @@ function roleCN(role){
 App.cycleShift = function(date, staffId){
   const st = App.state;
   if(!App.can('manage')) return;
+  App.pushHistory('roster');
   st.shifts[date] = st.shifts[date] || {};
   const cur = st.shifts[date][staffId];
   const next = cur === 'early' ? 'late' : cur === 'late' ? undefined : 'early';
@@ -115,6 +121,7 @@ App.cycleShift = function(date, staffId){
 App.regenSchedule = function(){
   const r = App.ui.roster;
   if(!confirm('一键智能排班将重新生成该时段全部班表（手动调整会被覆盖，已批准休假者自动排除）。确定继续？')) return;
+  App.pushHistory('roster');
   if(r.mode === 'week'){
     // 周视图：对其所在月执行智能排班（覆盖该周），保证算法连贯
     const mon = D.addDays(r.ref, -((D.parse(r.ref).getDay() + 6) % 7));
@@ -126,6 +133,26 @@ App.regenSchedule = function(){
   }
   App.toast('智能排班已生成：比赛日 4 人 / 休赛日 2 人，休假者已排除，早/晚班均衡轮转', 'ok', 5000);
   App.renderView();
+};
+
+App.undoRoster = function(){
+  if(App.undoSection('roster')){
+    App.toast('已撤销', 'info', 1500);
+    App.renderView();
+  }
+};
+App.redoRoster = function(){
+  if(App.redoSection('roster')){
+    App.toast('已重做', 'info', 1500);
+    App.renderView();
+  }
+};
+App.resetRoster = function(){
+  if(!confirm('确定重置到进入排班页面时的状态？当前所有未同步的排班修改将被撤销。')) return;
+  if(App.resetSection('roster')){
+    App.toast('已重置到初始状态', 'ok', 2000);
+    App.renderView();
+  }
 };
 
 App.exportRoster = function(){

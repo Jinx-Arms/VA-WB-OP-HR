@@ -56,6 +56,11 @@ App.renderContentMonth = function(){
   </div>
   <div class="card">
     <div class="toolbar">
+      ${isAdmin ? `<div class="undo-group">
+        <button class="btn sm" onclick="App.undoContent()" ${!App.canUndo('content')?'disabled':''} title="撤销上次操作">↶ 撤销</button>
+        <button class="btn sm" onclick="App.redoContent()" ${!App.canRedo('content')?'disabled':''} title="重做">↷ 重做</button>
+        <button class="btn sm" onclick="App.resetContent()" ${!App.canReset('content')?'disabled':''} title="重置到进入页面时的状态">↺ 重置</button>
+      </div>` : ''}
       <input type="month" value="${monthStr}" style="width:150px" onchange="App.ui.contentMonth=this.value;App.renderView()">
       <select style="width:120px" onchange="App.ui.contentFType=this.value;App.renderView()">
         <option value="">全部类型</option>
@@ -141,6 +146,11 @@ App.renderContentDay = function(){
       <button class="btn sm" onclick="App.ui.contentDay=D.today();App.renderView()">今天</button>
       <input type="date" value="${ds}" style="width:150px" onchange="App.ui.contentDay=this.value;App.renderView()">
       <div class="spacer"></div>
+      ${isAdmin ? `<div class="undo-group">
+        <button class="btn sm" onclick="App.undoContent()" ${!App.canUndo('content')?'disabled':''} title="撤销上次操作">↶ 撤销</button>
+        <button class="btn sm" onclick="App.redoContent()" ${!App.canRedo('content')?'disabled':''} title="重做">↷ 重做</button>
+        <button class="btn sm" onclick="App.resetContent()" ${!App.canReset('content')?'disabled':''} title="重置到进入页面时的状态">↺ 重置</button>
+      </div>` : ''}
       <span class="badge ${type}" style="pointer-events:none">${type === 'match' ? '比赛日' : '休赛日'}${info && info.manual ? '·手' : ''}</span>
       <span class="hint">${items.length} 条内容 · ${items.filter(c=>!c.assigneeId&&c.status!=='cancelled').length} 条未分配</span>
     </div>
@@ -186,6 +196,7 @@ App.contentSave = function(id){
   const date = document.getElementById('cf-date').value;
   if(!title){ App.toast('请填写标题', 'err'); return; }
   if(!date){ App.toast('请选择日期', 'err'); return; }
+  App.pushHistory('content');
   const data = {
     title,
     date,
@@ -211,9 +222,31 @@ App.contentSave = function(id){
 };
 
 App.contentDelete = function(id){
+  App.pushHistory('content');
   App.state.content = App.state.content.filter(c => c.id !== id);
   App.save();
   App.closeModal();
   App.toast('内容已删除', 'ok');
   App.renderView();
+};
+
+/* ---------- 撤销 / 重做 / 重置 ---------- */
+App.undoContent = function(){
+  if(App.undoSection('content')){
+    App.toast('已撤销', 'info', 1500);
+    App.renderView();
+  }
+};
+App.redoContent = function(){
+  if(App.redoSection('content')){
+    App.toast('已重做', 'info', 1500);
+    App.renderView();
+  }
+};
+App.resetContent = function(){
+  if(!confirm('确定重置到进入内容排期时的状态？当前所有未同步的内容修改将被撤销。')) return;
+  if(App.resetSection('content')){
+    App.toast('已重置到初始状态', 'ok', 2000);
+    App.renderView();
+  }
 };

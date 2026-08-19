@@ -267,6 +267,86 @@ App.dayType = function(date){
   return info ? info.type : 'rest';
 };
 
+/* ---------- 撤销 / 重做 / 重置（按页面分区） ----------
+ * 每个页面（roster/content）维护独立的历史栈：
+ *   baseline: 进入页面时的快照（重置目标）
+ *   undo[]:   每次修改前推入，撤销时弹出
+ *   redo[]:   撤销时推入，重做时弹出
+ */
+App._history = {};
+
+/* 快照：深拷贝当前页面的核心数据 */
+App._snap = function(section){
+  if(section === 'roster')  return JSON.parse(JSON.stringify(App.state.shifts));
+  if(section === 'content') return JSON.parse(JSON.stringify(App.state.content));
+  return null;
+};
+/* 恢复：将快照写回 state */
+App._restore = function(section, snap){
+  if(section === 'roster')  App.state.shifts  = snap;
+  if(section === 'content') App.state.content = snap;
+};
+
+/* 进入页面时调用，建立 baseline */
+App.initHistory = function(section){
+  App._history[section] = { undo: [], redo: [], baseline: App._snap(section) };
+};
+
+/* 修改前调用：推入当前状态到 undo 栈，清空 redo */
+App.pushHistory = function(section){
+  if(!App._history[section]) App.initHistory(section);
+  const h = App._history[section];
+  h.undo.push(App._snap(section));
+  h.redo = [];
+  if(h.undo.length > 50) h.undo.shift();
+};
+
+/* 撤销：返回 true 表示成功 */
+App.undoSection = function(section){
+  const h = App._history[section];
+  if(!h || !h.undo.length) return false;
+  h.redo.push(App._snap(section));
+  App._restore(section, h.undo.pop());
+  App.save();
+  return true;
+};
+
+/* 重做：返回 true 表示成功 */
+App.redoSection = function(section){
+  const h = App._history[section];
+  if(!h || !h.redo.length) return false;
+  h.undo.push(App._snap(section));
+  App._restore(section, h.redo.pop());
+  App.save();
+  return true;
+};
+
+/* 重置：恢复到 baseline（进入页面时的状态） */
+App.resetSection = function(section){
+  const h = App._history[section];
+  if(!h || !h.baseline) return false;
+  const cur = App._snap(section);
+  if(JSON.stringify(cur) === JSON.stringify(h.baseline)) return false;
+  h.undo.push(cur);
+  h.redo = [];
+  App._restore(section, JSON.parse(JSON.stringify(h.baseline)));
+  App.save();
+  return true;
+};
+
+/* 清空历史（auto-sync 更新数据后调用） */
+App.clearHistory = function(){
+  App._history = {};
+};
+
+App.canUndo  = function(s){ const h = App._history[s]; return !!(h && h.undo.length); };
+App.canRedo  = function(s){ const h = App._history[s]; return !!(h && h.redo.length); };
+App.canReset = function(s){
+  const h = App._history[s];
+  if(!h || !h.baseline) return false;
+  return JSON.stringify(App._snap(s)) !== JSON.stringify(h.baseline);
+};
+
 /* ---------- 通知 ---------- */
 App.notify = function(userId, text){
   App.state.notifications.unshift({ id: App.uid('N'), userId, text, time: Date.now(), read: false });
