@@ -214,15 +214,23 @@ function leavePanel(){
   const row = (l, act) => {
     const s = App.staffById(l.staffId);
     const days = D.parse(l.end).getDate() - D.parse(l.start).getDate() + 1;
+    let actionHTML = '';
+    if(act){
+      actionHTML = `<td>
+        <button class="btn sm primary" onclick="App.decideLeave('${l.id}', true)">批准</button>
+        <button class="btn sm danger" onclick="App.decideLeave('${l.id}', false)">驳回</button></td>`;
+    } else if(l.status === 'approved' && App.can('manage')){
+      actionHTML = `<td><button class="btn sm warn" onclick="App.revokeLeave('${l.id}')" title="撤回审批，休假恢复为待审批状态">↶ 撤回</button></td>`;
+    } else {
+      actionHTML = `<td>—</td>`;
+    }
     return `<tr>
       <td>${s ? s.name : '—'}</td>
       <td>${l.start} ~ ${l.end}<span class="hint">（${days} 天）</span></td>
       <td style="white-space:normal;max-width:220px">${l.reason}</td>
       <td>${new Date(l.createdAt).toLocaleString('zh-CN', {month:'2-digit', day:'2-digit', hour:'2-digit', minute:'2-digit'})}</td>
       <td><span class="badge st-${l.status}">${{pending:'待审批',approved:'已批准',rejected:'已驳回'}[l.status]}</span></td>
-      ${act ? `<td>
-        <button class="btn sm primary" onclick="App.decideLeave('${l.id}', true)">批准</button>
-        <button class="btn sm danger" onclick="App.decideLeave('${l.id}', false)">驳回</button></td>` : ''}
+      ${actionHTML}
     </tr>`;
   };
   return `
@@ -237,7 +245,7 @@ function leavePanel(){
   <div class="card">
     <h3><span class="left">审批记录</span></h3>
     ${history.length ? `<div class="tbl-wrap"><table class="tbl">
-      <thead><tr><th>申请人</th><th>休假日期</th><th>事由</th><th>提交时间</th><th>状态</th></tr></thead>
+      <thead><tr><th>申请人</th><th>休假日期</th><th>事由</th><th>提交时间</th><th>状态</th><th>操作</th></tr></thead>
       <tbody>${history.map(l => row(l, false)).join('')}</tbody></table></div>`
       : '<div class="empty">暂无记录</div>'}
   </div>`;
@@ -247,6 +255,7 @@ App.decideLeave = function(id, ok){
   const st = App.state;
   const l = st.leave.find(x => x.id === id);
   if(!l) return;
+  App.pushHistory('roster');
   l.status = ok ? 'approved' : 'rejected';
   l.decidedBy = st.user; l.decidedAt = Date.now();
   if(ok){
@@ -267,7 +276,27 @@ App.decideLeave = function(id, ok){
   App.renderView();
 };
 
-/* ---------- 冲突检测 ---------- */
+/* 撤回已批准的休假审批 */
+App.revokeLeave = function(id){
+  const st = App.state;
+  const l = st.leave.find(x => x.id === id);
+  if(!l || l.status !== 'approved') return;
+  const s = App.staffById(l.staffId);
+  const name = s ? s.name : '该成员';
+  const days = D.parse(l.end).getDate() - D.parse(l.start).getDate() + 1;
+  if(!confirm(`确认撤回 ${name} 的休假审批？\n\n` +
+    `休假日期：${l.start} ~ ${l.end}（${days} 天）\n` +
+    `撤回后该申请将恢复为「待审批」状态，休假期间的排班不会自动恢复，\n` +
+    `可点击「一键智能排班」重新生成。`)) return;
+  App.pushHistory('roster');
+  l.status = 'pending';
+  l.decidedBy = null;
+  l.decidedAt = null;
+  App.notify(l.staffId, `你的休假申请（${l.start} ~ ${l.end}）审批已被撤回，恢复为待审批状态，如有疑问请联系运营主管`);
+  App.save();
+  App.toast('已撤回审批，休假恢复为待审批状态。排班需手动或智能排班补足', 'ok', 5000);
+  App.renderView();
+};
 function conflictPanel(){
   const r = App.ui.roster || { ref: D.today() };
   const { y, m } = D.ym(r.ref);
