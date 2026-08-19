@@ -351,6 +351,8 @@ App.contentTemplateOpen = function(){
 };
 
 App._renderContentTemplateModal = function(){
+  /* 先关闭旧弹窗，避免叠加导致 querySelectorAll 读取到多份重复数据 */
+  App.closeModal();
   const tpl = App.state.contentTemplate;
   const monthStr = App.ui.contentMonth || D.today().slice(0, 7);
   const monthMatchDays = Object.keys(App.state.scheduleDays)
