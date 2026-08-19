@@ -1,0 +1,666 @@
+{
+  "days": {
+    "2026-07-09": {
+      "type": "match",
+      "manual": false,
+      "matches": [
+        {
+          "time": "16:00",
+          "name": "VCT CN 2026 第二赛段 第1周",
+          "stage": "第1周",
+          "bo": "BO3",
+          "teams": "Wolves Esports vs Titan Esports Club"
+        },
+        {
+          "time": "18:20",
+          "name": "VCT CN 2026 第二赛段 第1周",
+          "stage": "第1周",
+          "bo": "BO3",
+          "teams": "Dragon Ranger Gaming vs Bilibili Gaming"
+        }
+      ]
+    },
+    "2026-07-10": {
+      "type": "match",
+      "manual": false,
+      "matches": [
+        {
+          "time": "16:00",
+          "name": "VCT CN 2026 第二赛段 第1周",
+          "stage": "第1周",
+          "bo": "BO3",
+          "teams": "FunPlus Phoenix vs Trace Esports"
+        },
+        {
+          "time": "18:10",
+          "name": "VCT CN 2026 第二赛段 第1周",
+          "stage": "第1周",
+          "bo": "BO3",
+          "teams": "JD Gaming vs TYLOO"
+        }
+      ]
+    },
+    "2026-07-11": {
+      "type": "match",
+      "manual": false,
+      "matches": [
+        {
+          "time": "16:00",
+          "name": "VCT CN 2026 第二赛段 第1周",
+          "stage": "第1周",
+          "bo": "BO3",
+          "teams": "Dragon Ranger Gaming vs Titan Esports Club"
+        },
+        {
+          "time": "19:35",
+          "name": "VCT CN 2026 第二赛段 第1周",
+          "stage": "第1周",
+          "bo": "BO3",
+          "teams": "Bilibili Gaming vs Wolves Esports"
+        }
+      ]
+    },
+    "2026-07-12": {
+      "type": "match",
+      "manual": false,
+      "matches": [
+        {
+          "time": "16:00",
+          "name": "VCT CN 2026 第二赛段 第1周",
+          "stage": "第1周",
+          "bo": "BO3",
+          "teams": "Nova Esports vs FunPlus Phoenix"
+        },
+        {
+          "time": "18:10",
+          "name": "VCT CN 2026 第二赛段 第1周",
+          "stage": "第1周",
+          "bo": "BO3",
+          "teams": "TYLOO vs Trace Esports"
+        }
+      ]
+    },
+    "2026-07-14": {
+      "type": "match",
+      "manual": false,
+      "matches": [
+        {
+          "time": "17:00",
+          "name": "VCT CN 2026 第二赛段 第2周",
+          "stage": "第2周",
+          "bo": "BO3",
+          "teams": "Wolves Esports vs All Gamers"
+        },
+        {
+          "time": "19:15",
+          "name": "VCT CN 2026 第二赛段 第2周",
+          "stage": "第2周",
+          "bo": "BO3",
+          "teams": "Xi Lai Gaming vs Titan Esports Club"
+        }
+      ]
+    },
+    "2026-07-15": {
+      "type": "match",
+      "manual": false,
+      "matches": [
+        {
+          "time": "17:00",
+          "name": "VCT CN 2026 第二赛段 第2周",
+          "stage": "第2周",
+          "bo": "BO3",
+          "teams": "JD Gaming vs FunPlus Phoenix"
+        },
+        {
+          "time": "19:20",
+          "name": "VCT CN 2026 第二赛段 第2周",
+          "stage": "第2周",
+          "bo": "BO3",
+          "teams": "EDward Gaming vs TYLOO"
+        }
+      ]
+    },
+    "2026-07-16": {
+      "type": "match",
+      "manual": false,
+      "matches": [
+        {
+          "time": "17:00",
+          "name": "VCT CN 2026 第二赛段 第2周",
+          "stage": "第2周",
+          "bo": "BO3",
+          "teams": "All Gamers vs Bilibili Gaming"
+        },
+        {
+          "time": "20:25",
+          "name": "VCT CN 2026 第二赛段 第2周",
+          "stage": "第2周",
+          "bo": "BO3",
+          "teams": "Xi Lai Gaming vs Dragon Ranger Gaming"
+        }
+      ]
+    },
+    "2026-07-17": {
+      "type": "match",
+      "manual": false,
+      "matches": [
+        {
+          "time": "15:00",
+          "name": "VCT CN 2026 第二赛段 第2周",
+          "stage": "第2周",
+          "bo": "BO3",
+          "teams": "Nova Esports vs JD Gaming"
+        },
+        {
+          "time": "18:00",
+          "name": "VCT CN 2026 第二赛段 第2周",
+          "stage": "第2周",
+          "bo": "BO3",
+          "teams": "TYLOO vs FunPlus Phoenix"
+        },
+        {
+          "time": "21:30",
+          "name": "VCT CN 2026 第二赛段 第2周",
+          "stage": "第2周",
+          "bo": "BO3",
+          "teams": "Trace Esports vs EDward Gaming"
+        }
+      ]
+    },
+    "2026-07-18": {
+      "type": "match",
+      "manual": false,
+      "matches": [
+        {
+          "time": "17:00",
+          "name": "VCT CN 2026 第二赛段 第2周",
+          "stage": "第2周",
+          "bo": "BO3",
+          "teams": "Titan Esports Club vs Bilibili Gaming"
+        },
+        {
+          "time": "21:00",
+          "name": "VCT CN 2026 第二赛段 第2周",
+          "stage": "第2周",
+          "bo": "BO3",
+          "teams": "All Gamers vs Xi Lai Gaming"
+        }
+      ]
+    },
+    "2026-07-19": {
+      "type": "match",
+      "manual": false,
+      "matches": [
+        {
+          "time": "15:00",
+          "name": "VCT CN 2026 第二赛段 第2周",
+          "stage": "第2周",
+          "bo": "BO3",
+          "teams": "Trace Esports vs Nova Esports"
+        },
+        {
+          "time": "18:25",
+          "name": "VCT CN 2026 第二赛段 第2周",
+          "stage": "第2周",
+          "bo": "BO3",
+          "teams": "Dragon Ranger Gaming vs Wolves Esports"
+        },
+        {
+          "time": "21:45",
+          "name": "VCT CN 2026 第二赛段 第2周",
+          "stage": "第2周",
+          "bo": "BO3",
+          "teams": "EDward Gaming vs JD Gaming"
+        }
+      ]
+    },
+    "2026-07-20": {
+      "type": "match",
+      "manual": false,
+      "matches": [
+        {
+          "time": "17:00",
+          "name": "VCT CN 2026 第二赛段 第3周",
+          "stage": "第3周",
+          "bo": "BO3",
+          "teams": "Titan Esports Club vs All Gamers"
+        },
+        {
+          "time": "19:25",
+          "name": "VCT CN 2026 第二赛段 第3周",
+          "stage": "第3周",
+          "bo": "BO3",
+          "teams": "Bilibili Gaming vs Xi Lai Gaming"
+        }
+      ]
+    },
+    "2026-07-21": {
+      "type": "match",
+      "manual": false,
+      "matches": [
+        {
+          "time": "17:00",
+          "name": "VCT CN 2026 第二赛段 第3周",
+          "stage": "第3周",
+          "bo": "BO3",
+          "teams": "JD Gaming vs Trace Esports"
+        },
+        {
+          "time": "19:15",
+          "name": "VCT CN 2026 第二赛段 第3周",
+          "stage": "第3周",
+          "bo": "BO3",
+          "teams": "EDward Gaming vs Nova Esports"
+        }
+      ]
+    },
+    "2026-07-22": {
+      "type": "match",
+      "manual": false,
+      "matches": [
+        {
+          "time": "17:00",
+          "name": "VCT CN 2026 第二赛段 第3周",
+          "stage": "第3周",
+          "bo": "BO3",
+          "teams": "Xi Lai Gaming vs Wolves Esports"
+        },
+        {
+          "time": "20:20",
+          "name": "VCT CN 2026 第二赛段 第3周",
+          "stage": "第3周",
+          "bo": "BO3",
+          "teams": "All Gamers vs Dragon Ranger Gaming"
+        }
+      ]
+    },
+    "2026-07-23": {
+      "type": "match",
+      "manual": false,
+      "matches": [
+        {
+          "time": "17:00",
+          "name": "VCT CN 2026 第二赛段 第3周",
+          "stage": "第3周",
+          "bo": "BO3",
+          "teams": "TYLOO vs Nova Esports"
+        },
+        {
+          "time": "19:35",
+          "name": "VCT CN 2026 第二赛段 第3周",
+          "stage": "第3周",
+          "bo": "BO3",
+          "teams": "FunPlus Phoenix vs EDward Gaming"
+        }
+      ]
+    },
+    "2026-07-24": {
+      "type": "match",
+      "manual": false,
+      "matches": [
+        {
+          "time": "17:00",
+          "name": "VCT CN 2026 第二赛段 种子排位赛",
+          "stage": "种子排位赛",
+          "bo": "BO3",
+          "teams": "Trace Esports vs Titan Esports Club"
+        },
+        {
+          "time": "19:35",
+          "name": "VCT CN 2026 第二赛段 种子排位赛",
+          "stage": "种子排位赛",
+          "bo": "BO3",
+          "teams": "EDward Gaming vs All Gamers"
+        }
+      ]
+    },
+    "2026-07-25": {
+      "type": "match",
+      "manual": false,
+      "matches": [
+        {
+          "time": "17:00",
+          "name": "VCT CN 2026 第二赛段 种子排位赛",
+          "stage": "种子排位赛",
+          "bo": "BO3",
+          "teams": "JD Gaming vs Dragon Ranger Gaming"
+        },
+        {
+          "time": "20:35",
+          "name": "VCT CN 2026 第二赛段 种子排位赛",
+          "stage": "种子排位赛",
+          "bo": "BO3",
+          "teams": "TYLOO vs Xi Lai Gaming"
+        }
+      ]
+    },
+    "2026-07-26": {
+      "type": "match",
+      "manual": false,
+      "matches": [
+        {
+          "time": "17:00",
+          "name": "VCT CN 2026 第二赛段 种子排位赛",
+          "stage": "种子排位赛",
+          "bo": "BO3",
+          "teams": "FunPlus Phoenix vs Wolves Esports"
+        },
+        {
+          "time": "19:30",
+          "name": "VCT CN 2026 第二赛段 种子排位赛",
+          "stage": "种子排位赛",
+          "bo": "BO3",
+          "teams": "Nova Esports vs Bilibili Gaming"
+        }
+      ]
+    },
+    "2026-08-05": {
+      "type": "match",
+      "manual": false,
+      "matches": [
+        {
+          "time": "16:00",
+          "name": "VCT CN 2026 第二赛段 入围赛·胜者组第一轮",
+          "stage": "入围赛·胜者组第一轮",
+          "bo": "BO3",
+          "teams": "Trace Esports vs A Team"
+        },
+        {
+          "time": "18:00",
+          "name": "VCT CN 2026 第二赛段 入围赛·胜者组第一轮",
+          "stage": "入围赛·胜者组第一轮",
+          "bo": "BO3",
+          "teams": "Titan Esports Club vs KeepBest Gaming"
+        }
+      ]
+    },
+    "2026-08-06": {
+      "type": "match",
+      "manual": false,
+      "matches": [
+        {
+          "time": "16:00",
+          "name": "VCT CN 2026 第二赛段 胜者组四分之一决赛",
+          "stage": "胜者组四分之一决赛",
+          "bo": "BO3",
+          "teams": "FunPlus Phoenix vs JD Gaming"
+        },
+        {
+          "time": "19:00",
+          "name": "VCT CN 2026 第二赛段 胜者组四分之一决赛",
+          "stage": "胜者组四分之一决赛",
+          "bo": "BO3",
+          "teams": "Wolves Esports vs Dragon Ranger Gaming"
+        }
+      ]
+    },
+    "2026-08-07": {
+      "type": "match",
+      "manual": false,
+      "matches": [
+        {
+          "time": "16:00",
+          "name": "VCT CN 2026 第二赛段 胜者组四分之一决赛",
+          "stage": "胜者组四分之一决赛",
+          "bo": "BO3",
+          "teams": "All Gamers vs Trace Esports"
+        },
+        {
+          "time": "19:00",
+          "name": "VCT CN 2026 第二赛段 胜者组四分之一决赛",
+          "stage": "胜者组四分之一决赛",
+          "bo": "BO3",
+          "teams": "EDward Gaming vs Titan Esports Club"
+        }
+      ]
+    },
+    "2026-08-08": {
+      "type": "match",
+      "manual": false,
+      "matches": [
+        {
+          "time": "16:00",
+          "name": "VCT CN 2026 第二赛段 败者组第一轮",
+          "stage": "败者组第一轮",
+          "bo": "BO3",
+          "teams": "A Team vs Wolves Esports"
+        },
+        {
+          "time": "19:35",
+          "name": "VCT CN 2026 第二赛段 败者组第一轮",
+          "stage": "败者组第一轮",
+          "bo": "BO3",
+          "teams": "KeepBest Gaming vs FunPlus Phoenix"
+        }
+      ]
+    },
+    "2026-08-09": {
+      "type": "match",
+      "manual": false,
+      "matches": [
+        {
+          "time": "16:00",
+          "name": "VCT CN 2026 第二赛段 败者组第二轮",
+          "stage": "败者组第二轮",
+          "bo": "BO3",
+          "teams": "EDward Gaming vs Wolves Esports"
+        },
+        {
+          "time": "19:25",
+          "name": "VCT CN 2026 第二赛段 败者组第二轮",
+          "stage": "败者组第二轮",
+          "bo": "BO3",
+          "teams": "Trace Esports vs FunPlus Phoenix"
+        }
+      ]
+    },
+    "2026-08-10": {
+      "type": "match",
+      "manual": false,
+      "matches": [
+        {
+          "time": "16:00",
+          "name": "VCT CN 2026 第二赛段 胜者组半决赛",
+          "stage": "胜者组半决赛",
+          "bo": "BO3",
+          "teams": "All Gamers vs JD Gaming"
+        },
+        {
+          "time": "18:40",
+          "name": "VCT CN 2026 第二赛段 胜者组半决赛",
+          "stage": "胜者组半决赛",
+          "bo": "BO3",
+          "teams": "Titan Esports Club vs Dragon Ranger Gaming"
+        }
+      ]
+    },
+    "2026-08-11": {
+      "type": "match",
+      "manual": false,
+      "matches": [
+        {
+          "time": "16:00",
+          "name": "VCT CN 2026 第二赛段 败者组第三轮",
+          "stage": "败者组第三轮",
+          "bo": "BO3",
+          "teams": "JD Gaming vs EDward Gaming"
+        },
+        {
+          "time": "18:05",
+          "name": "VCT CN 2026 第二赛段 败者组第三轮",
+          "stage": "败者组第三轮",
+          "bo": "BO3",
+          "teams": "Dragon Ranger Gaming vs Trace Esports"
+        }
+      ]
+    },
+    "2026-08-12": {
+      "type": "match",
+      "manual": false,
+      "matches": [
+        {
+          "time": "16:00",
+          "name": "VCT CN 2026 第二赛段 胜者组决赛",
+          "stage": "胜者组决赛",
+          "bo": "BO3",
+          "teams": "All Gamers vs Titan Esports Club"
+        },
+        {
+          "time": "19:45",
+          "name": "VCT CN 2026 第二赛段 败者组决赛",
+          "stage": "败者组决赛",
+          "bo": "BO5",
+          "teams": "JD Gaming vs Trace Esports"
+        }
+      ]
+    },
+    "2026-08-14": {
+      "type": "match",
+      "manual": false,
+      "matches": [
+        {
+          "time": "16:00",
+          "name": "VCT CN 2026 第二赛段 胜者组四分之一决赛",
+          "stage": "胜者组四分之一决赛",
+          "bo": "BO3",
+          "teams": "Nova Esports vs JD Gaming"
+        },
+        {
+          "time": "18:30",
+          "name": "VCT CN 2026 第二赛段 胜者组四分之一决赛",
+          "stage": "胜者组四分之一决赛",
+          "bo": "BO3",
+          "teams": "TYLOO vs Titan Esports Club"
+        }
+      ]
+    },
+    "2026-08-15": {
+      "type": "match",
+      "manual": false,
+      "matches": [
+        {
+          "time": "16:00",
+          "name": "VCT CN 2026 第二赛段 胜者组四分之一决赛",
+          "stage": "胜者组四分之一决赛",
+          "bo": "BO3",
+          "teams": "Bilibili Gaming vs Trace Esports"
+        },
+        {
+          "time": "19:30",
+          "name": "VCT CN 2026 第二赛段 胜者组四分之一决赛",
+          "stage": "胜者组四分之一决赛",
+          "bo": "BO3",
+          "teams": "Xi Lai Gaming vs All Gamers"
+        }
+      ]
+    },
+    "2026-08-16": {
+      "type": "match",
+      "manual": false,
+      "matches": [
+        {
+          "time": "16:00",
+          "name": "VCT CN 2026 第二赛段 败者组第一轮",
+          "stage": "败者组第一轮",
+          "bo": "BO3",
+          "teams": "Titan Esports Club vs Nova Esports"
+        },
+        {
+          "time": "18:35",
+          "name": "VCT CN 2026 第二赛段 败者组第一轮",
+          "stage": "败者组第一轮",
+          "bo": "BO3",
+          "teams": "All Gamers vs Trace Esports"
+        }
+      ]
+    },
+    "2026-08-19": {
+      "type": "match",
+      "manual": false,
+      "matches": [
+        {
+          "time": "16:00",
+          "name": "VCT CN 2026 第二赛段 胜者组半决赛",
+          "stage": "胜者组半决赛",
+          "bo": "BO3",
+          "teams": "TYLOO vs JD Gaming"
+        },
+        {
+          "time": "19:45",
+          "name": "VCT CN 2026 第二赛段 胜者组半决赛",
+          "stage": "胜者组半决赛",
+          "bo": "BO3",
+          "teams": "Xi Lai Gaming vs Bilibili Gaming"
+        }
+      ]
+    },
+    "2026-08-20": {
+      "type": "match",
+      "manual": false,
+      "matches": [
+        {
+          "time": "16:00",
+          "name": "VCT CN 2026 第二赛段 败者组第二轮",
+          "stage": "败者组第二轮",
+          "bo": "BO3",
+          "teams": "TBD vs Nova Esports"
+        },
+        {
+          "time": "18:00",
+          "name": "VCT CN 2026 第二赛段 败者组第二轮",
+          "stage": "败者组第二轮",
+          "bo": "BO3",
+          "teams": "TYLOO vs All Gamers"
+        }
+      ]
+    },
+    "2026-08-21": {
+      "type": "match",
+      "manual": false,
+      "matches": [
+        {
+          "time": "16:00",
+          "name": "VCT CN 2026 第二赛段 胜者组决赛",
+          "stage": "胜者组决赛",
+          "bo": "BO3",
+          "teams": "JD Gaming vs TBD"
+        },
+        {
+          "time": "18:00",
+          "name": "VCT CN 2026 第二赛段 败者组第三轮",
+          "stage": "败者组第三轮",
+          "bo": "BO3",
+          "teams": "TBD vs TBD"
+        }
+      ]
+    },
+    "2026-08-22": {
+      "type": "match",
+      "manual": false,
+      "matches": [
+        {
+          "time": "16:00",
+          "name": "VCT CN 2026 第二赛段 败者组决赛",
+          "stage": "败者组决赛",
+          "bo": "BO5",
+          "teams": "TBD vs TBD"
+        }
+      ]
+    },
+    "2026-08-23": {
+      "type": "match",
+      "manual": false,
+      "matches": [
+        {
+          "time": "16:00",
+          "name": "VCT CN 2026 第二赛段 总决赛",
+          "stage": "总决赛",
+          "bo": "BO5",
+          "teams": "TBD vs TBD"
+        }
+      ]
+    }
+  },
+  "errors": [],
+  "fetchedAt": "2026-08-19T12:53:50.113Z"
+}

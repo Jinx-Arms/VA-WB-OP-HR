@@ -1,0 +1,16 @@
+# Render Blueprint — 一键部署配置
+# 详见 DEPLOY.md
+
+services:
+  - type: web
+    name: vct-ops-hr
+    runtime: node
+    plan: free
+    buildCommand: npm install
+    startCommand: node server.js
+    healthCheckPath: /api/health
+    envVars:
+      - key: NODE_VERSION
+        value: 22.22.2
+      - key: DATABASE_URL
+        sync: false

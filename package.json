@@ -1,0 +1,16 @@
+{
+  "name": "vct-ops-hr",
+  "version": "1.0.0",
+  "description": "VCT 赛事运营中台 — 赛程管理 / 智能排班 / 人员管理 / 内容排期 / 责任分配",
+  "private": true,
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "pg": "^8.13.1"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
