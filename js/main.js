@@ -200,6 +200,7 @@ App.renderShell = function(){
           <button class="bell" onclick="App.toggleBell()">🔔${unread ? `<span class="dot">${unread}</span>` : ''}</button>
           <div id="bell-panel" style="display:none"></div>
         </div>
+        <span id="storage-indicator" class="storage-indicator" title="数据存储状态"></span>
         <button class="theme-toggle" onclick="App.toggleTheme()" title="切换亮色/深色主题"><span id="theme-icon">${(localStorage.getItem('vct-theme')||'dark')==='light'?'🌙':'☀️'}</span></button>
         <div class="user-chip-wrap">
           <div class="user-chip" onclick="App.toggleUserMenu()" title="账户操作">
@@ -214,6 +215,29 @@ App.renderShell = function(){
       <main class="content" id="view"></main>
     </div>
   </div>`;
+};
+
+/* ---------- 存储状态指示器 ---------- */
+App.updateStorageIndicator = function(){
+  const el = document.getElementById('storage-indicator');
+  if(!el) return;
+  if(CLOUD.isCloudMode()){
+    el.textContent = '☁️';
+    el.title = '云端模式：数据同步到 Supabase';
+    el.className = 'storage-indicator ok';
+  } else if(App._serverOK === true){
+    el.textContent = '💾';
+    el.title = '已连接服务器：数据持久化到磁盘';
+    el.className = 'storage-indicator ok';
+  } else if(App._serverOK === false){
+    el.textContent = '⚠️';
+    el.title = '服务器未运行！数据仅存于当前浏览器，换浏览器/清缓存将丢失。请启动 server.js';
+    el.className = 'storage-indicator warn';
+  } else {
+    el.textContent = '⏳';
+    el.title = '正在连接服务器…';
+    el.className = 'storage-indicator';
+  }
 };
 
 App.nav = function(key){
@@ -342,13 +366,21 @@ App.init = function(){
       <div class="loading-text">正在加载数据…</div>
     </div>`;
   App.load().then(() => {
-    // 旧数据迁移：补认证字段
-    if(App.state && App.state.staff) migrateAuth(App.state.staff);
+    // 旧数据迁移：补认证字段，有改动则立即持久化
+    if(App.state && App.state.staff){
+      if(migrateAuth(App.state.staff)) App.save();
+    }
     if(App.state.user && App.staffById(App.state.user) && App.staffById(App.state.user).status === 'active'){
       App.renderShell();
       App.nav(App.can('manage') ? 'dash' : 'mine');
     } else {
       App.renderLogin();
+    }
+    // 服务器不可用时警告（非云端模式）
+    if(!CLOUD.isCloudMode() && App._serverOK === false){
+      setTimeout(() => {
+        App.toast('⚠️ 服务器未运行，数据仅存于当前浏览器！请先启动 server.js 再使用', 'warn', 8000);
+      }, 500);
     }
   });
 };

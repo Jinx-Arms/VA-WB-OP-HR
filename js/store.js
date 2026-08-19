@@ -17,11 +17,14 @@ async function sha256(text){
 }
 
 /* ---------- 认证字段迁移（旧数据兼容） ---------- */
+/* 返回 true 表示有字段被补齐（调用方应 save 持久化） */
 function migrateAuth(staff){
+  let changed = false;
   staff.forEach(s => {
-    if(!s.username) s.username = s.id.toLowerCase();
-    if(!s.passwordHash) s.passwordHash = DEFAULT_PWD_HASH;
+    if(!s.username){ s.username = s.id.toLowerCase(); changed = true; }
+    if(!s.passwordHash){ s.passwordHash = DEFAULT_PWD_HASH; changed = true; }
   });
+  return changed;
 }
 
 /* ---------- 种子数据 ---------- */
@@ -93,7 +96,7 @@ App.save = function(){
         console.warn('[存储] Supabase 保存失败，降级 localStorage:', e.message);
         App._serverOK = false;
         try{ localStorage.setItem(LS_KEY, json); }catch(e2){}
-      }).finally(() => { App._pendingSave = null; });
+      }).finally(() => { App._pendingSave = null; if(App.updateStorageIndicator) App.updateStorageIndicator(); });
     }, 200);
     return;
   }
@@ -112,7 +115,7 @@ App.save = function(){
       body: JSON.stringify(App.state)
     }).then(r => { App._serverOK = r.ok; })
       .catch(() => { App._serverOK = false; try{ localStorage.setItem(LS_KEY, json); }catch(e){} })
-      .finally(() => { App._pendingSave = null; });
+      .finally(() => { App._pendingSave = null; if(App.updateStorageIndicator) App.updateStorageIndicator(); });
   }, 200);
 };
 
@@ -176,7 +179,7 @@ App.load = function(){
     App.autoSchedule(y, m, true);
     App.autoAssign(true);
     try{ localStorage.setItem(LS_KEY, JSON.stringify(App.state)); }catch(e){}
-  });
+  }).finally(() => { if(App.updateStorageIndicator) App.updateStorageIndicator(); });
 };
 
 /* 页面关闭前强制刷写（尽力而为） */

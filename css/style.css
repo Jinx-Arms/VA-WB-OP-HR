@@ -268,3 +268,8 @@ table.roster{border-collapse:collapse;font-size:12px;width:max-content;min-width
 /* ---------- 主题切换按钮 ---------- */
 .theme-toggle{display:flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:9px;font-size:17px;transition:.2s}
 .theme-toggle:hover{background:var(--panel2)}
+.storage-indicator{display:flex;align-items:center;justify-content:center;width:36px;height:36px;border-radius:9px;font-size:15px;transition:.2s;cursor:default}
+.storage-indicator.ok{opacity:.7}
+.storage-indicator.warn{opacity:1;animation:pulse-warn 2s ease-in-out infinite}
+@keyframes pulse-warn{0%,100%{opacity:.6}50%{opacity:1}}
+.storage-indicator:hover{background:var(--panel2)}
