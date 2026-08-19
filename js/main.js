@@ -100,6 +100,7 @@ App.doLogin = async function(){
   App.ui = { rosterTab:'grid', roster:{ mode:'month', ref: D.today() } };
   App.renderShell();
   App.nav(App.can('manage') ? 'dash' : 'mine');
+  if(App._autoSyncOn) App.startAutoSync();
   // 超 24 小时自动同步一次官方赛程
   if(Date.now() - (App.state.lastSync || 0) > 86400000 && App.can('manage')){
     App.syncSchedule().then(({ changes, affected }) => {
@@ -160,6 +161,7 @@ App.closeUserMenu = function(){
 
 App.logout = function(){
   App.closeUserMenu();
+  App.stopAutoSync();
   App.clearSession();
   App.closeModal();
   App.renderLogin();
@@ -206,7 +208,106 @@ App.manualSync = async function(){
   }
 };
 
-/* ---------- 框架 & 路由 ---------- */
+/* ---------- 自动同步（定时轮询 Supabase） ---------- */
+App._doAutoSync = async function(){
+  if(!CLOUD.isCloudMode()) return;
+  if(!App.state || !App.state.user) return;          // 未登录
+  if(App._syncing) return;                             // 正在同步中
+  if(document.hidden) return;                          // 标签页不可见
+  if(document.querySelector('.modal-wrap')) return;    // 有弹窗（正在编辑）
+  // 用户正在输入时跳过，避免打断
+  const ae = document.activeElement;
+  if(ae && ['INPUT','TEXTAREA','SELECT'].includes(ae.tagName)) return;
+
+  App._syncing = true;
+  try{
+    /* 1. 先推送本地待写数据 */
+    if(App._pendingSave){
+      clearTimeout(App._pendingSave);
+      App._pendingSave = null;
+      const persistState = Object.assign({}, App.state);
+      delete persistState.user;
+      await CLOUD.setState(persistState);
+    }
+
+    /* 2. 拉取云端最新数据 */
+    const remote = await CLOUD.getState();
+    if(!remote) { App._syncing = false; return; }
+
+    /* 3. 对比数据是否变化（排除 user 字段） */
+    const remoteCopy = Object.assign({}, remote); delete remoteCopy.user;
+    const localCopy  = Object.assign({}, App.state); delete localCopy.user;
+    const remoteStr = JSON.stringify(remoteCopy);
+    const localStr  = JSON.stringify(localCopy);
+    if(remoteStr === localStr){ App._syncing = false; return; }  // 无变化
+
+    /* 4. 有变化 → 更新状态、恢复会话、重新渲染 */
+    const prevView = App.currentView;
+    App.state = remote;
+    App.restoreSession();
+
+    /* 5. 检查登录态 */
+    if(!App.state.user || !App.staffById(App.state.user) || App.staffById(App.state.user).status !== 'active'){
+      App.clearSession();
+      App.stopAutoSync();
+      App.renderLogin();
+      App.toast('登录状态已失效，请重新登录', 'warn');
+      return;
+    }
+
+    /* 6. 重新渲染（保留当前页面和自动同步开关状态） */
+    App.renderShell();
+    App.nav(prevView || (App.can('manage') ? 'dash' : 'mine'));
+
+    /* 7. 同步图标旋转提示 */
+    const icon = document.getElementById('sync-icon');
+    if(icon){
+      icon.classList.add('spinning');
+      setTimeout(() => icon.classList.remove('spinning'), 1000);
+    }
+    App.toast('数据已自动更新', 'info', 2000);
+  } catch(e){
+    console.warn('[自动同步] 失败:', e.message);
+  } finally {
+    App._syncing = false;
+  }
+};
+
+App.startAutoSync = function(){
+  if(!CLOUD.isCloudMode()) return;
+  App._autoSyncOn = true;
+  localStorage.setItem('wb-autosync', 'on');
+  if(App._autoSyncTimer) clearInterval(App._autoSyncTimer);
+  App._autoSyncTimer = setInterval(() => App._doAutoSync(), App._autoSyncInterval);
+  /* 标签页重新可见时立即同步一次 */
+  if(!App._visHandler){
+    App._visHandler = true;
+    document.addEventListener('visibilitychange', () => {
+      if(!document.hidden && App._autoSyncOn) App._doAutoSync();
+    });
+  }
+};
+
+App.stopAutoSync = function(){
+  App._autoSyncOn = false;
+  localStorage.setItem('wb-autosync', 'off');
+  if(App._autoSyncTimer){ clearInterval(App._autoSyncTimer); App._autoSyncTimer = null; }
+};
+
+App.toggleAutoSync = function(){
+  if(App._autoSyncOn){
+    App.stopAutoSync();
+    App.toast('自动同步已关闭');
+  } else {
+    App.startAutoSync();
+    App.toast('自动同步已开启（每30秒刷新）');
+  }
+  /* 更新开关 UI */
+  const sw = document.querySelector('.auto-sync-switch');
+  if(sw) sw.classList.toggle('on', App._autoSyncOn);
+  const label = document.querySelector('.auto-sync-label');
+  if(label) label.textContent = App._autoSyncOn ? '自动' : '手动';
+};
 const NAV = [
   { key:'dash',    label:'运营概览',    ico:'📊', admin:true },
   { key:'schedule',label:'赛程日历',    ico:'📅' },
@@ -236,7 +337,11 @@ App.renderShell = function(){
     <div class="main">
       <header class="topbar">
         <h1 id="page-title"></h1>
-        <button class="sync-btn" onclick="App.manualSync()" title="同步云端最新数据"><span id="sync-icon">🔄</span></button>
+        <button class="sync-btn" onclick="App.manualSync()" title="手动同步云端最新数据"><span id="sync-icon">🔄</span></button>
+        <span class="auto-sync-toggle" onclick="App.toggleAutoSync()" title="自动同步（每30秒）：${App._autoSyncOn?'已开启':'已关闭'}">
+          <span class="auto-sync-label">${App._autoSyncOn?'自动':'手动'}</span>
+          <span class="auto-sync-switch ${App._autoSyncOn?'on':''}"></span>
+        </span>
         <div style="position:relative">
           <button class="bell" onclick="App.toggleBell()">🔔${unread ? `<span class="dot">${unread}</span>` : ''}</button>
           <div id="bell-panel" style="display:none"></div>
@@ -485,6 +590,7 @@ App.init = function(){
     if(App.state.user && App.staffById(App.state.user) && App.staffById(App.state.user).status === 'active'){
       App.renderShell();
       App.nav(App.can('manage') ? 'dash' : 'mine');
+      if(App._autoSyncOn) App.startAutoSync();
     } else {
       App.renderLogin();
     }

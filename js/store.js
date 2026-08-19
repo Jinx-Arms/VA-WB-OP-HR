@@ -8,7 +8,13 @@
 const LS_KEY = 'vct-ops-hr-v1';  // 降级用 localStorage key
 const SESSION_KEY = 'wb-session';  // 本设备登录会话（各设备独立，不写入云端）
 const DEFAULT_PWD_HASH = 'b5a557a3cd3d0259f4908630a9df88b081cf9a42a56728371ced9f370460ce5c'; // SHA-256('vct2026')
-const App = window.App = { state: null, ui: {}, _serverOK: null, _pendingSave: null };
+const App = window.App = { state: null, ui: {}, _serverOK: null, _pendingSave: null,
+  _autoSyncOn: localStorage.getItem('wb-autosync') !== 'off',  // 默认开启，记住用户偏好
+  _autoSyncTimer: null,
+  _autoSyncInterval: 30000,  // 30秒
+  _lastCloudHash: null,
+  _syncing: false,
+};
 
 /* ---------- 密码哈希（浏览器 Web Crypto API） ---------- */
 async function sha256(text){
