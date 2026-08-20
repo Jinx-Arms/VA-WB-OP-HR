@@ -1,0 +1,1262 @@
+[
+ {
+  "id": "edg",
+  "name": "EDward Gaming",
+  "short": "EDG",
+  "region": "cn",
+  "vlrId": "",
+  "aliases": [
+   "Edward Gaming",
+   "爱德"
+  ],
+  "rosterSeed": [
+   {
+    "id": "p-zmjjkk",
+    "name": "ZmjjKK",
+    "country": "cn",
+    "role": "duelist",
+    "joined": "2021-06",
+    "formerTeams": []
+   },
+   {
+    "id": "p-chichoo",
+    "name": "CHICHOO",
+    "country": "cn",
+    "role": "initiator",
+    "joined": "2023-01",
+    "formerTeams": []
+   },
+   {
+    "id": "p-nobody",
+    "name": "nobody",
+    "country": "cn",
+    "role": "igl",
+    "joined": "2021-06",
+    "formerTeams": []
+   },
+   {
+    "id": "p-smoggy",
+    "name": "Smoggy",
+    "country": "cn",
+    "role": "controller",
+    "joined": "2022-03",
+    "formerTeams": []
+   },
+   {
+    "id": "p-haodong",
+    "name": "Haodong",
+    "country": "cn",
+    "role": "sentinel",
+    "joined": "2021-06",
+    "formerTeams": []
+   }
+  ]
+ },
+ {
+  "id": "fpx",
+  "name": "FunPlus Phoenix",
+  "short": "FPX",
+  "region": "cn",
+  "vlrId": "",
+  "aliases": [
+   "FunPlus",
+   "FPX"
+  ],
+  "rosterSeed": [
+   {
+    "id": "p-life",
+    "name": "Life",
+    "country": "cn",
+    "role": "duelist",
+    "joined": "2023-06",
+    "formerTeams": [
+     "edg"
+    ]
+   },
+   {
+    "id": "p-autumn",
+    "name": "autumn",
+    "country": "cn",
+    "role": "initiator",
+    "joined": "2022-01",
+    "formerTeams": []
+   },
+   {
+    "id": "p-aaaay",
+    "name": "AAAAY",
+    "country": "cn",
+    "role": "controller",
+    "joined": "2022-01",
+    "formerTeams": []
+   },
+   {
+    "id": "p-berlin",
+    "name": "BerLIN",
+    "country": "cn",
+    "role": "sentinel",
+    "joined": "2022-01",
+    "formerTeams": []
+   },
+   {
+    "id": "p-lysoar",
+    "name": "Lysoar",
+    "country": "cn",
+    "role": "igl",
+    "joined": "2023-01",
+    "formerTeams": []
+   }
+  ]
+ },
+ {
+  "id": "blg",
+  "name": "Bilibili Gaming",
+  "short": "BLG",
+  "region": "cn",
+  "vlrId": "",
+  "aliases": [
+   "Bilibili"
+  ],
+  "rosterSeed": [
+   {
+    "id": "p-knight",
+    "name": "Knight",
+    "country": "cn",
+    "role": "duelist",
+    "joined": "2023-06",
+    "formerTeams": []
+   },
+   {
+    "id": "p-b3ar",
+    "name": "B3Ar",
+    "country": "cn",
+    "role": "initiator",
+    "joined": "2023-06",
+    "formerTeams": []
+   },
+   {
+    "id": "p-biank",
+    "name": "Biank",
+    "country": "cn",
+    "role": "igl",
+    "joined": "2022-06",
+    "formerTeams": []
+   },
+   {
+    "id": "p-whzy",
+    "name": "whzy",
+    "country": "cn",
+    "role": "sentinel",
+    "joined": "2023-01",
+    "formerTeams": []
+   },
+   {
+    "id": "p-yosemite",
+    "name": "yosemite",
+    "country": "cn",
+    "role": "controller",
+    "joined": "2023-06",
+    "formerTeams": []
+   }
+  ]
+ },
+ {
+  "id": "drg",
+  "name": "Dragon Ranger Gaming",
+  "short": "DRG",
+  "region": "cn",
+  "vlrId": "",
+  "aliases": [
+   "Dragon Ranger",
+   "DRG"
+  ],
+  "rosterSeed": [
+   {
+    "id": "p-nicc",
+    "name": "Nicc",
+    "country": "cn",
+    "role": "igl",
+    "joined": "2023-01",
+    "formerTeams": []
+   },
+   {
+    "id": "p-vo0kashu",
+    "name": "vo0kashu",
+    "country": "cn",
+    "role": "duelist",
+    "joined": "2023-01",
+    "formerTeams": []
+   },
+   {
+    "id": "p-tvirusluke",
+    "name": "TvirusLuke",
+    "country": "cn",
+    "role": "sentinel",
+    "joined": "2023-01",
+    "formerTeams": []
+   },
+   {
+    "id": "p-nizhaotzh",
+    "name": "nizhaoTZH",
+    "country": "cn",
+    "role": "controller",
+    "joined": "2023-06",
+    "formerTeams": []
+   }
+  ]
+ },
+ {
+  "id": "te",
+  "name": "Trace Esports",
+  "short": "TE",
+  "region": "cn",
+  "vlrId": "",
+  "aliases": [
+   "Trace"
+  ],
+  "rosterSeed": [
+   {
+    "id": "p-kai",
+    "name": "Kai",
+    "country": "cn",
+    "role": "duelist",
+    "joined": "2023-01",
+    "formerTeams": []
+   },
+   {
+    "id": "p-luok1ng",
+    "name": "LuoK1ng",
+    "country": "cn",
+    "role": "initiator",
+    "joined": "2023-01",
+    "formerTeams": [
+     "ag"
+    ]
+   }
+  ]
+ },
+ {
+  "id": "ag",
+  "name": "All Gamers",
+  "short": "AG",
+  "region": "cn",
+  "vlrId": "",
+  "aliases": [
+   "AllGamers",
+   "AG"
+  ],
+  "rosterSeed": [
+   {
+    "id": "p-bunt",
+    "name": "Bunt",
+    "country": "cn",
+    "role": "igl",
+    "joined": "2022-01",
+    "formerTeams": []
+   },
+   {
+    "id": "p-delb",
+    "name": "DeLb",
+    "country": "cn",
+    "role": "duelist",
+    "joined": "2022-01",
+    "formerTeams": []
+   },
+   {
+    "id": "p-monk",
+    "name": "monk",
+    "country": "cn",
+    "role": "sentinel",
+    "joined": "2023-01",
+    "formerTeams": []
+   }
+  ]
+ },
+ {
+  "id": "xlg",
+  "name": "XLG Esports",
+  "short": "XLG",
+  "region": "cn",
+  "vlrId": "",
+  "aliases": [
+   "XLG"
+  ],
+  "rosterSeed": []
+ },
+ {
+  "id": "tyl",
+  "name": "TYLOO",
+  "short": "TYL",
+  "region": "cn",
+  "vlrId": "",
+  "aliases": [
+   "TYLOO",
+   "TyLoo"
+  ],
+  "rosterSeed": []
+ },
+ {
+  "id": "nova",
+  "name": "Nova Esports",
+  "short": "NOVA",
+  "region": "cn",
+  "vlrId": "",
+  "aliases": [
+   "Nova"
+  ],
+  "rosterSeed": []
+ },
+ {
+  "id": "jdg",
+  "name": "JD Gaming",
+  "short": "JDG",
+  "region": "cn",
+  "vlrId": "",
+  "aliases": [
+   "JDG",
+   "JingDong"
+  ],
+  "rosterSeed": []
+ },
+ {
+  "id": "tec",
+  "name": "Titan EC",
+  "short": "TEC",
+  "region": "cn",
+  "vlrId": "",
+  "aliases": [
+   "TitanEC",
+   "TEC"
+  ],
+  "rosterSeed": []
+ },
+ {
+  "id": "wol",
+  "name": "Wolves Esports",
+  "short": "WOL",
+  "region": "cn",
+  "vlrId": "",
+  "aliases": [
+   "Wolves",
+   "WOL"
+  ],
+  "rosterSeed": []
+ },
+ {
+  "id": "nrg",
+  "name": "NRG",
+  "short": "NRG",
+  "region": "americas",
+  "vlrId": "",
+  "aliases": [],
+  "rosterSeed": [
+   {
+    "id": "p-ethan",
+    "name": "Ethan",
+    "country": "us",
+    "role": "igl",
+    "joined": "2024-01",
+    "formerTeams": []
+   },
+   {
+    "id": "p-mada",
+    "name": "mada",
+    "country": "us",
+    "role": "duelist",
+    "joined": "2024-01",
+    "formerTeams": []
+   },
+   {
+    "id": "p-brawk",
+    "name": "brawk",
+    "country": "us",
+    "role": "initiator",
+    "joined": "2024-01",
+    "formerTeams": []
+   },
+   {
+    "id": "p-skuba",
+    "name": "skuba",
+    "country": "us",
+    "role": "controller",
+    "joined": "2024-01",
+    "formerTeams": []
+   },
+   {
+    "id": "p-keiko",
+    "name": "keiko",
+    "country": "us",
+    "role": "sentinel",
+    "joined": "2024-01",
+    "formerTeams": []
+   }
+  ]
+ },
+ {
+  "id": "mibr",
+  "name": "MIBR",
+  "short": "MIBR",
+  "region": "americas",
+  "vlrId": "",
+  "aliases": [
+   "MIBR"
+  ],
+  "rosterSeed": [
+   {
+    "id": "p-aspas",
+    "name": "aspas",
+    "country": "br",
+    "role": "duelist",
+    "joined": "2024-06",
+    "formerTeams": [
+     "lev"
+    ]
+   },
+   {
+    "id": "p-xenom",
+    "name": "xenom",
+    "country": "br",
+    "role": "sentinel",
+    "joined": "2024-01",
+    "formerTeams": []
+   },
+   {
+    "id": "p-verno",
+    "name": "Verno",
+    "country": "br",
+    "role": "initiator",
+    "joined": "2024-01",
+    "formerTeams": []
+   }
+  ]
+ },
+ {
+  "id": "lev",
+  "name": "Leviatán",
+  "short": "LEV",
+  "region": "americas",
+  "vlrId": "",
+  "aliases": [
+   "Leviatan",
+   "LEV"
+  ],
+  "rosterSeed": [
+   {
+    "id": "p-kingg",
+    "name": "kiNgg",
+    "country": "cl",
+    "role": "igl",
+    "joined": "2024-01",
+    "formerTeams": []
+   },
+   {
+    "id": "p-neon",
+    "name": "Neon",
+    "country": "cl",
+    "role": "duelist",
+    "joined": "2024-01",
+    "formerTeams": []
+   },
+   {
+    "id": "p-spikezin",
+    "name": "spikeziN",
+    "country": "br",
+    "role": "initiator",
+    "joined": "2024-01",
+    "formerTeams": []
+   },
+   {
+    "id": "p-sato",
+    "name": "Sato",
+    "country": "br",
+    "role": "sentinel",
+    "joined": "2024-01",
+    "formerTeams": []
+   },
+   {
+    "id": "p-blowz",
+    "name": "blowz",
+    "country": "br",
+    "role": "controller",
+    "joined": "2024-01",
+    "formerTeams": []
+   }
+  ]
+ },
+ {
+  "id": "g2",
+  "name": "G2 Esports",
+  "short": "G2",
+  "region": "americas",
+  "vlrId": "",
+  "aliases": [
+   "G2 Esports"
+  ],
+  "rosterSeed": [
+   {
+    "id": "p-valyn",
+    "name": "valyn",
+    "country": "us",
+    "role": "igl",
+    "joined": "2024-01",
+    "formerTeams": []
+   },
+   {
+    "id": "p-trent",
+    "name": "trent",
+    "country": "us",
+    "role": "initiator",
+    "joined": "2024-01",
+    "formerTeams": []
+   },
+   {
+    "id": "p-leaf",
+    "name": "leaf",
+    "country": "us",
+    "role": "duelist",
+    "joined": "2024-01",
+    "formerTeams": []
+   },
+   {
+    "id": "p-jawgemo",
+    "name": "jawgemo",
+    "country": "us",
+    "role": "sentinel",
+    "joined": "2024-01",
+    "formerTeams": []
+   }
+  ]
+ },
+ {
+  "id": "loud",
+  "name": "LOUD",
+  "short": "LOUD",
+  "region": "americas",
+  "vlrId": "",
+  "aliases": [
+   "LOUD"
+  ],
+  "rosterSeed": []
+ },
+ {
+  "id": "eg",
+  "name": "Evil Geniuses",
+  "short": "EG",
+  "region": "americas",
+  "vlrId": "",
+  "aliases": [
+   "Evil Geniuses",
+   "EG"
+  ],
+  "rosterSeed": []
+ },
+ {
+  "id": "sen",
+  "name": "Sentinels",
+  "short": "SEN",
+  "region": "americas",
+  "vlrId": "",
+  "aliases": [
+   "Sentinels",
+   "SEN"
+  ],
+  "rosterSeed": []
+ },
+ {
+  "id": "100t",
+  "name": "100 Thieves",
+  "short": "100T",
+  "region": "americas",
+  "vlrId": "",
+  "aliases": [
+   "100 Thieves",
+   "100T"
+  ],
+  "rosterSeed": []
+ },
+ {
+  "id": "c9",
+  "name": "Cloud9",
+  "short": "C9",
+  "region": "americas",
+  "vlrId": "",
+  "aliases": [
+   "Cloud9",
+   "C9"
+  ],
+  "rosterSeed": []
+ },
+ {
+  "id": "furia",
+  "name": "FURIA",
+  "short": "FURIA",
+  "region": "americas",
+  "vlrId": "",
+  "aliases": [
+   "FURIA",
+   "Furia"
+  ],
+  "rosterSeed": []
+ },
+ {
+  "id": "kru",
+  "name": "KRÜ",
+  "short": "KRÜ",
+  "region": "americas",
+  "vlrId": "",
+  "aliases": [
+   "KRÜ",
+   "KRU",
+   "kru"
+  ],
+  "rosterSeed": []
+ },
+ {
+  "id": "envy",
+  "name": "ENVY",
+  "short": "ENVY",
+  "region": "americas",
+  "vlrId": "",
+  "aliases": [
+   "ENVY",
+   "Envy"
+  ],
+  "rosterSeed": []
+ },
+ {
+  "id": "vit",
+  "name": "Team Vitality",
+  "short": "VIT",
+  "region": "emea",
+  "vlrId": "",
+  "aliases": [
+   "Team Vitality",
+   "Vitality",
+   "VIT"
+  ],
+  "rosterSeed": [
+   {
+    "id": "p-jamppi",
+    "name": "Jamppi",
+    "country": "fi",
+    "role": "igl",
+    "joined": "2024-01",
+    "formerTeams": []
+   },
+   {
+    "id": "p-derke",
+    "name": "Derke",
+    "country": "fi",
+    "role": "duelist",
+    "joined": "2024-01",
+    "formerTeams": [
+     "fnc"
+    ]
+   },
+   {
+    "id": "p-chronicle",
+    "name": "Chronicle",
+    "country": "ru",
+    "role": "initiator",
+    "joined": "2024-01",
+    "formerTeams": []
+   },
+   {
+    "id": "p-profek",
+    "name": "PROFEK",
+    "country": "pl",
+    "role": "sentinel",
+    "joined": "2024-01",
+    "formerTeams": []
+   },
+   {
+    "id": "p-sayonara",
+    "name": "Sayonara",
+    "country": "ru",
+    "role": "controller",
+    "joined": "2024-01",
+    "formerTeams": []
+   }
+  ]
+ },
+ {
+  "id": "th",
+  "name": "Team Heretics",
+  "short": "TH",
+  "region": "emea",
+  "vlrId": "",
+  "aliases": [
+   "Team Heretics",
+   "Heretics",
+   "TH"
+  ],
+  "rosterSeed": [
+   {
+    "id": "p-boo",
+    "name": "Boo",
+    "country": "es",
+    "role": "igl",
+    "joined": "2024-01",
+    "formerTeams": []
+   },
+   {
+    "id": "p-benjyfishy",
+    "name": "benjyfishy",
+    "country": "gb",
+    "role": "initiator",
+    "joined": "2024-01",
+    "formerTeams": []
+   },
+   {
+    "id": "p-riens",
+    "name": "RieNs",
+    "country": "es",
+    "role": "duelist",
+    "joined": "2024-01",
+    "formerTeams": []
+   },
+   {
+    "id": "p-wo0t",
+    "name": "Wo0t",
+    "country": "es",
+    "role": "sentinel",
+    "joined": "2024-01",
+    "formerTeams": []
+   },
+   {
+    "id": "p-comeback",
+    "name": "ComeBack",
+    "country": "es",
+    "role": "controller",
+    "joined": "2024-01",
+    "formerTeams": []
+   }
+  ]
+ },
+ {
+  "id": "fnc",
+  "name": "Fnatic",
+  "short": "FNC",
+  "region": "emea",
+  "vlrId": "",
+  "aliases": [
+   "Fnatic",
+   "FNC"
+  ],
+  "rosterSeed": [
+   {
+    "id": "p-boaster",
+    "name": "Boaster",
+    "country": "gb",
+    "role": "igl",
+    "joined": "2022-01",
+    "formerTeams": []
+   },
+   {
+    "id": "p-alfajer",
+    "name": "Alfajer",
+    "country": "tr",
+    "role": "sentinel",
+    "joined": "2022-06",
+    "formerTeams": []
+   },
+   {
+    "id": "p-kaajak",
+    "name": "kaajak",
+    "country": "tr",
+    "role": "duelist",
+    "joined": "2024-01",
+    "formerTeams": []
+   },
+   {
+    "id": "p-crashies",
+    "name": "crashies",
+    "country": "us",
+    "role": "initiator",
+    "joined": "2024-06",
+    "formerTeams": []
+   },
+   {
+    "id": "p-veqaj",
+    "name": "Veqaj",
+    "country": "tr",
+    "role": "controller",
+    "joined": "2024-06",
+    "formerTeams": []
+   }
+  ]
+ },
+ {
+  "id": "fut",
+  "name": "FUT Esports",
+  "short": "FUT",
+  "region": "emea",
+  "vlrId": "",
+  "aliases": [
+   "FUT",
+   "FUT Esports"
+  ],
+  "rosterSeed": [
+   {
+    "id": "p-mrfalin",
+    "name": "MrFaliN",
+    "country": "tr",
+    "role": "igl",
+    "joined": "2023-01",
+    "formerTeams": []
+   },
+   {
+    "id": "p-qraxs",
+    "name": "qRaxs",
+    "country": "tr",
+    "role": "duelist",
+    "joined": "2023-01",
+    "formerTeams": []
+   },
+   {
+    "id": "p-xeus",
+    "name": "xeus",
+    "country": "tr",
+    "role": "initiator",
+    "joined": "2023-01",
+    "formerTeams": []
+   },
+   {
+    "id": "p-yetujey",
+    "name": "yetujey",
+    "country": "tr",
+    "role": "sentinel",
+    "joined": "2023-01",
+    "formerTeams": []
+   }
+  ]
+ },
+ {
+  "id": "tl",
+  "name": "Team Liquid",
+  "short": "TL",
+  "region": "emea",
+  "vlrId": "",
+  "aliases": [
+   "Team Liquid",
+   "TL",
+   "Liquid"
+  ],
+  "rosterSeed": []
+ },
+ {
+  "id": "kc",
+  "name": "Karmine Corp",
+  "short": "KC",
+  "region": "emea",
+  "vlrId": "",
+  "aliases": [
+   "Karmine Corp",
+   "KC"
+  ],
+  "rosterSeed": []
+ },
+ {
+  "id": "navi",
+  "name": "NAVI",
+  "short": "NAVI",
+  "region": "emea",
+  "vlrId": "",
+  "aliases": [
+   "NAVI",
+   "Natus Vincere"
+  ],
+  "rosterSeed": []
+ },
+ {
+  "id": "bbl",
+  "name": "BBL",
+  "short": "BBL",
+  "region": "emea",
+  "vlrId": "",
+  "aliases": [
+   "BBL"
+  ],
+  "rosterSeed": []
+ },
+ {
+  "id": "m8",
+  "name": "Gentle Mates",
+  "short": "M8",
+  "region": "emea",
+  "vlrId": "",
+  "aliases": [
+   "Gentle Mates",
+   "GM8"
+  ],
+  "rosterSeed": []
+ },
+ {
+  "id": "gx",
+  "name": "GiantX",
+  "short": "GX",
+  "region": "emea",
+  "vlrId": "",
+  "aliases": [
+   "GiantX",
+   "GX"
+  ],
+  "rosterSeed": []
+ },
+ {
+  "id": "pcific",
+  "name": "PCIFIC",
+  "short": "PCIFIC",
+  "region": "emea",
+  "vlrId": "",
+  "aliases": [
+   "PCIFIC"
+  ],
+  "rosterSeed": []
+ },
+ {
+  "id": "ulf",
+  "name": "ULF",
+  "short": "ULF",
+  "region": "emea",
+  "vlrId": "",
+  "aliases": [
+   "ULF"
+  ],
+  "rosterSeed": []
+ },
+ {
+  "id": "prx",
+  "name": "Paper Rex",
+  "short": "PRX",
+  "region": "pacific",
+  "vlrId": "",
+  "aliases": [
+   "Paper Rex",
+   "PRX"
+  ],
+  "rosterSeed": [
+   {
+    "id": "p-f0rsaken",
+    "name": "f0rsakeN",
+    "country": "id",
+    "role": "igl",
+    "joined": "2021-06",
+    "formerTeams": []
+   },
+   {
+    "id": "p-jinggg",
+    "name": "Jinggg",
+    "country": "id",
+    "role": "duelist",
+    "joined": "2022-01",
+    "formerTeams": []
+   },
+   {
+    "id": "p-d4v41",
+    "name": "d4v41",
+    "country": "th",
+    "role": "initiator",
+    "joined": "2021-06",
+    "formerTeams": []
+   },
+   {
+    "id": "p-invy",
+    "name": "invy",
+    "country": "id",
+    "role": "sentinel",
+    "joined": "2023-01",
+    "formerTeams": []
+   },
+   {
+    "id": "p-something",
+    "name": "something",
+    "country": "id",
+    "role": "controller",
+    "joined": "2023-06",
+    "formerTeams": []
+   }
+  ]
+ },
+ {
+  "id": "gen",
+  "name": "Gen.G",
+  "short": "GEN",
+  "region": "pacific",
+  "vlrId": "",
+  "aliases": [
+   "Gen.G",
+   "GEN",
+   "GenG"
+  ],
+  "rosterSeed": [
+   {
+    "id": "p-t3xture",
+    "name": "t3xture",
+    "country": "kr",
+    "role": "duelist",
+    "joined": "2024-01",
+    "formerTeams": []
+   },
+   {
+    "id": "p-karon",
+    "name": "Karon",
+    "country": "kr",
+    "role": "sentinel",
+    "joined": "2024-01",
+    "formerTeams": []
+   },
+   {
+    "id": "p-ash",
+    "name": "Ash",
+    "country": "kr",
+    "role": "controller",
+    "joined": "2024-01",
+    "formerTeams": []
+   },
+   {
+    "id": "p-efina",
+    "name": "Efina",
+    "country": "kr",
+    "role": "initiator",
+    "joined": "2024-01",
+    "formerTeams": []
+   },
+   {
+    "id": "p-lakia",
+    "name": "Lakia",
+    "country": "kr",
+    "role": "igl",
+    "joined": "2024-01",
+    "formerTeams": []
+   }
+  ]
+ },
+ {
+  "id": "t1",
+  "name": "T1",
+  "short": "T1",
+  "region": "pacific",
+  "vlrId": "",
+  "aliases": [
+   "T1"
+  ],
+  "rosterSeed": [
+   {
+    "id": "p-stax",
+    "name": "stax",
+    "country": "kr",
+    "role": "sentinel",
+    "joined": "2024-01",
+    "formerTeams": []
+   },
+   {
+    "id": "p-munchkin",
+    "name": "Munchkin",
+    "country": "kr",
+    "role": "igl",
+    "joined": "2024-01",
+    "formerTeams": []
+   },
+   {
+    "id": "p-buzz",
+    "name": "BuZz",
+    "country": "kr",
+    "role": "duelist",
+    "joined": "2024-01",
+    "formerTeams": []
+   },
+   {
+    "id": "p-meteor",
+    "name": "Meteor",
+    "country": "kr",
+    "role": "initiator",
+    "joined": "2024-01",
+    "formerTeams": []
+   },
+   {
+    "id": "p-izu",
+    "name": "iZu",
+    "country": "kr",
+    "role": "controller",
+    "joined": "2024-01",
+    "formerTeams": []
+   }
+  ]
+ },
+ {
+  "id": "nsr",
+  "name": "NS RedForce",
+  "short": "NSR",
+  "region": "pacific",
+  "vlrId": "",
+  "aliases": [
+   "NS RedForce",
+   "NSR",
+   "NSRF"
+  ],
+  "rosterSeed": [
+   {
+    "id": "p-rb",
+    "name": "Rb",
+    "country": "kr",
+    "role": "igl",
+    "joined": "2024-06",
+    "formerTeams": []
+   },
+   {
+    "id": "p-dambi",
+    "name": "Dambi",
+    "country": "kr",
+    "role": "duelist",
+    "joined": "2024-06",
+    "formerTeams": []
+   },
+   {
+    "id": "p-francis",
+    "name": "Francis",
+    "country": "kr",
+    "role": "initiator",
+    "joined": "2024-06",
+    "formerTeams": []
+   },
+   {
+    "id": "p-ivy",
+    "name": "Ivy",
+    "country": "kr",
+    "role": "sentinel",
+    "joined": "2024-06",
+    "formerTeams": []
+   },
+   {
+    "id": "p-xross",
+    "name": "Xross",
+    "country": "kr",
+    "role": "controller",
+    "joined": "2024-06",
+    "formerTeams": []
+   }
+  ]
+ },
+ {
+  "id": "drx",
+  "name": "KIWOOM DRX",
+  "short": "DRX",
+  "region": "pacific",
+  "vlrId": "",
+  "aliases": [
+   "KIWOOM DRX",
+   "DRX",
+   "Kiwoom"
+  ],
+  "rosterSeed": []
+ },
+ {
+  "id": "ge",
+  "name": "Global Esports",
+  "short": "GE",
+  "region": "pacific",
+  "vlrId": "",
+  "aliases": [
+   "Global Esports",
+   "GE"
+  ],
+  "rosterSeed": []
+ },
+ {
+  "id": "rrq",
+  "name": "RRQ",
+  "short": "RRQ",
+  "region": "pacific",
+  "vlrId": "",
+  "aliases": [
+   "RRQ",
+   "Rex Regum Qeon"
+  ],
+  "rosterSeed": []
+ },
+ {
+  "id": "tsec",
+  "name": "Team Secret",
+  "short": "TSEC",
+  "region": "pacific",
+  "vlrId": "",
+  "aliases": [
+   "Team Secret",
+   "TSEC",
+   "Secret"
+  ],
+  "rosterSeed": []
+ },
+ {
+  "id": "dfm",
+  "name": "DFM",
+  "short": "DFM",
+  "region": "pacific",
+  "vlrId": "",
+  "aliases": [
+   "DFM",
+   "DetonatioN FM"
+  ],
+  "rosterSeed": []
+ },
+ {
+  "id": "zeta",
+  "name": "ZETA",
+  "short": "ZETA",
+  "region": "pacific",
+  "vlrId": "",
+  "aliases": [
+   "ZETA",
+   "Zeta Division"
+  ],
+  "rosterSeed": []
+ },
+ {
+  "id": "varrel",
+  "name": "VARREL",
+  "short": "VARREL",
+  "region": "pacific",
+  "vlrId": "",
+  "aliases": [
+   "VARREL"
+  ],
+  "rosterSeed": []
+ },
+ {
+  "id": "fs",
+  "name": "FULL SENSE",
+  "short": "FS",
+  "region": "pacific",
+  "vlrId": "",
+  "aliases": [
+   "FULL SENSE",
+   "FS",
+   "FullSense"
+  ],
+  "rosterSeed": []
+ },
+ {
+  "id": "at",
+  "name": "Attacking Soul",
+  "short": "AT",
+  "region": "cn-challenger",
+  "vlrId": "",
+  "aliases": [
+   "AT",
+   "Attacking Soul"
+  ],
+  "rosterSeed": []
+ },
+ {
+  "id": "kbg",
+  "name": "Kingback Gaming",
+  "short": "KBG",
+  "region": "cn-challenger",
+  "vlrId": "",
+  "aliases": [
+   "KBG",
+   "Kingback"
+  ],
+  "rosterSeed": []
+ }
+]

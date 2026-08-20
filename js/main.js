@@ -614,7 +614,9 @@ App.init = function(){
       <div class="loading-spinner"></div>
       <div class="loading-text">正在加载数据…</div>
     </div>`;
-  App.load().then(() => {
+  /* 战队注册表加载（浏览器端从 JSON fetch，必须先于 load/seedState 完成） */
+  const teamsReady = (typeof VCT_TEAMS_LOAD === 'function') ? VCT_TEAMS_LOAD() : Promise.resolve();
+  teamsReady.then(() => App.load()).then(() => {
     // 旧数据迁移：补认证字段，有改动则立即持久化
     if(App.state && App.state.staff){
       if(migrateAuth(App.state.staff)) App.save();
