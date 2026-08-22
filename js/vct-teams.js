@@ -40,19 +40,25 @@ function VCT_TEAMS_SEED(){
     obj[t.id] = {
       id: t.id,
       name: t.name,
+      nameEn: t.name,
+      shortName: t.short,
+      shortNameEn: t.short,
       short: t.short,
       aliases: t.aliases || [],
       region: t.region,
       vlrId: t.vlrId || '',
+      logo: '',
       roster: (t.rosterSeed || []).map(p => ({
         id: p.id,
         name: p.name,
+        avatar: '',
         country: p.country,
         role: p.role,
         joined: p.joined || '',
         formerTeams: p.formerTeams || [],
         source: 'seed'
       })),
+      coaches: [],
       manual: false,
       updatedAt: 0
     };

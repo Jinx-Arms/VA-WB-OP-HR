@@ -649,3 +649,67 @@ table.roster{border-collapse:collapse;font-size:12px;width:max-content;min-width
   .st-table{font-size:11px}
   .st-table th,.st-table td{padding:6px}
 }
+
+/* =====================================================
+ * 图形工厂 (rf-) 与 素材后台 (al-)
+ * ===================================================== */
+.rf-head h2, .al- .rf-head h2{font-size:20px;margin-bottom:14px}
+.rf-head small, .al- small{color:var(--sub);font-size:13px;font-weight:400;margin-left:8px}
+.rf-top{display:flex;flex-wrap:wrap;gap:14px;align-items:flex-end;margin-bottom:14px}
+.rf-top .form-row{width:220px;margin:0}
+.rf-top .toolbar{margin:0}
+.rf-body{display:grid;grid-template-columns:1fr 360px;gap:16px;align-items:start}
+@media(max-width:1100px){.rf-body{grid-template-columns:1fr}}
+.rf-left{display:flex;flex-direction:column;gap:14px}
+.rf-src h3,.rf-preview h3,.rf-right .card h3,.rf-export h3{display:flex;align-items:center;gap:10px;font-size:15px;margin-bottom:10px}
+.rf-preview{min-height:200px}
+.rf-canvas-wrap{background:#0b0708;border:1px solid var(--line);border-radius:8px;padding:8px;overflow:auto;text-align:center}
+#rf-canvas{max-width:100%;height:auto;display:inline-block;box-shadow:0 4px 24px rgba(0,0,0,.4)}
+.rf-chk{font-size:13px;color:var(--sub);display:inline-flex;align-items:center;gap:4px}
+.rf-chk select{width:auto;padding:4px 8px}
+.rf-banner{margin-bottom:8px}
+.rf-missing{background:rgba(220,48,48,.12);border:1px solid rgba(220,48,48,.5);color:#ffb4b4;padding:8px 12px;border-radius:8px;font-size:13px;line-height:1.5}
+.rf-slotlist{max-height:280px;overflow:auto;display:flex;flex-direction:column;gap:4px}
+.rf-slot{display:flex;align-items:center;gap:6px;padding:6px 8px;border:1px solid var(--line);border-radius:6px;cursor:pointer;font-size:12px}
+.rf-slot:hover{border-color:var(--accent)}
+.rf-slot.active{border-color:var(--accent);background:rgba(220,48,48,.12)}
+.rf-slot .rf-sk{font-weight:600;color:var(--txt)}
+.rf-slot .btn{margin-left:auto}
+.tag{font-size:10px;padding:1px 6px;border-radius:4px;background:var(--panel2);color:var(--sub)}
+.tag.ok{background:rgba(73,255,211,.15);color:var(--ok)}
+.rf-form{display:flex;flex-direction:column;gap:8px;margin-top:8px}
+.rf-fr{display:flex;align-items:center;gap:8px}
+.rf-fr label{width:56px;font-size:12px;color:var(--sub)}
+.rf-fr input,.rf-fr select{flex:1;width:auto;padding:6px 8px;font-size:12px}
+.rf-teams{display:flex;flex-wrap:wrap;gap:8px}
+.rf-tc{display:inline-flex;align-items:center;gap:5px;font-size:13px;background:var(--panel2);border:1px solid var(--line);border-radius:14px;padding:4px 10px;cursor:pointer}
+.rf-casters{margin-top:8px;display:flex;flex-direction:column;gap:10px}
+.rf-match{background:var(--panel2);border:1px solid var(--line);border-radius:8px;padding:8px 10px}
+.rf-match .muted{font-size:12px}
+.rf-caster-pool{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.rf-caster-pool .rf-tc small{color:var(--dim);margin-left:2px}
+.rf-export{margin-top:14px}
+.rf-export .toolbar{align-items:center}
+.rf-export .btn.primary[disabled]{opacity:.4;cursor:not-allowed}
+.muted{color:var(--dim);font-size:12px}
+
+/* 素材后台 */
+.al-layout{display:grid;grid-template-columns:380px 1fr;gap:16px;align-items:start}
+@media(max-width:1100px){.al-layout{grid-template-columns:1fr}}
+.al-side .al-logo{display:flex;align-items:center;gap:12px;margin:10px 0}
+.al-logo-prev{width:88px;height:88px;border:1px solid var(--line);border-radius:8px;display:flex;align-items:center;justify-content:center;background:var(--panel2);overflow:hidden}
+.al-logo-prev img{width:100%;height:100%;object-fit:contain}
+.al-players{display:flex;flex-direction:column;gap:8px}
+.al-player{display:flex;align-items:center;gap:10px;background:var(--panel2);border:1px solid var(--line);border-radius:8px;padding:8px}
+.al-ava{width:56px;height:56px;border-radius:8px;background:var(--bg);display:flex;align-items:center;justify-content:center;overflow:hidden;flex:0 0 auto;color:var(--dim);font-size:11px}
+.al-ava img{width:100%;height:100%;object-fit:cover}
+.al-pf{flex:1;display:flex;flex-direction:column;gap:5px}
+.al-pf input{font-size:12px;padding:6px 8px}
+.al-pact{display:flex;flex-direction:column;gap:4px;flex:0 0 auto}
+.al-casters{display:flex;flex-direction:column;gap:8px}
+.al-font-tbl{width:100%;border-collapse:collapse;margin-top:8px;font-size:13px}
+.al-font-tbl th,.al-font-tbl td{border:1px solid var(--line);padding:6px 8px;text-align:left}
+.al-font-tbl th{background:var(--panel2);color:var(--sub)}
+.btn.sm{padding:4px 8px;font-size:12px}
+.btn.danger{color:#ff9a9a;border:1px solid rgba(220,48,48,.4)}
+.btn.danger:hover{background:rgba(220,48,48,.15)}

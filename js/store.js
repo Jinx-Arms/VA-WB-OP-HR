@@ -75,7 +75,19 @@ function seedState(){
     /* 看点挖掘模块 */
     teams: (typeof VCT_TEAMS_SEED !== 'undefined') ? VCT_TEAMS_SEED() : {},
     matchups: {},     // key 'a-vs-b' -> {teams, history[], notes[], updatedAt}
-    highlights: []    // [{id, matchKey, date, teams, tags, title, summary, status, edited, ...}]
+    highlights: [],   // [{id, matchKey, date, teams, tags, title, summary, status, edited, ...}]
+
+    /* ---- 图形工厂 ---- */
+    templates: (typeof RENDER_TEMPLATES_SEED !== 'undefined') ? RENDER_TEMPLATES_SEED() : [],
+    casters: [],    // 解说池 [{id,name,portrait,role,createdBy,createdAt}]
+    fonts: [],      // 字体 [{family,name,url,scope,uploadedBy,uploadedAt}]
+    allowedFonts: [], // 白名单；空数组 = 不限制
+    render: {       // 会话级缓冲（不持久化到云端）
+      currentTemplateId: null,
+      currentSource: null,
+      draftSlots: null,  // 管理员模板结构编辑未保存改动
+      overrides: {}      // 运营文字微调
+    }
   };
   return st;
 }
@@ -149,6 +161,7 @@ App.save = function(){
   /* 剥离会话字段：不写入云端/服务器共享存储 */
   const persistState = Object.assign({}, App.state);
   delete persistState.user;
+  delete persistState.render;
   const json = JSON.stringify(persistState);
 
   /* 云端模式：写入 Supabase */
@@ -258,6 +271,7 @@ App.flush = function(){
   /* 剥离会话字段，不写入共享存储 */
   const persistState = Object.assign({}, App.state);
   delete persistState.user;
+  delete persistState.render;
 
   /* 云端模式：fetch keepalive 刷写 Supabase */
   if(CLOUD.isCloudMode()){
@@ -319,6 +333,9 @@ App._snap = function(section){
     matchups: JSON.parse(JSON.stringify(App.state.matchups)),
     highlights: JSON.parse(JSON.stringify(App.state.highlights))
   };
+  if(section === 'render') return {
+    render: JSON.parse(JSON.stringify(App.state.render))
+  };
   return null;
 };
 /* 恢复：将快照写回 state */
@@ -330,6 +347,9 @@ App._restore = function(section, snap){
     App.state.teams = snap.teams;
     App.state.matchups = snap.matchups;
     App.state.highlights = snap.highlights;
+  }
+  if(section === 'render'){
+    App.state.render = snap.render;
   }
 };
 

@@ -327,6 +327,8 @@ const NAV = [
   { key:'assign',  label:'责任分配',    ico:'🎯', admin:true },
   { key:'story',   label:'看点挖掘',    ico:'🧠' },
   { key:'kb',      label:'知识库',      ico:'📚' },
+  { key:'render',  label:'图形工厂',    ico:'🎨' },
+  { key:'assets',  label:'素材管理',    ico:'🗂️', admin:true },
   { key:'mine',    label:'我的面板',    ico:'🙋', hideForAdmin:false }
 ];
 
@@ -408,6 +410,7 @@ App.nav = function(key){
   if(key === 'content' && !App._history['content']) App.initHistory('content');
   if(key === 'schedule' && !App._history['schedule']) App.initHistory('schedule');
   if(key === 'story' && !App._history['story']) App.initHistory('story');
+  if(key === 'render' && !App._history['render']) App.initHistory('render');
   document.querySelectorAll('.nav-item').forEach(e => e.classList.remove('active'));
   const el = document.getElementById('nav-' + key);
   if(el) el.classList.add('active');
@@ -430,8 +433,11 @@ App.renderView = function(){
   else if(App.currentView === 'assign') v.innerHTML = App.renderAssign();
   else if(App.currentView === 'kb') v.innerHTML = App.renderKB();
   else if(App.currentView === 'story') v.innerHTML = App.renderStory();
+  else if(App.currentView === 'assets') v.innerHTML = App.renderAssets();
+  else if(App.currentView === 'render') v.innerHTML = App.renderRender();
   else if(App.currentView === 'mine') v.innerHTML = App.renderMine();
   else v.innerHTML = App.renderDash();
+  if(App.currentView === 'render') App.rfDraw();
 };
 
 /* ---------- 通知中心 ---------- */
@@ -649,6 +655,22 @@ App.init = function(){
     }
     if(!App.state.matchups){ App.state.matchups = {}; App.save(); }
     if(!App.state.highlights){ App.state.highlights = []; App.save(); }
+
+    // 图形工厂字段迁移 / 队伍字段补全
+    if(!App.state.templates){ App.state.templates = (typeof RENDER_TEMPLATES_SEED !== 'undefined') ? RENDER_TEMPLATES_SEED() : []; App.save(); }
+    if(!App.state.casters){ App.state.casters = []; App.save(); }
+    if(!App.state.fonts){ App.state.fonts = []; App.save(); }
+    if(!App.state.allowedFonts){ App.state.allowedFonts = []; App.save(); }
+    if(!App.state.render){ App.state.render = { currentTemplateId:null, currentSource:null, draftSlots:null, overrides:{} }; App.save(); }
+    Object.values(App.state.teams || {}).forEach(t => {
+      if(t.nameEn === undefined){ t.nameEn = t.name; t.shortName = t.short; t.shortNameEn = t.short; }
+      if(t.logo === undefined) t.logo = '';
+      if(!t.coaches) t.coaches = [];
+      (t.roster || []).forEach(p => { if(p.avatar === undefined) p.avatar = ''; });
+    });
+    App.save();
+    // 注册已录入的字体（白名单 Storage 字体）
+    if(typeof FONT !== 'undefined') FONT.registerStateFonts().catch(() => {});
     // 从本设备 localStorage 恢复登录会话（不依赖云端共享数据）
     App.restoreSession();
     if(App.state.user && App.staffById(App.state.user) && App.staffById(App.state.user).status === 'active'){
