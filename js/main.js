@@ -56,7 +56,10 @@ function avatarHTML(s, size){
 
 App.renderLogin = function(){
   const ti = (localStorage.getItem('vct-theme')||'dark')==='light' ? '🌙' : '☀️';
-  document.getElementById('app').innerHTML = `
+  // 防御性：避免二次调用时操作已被 remove 的元素（曾导致 null.innerHTML 抛错）
+  const appEl = document.getElementById('app');
+  if(!appEl) return;
+  appEl.innerHTML = `
   <div class="login-wrap">
     <button class="theme-toggle" style="position:fixed;top:18px;right:18px" onclick="App.toggleTheme()" title="切换亮色/深色主题"><span id="theme-icon">${ti}</span></button>
     <div class="login-logo">瓦电 <b>赛事运营中台</b></div>
@@ -450,6 +453,22 @@ App.renderView = function(){
   }catch(e){
     console.error('[renderView] 渲染失败，已保留上一视图：', e);
     if(App.toast) App.toast('页面渲染出错（已保留当前内容）：' + (e && e.message ? e.message : e), 'err', 4000);
+    // 二次兜底：极少数情况下（renderShell 重建后 #view 被整体清空、catch 也无 DOM 可保留），
+    // 给一个安全降级页 + 刷新入口，避免用户看到完全空白的中间区域。
+    try{
+      if(v && (!v.childElementCount || v.innerText.trim()==='')){
+        v.innerHTML = `
+          <div class="card" style="max-width:560px;margin:48px auto;text-align:center">
+            <h3>页面渲染异常</h3>
+            <p class="hint">视图渲染遇到问题，已显示安全降级页。错误：<code>${(e && e.message ? e.message : e)||'未知'}</code></p>
+            <div class="toolbar" style="justify-content:center;margin-top:12px">
+              <button class="btn primary" onclick="location.reload()">🔄 刷新页面</button>
+              <button class="btn" onclick="App.nav('dash')">🏠 回运营概览</button>
+              <button class="btn" onclick="App.manualSync()">☁ 重新同步云端</button>
+            </div>
+          </div>`;
+      }
+    }catch(_){ /* 二次兜底再失败就放弃，避免无限递归 */ }
     return; // 不继续 rfDraw，避免基于损坏 DOM 操作
   }
   if(App.currentView === 'render') App.rfDraw();

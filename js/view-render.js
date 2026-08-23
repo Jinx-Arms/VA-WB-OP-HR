@@ -340,6 +340,33 @@ App.rfDeleteSlot = function(key){
 };
 
 /* ---------- 管理员：模板管理 (3.5) ---------- */
+/* 选完底图后自动读宽高，填入 w/h 输入框。仅在用户尚未手动改尺寸（即值仍为默认 1080/空）时自动覆盖。 */
+App.rfNewTemplateAutoSize = function(input){
+  const file = input.files && input.files[0];
+  if(!file) return;
+  const wInp = document.getElementById('nt-w');
+  const hInp = document.getElementById('nt-h');
+  // 只在两个尺寸都是"未手动改过"（空/0）时自动覆盖，避免误覆盖用户已改的值
+  const wTouched = wInp && wInp.value && +wInp.value > 0 && document.getElementById('nt-w').defaultValue !== wInp.value;
+  const hTouched = hInp && hInp.value && +hInp.value > 0 && document.getElementById('nt-h').defaultValue !== hInp.value;
+  if(wTouched || hTouched){
+    App.toast('已保留你手动改的尺寸（自动尺寸未应用）', 'info', 1800);
+    return;
+  }
+  const url = URL.createObjectURL(file);
+  const img = new Image();
+  img.onload = function(){
+    if(wInp) wInp.value = img.naturalWidth;
+    if(hInp) hInp.value = img.naturalHeight;
+    URL.revokeObjectURL(url);
+    App.toast('已自动填入底图尺寸：'+img.naturalWidth+'×'+img.naturalHeight, 'ok', 1500);
+  };
+  img.onerror = function(){
+    URL.revokeObjectURL(url);
+    App.toast('底图解析失败，请手动填写尺寸', 'err');
+  };
+  img.src = url;
+};
 App.rfNewTemplate = function(){
   if(!App.can('manage')){ App.toast('仅管理员可管理模板','err'); return; }
   App.modal('新建模板', `
@@ -348,17 +375,24 @@ App.rfNewTemplate = function(){
     <div class="form-row"><label>设计尺寸 w,h</label>
       <input id="nt-w" type="number" value="1080" style="width:90px"> <input id="nt-h" type="number" value="1080" style="width:90px"></div>
     <div class="form-row"><label>类型</label><select id="nt-kind"><option value="preview">今日预告</option><option value="casters">今日解说</option><option value="lineup">今日首发</option><option value="custom">自定义</option></select></div>
-    <div class="form-row"><label>底图(可选)</label><input type="file" id="nt-base" accept="image/*"></div>
+    <div class="form-row"><label>底图(可选)</label><input type="file" id="nt-base" accept="image/*" onchange="App.rfNewTemplateAutoSize(this)"></div>
   `, `<button class="btn" onclick="App.closeModal()">取消</button>
       <button class="btn primary" onclick="App.rfNewTemplateConfirm()">创建并编辑</button>`);
 };
 App.rfNewTemplateConfirm = async function(){
-  const name = document.getElementById('nt-name').value.trim() || '未命名模板';
-  const w = +document.getElementById('nt-w').value, h = +document.getElementById('nt-h').value;
-  const orient = document.getElementById('nt-orient').value;
-  const kind = document.getElementById('nt-kind').value;
+  // 防御：弹窗已被关闭（连点/异步竞态）时元素不存在，直接退出而非抛错
+  const nmEl = document.getElementById('nt-name');
+  if(!nmEl) { App.toast('新建模板窗口已关闭，请重试', 'err', 2000); return; }
+  const name = nmEl.value.trim() || '未命名模板';
+  const wInp = document.getElementById('nt-w'), hInp = document.getElementById('nt-h');
+  const w = wInp && wInp.value ? +wInp.value : 1080;
+  const h = hInp && hInp.value ? +hInp.value : 1080;
+  const orientEl = document.getElementById('nt-orient'), kindEl = document.getElementById('nt-kind');
+  const orient = orientEl ? orientEl.value : 'portrait';
+  const kind = kindEl ? kindEl.value : 'preview';
   let base = '';
-  const file = document.getElementById('nt-base').files[0];
+  const fileEl = document.getElementById('nt-base');
+  const file = fileEl && fileEl.files ? fileEl.files[0] : null;
   if(file){
     try{ base = await ASSETS.upload(file, 'templates'); }catch(e){ App.toast('底图上传失败：'+e.message,'err'); }
   }
