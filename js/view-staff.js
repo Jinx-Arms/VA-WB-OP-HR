@@ -46,9 +46,9 @@ App.staffFormOpen = function(id){
   const s = id ? App.staffById(id) : null;
   App.modal(s ? '编辑成员信息' : '入职登记', `
     <div class="form-row">
-      <div><label>姓名 *</label><input id="sf-name" value="${s ? s.name : ''}" placeholder="请输入姓名"></div>
+      <div><label>姓名 *</label><input id="sf-name" value="${s ? s.name : ''}" placeholder="请输入姓名" oninput="App._modalDirty=true"></div>
       <div><label>角色权限 *</label>
-        <select id="sf-role">
+        <select id="sf-role" onchange="App._modalDirty=true">
           <option value="employee" ${s && s.role==='employee'?'selected':''}>普通员工（排班 / 休假 / 任务）</option>
           <option value="admin" ${s && s.role==='admin'?'selected':''}>管理员（排班 / 审批 / 人员管理）</option>
           <option value="intern" ${s && s.role==='intern'?'selected':''}>实习生（排班 / 休假，不承担内容发布）</option>
@@ -56,17 +56,17 @@ App.staffFormOpen = function(id){
       </div>
     </div>
     <div class="form-row">
-      <div><label>职位</label><input id="sf-pos" value="${s ? s.position : ''}" placeholder="如：内容运营"></div>
-      <div><label>联系电话</label><input id="sf-phone" value="${s ? s.phone : ''}" placeholder="手机号"></div>
+      <div><label>职位</label><input id="sf-pos" value="${s ? s.position : ''}" placeholder="如：内容运营" oninput="App._modalDirty=true"></div>
+      <div><label>联系电话</label><input id="sf-phone" value="${s ? s.phone : ''}" placeholder="手机号" oninput="App._modalDirty=true"></div>
     </div>
     <div class="form-row">
-      <div><label>用户名 ${s ? '' : '（留空自动生成）'}</label><input id="sf-username" value="${s ? (s.username || '') : ''}" placeholder="登录用户名"></div>
-      <div><label>入职日期 *</label><input type="date" id="sf-join" value="${s ? s.joinDate : D.today()}"></div>
+      <div><label>用户名 ${s ? '' : '（留空自动生成）'}</label><input id="sf-username" value="${s ? (s.username || '') : ''}" placeholder="登录用户名" oninput="App._modalDirty=true"></div>
+      <div><label>入职日期 *</label><input type="date" id="sf-join" value="${s ? s.joinDate : D.today()}" onchange="App._modalDirty=true"></div>
     </div>
     ${s ? '<div class="hint">如需修改密码，请使用 🔑 按钮重置。</div>' : '<div class="hint">新成员初始密码为 vct2026，首次登录后请提醒修改。</div>'}
   `, `
     <button class="btn" onclick="App.closeModal()">取消</button>
-    <button class="btn primary" onclick="App.staffSave('${id || ''}')">${s ? '保存修改' : '确认入职'}</button>
+    <button class="btn primary" onclick="App._modalDirty=false;App.staffSave('${id || ''}')">${s ? '保存修改' : '确认入职'}</button>
   `);
 };
 
@@ -113,12 +113,12 @@ App.staffSave = function(id){
 App.resetPasswordOpen = function(id){
   const s = App.staffById(id);
   App.modal(`重置密码 · ${s.name}`, `
-    <div class="form-row single"><label>新密码</label><input type="password" id="rp-pwd" placeholder="至少 6 位" autocomplete="new-password"></div>
-    <div class="form-row single"><label>确认新密码</label><input type="password" id="rp-confirm" placeholder="再次输入新密码" autocomplete="new-password"></div>
+    <div class="form-row single"><label>新密码</label><input type="password" id="rp-pwd" placeholder="至少 6 位" autocomplete="new-password" oninput="App._modalDirty=true"></div>
+    <div class="form-row single"><label>确认新密码</label><input type="password" id="rp-confirm" placeholder="再次输入新密码" autocomplete="new-password" oninput="App._modalDirty=true"></div>
     <div class="hint">重置后请将新密码告知 ${s.name}，建议登录后自行修改。</div>
   `, `
     <button class="btn" onclick="App.closeModal()">取消</button>
-    <button class="btn primary" onclick="App.resetPasswordConfirm('${id}')">确认重置</button>
+    <button class="btn primary" onclick="App._modalDirty=false;App.resetPasswordConfirm('${id}')">确认重置</button>
   `);
   setTimeout(() => { const el = document.getElementById('rp-pwd'); if(el) el.focus(); }, 100);
 };
@@ -147,11 +147,11 @@ App.staffLeaveOpen = function(id){
   const futureTasks = st.content.filter(c => c.assigneeId === id && c.date >= today && c.status !== 'cancelled').length;
   App.modal(`离职办理 · ${s.name}`, `
     <div class="conflict-item warn">⚠️ 离职后该成员将无法登录，未来 ${futureDays} 天排班自动移除${futureTasks ? `，${futureTasks} 条待发布内容需重新分配负责人` : ''}。历史记录将完整保留。</div>
-    <div class="form-row single" style="margin-top:14px"><label>离职日期</label><input type="date" id="sf-leave" value="${today}"></div>
+    <div class="form-row single" style="margin-top:14px"><label>离职日期</label><input type="date" id="sf-leave" value="${today}" onchange="App._modalDirty=true"></div>
     <div class="hint">离职交接提示：导出其历史排班（排班管理 → 显示已离职 → 导出 CSV）交由接手人。</div>
   `, `
     <button class="btn" onclick="App.closeModal()">取消</button>
-    <button class="btn danger" onclick="App.staffLeaveConfirm('${id}')">确认离职</button>
+    <button class="btn danger" onclick="App._modalDirty=false;App.staffLeaveConfirm('${id}')">确认离职</button>
   `);
 };
 

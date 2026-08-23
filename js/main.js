@@ -4,8 +4,9 @@
 
 /* ---------- 弹窗 & 轻提示 ---------- */
 App.modal = function(title, bodyHTML, footHTML){
-  /* 每次打开弹窗前先关闭已有弹窗，避免叠加导致 DOM 重复读取 */
-  App.closeModal();
+  /* 每次打开弹窗前先强制关闭已有弹窗（跳过 dirty 守卫，避免打开新弹窗时误拦截） */
+  App.closeModal(true);
+  App._modalDirty = false;
   const wrap = document.createElement('div');
   wrap.className = 'modal-wrap';
   wrap.innerHTML = `<div class="modal">
@@ -16,7 +17,15 @@ App.modal = function(title, bodyHTML, footHTML){
   wrap.addEventListener('click', e => { if(e.target === wrap) App.closeModal(); });
   document.body.appendChild(wrap);
 };
-App.closeModal = function(){ document.querySelectorAll('.modal-wrap').forEach(e => e.remove()); };
+/* closeModal(force): 非 force 且当前弹窗有未保存改动时，用 confirm 拦截，避免静默丢失。
+   人员管理等表单弹窗在用户输入时置 App._modalDirty=true，确认按钮里置 false 再关。 */
+App.closeModal = function(force){
+  if(!force && App._modalDirty){
+    if(!confirm('有未保存的修改，确定关闭吗？关闭后修改将丢失。')) return;
+  }
+  App._modalDirty = false;
+  document.querySelectorAll('.modal-wrap').forEach(e => e.remove());
+};
 App.toast = function(msg, type = 'info', ms = 3000){
   const t = document.createElement('div');
   t.className = 'toast ' + (type === 'info' ? '' : type);
@@ -106,15 +115,19 @@ App.doLogin = async function(){
   App.renderShell();
   App.nav(App.can('manage') ? 'dash' : 'mine');
   if(App._autoSyncOn) App.startAutoSync();
-  // 超 24 小时自动同步一次官方赛程
-  if(Date.now() - (App.state.lastSync || 0) > 86400000 && App.can('manage')){
+  /* 登录后立即触发一次云端 state 同步（不等 30s 轮询首个 tick），让登录瞬间就拿到最新数据 */
+  if(App._autoSyncOn) App._doAutoSync().catch(() => {});
+  /* 登录时自动拉官方赛程（节流：距上次自动拉超过 6 小时才跑，避免每次进页打静态文件）
+     非管理员（普通员工）也看赛程页，同样需要最新官方赛程，故去掉 can('manage') 限制 */
+  if(Date.now() - (App._lastAutoOfficialSync || 0) > 21600000){
+    App._lastAutoOfficialSync = Date.now();
     App.syncSchedule().then(({ changes, affected }) => {
       if(changes.length){
         App.toast(`官方赛程有 ${changes.length} 项更新：` + changes.map(c => D.dateCN(c.date) + c.desc).join('；'), 'ok', 6000);
         if(affected.length) App.toast(`⚠️ ${affected.length} 个已排班日受影响，建议重新排班`, 'warn', 6000);
         App.renderView();
       }
-    });
+    }).catch(() => {});
   }
 };
 
@@ -441,6 +454,17 @@ App.nav = function(key){
   if(key === 'roster'  && !App._history['roster'])  App.initHistory('roster');
   if(key === 'content' && !App._history['content']) App.initHistory('content');
   if(key === 'schedule' && !App._history['schedule']) App.initHistory('schedule');
+  /* 进入赛程页时自动拉一次官方赛程（节流：距上次自动拉超 6 小时才跑，避免每次进页打静态文件） */
+  if(key === 'schedule' && Date.now() - (App._lastAutoOfficialSync || 0) > 21600000){
+    App._lastAutoOfficialSync = Date.now();
+    App.syncSchedule().then(({ changes, affected }) => {
+      if(changes.length){
+        App.toast(`官方赛程有 ${changes.length} 项更新：` + changes.map(c => D.dateCN(c.date) + c.desc).join('；'), 'ok', 6000);
+        if(affected.length) App.toast(`⚠️ ${affected.length} 个已排班日受影响，建议重新排班`, 'warn', 6000);
+        App.renderView();
+      }
+    }).catch(() => {});
+  }
   if(key === 'story' && !App._history['story']) App.initHistory('story');
   if(key === 'render' && !App._history['render']) App.initHistory('render');
   if(key === 'handover' && !App._history['handover']) App.initHistory('handover');
