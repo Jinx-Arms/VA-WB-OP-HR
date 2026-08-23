@@ -1,7 +1,13 @@
 /* =====================================================
  * vlr-scraper.js — VLR.gg 赛程抓取器（零依赖）
  * 定时从 VLR.gg 抓取赛事页面，解析 HTML 生成 scheduleDays
- * 通过 Cookie tz=8 获取北京时间
+ *
+ * 时区说明（重要）：
+ *   VLR.gg 服务端(SSR)按「赛事当地时区」渲染比赛时间 —— VCT CN / 上海冠军赛即北京时间(UTC+8)，
+ *   与抓取机物理时区无关（已实测：tz=8 cookie、Accept-Language 均不改变 SSR 输出）。
+ *   因此抓到的 "4:00 PM" 解析后即北京时间，无需二次时区换算。
+ *   Cookie tz=8 仅作前端备用，不影响 SSR。下方 sanity check 会在 VLR 改为返回 UTC 等
+ *   异常时区时告警。落盘元数据 tz:'Asia/Shanghai' 标明规范口径。
  * ===================================================== */
 'use strict';
 const https = require('https');
@@ -75,6 +81,12 @@ function parseTime(text){
   return String(h).padStart(2,'0') + ':' + min;
 }
 
+/* runner 当前时区（如 'UTC' / 'Asia/Shanghai' / 'America/New_York'），供落盘审计 */
+function runnerTZ(){
+  try { return Intl.DateTimeFormat().resolvedOptions().timeZone || 'UTC'; }
+  catch(e){ return 'UTC'; }
+}
+
 /* ---------- 提取纯文本（去标签） ---------- */
 function stripTags(html){
   return html.replace(/<[^>]*>/g, '').replace(/&amp;/g,'&').replace(/&ndash;/g,'-')
@@ -119,9 +131,11 @@ function parseVLRPage(html, eventLabel){
       const matchHTML = m[2];
       const slug = extractSlug(href);
 
-      // 提取时间
+      // 提取时间。VLR 服务端（SSR）按「赛事当地时区」渲染，VCT CN / 上海冠军赛即北京时间（UTC+8），
+      // 与抓取机物理时区无关（已实测 tz=8 cookie / Accept-Language 均不改变 SSR 输出）。
+      // 因此直接采用解析后的本地时间文本即可；下方 sanity check 会在 VLR 改为返回 UTC 等异常时告警。
       const timeMatch = matchHTML.match(/match-item-time[^>]*>([\s\S]*?)<\/div>/);
-      const time = timeMatch ? parseTime(stripTags(timeMatch[1])) : '';
+      const time = timeMatch ? (parseTime(stripTags(timeMatch[1])) || 'TBD') : 'TBD';
 
       // 提取队伍名（match-item-vs-team-name 内的 text-of）
       const teamRegex = /match-item-vs-team-name[^>]*>[\s\S]*?text-of[^>]*>([\s\S]*?)<\/div>/g;
@@ -182,7 +196,27 @@ async function fetchVLRSchedule(){
     }
   }
 
-  return { days: allDays, errors, fetchedAt: new Date().toISOString() };
+  // 时区 sanity check：VCT CN / 上海冠军赛的开赛时间几乎都在 13:00–22:00 北京档（UTC+8）。
+  // 若 VLR 将来改为返回 UTC（比北京慢 8h，16:00→08:00）或偏移其他时区，会出现大量
+  // <11:00 或 >23:00 的异常值。此处告警但不阻断，便于 CI 日志发现时区回归。
+  let abnormal = 0;
+  for(const ds of Object.keys(allDays)){
+    for(const mt of allDays[ds].matches){
+      const hh = parseInt((mt.time || '').split(':')[0]);
+      if(!isNaN(hh) && (hh < 11 || hh >= 23)) abnormal++;
+    }
+  }
+  if(abnormal){
+    console.warn('[VLR][时区告警] 检测到 %d 个比赛时间落在可疑档（抓取机时区=%s），请确认 VLR 是否仍按赛事当地时区(北京)返回', abnormal, runnerTZ());
+  }
+
+  return {
+    days: allDays,
+    errors,
+    fetchedAt: new Date().toISOString(),
+    tz: 'Asia/Shanghai',          // 规范后所有时间均为北京时间（UTC+8）
+    generatedTZ: runnerTZ(),      // 抓取机实际时区，供审计
+  };
 }
 
 module.exports = { fetchVLRSchedule, fetchVLRTeams, VLR_EVENTS, parseVLRPage, parseDate, parseTime, parseTeamRoster, parseTeamMatches };

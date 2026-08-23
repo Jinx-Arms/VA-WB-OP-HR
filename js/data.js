@@ -198,7 +198,10 @@ function fetchRemoteSchedule(rev){
           merged[ds] = info;
           updated++;
         }
-        return { rev, days: merged, source:'vlr', updated, fetchedAt: result.fetchedAt };
+        if(result.tz && result.tz !== 'Asia/Shanghai'){
+          console.warn('[赛程同步] fetched-schedule.json 时区标记异常(%s)，赛程时间可能不是北京时间', result.tz);
+        }
+        return { rev, days: merged, source:'vlr', updated, fetchedAt: result.fetchedAt, tz: result.tz || 'Asia/Shanghai' };
       })
       .catch(err => {
         console.warn('[赛程同步] 静态赛程文件加载失败，降级到本地模拟:', err.message);
@@ -224,7 +227,10 @@ function fetchRemoteSchedule(rev){
           updated++;
         }
         // 标记没有比赛的日期为休赛日（VLR 未返回的日期保持基础赛历不变）
-        return { rev, days: merged, source:'vlr', updated, fetchedAt: result.fetchedAt };
+        if(result.tz && result.tz !== 'Asia/Shanghai'){
+          console.warn('[赛程同步] fetched-schedule.json 时区标记异常(%s)，赛程时间可能不是北京时间', result.tz);
+        }
+        return { rev, days: merged, source:'vlr', updated, fetchedAt: result.fetchedAt, tz: result.tz || 'Asia/Shanghai' };
       })
       .catch(err => {
         console.warn('[赛程同步] 服务器抓取失败，降级到本地模拟:', err.message);
