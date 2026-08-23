@@ -425,18 +425,25 @@ App.renderView = function(){
   const v = document.getElementById('view');
   if(!v) return;
   App.closeModal();
-  if(App.currentView === 'dash') v.innerHTML = App.renderDash();
-  else if(App.currentView === 'schedule') v.innerHTML = App.renderSchedule();
-  else if(App.currentView === 'roster') v.innerHTML = App.renderRoster();
-  else if(App.currentView === 'staff') v.innerHTML = App.renderStaff();
-  else if(App.currentView === 'content') v.innerHTML = App.renderContent();
-  else if(App.currentView === 'assign') v.innerHTML = App.renderAssign();
-  else if(App.currentView === 'kb') v.innerHTML = App.renderKB();
-  else if(App.currentView === 'story') v.innerHTML = App.renderStory();
-  else if(App.currentView === 'assets') v.innerHTML = App.renderAssets();
-  else if(App.currentView === 'render') v.innerHTML = App.renderRender();
-  else if(App.currentView === 'mine') v.innerHTML = App.renderMine();
-  else v.innerHTML = App.renderDash();
+  // 防御性渲染：任一视图渲染抛错时保留上一次 DOM 并提示，避免整页白屏（控件全消失）
+  try{
+    if(App.currentView === 'dash') v.innerHTML = App.renderDash();
+    else if(App.currentView === 'schedule') v.innerHTML = App.renderSchedule();
+    else if(App.currentView === 'roster') v.innerHTML = App.renderRoster();
+    else if(App.currentView === 'staff') v.innerHTML = App.renderStaff();
+    else if(App.currentView === 'content') v.innerHTML = App.renderContent();
+    else if(App.currentView === 'assign') v.innerHTML = App.renderAssign();
+    else if(App.currentView === 'kb') v.innerHTML = App.renderKB();
+    else if(App.currentView === 'story') v.innerHTML = App.renderStory();
+    else if(App.currentView === 'assets') v.innerHTML = App.renderAssets();
+    else if(App.currentView === 'render') v.innerHTML = App.renderRender();
+    else if(App.currentView === 'mine') v.innerHTML = App.renderMine();
+    else v.innerHTML = App.renderDash();
+  }catch(e){
+    console.error('[renderView] 渲染失败，已保留上一视图：', e);
+    if(App.toast) App.toast('页面渲染出错（已保留当前内容）：' + (e && e.message ? e.message : e), 'err', 4000);
+    return; // 不继续 rfDraw，避免基于损坏 DOM 操作
+  }
   if(App.currentView === 'render') App.rfDraw();
 };
 

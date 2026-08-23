@@ -26,6 +26,10 @@ function rfDayTeams(date){
 App.renderRender = function(){
   if(!App.state.render) App.state.render = { currentTemplateId:null, currentSource:null, draftSlots:null, overrides:{} };
   const tpls = App.state.templates || [];
+  // 防御：templates 缺失或非数组时兜底，避免 renderRender 抛错导致白屏
+  if(!Array.isArray(tpls)) App.state.templates = [];
+  // 确保 _rf 编辑态对象存在，供子组件（rfInspector/rfSlotList）安全读取
+  if(!App._rf) App._rf = { mode:'preview', sel:null, grid:true, lang:'zh' };
   let tpl = rfTpl();
   if(!tpl || App.state.render.currentTemplateId == null){
     const first = tpls[0];
@@ -187,10 +191,12 @@ function rfInspector(tpl, isAdmin){
     </div>`:''}
     ${(!isAdmin && s.editable) ? `
     <div class="rf-form">
-      <div class="rf-fr"><label>微调文字</label><input value="${escAttr((App.state.render.overrides[s.key]&&App.state.render.overrides[s.key].text)!=null?(App.state.render.overrides[s.key].text):'')}" placeholder="${escAttr(s.staticText||'')}" oninput="App.rfSetOverride('${s.key}','text',this.value)"></div>
-      <div class="rf-fr"><label>字号</label><input type="number" value="${(App.state.render.overrides[s.key]&&App.state.render.overrides[s.key].size)!=null?(App.state.render.overrides[s.key].size):(s.size||28)}" oninput="App.rfSetOverride('${s.key}','size',+this.value)"></div>
-      <div class="rf-fr"><label>颜色</label><input type="color" value="${(App.state.render.overrides[s.key]&&App.state.render.overrides[s.key].color)||s.color||'#ffffff'}" oninput="App.rfSetOverride('${s.key}','color',this.value)"></div>
-      <div class="rf-fr"><label>对齐</label><select onchange="App.rfSetOverride('${s.key}','align',this.value)">${['left','center','right'].map(o=>`<option ${((App.state.render.overrides[s.key]&&App.state.render.overrides[s.key].align)||s.align||'left')===o?'selected':''}>${o}</option>`).join('')}</select></div>
+      ${(() => { const ovr = App.state.render.overrides || {}; const o = ovr[s.key] || {}; return `
+      <div class="rf-fr"><label>微调文字</label><input value="${escAttr(o.text!=null?o.text:'')}" placeholder="${escAttr(s.staticText||'')}" oninput="App.rfSetOverride('${s.key}','text',this.value)"></div>
+      <div class="rf-fr"><label>字号</label><input type="number" value="${o.size!=null?o.size:(s.size||28)}" oninput="App.rfSetOverride('${s.key}','size',+this.value)"></div>
+      <div class="rf-fr"><label>颜色</label><input type="color" value="${o.color||s.color||'#ffffff'}" oninput="App.rfSetOverride('${s.key}','color',this.value)"></div>
+      <div class="rf-fr"><label>对齐</label><select onchange="App.rfSetOverride('${s.key}','align',this.value)">${['left','center','right'].map(o2=>`<option ${((o.align)||s.align||'left')===o2?'selected':''}>${o2}</option>`).join('')}</select></div>
+      `; })()}
     </div>`:''}
   `;
 }
@@ -493,10 +499,11 @@ App.rfDraw = function(){
   });
   document.addEventListener('mousemove', e => {
     if(!drag) return;
+    const tpl = rfTpl();
+    if(!tpl || !App._rf || !App._rf.disp) return; // 拖拽中途模板/状态失效则安全退出
     const dx = (e.clientX - drag.ox) / App._rf.disp;
     const dy = (e.clientY - drag.oy) / App._rf.disp;
     let nx = drag.sx + dx, ny = drag.sy + dy;
-    const tpl = rfTpl();
     const s = tpl.slots.find(x=>x.key===drag.key); if(!s) return;
     // 网格吸附
     if(App._rf.grid){ nx = Math.round(nx/10)*10; ny = Math.round(ny/10)*10; }
