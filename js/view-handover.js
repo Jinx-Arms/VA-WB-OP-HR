@@ -10,9 +10,10 @@ App.renderHandover = function(){
   const me = App.me();
   if(!me) return '';
   const st = App.state;
-  const mine_sent = st.handovers.filter(h => h.fromId === me.id)
+  const handovers = st.handovers || [];
+  const mine_sent = handovers.filter(h => h.fromId === me.id)
     .sort((a, b) => b.createdAt - a.createdAt);
-  const mine_recv = st.handovers.filter(h => h.toId === me.id)
+  const mine_recv = handovers.filter(h => h.toId === me.id)
     .sort((a, b) => b.createdAt - a.createdAt);
 
   return `
@@ -102,9 +103,7 @@ App.handoverStart = function(){
   // 默认归集我自己的待办
   const myItems = App.collectOwnerItems(me.id, { onlyPending: true });
 
-  App.openModal(`
-    <div class="modal-head">发起工作交接</div>
-    <div class="modal-body">
+  App.modal('发起工作交接', `
       <div class="form-row">
         <div><label>交接类型</label>
           <select id="ho-type">
@@ -114,8 +113,8 @@ App.handoverStart = function(){
         </div>
         <div><label>接收人</label><select id="ho-to">${opts}</select></div>
       </div>
-      <div class="form-row single"><label>备注（选填，如休假起止、重点关注事项）</label>
-        <input id="ho-note" placeholder="例如：8/25-8/27 年假，微博话题由你接手"></div>
+      <div class="form-row single"><div><label>备注（选填，如休假起止、重点关注事项）</label>
+        <input id="ho-note" placeholder="例如：8/25-8/27 年假，微博话题由你接手"></div></div>
       <div class="hint" style="margin:4px 0 8px">以下为系统按「归属人=你」自动归集的待办（content 任务 / story 看点 / 值班日），可逐项勾选要交付的项：</div>
       <div id="ho-items" class="ho-pick">
         ${myItems.length ? myItems.map((it, idx) => `
@@ -127,11 +126,9 @@ App.handoverStart = function(){
           </label>`).join('')
         : '<div class="empty">你当前没有归属中的待办事项 🎉</div>'}
       </div>
-    </div>
-    <div class="modal-foot">
+  `, `
       <button class="btn" onclick="App.closeModal()">取消</button>
       <button class="btn primary" onclick="App.handoverSubmit()">生成并交付</button>
-    </div>
   `);
   // 把待选项暂存，提交时读取
   App._hoDraft = myItems;

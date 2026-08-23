@@ -260,7 +260,14 @@ App.load = function(){
     App.autoSchedule(y, m, true);
     App.autoAssign(true);
     try{ localStorage.setItem(LS_KEY, JSON.stringify(App.state)); }catch(e){}
-  }).finally(() => { if(App.updateStorageIndicator) App.updateStorageIndicator(); });
+  }).finally(() => { App.ensureHandovers(); if(App.updateStorageIndicator) App.updateStorageIndicator(); });
+};
+
+/* 字段补全：旧 state（磁盘/云端/localStorage 历史数据）可能缺新增字段，统一兜底，避免访问 undefined 崩溃 */
+App.ensureHandovers = function(){
+  if(!App.state) return;
+  if(!App.state.handovers) App.state.handovers = [];
+  if(!App.state.render) App.state.render = { currentSource:0, currentTemplateId:null, draftSlots:null, templates:[] };
 };
 
 /* 页面关闭前强制刷写（尽力而为） */
@@ -339,7 +346,7 @@ App._snap = function(section){
   if(section === 'render') return {
     render: JSON.parse(JSON.stringify(App.state.render))
   };
-  if(section === 'handover') return JSON.parse(JSON.stringify(App.state.handovers));
+  if(section === 'handover') return JSON.parse(JSON.stringify(App.state.handovers || []));
   return null;
 };
 /* 恢复：将快照写回 state */

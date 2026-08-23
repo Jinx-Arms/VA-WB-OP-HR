@@ -256,6 +256,7 @@ App._doAutoSync = async function(){
     /* 4. 有变化 → 更新状态、恢复会话、重新渲染 */
     const prevView = App.currentView;
     App.state = remote;
+    App.ensureHandovers();
     App.clearHistory();  /* 云端数据已更新，清除本地撤销/重做历史 */
     App.restoreSession();
 

@@ -22,7 +22,7 @@ App.renderMine = function(){
 /* ---------- 我收到的交接（速览） ---------- */
 function mineHandoverCard(me){
   const st = App.state;
-  const recv = st.handovers.filter(h => h.toId === me.id && h.status !== 'acknowledged')
+  const recv = (st.handovers || []).filter(h => h.toId === me.id && h.status !== 'acknowledged')
     .sort((a, b) => b.createdAt - a.createdAt);
   if(!recv.length) return '';
   return `
