@@ -308,6 +308,7 @@ App.renderStoryTeams = function(){
       : '';
     html += `<div class="hint" style="margin-bottom:12px">
       <button class="btn sm" onclick="App.storySyncTeams()">⟳ 同步VLR数据</button>
+      <button class="btn sm" onclick="App.teamCreateOpen()">＋ 新建战队</button>
       <span style="margin-left:8px">编辑战队后该队将不再被自动同步覆盖（manual标记）</span>
       ${noRosterHint}
     </div>`;
@@ -388,11 +389,10 @@ App.storySyncTeams = async function(){
   App.renderView();
 };
 
-/* ---------- 战队编辑弹窗 ---------- */
-App.teamEditOpen = function(teamId){
-  const team = (App.state.teams || {})[teamId];
-  if(!team) return;
-
+/* ---------- 战队编辑 / 新建 弹窗 ---------- */
+/* 共用：渲染战队表单字段（编辑与新建复用） */
+App._teamFormFields = function(team){
+  team = team || {};
   const roleOptions = ['duelist','initiator','controller','sentinel','igl'];
   const roleLabels = { duelist:'决斗者', initiator:'先锋', controller:'控场', sentinel:'哨位', igl:'指挥' };
 
@@ -407,13 +407,13 @@ App.teamEditOpen = function(teamId){
       <button class="btn xs" onclick="this.parentElement.remove()">✕</button>
     </div>`).join('');
 
-  App.modal(`编辑战队：${team.name}`, `
+  return `
     <div class="form-row single">
       <label>战队全名</label>
-      <input id="te-name" value="${team.name}">
+      <input id="te-name" value="${team.name||''}">
     </div>
     <div class="form-row">
-      <div><label>简称</label><input id="te-short" value="${team.short}"></div>
+      <div><label>简称</label><input id="te-short" value="${team.short||''}"></div>
       <div><label>VLR ID</label><input id="te-vlrid" value="${team.vlrId||''}" placeholder="vlr.gg战队页ID"></div>
     </div>
     <div class="form-row">
@@ -437,10 +437,65 @@ App.teamEditOpen = function(teamId){
     </div>
     <h4 style="margin:14px 0 8px">选手阵容 <button class="btn xs" onclick="App._teamAddRow()">+ 添加选手</button></h4>
     <div id="te-roster">${rosterRows}</div>
-  `, `
+  `;
+};
+
+App.teamEditOpen = function(teamId){
+  const team = (App.state.teams || {})[teamId];
+  if(!team) return;
+
+  App.modal(`编辑战队：${team.name}`, App._teamFormFields(team), `
     <button class="btn" onclick="App.closeModal()">取消</button>
     <button class="btn primary" onclick="App.teamEditSave('${teamId}')">保存</button>
   `);
+};
+
+/* 新建战队 */
+App.teamCreateOpen = function(){
+  App.modal('新建战队', App._teamFormFields({}), `
+    <button class="btn" onclick="App.closeModal()">取消</button>
+    <button class="btn primary" onclick="App.teamCreateSave()">创建</button>
+  `);
+};
+
+App.teamCreateSave = function(){
+  const name = document.getElementById('te-name').value.trim();
+  if(!name){
+    App.toast('请填写战队全名', 'err');
+    return;
+  }
+  const short = document.getElementById('te-short').value.trim() || name.slice(0, 4).toUpperCase();
+  const vlrId = document.getElementById('te-vlrid').value.trim();
+  const aliases = document.getElementById('te-aliases').value.split(',').map(s => s.trim()).filter(Boolean);
+  const region = document.getElementById('te-region').value;
+  const haojiaoUrl = document.getElementById('te-haojiao').value.trim();
+
+  /* 从 DOM 读取选手 */
+  const rows = document.querySelectorAll('#te-roster .st-edit-row');
+  const roster = [];
+  rows.forEach((row, i) => {
+    const pName = row.querySelector('.st-edit-name').value.trim();
+    if(!pName) return;
+    const role = row.querySelector('.st-edit-role').value;
+    const country = row.querySelector('.st-edit-country').value.trim().toLowerCase();
+    const formerTeams = row.querySelector('.st-edit-former').value.split(',').map(s => s.trim().toLowerCase()).filter(Boolean);
+    roster.push({
+      id: 'p-' + pName.toLowerCase().replace(/[^a-z0-9]/g, ''),
+      name: pName, country, role, joined: '',
+      formerTeams, source: 'manual'
+    });
+  });
+
+  App.pushHistory('story');
+  const id = App.uid('T');
+  App.state.teams[id] = {
+    id, name, short, vlrId, aliases, region, haojiaoUrl,
+    roster, manual: true, createdAt: Date.now(), updatedAt: Date.now()
+  };
+  App.save();
+  App.closeModal();
+  App.toast(`战队「${name}」已创建`, 'ok');
+  App.renderView();
 };
 
 App._teamAddRow = function(){

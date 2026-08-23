@@ -326,6 +326,7 @@ const NAV = [
   { key:'content', label:'内容排期',    ico:'📝' },
   { key:'assign',  label:'责任分配',    ico:'🎯', admin:true },
   { key:'story',   label:'看点挖掘',    ico:'🧠' },
+  { key:'report',  label:'赛况战报',    ico:'📰', admin:true },
   { key:'kb',      label:'知识库',      ico:'📚' },
   { key:'render',  label:'图形工厂',    ico:'🎨' },
   { key:'assets',  label:'素材管理',    ico:'🗂️', admin:true },
@@ -435,6 +436,7 @@ App.renderView = function(){
     else if(App.currentView === 'assign') v.innerHTML = App.renderAssign();
     else if(App.currentView === 'kb') v.innerHTML = App.renderKB();
     else if(App.currentView === 'story') v.innerHTML = App.renderStory();
+    else if(App.currentView === 'report') v.innerHTML = App.renderReport();
     else if(App.currentView === 'assets') v.innerHTML = App.renderAssets();
     else if(App.currentView === 'render') v.innerHTML = App.renderRender();
     else if(App.currentView === 'mine') v.innerHTML = App.renderMine();
