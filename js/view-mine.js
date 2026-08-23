@@ -15,8 +15,30 @@ App.renderMine = function(){
     ${mineScheduleCard(me)}
     ${mineLeaveCard(me)}
   </div>
-  <div style="margin-top:18px">${mineTaskCard(me)}</div>`;
+  <div style="margin-top:18px">${mineTaskCard(me)}</div>
+  ${mineHandoverCard(me)}`;
 };
+
+/* ---------- 我收到的交接（速览） ---------- */
+function mineHandoverCard(me){
+  const st = App.state;
+  const recv = st.handovers.filter(h => h.toId === me.id && h.status !== 'acknowledged')
+    .sort((a, b) => b.createdAt - a.createdAt);
+  if(!recv.length) return '';
+  return `
+  <div class="card" style="margin-top:18px">
+    <h3><span class="left">🔁 待确认的工作交接 <span class="hint">${recv.length} 条</span></span>
+      <span class="hint" style="margin-left:auto;cursor:pointer" onclick="App.nav('handover')">前往「工作交接」→</span></h3>
+    ${recv.map(h => {
+      const from = App.staffById(h.fromId);
+      return `<div class="ho-card">
+        <div class="ho-head"><b>${from ? from.name : '同事'}</b> · ${App.HANDOVER_TYPE[h.type]}
+          <span class="hint" style="margin-left:auto">${h.items.filter(i=>i.done).length}/${h.items.length} 项完成</span></div>
+        <div class="hint" style="margin-top:4px">点击右上「工作交接」进入逐条确认</div>
+      </div>`;
+    }).join('')}
+  </div>`;
+}
 
 /* ---------- 我的排班 ---------- */
 function mineScheduleCard(me){

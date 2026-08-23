@@ -330,6 +330,7 @@ const NAV = [
   { key:'kb',      label:'知识库',      ico:'📚' },
   { key:'render',  label:'图形工厂',    ico:'🎨' },
   { key:'assets',  label:'素材管理',    ico:'🗂️', admin:true },
+  { key:'handover',label:'工作交接',    ico:'🔁' },
   { key:'mine',    label:'我的面板',    ico:'🙋', hideForAdmin:false }
 ];
 
@@ -342,10 +343,13 @@ App.renderShell = function(){
     <aside class="sidebar">
       <div class="brand">瓦电运营中台<small>赛事人员管理系统 v1.0</small></div>
       <nav class="nav">
-        ${NAV.filter(n => !n.admin || App.can('manage')).map(n => `
+        ${NAV.filter(n => !n.admin || App.can('manage')).map(n => {
+          const badge = n.key === 'handover' ? App.myHandoverPending() : 0;
+          return `
           <div class="nav-item" id="nav-${n.key}" onclick="App.nav('${n.key}')">
-            <span class="ico">${n.ico}</span>${n.label}
-          </div>`).join('')}
+            <span class="ico">${n.ico}</span>${n.label}${badge ? `<span class="nav-badge">${badge}</span>` : ''}
+          </div>`;
+        }).join('')}
       </nav>
       <div class="side-foot">${LEAGUE}<br>数据磁盘持久化 · 服务器托管</div>
     </aside>
@@ -412,6 +416,7 @@ App.nav = function(key){
   if(key === 'schedule' && !App._history['schedule']) App.initHistory('schedule');
   if(key === 'story' && !App._history['story']) App.initHistory('story');
   if(key === 'render' && !App._history['render']) App.initHistory('render');
+  if(key === 'handover' && !App._history['handover']) App.initHistory('handover');
   document.querySelectorAll('.nav-item').forEach(e => e.classList.remove('active'));
   const el = document.getElementById('nav-' + key);
   if(el) el.classList.add('active');
@@ -439,6 +444,7 @@ App.renderView = function(){
     else if(App.currentView === 'report') v.innerHTML = App.renderReport();
     else if(App.currentView === 'assets') v.innerHTML = App.renderAssets();
     else if(App.currentView === 'render') v.innerHTML = App.renderRender();
+    else if(App.currentView === 'handover') v.innerHTML = App.renderHandover();
     else if(App.currentView === 'mine') v.innerHTML = App.renderMine();
     else v.innerHTML = App.renderDash();
   }catch(e){

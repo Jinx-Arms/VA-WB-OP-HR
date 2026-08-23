@@ -77,6 +77,9 @@ function seedState(){
     matchups: {},     // key 'a-vs-b' -> {teams, history[], notes[], updatedAt}
     highlights: [],   // [{id, matchKey, date, teams, tags, title, summary, status, edited, ...}]
 
+    /* ---- 工作交接（值班人 ↔ 休假人 待办交付） ---- */
+    handovers: [],   // [{id,fromId,toId,type,dateRange,items[],status,createdAt,deliveredAt,acknowledgedAt,note}]
+
     /* ---- 图形工厂 ---- */
     templates: (typeof RENDER_TEMPLATES_SEED !== 'undefined') ? RENDER_TEMPLATES_SEED() : [],
     casters: [],    // 解说池 [{id,name,portrait,role,createdBy,createdAt}]
@@ -336,6 +339,7 @@ App._snap = function(section){
   if(section === 'render') return {
     render: JSON.parse(JSON.stringify(App.state.render))
   };
+  if(section === 'handover') return JSON.parse(JSON.stringify(App.state.handovers));
   return null;
 };
 /* 恢复：将快照写回 state */
@@ -350,6 +354,9 @@ App._restore = function(section, snap){
   }
   if(section === 'render'){
     App.state.render = snap.render;
+  }
+  if(section === 'handover'){
+    App.state.handovers = snap;
   }
 };
 
@@ -421,6 +428,100 @@ App.notify = function(userId, text){
 App.unreadCount = function(){
   const uid = App.state.user;
   return App.state.notifications.filter(n => n.userId === uid && !n.read).length;
+};
+
+/* ---------- 工作交接：归集某人的全类型待办事项 ----------
+ * 范围：content 内容任务（assigneeId）、story 看点（assigneeId）、
+ *       排班值班备注（当天当班人，无结构化条目时以「值班待办」占位）。
+ * 战报(report) 为团队自动产物，不挂个人，不纳入交接单。
+ * 返回 [{refType, refId, title, ownerId, date, priority, done}]
+ */
+App.collectOwnerItems = function(staffId, opts){
+  opts = opts || {};
+  const st = App.state;
+  const today = D.today();
+  const out = [];
+  // 1. content 内容任务
+  st.content.filter(c =>
+    c.assigneeId === staffId && c.status !== 'cancelled' && (opts.onlyPending ? c.status !== 'published' && c.status !== 'done' : true)
+  ).forEach(c => out.push({
+    refType: 'content', refId: c.id, title: c.title, ownerId: staffId,
+    date: c.date, priority: (c.status === 'planned' ? '中' : '高'), done: c.status === 'published' || c.status === 'done'
+  }));
+  // 2. story 看点
+  (st.highlights || []).filter(h =>
+    h.assigneeId === staffId && h.status !== 'rejected'
+  ).forEach(h => out.push({
+    refType: 'story', refId: h.id, title: (h.title || '看点') + (h.teams ? '（' + h.teams + '）' : ''),
+    ownerId: staffId, date: h.date || '', priority: '中', done: h.status === 'used' || h.status === 'approved'
+  }));
+  // 3. 排班值班备注（当天当班且无内容任务时，给出"值班待办"占位说明）
+  Object.keys(st.shifts).filter(ds => ds >= today && (st.shifts[ds] || {})[staffId])
+    .forEach(ds => {
+      const hasContent = st.content.some(c => c.assigneeId === staffId && c.date === ds);
+      if(!hasContent){
+        out.push({
+          refType: 'shift', refId: 'shift_' + ds + '_' + staffId, title: '值班日待办（' + D.dateCN(ds) + ' ' + App.getShiftType((st.shifts[ds] || {})[staffId]).label + '）',
+          ownerId: staffId, date: ds, priority: '低', done: false
+        });
+      }
+    });
+  // 排序：按日期升序，未完成在前
+  out.sort((a, b) => {
+    if(a.done !== b.done) return a.done ? 1 : -1;
+    return (a.date || '').localeCompare(b.date || '');
+  });
+  return out;
+};
+
+/* 交接单状态文案 */
+App.HANDOVER_STATUS = { draft: '草稿', delivered: '已交付', acknowledged: '已确认' };
+App.HANDOVER_TYPE = { 'pre-leave': '休假前交代', 'post-return': '返岗认领' };
+
+/* 发起交接单 */
+App.createHandover = function(fromId, toId, type, dateRange, items, note){
+  const ho = {
+    id: App.uid('H'), fromId, toId, type,
+    dateRange: dateRange || [D.today(), D.today()],
+    items: (items || []).map(it => ({
+      refType: it.refType, refId: it.refId, title: it.title, ownerId: it.ownerId,
+      date: it.date || '', priority: it.priority || '中', done: false
+    })),
+    status: 'delivered', note: note || '',
+    createdAt: Date.now(), deliveredAt: Date.now(), acknowledgedAt: null
+  };
+  App.state.handovers.push(ho);
+  const from = App.staffById(fromId), to = App.staffById(toId);
+  App.notify(toId, `${from ? from.name : '同事'} 向你交付了工作交接单（${App.HANDOVER_TYPE[type]}），共 ${ho.items.length} 项待办，请前往「工作交接」确认。`);
+  App.save();
+  return ho;
+};
+
+/* 接收人逐条标记完成（不改原事项归属） */
+App.handoverToggleItem = function(handoverId, idx){
+  const ho = App.state.handovers.find(x => x.id === handoverId);
+  if(!ho) return;
+  ho.items[idx].done = !ho.items[idx].done;
+  App.save();
+};
+
+/* 接收人整体确认交接单 */
+App.handoverAck = function(handoverId){
+  const ho = App.state.handovers.find(x => x.id === handoverId);
+  if(!ho || ho.status === 'acknowledged') return;
+  ho.status = 'acknowledged';
+  ho.acknowledgedAt = Date.now();
+  const from = App.staffById(ho.fromId);
+  if(from) App.notify(ho.fromId, `${App.staffById(ho.toId) ? App.staffById(ho.toId).name : '对方'} 已确认你交付的交接单（${App.HANDOVER_TYPE[ho.type]}）。`);
+  App.save();
+  App.toast('已确认交接单', 'ok');
+  App.renderView();
+};
+
+/* 我收到的待确认交接单数量（角标用） */
+App.myHandoverPending = function(){
+  const uid = App.state.user;
+  return (App.state.handovers || []).filter(h => h.toId === uid && h.status !== 'acknowledged').length;
 };
 
 /* ---------- 赛程同步（官方接口 → 本地） ----------
