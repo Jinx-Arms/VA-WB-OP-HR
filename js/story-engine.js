@@ -111,6 +111,59 @@ App.findTeamKey = function(str){
   return [result[0], result[1]];
 };
 
+/* =====================================================
+ * 队名归一化层：全称 / 变体 → 官方简称
+ * 解决 VLR 抓取赛程默认使用全称（如 "EDward Gaming"）
+ * 导致浏览不便的问题。对照 App.state.teams 的所有可识别
+ * 形态（name / nameEn / shortName / short / aliases / id），
+ * 任一都能映射到官方简称（short）。未知队名原样返回。
+ * 仅用于展示归一化，不改动存储数据，不影响手动编辑。
+ * ===================================================== */
+
+/* 构建「任意形态 → 官方简称」查表（惰性，依 App.state.teams 实时构建） */
+App._buildTeamNameMap = function(){
+  const map = {};
+  const teams = App.state.teams || {};
+  const add = (k, v) => { if(k) map[String(k).trim().toUpperCase()] = v; };
+  for(const [id, t] of Object.entries(teams)){
+    const short = (t.shortName || t.short || id || '').toUpperCase();
+    if(!short) continue;
+    add(t.name, short);
+    add(t.nameEn, short);
+    add(t.shortName, short);
+    add(t.short, short);
+    add(id, short);
+    (t.aliases || []).forEach(a => add(a, short));
+    /* 去空格变体：兼容 "AllGamers" vs "All Gamers" 等写法 */
+    add((t.name || '').replace(/\s+/g, ''), short);
+    (t.aliases || []).forEach(a => add(a.replace(/\s+/g, ''), short));
+  }
+  return map;
+};
+
+/* 单队名归一化：全称/变体 → 简称；未命中返回原值 */
+App.normalizeTeamName = function(raw){
+  if(!raw) return raw;
+  const map = App._buildTeamNameMap();
+  const key = String(raw).trim().toUpperCase();
+  if(map[key]) return map[key];
+  /* 去空格兜底 */
+  const noSpace = key.replace(/\s+/g, '');
+  if(map[noSpace]) return map[noSpace];
+  return raw;
+};
+
+/* 对阵串归一化：保留 " vs " 分隔符，仅替换两端队名为简称
+ * 例："EDward Gaming vs All Gamers" → "EDG vs AG"
+ * 与 findTeamKey 的分隔符约定保持一致，不影响下游解析。
+ */
+App.normalizeMatchup = function(str){
+  if(!str) return str;
+  return String(str).split(/(\s+vs?\s+)/i).map((seg, i) => {
+    return (i % 2 === 0) ? App.normalizeTeamName(seg) : seg;   // 奇数段为分隔符，原样保留
+  }).join('');
+};
+
 /* 构造 matchup key（字典序） */
 App.matchupKey = function(a, b){
   return [a, b].sort().join('-vs-');

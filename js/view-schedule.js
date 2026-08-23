@@ -23,7 +23,7 @@ App.renderSchedule = function(){
       <span class="badge ${type}">${type === 'match' ? '赛' : '休'}${info && info.manual ? '·手' : ''}</span></div>`;
     if(type === 'match' && info){
       info.matches.forEach(mt => {
-        inner += `<div class="match-line"><b>${mt.time}</b> ${mt.teams} <span class="hint">${mt.bo||''}</span></div>`;
+        inner += `<div class="match-line"><b>${mt.time}</b> ${App.normalizeMatchup(mt.teams)} <span class="hint">${mt.bo||''}</span></div>`;
       });
       inner += `<div class="hint" style="margin-top:3px">${info.matches[0] ? info.matches[0].stage : ''}</div>`;
     }
@@ -108,7 +108,7 @@ App.renderScheduleModal = function(){
   const matchesHTML = info.matches.map((mt, i) => `
     <div class="toolbar" style="margin-bottom:8px">
       <input type="time" value="${mt.time}" style="width:100px" onchange="App._editDay.info.matches[${i}].time=this.value">
-      <input value="${mt.teams||''}" placeholder="对阵，如 TES vs WBG" onchange="App._editDay.info.matches[${i}].teams=this.value">
+      <input value="${App.normalizeMatchup(mt.teams||'')}" placeholder="对阵，如 TES vs WBG" onchange="App._editDay.info.matches[${i}].teams=this.value">
       <input value="${mt.stage||''}" placeholder="阶段" style="width:120px" onchange="App._editDay.info.matches[${i}].stage=this.value">
       <button class="btn sm danger" onclick="App._editDay.info.matches.splice(${i},1);App.renderScheduleModal()">删除</button>
     </div>`).join('') || '<div class="empty">当日无比赛</div>';

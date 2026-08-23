@@ -510,7 +510,7 @@ App.renderDash = function(){
       ${upcoming.length ? upcoming.map(u => `
         <div class="match-row">
           <span class="when">${u.ds} 周${D.weekdayCN(u.ds)}</span>
-          <span class="vs">${u.info.matches.map(mt => mt.time + ' ' + mt.teams).join(' ／ ')}</span>
+          <span class="vs">${u.info.matches.map(mt => mt.time + ' ' + App.normalizeMatchup(mt.teams)).join(' ／ ')}</span>
           <span class="stage">${u.info.matches[0] ? u.info.matches[0].stage : ''} ${u.info.manual ? '<span class="badge manual">手动</span>' : ''}</span>
         </div>`).join('') : '<div class="empty">近期无比赛</div>'}
     </div>
@@ -526,7 +526,7 @@ App.renderDash = function(){
           })()}</span>
         </div>
         ${(todayInfo && todayInfo.matches || []).map(mt => `
-          <div class="match-row"><span class="when">${mt.time}</span><span class="vs">${mt.teams}</span><span class="stage">${mt.stage}</span></div>`).join('')}
+          <div class="match-row"><span class="when">${mt.time}</span><span class="vs">${App.normalizeMatchup(mt.teams)}</span><span class="stage">${mt.stage}</span></div>`).join('')}
         <div class="hint" style="margin-top:8px">今日当班：${Object.keys(st.shifts[today] || {}).map(id => { const s = App.staffById(id); return s ? s.name : ''; }).filter(Boolean).join('、') || '无人排班'}</div>
       </div>
       <div class="card">
