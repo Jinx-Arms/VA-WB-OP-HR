@@ -210,12 +210,14 @@ App.load = function(){
         App._serverOK = true;
         return;
       }
+      /* 云端为空：本地用种子初始化，但「不写回云端」——
+         避免把空/种子状态覆盖掉云端可能暂时读不到的真实数据（如 Supabase 抖动）。
+         标记为 _serverOK=false，交给后续自动同步或用户手动保存时再决定。 */
       App.state = seedState();
-      App._serverOK = true;
+      App._serverOK = false;
       const { y, m } = D.ym(D.today());
       App.autoSchedule(y, m, true);
       App.autoAssign(true);
-      App.save();
     }).catch(err => {
       console.warn('[存储] Supabase 加载失败，降级 localStorage:', err.message);
       App._serverOK = false;

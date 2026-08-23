@@ -233,30 +233,53 @@ App._doAutoSync = async function(){
 
   App._syncing = true;
   try{
-    /* 1. 先推送本地待写数据 */
-    if(App._pendingSave){
-      clearTimeout(App._pendingSave);
-      App._pendingSave = null;
-      const persistState = Object.assign({}, App.state);
-      delete persistState.user;
-      await CLOUD.setState(persistState);
+    /* 1. 先拉取云端最新数据（改为「先拉后推」，避免本地落后版本覆盖他人改动） */
+    const remote = await CLOUD.getState();
+    if(!remote){
+      /* 云端为空：仅在本地确有未保存改动时才推送（首启播种等），否则不动云端 */
+      if(App._pendingSave){
+        clearTimeout(App._pendingSave);
+        App._pendingSave = null;
+        const persistState = Object.assign({}, App.state);
+        delete persistState.user;
+        await CLOUD.setState(persistState);
+      }
+      App._syncing = false;
+      return;
     }
 
-    /* 2. 拉取云端最新数据 */
-    const remote = await CLOUD.getState();
-    if(!remote) { App._syncing = false; return; }
+    /* 2. 本地无未保存改动 → 直接采用云端，绝不回推（止血：避免旧 state 覆盖他人） */
+    if(!App._pendingSave){
+      const remoteCopy = Object.assign({}, remote); delete remoteCopy.user;
+      const localCopy  = Object.assign({}, App.state); delete localCopy.user;
+      if(JSON.stringify(remoteCopy) === JSON.stringify(localCopy)){
+        App._syncing = false; return; // 完全一致，无需处理
+      }
+      // 本地无改动但云端有更新：采用云端
+      App.state = remote;
+      App.ensureHandovers();
+      App.clearHistory();
+      App.restoreSession();
+      if(!App.state.user || !App.staffById(App.state.user) || App.staffById(App.state.user).status !== 'active'){
+        App.clearSession(); App.stopAutoSync(); App.renderLogin();
+        App.toast('登录状态已失效，请重新登录', 'warn');
+        App._syncing = false; return;
+      }
+      App.renderShell();
+      App.nav(App.currentView || (App.can('manage') ? 'dash' : 'mine'));
+      App._syncing = false; return;
+    }
 
-    /* 3. 对比数据是否变化（排除 user 字段） */
-    const remoteCopy = Object.assign({}, remote); delete remoteCopy.user;
-    const localCopy  = Object.assign({}, App.state); delete localCopy.user;
-    const remoteStr = JSON.stringify(remoteCopy);
-    const localStr  = JSON.stringify(localCopy);
-    if(remoteStr === localStr){ App._syncing = false; return; }  // 无变化
-
-    /* 4. 有变化 → 更新状态、恢复会话、重新渲染 */
-    const prevView = App.currentView;
+    /* 3. 本地有未保存改动 → 先采用云端（保留他人改动），再推回本地合并后的版本 */
     App.state = remote;
     App.ensureHandovers();
+    const persistState = Object.assign({}, App.state);
+    delete persistState.user;
+    await CLOUD.setState(persistState);
+    App._pendingSave = null;
+
+    /* 4. 更新状态、恢复会话、重新渲染 */
+    const prevView = App.currentView;
     App.clearHistory();  /* 云端数据已更新，清除本地撤销/重做历史 */
     App.restoreSession();
 
