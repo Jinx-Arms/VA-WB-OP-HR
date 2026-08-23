@@ -300,9 +300,16 @@ App.renderStoryTeams = function(){
 
   let html = '';
   if(isAdmin){
+    const stateTeams = App.state.teams || {};
+    const stateTeamCount = Object.keys(stateTeams).length;
+    const vlrIdMissing = Object.values(stateTeams).filter(t => !t.vlrId).length;
+    const noRosterHint = (stateTeamCount > 0 && vlrIdMissing >= stateTeamCount)
+      ? `<span style="color:var(--err);margin-left:8px">⚠ 战队库未填 VLR ID（${vlrIdMissing}/${stateTeamCount}），自动抓取阵容已禁用，请补全后重跑抓取</span>`
+      : '';
     html += `<div class="hint" style="margin-bottom:12px">
       <button class="btn sm" onclick="App.storySyncTeams()">⟳ 同步VLR数据</button>
       <span style="margin-left:8px">编辑战队后该队将不再被自动同步覆盖（manual标记）</span>
+      ${noRosterHint}
     </div>`;
   }
 
@@ -358,10 +365,25 @@ App.storySyncTeams = async function(){
   App.toast('正在同步VLR战队数据…', 'info', 3000);
   App._fetchedTeams = null; /* 清除缓存 */
   const data = await App.storyData();
-  if(data && data.merged){
-    App.toast('战队数据同步完成', 'ok');
+  const diag = (data && data.diag) || {};
+
+  if(!diag.fetchedTeamCount){
+    /* 抓取层无数据：定位根因 */
+    if(diag.vlrIdMissing >= diag.stateTeamCount && diag.stateTeamCount > 0){
+      App.toast('同步未完成：战队注册表未填 VLR ID，无法抓取阵容（需管理员补全后重跑）', 'err', 6000);
+    } else if(!diag.hasRoster){
+      App.toast('同步未完成：VLR 返回数据无阵容，可能抓取失败或站点改版', 'err', 6000);
+    } else {
+      App.toast('同步失败：未取到任何战队数据，请检查网络或稍后重试', 'err', 6000);
+    }
+    App.renderView();
+    return;
+  }
+
+  if(diag.hasRoster){
+    App.toast(`战队数据同步完成（${diag.fetchedTeamCount} 队含阵容）`, 'ok');
   } else {
-    App.toast('同步失败，请检查网络或稍后重试', 'err');
+    App.toast('同步完成，但无阵容数据（仅有赛程/基础信息）', 'warn', 5000);
   }
   App.renderView();
 };
@@ -406,6 +428,13 @@ App.teamEditOpen = function(teamId){
         </select>
       </div>
     </div>
+    <div class="form-row single">
+      <label>号角词条链接（人工对照参考源）</label>
+      <div style="display:flex;gap:8px;align-items:center">
+        <input id="te-haojiao" value="${team.haojiaoUrl||''}" placeholder="https://web.haojiao.cc/wiki/..." style="flex:1">
+        ${team.haojiaoUrl ? `<button class="btn xs" onclick="window.open('${team.haojiaoUrl}','_blank')">↗ 打开</button>` : ''}
+      </div>
+    </div>
     <h4 style="margin:14px 0 8px">选手阵容 <button class="btn xs" onclick="App._teamAddRow()">+ 添加选手</button></h4>
     <div id="te-roster">${rosterRows}</div>
   `, `
@@ -444,6 +473,7 @@ App.teamEditSave = function(teamId){
   const vlrId = document.getElementById('te-vlrid').value.trim();
   const aliases = document.getElementById('te-aliases').value.split(',').map(s => s.trim()).filter(Boolean);
   const region = document.getElementById('te-region').value;
+  const haojiaoUrl = document.getElementById('te-haojiao').value.trim();
 
   /* 从 DOM 读取选手 */
   const rows = document.querySelectorAll('#te-roster .st-edit-row');
@@ -467,6 +497,7 @@ App.teamEditSave = function(teamId){
   team.vlrId = vlrId;
   team.aliases = aliases;
   team.region = region;
+  team.haojiaoUrl = haojiaoUrl;
   team.roster = roster;
   team.manual = true;
   team.updatedAt = Date.now();

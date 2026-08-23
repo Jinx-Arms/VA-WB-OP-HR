@@ -1,5 +1,4976 @@
 {
-  "teams": {},
+  "teams": {
+    "edg": {
+      "name": "EDward Gaming",
+      "vlrId": "1120",
+      "roster": [
+        {
+          "id": "p-nobody",
+          "name": "nobody",
+          "realName": "Wang Senxu (王森旭)",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-zmjjkk",
+          "name": "ZmjjKK",
+          "realName": "Zheng Yongkang (郑永康)",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-chichoo",
+          "name": "CHICHOO",
+          "realName": "Wan Shunzhi (万顺治)",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-smoggy",
+          "name": "Smoggy",
+          "realName": "Zhang Zhao (张钊)",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-jieni7",
+          "name": "Jieni7",
+          "realName": "Zhang Juntai (张君泰)",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-stew",
+          "name": "stew",
+          "realName": "Park Young-chan (박영찬)",
+          "country": "kr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-zjc",
+          "name": "zjc",
+          "realName": "Zhang Juncheng (张峻程)",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-hibari",
+          "name": "Hibari",
+          "realName": "Jin Xingyu (金星宇)",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-autumn",
+          "name": "Autumn",
+          "realName": "Yoon Eu-teum (윤으뜸)",
+          "country": "kr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-indigo",
+          "name": "Indigo",
+          "realName": "Seol Do-hoon (설도훈)",
+          "country": "kr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-signed",
+          "name": "signed",
+          "realName": "Dale Tang",
+          "country": "unknown",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        }
+      ],
+      "matches": []
+    },
+    "fpx": {
+      "name": "FunPlus Phoenix",
+      "vlrId": "11328",
+      "roster": [
+        {
+          "id": "p-aaaay",
+          "name": "AAAAY",
+          "realName": "Zhang Yang (张杨)",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-kovaq",
+          "name": "KovaQ",
+          "realName": "Blendi Kovaci",
+          "country": "unknown",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-coconut",
+          "name": "coconut",
+          "realName": "Colin Patrick Chung (钟弘祖)",
+          "country": "unknown",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-xlele",
+          "name": "Xlele",
+          "realName": "Zhao Yanbo (赵炎博)",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-setrod",
+          "name": "Setrod",
+          "realName": "Ou Taigeng (欧泰赓)",
+          "country": "tw",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-9hr",
+          "name": "9hr",
+          "realName": "Guan Haoran (管豪然)",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-legija",
+          "name": "LEGIJA",
+          "realName": "Nikola Ninić",
+          "country": "de",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-york",
+          "name": "York",
+          "realName": "Yao Kun (姚堃)",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-pho",
+          "name": "PHO",
+          "realName": "Zhang Shicheng (张世成)",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        }
+      ],
+      "matches": []
+    },
+    "blg": {
+      "name": "Bilibili Gaming",
+      "vlrId": "12010",
+      "roster": [
+        {
+          "id": "p-whzy",
+          "name": "whzy",
+          "realName": "Wang Haozhe (王昊哲)",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-rushia",
+          "name": "rushia",
+          "realName": "Wang Xiaojie (王晓杰)",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-nephh",
+          "name": "nephh",
+          "realName": "Marcus Tan",
+          "country": "sg",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-yilai",
+          "name": "yilai",
+          "realName": "Gu Yiming (顾依铭)",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-knight",
+          "name": "Knight",
+          "realName": "Liu Yuxiang (刘宇翔)",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-bud",
+          "name": "bud",
+          "realName": "Yang Renyu (杨韧余)",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-ft",
+          "name": "FT",
+          "realName": "Yan Shuaibo (闫帅博)",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-levius",
+          "name": "Levius",
+          "realName": "Lu Yinzhong (卢胤中)",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-gandolf",
+          "name": "Gandolf",
+          "realName": "Jiang Hao (蒋浩)",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-anaks",
+          "name": "Anaks",
+          "realName": "Ye Sang-jun (예상준)",
+          "country": "kr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-yaoxie",
+          "name": "YaoXie",
+          "realName": "Zhang Jihang (張繼航)",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-jexen",
+          "name": "Jexen",
+          "realName": "Wang Lin Xiao (王林骁)",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-balax",
+          "name": "balax",
+          "realName": "Thong Chern Kwi",
+          "country": "sg",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-rain",
+          "name": "Rain",
+          "realName": "Deng Shiyao (邓诗耀)",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        }
+      ],
+      "matches": []
+    },
+    "drg": {
+      "name": "Dragon Ranger Gaming",
+      "vlrId": "11981",
+      "roster": [
+        {
+          "id": "p-nicc",
+          "name": "Nicc",
+          "realName": "Shao Yi-qun (邵逸群)",
+          "country": "tw",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-flex1n",
+          "name": "Flex1n",
+          "realName": "Lo Rui (罗瑞)",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-life",
+          "name": "Life",
+          "realName": "Qu Donghao (瞿东豪)",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-vo0kashu",
+          "name": "vo0kashu",
+          "realName": "Ilya Ushakov",
+          "country": "ru",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-verse",
+          "name": "Verse",
+          "realName": "Zhou Zijun (周子钧)",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-spiritz1",
+          "name": "SpiritZ1",
+          "realName": "Lin Dingyu (林定宇)",
+          "country": "tw",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-nathand",
+          "name": "NaThanD",
+          "realName": "Deng Senqiao (邓森侨)",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-1t",
+          "name": "1t",
+          "realName": "Huang Biaohong (黄彪宏)",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-alti",
+          "name": "Alti",
+          "realName": "",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-melon",
+          "name": "Melon",
+          "realName": "",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        }
+      ],
+      "matches": []
+    },
+    "te": {
+      "name": "Trace Esports",
+      "vlrId": "12685",
+      "roster": [
+        {
+          "id": "p-luok1ng",
+          "name": "LuoK1ng",
+          "realName": "Zhang Zhanpeng (张展鹏)",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-kai",
+          "name": "Kai",
+          "realName": "Lu Zhinan (卢智楠)",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-fengf",
+          "name": "FengF",
+          "realName": "Song Xuefeng (宋学锋)",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-fkey",
+          "name": "FKEY",
+          "realName": "Ke Chen",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-delb",
+          "name": "deLb",
+          "realName": "Delbert Tanoto",
+          "country": "id",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-abo",
+          "name": "Abo",
+          "realName": "Han Bohao (韩博皓)",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-toosy",
+          "name": "Toosy",
+          "realName": "Wu Yufeng (吴雨峰)",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-kaka",
+          "name": "KaKa",
+          "realName": "Zhou Wenxing (周文兴)",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-destroyer",
+          "name": "destroyeR",
+          "realName": "Gu Jiaming (顾佳鸣)",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-yiyee",
+          "name": "Yiyee",
+          "realName": "Zhang Tianyuan (张天元)",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-viva",
+          "name": "Viva",
+          "realName": "Lifan Ran (冉立凡)",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-draven",
+          "name": "Draven",
+          "realName": "",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        }
+      ],
+      "matches": []
+    },
+    "ag": {
+      "name": "All Gamers",
+      "vlrId": "1119",
+      "roster": [
+        {
+          "id": "p-shr1mp",
+          "name": "Shr1mp",
+          "realName": "Yang Yong (杨勇)",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-k1ra",
+          "name": "K1ra",
+          "realName": "Huang Zhihao (黄志豪)",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-bai",
+          "name": "Bai",
+          "realName": "Zhang Zeyang (张泽洋)",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-f4ngeer",
+          "name": "f4ngeer",
+          "realName": "Roman Smirnov",
+          "country": "ru",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-iamgrq",
+          "name": "iamgrq",
+          "realName": "Gao Ruiqi (高锐琦)",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-aaron0",
+          "name": "AaRon0",
+          "realName": "Xu Maoxiao (徐茂蕭)",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-ed101",
+          "name": "ED101",
+          "realName": "Han Tianqi (韩天奇)",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-master",
+          "name": "Master",
+          "realName": "Cheng Zihan (程子晗)",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        }
+      ],
+      "matches": []
+    },
+    "xlg": {
+      "name": "XLG Esports",
+      "vlrId": "13581",
+      "roster": [
+        {
+          "id": "p-wsleo",
+          "name": "WsLeo",
+          "realName": "Huang Pinwei (黄品维)",
+          "country": "tw",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-sharks",
+          "name": "Sharks",
+          "realName": "Qiu Ge (邱戈)",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-lysoar",
+          "name": "Lysoar",
+          "realName": "Liang Youhao (梁优好)",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-noman",
+          "name": "NoMan",
+          "realName": "James Man",
+          "country": "unknown",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-rarga",
+          "name": "Rarga",
+          "realName": "Arthur Churyumov",
+          "country": "ru",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-happywei",
+          "name": "happywei",
+          "realName": "Deng Minwei (邓闵维)",
+          "country": "tw",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-arty",
+          "name": "Arty",
+          "realName": "Yang Zhe (杨喆)",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-hvoya",
+          "name": "hvoya",
+          "realName": "Aleksandr Eremin",
+          "country": "ru",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-steady",
+          "name": "steady",
+          "realName": "Dmitry Prutkov",
+          "country": "ru",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-coffin0",
+          "name": "Coffin0",
+          "realName": "Tao Yumeng (陶禹萌)",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        }
+      ],
+      "matches": []
+    },
+    "tyl": {
+      "name": "TYLOO",
+      "vlrId": "731",
+      "roster": [
+        {
+          "id": "p-siufatbb",
+          "name": "SiuFatBB",
+          "realName": "Pong Gaa Hei (庞加曦)",
+          "country": "unknown",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-splash",
+          "name": "splash",
+          "realName": "Moses Christophe Jonathan",
+          "country": "id",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-scales",
+          "name": "Scales",
+          "realName": "Zhang Zhen (张震)",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-erv",
+          "name": "Erv",
+          "realName": "Shen Zhiwei",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-slowly",
+          "name": "slowly",
+          "realName": "Kelun Sun (孙科伦)",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-xihe",
+          "name": "xihe",
+          "realName": "Peng Wenbo (彭文博)",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-fc4t",
+          "name": "fc4t",
+          "realName": "Yang Jiawei (杨家玮)",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-hypnotizing",
+          "name": "hypnotizing",
+          "realName": "Xie Haozhi (谢昊志)",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-billyo",
+          "name": "Billyo",
+          "realName": "Li Xinyu (李新宇)",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-sword9",
+          "name": "sword9",
+          "realName": "Li Wei (李卫)",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-ominous",
+          "name": "Ominous",
+          "realName": "Sushant Jha",
+          "country": "unknown",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        }
+      ],
+      "matches": []
+    },
+    "nova": {
+      "name": "Nova Esports",
+      "vlrId": "12064",
+      "roster": [
+        {
+          "id": "p-qiutian",
+          "name": "qiutiaN",
+          "realName": "Bijan Moeinzadeh (慕英毕强)",
+          "country": "tw",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-cb",
+          "name": "cb",
+          "realName": "Wang Qingchuan (王庆川)",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-ezeir",
+          "name": "Ezeir",
+          "realName": "Zhao Zejun (赵泽骏)",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-guang",
+          "name": "GuanG",
+          "realName": "Guang Honglin (光洪霖)",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-swagzor",
+          "name": "swagzor",
+          "realName": "Mikhail Vaniushin",
+          "country": "ru",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-kodeth",
+          "name": "kodeth",
+          "realName": "Bo Li",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-green",
+          "name": "GREEN",
+          "realName": "Qiu Jianzhi (邱建智)",
+          "country": "tw",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-24k",
+          "name": "24K",
+          "realName": "Shao Yubo (邵玉波)",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-onbush",
+          "name": "OnbusH",
+          "realName": "Kim Taek-soo (김택수)",
+          "country": "kr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        }
+      ],
+      "matches": []
+    },
+    "jdg": {
+      "name": "JD Gaming",
+      "vlrId": "13576",
+      "roster": [
+        {
+          "id": "p-jkuro",
+          "name": "jkuro",
+          "realName": "Yong Haochong (杨浩聪)",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-zhe",
+          "name": "zhe",
+          "realName": "Niu Zhe (牛哲)",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-yuicaw",
+          "name": "Yuicaw",
+          "realName": "Huang Yung-chieh (黃湧傑)",
+          "country": "tw",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-crownfisher",
+          "name": "crownfisher",
+          "realName": "Li Ao (李翱)",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-berlin",
+          "name": "BerLIN",
+          "realName": "Zhang Bolin (張柏霖)",
+          "country": "tw",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-jiandan",
+          "name": "JIANDAN",
+          "realName": "Wang Sai (王赛)",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-bail",
+          "name": "bail",
+          "realName": "Lee Sung-jae (이성재)",
+          "country": "kr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-desire",
+          "name": "Desire",
+          "realName": "Peng Siji (彭思骥)",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-phong",
+          "name": "Phong",
+          "realName": "Huang Chunfeng (黄春峰)",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        }
+      ],
+      "matches": []
+    },
+    "tec": {
+      "name": "Titan EC",
+      "vlrId": "14137",
+      "roster": [
+        {
+          "id": "p-haodong",
+          "name": "Haodong",
+          "realName": "Guo Haodong (郭浩东)",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-lucas",
+          "name": "lucas",
+          "realName": "Yunkun Lu (路昀昆)",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-dynamite",
+          "name": "Dynamite",
+          "realName": "Zhao Zihao (赵梓浩)",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-ra1ny",
+          "name": "ra1ny",
+          "realName": "Chen Baohuan (陈葆桓)",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-coco",
+          "name": "Coco",
+          "realName": "Ding Dajian (丁达建)",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-spitfires",
+          "name": "Spitfires",
+          "realName": "Xin Mingyan (辛明阳)",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-gazero",
+          "name": "Gazero",
+          "realName": "Li Zhe (李哲)",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-after",
+          "name": "AfteR",
+          "realName": "Lo Wen-Hsin (罗文信)",
+          "country": "tw",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-muggle",
+          "name": "Muggle",
+          "realName": "Tang Shijun (唐时俊)",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-3water",
+          "name": "3water",
+          "realName": "Liu Miao (刘淼)",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-sora",
+          "name": "sora",
+          "realName": "Hao Jinyu (郝金淼)",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-lemon",
+          "name": "LemoN",
+          "realName": "Liu Qirui (刘骐瑞)",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        }
+      ],
+      "matches": []
+    },
+    "wol": {
+      "name": "Wolves Esports",
+      "vlrId": "13790",
+      "roster": [
+        {
+          "id": "p-glacier",
+          "name": "glacier",
+          "realName": "Liang Zhekai (梁哲恺)",
+          "country": "tw",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-yosemite",
+          "name": "yosemite",
+          "realName": "Wang Lei (王磊)",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-spring",
+          "name": "Spring",
+          "realName": "Liu Jiunting (刘俊霆)",
+          "country": "tw",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-deryeon",
+          "name": "Deryeon",
+          "realName": "Derrick Yee",
+          "country": "sg",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-aluba",
+          "name": "aluba",
+          "realName": "Zhong Haojun (钟皓钧)",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-nothing",
+          "name": "nothing",
+          "realName": "Xie Junzheng (谢君正)",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-chao",
+          "name": "Chao",
+          "realName": "",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-alexrr",
+          "name": "alexRr",
+          "realName": "Alexander Frisch",
+          "country": "de",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-ja7",
+          "name": "Ja7",
+          "realName": "",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        }
+      ],
+      "matches": []
+    },
+    "nrg": {
+      "name": "NRG",
+      "vlrId": "1034",
+      "roster": [
+        {
+          "id": "p-ethan",
+          "name": "Ethan",
+          "realName": "Ethan Arnold",
+          "country": "us",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-keiko",
+          "name": "keiko",
+          "realName": "Georgio Sanassy",
+          "country": "gb",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-brawk",
+          "name": "brawk",
+          "realName": "Brock Somerhalder",
+          "country": "us",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-mada",
+          "name": "mada",
+          "realName": "Adam Pampuch",
+          "country": "ca",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-skuba",
+          "name": "skuba",
+          "realName": "Logan Jenkins",
+          "country": "us",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-ry",
+          "name": "Ry",
+          "realName": "Zachary Parr",
+          "country": "co",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-bonkar",
+          "name": "bonkar",
+          "realName": "Malkolm Rench",
+          "country": "se",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-mitch",
+          "name": "mitch",
+          "realName": "Mitch Semago",
+          "country": "us",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        }
+      ],
+      "matches": []
+    },
+    "mibr": {
+      "name": "MIBR",
+      "vlrId": "7386",
+      "roster": [
+        {
+          "id": "p-zekken",
+          "name": "zekken",
+          "realName": "Zachary Patrone",
+          "country": "us",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-tex",
+          "name": "tex",
+          "realName": "Ian Botsch",
+          "country": "de",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-mazino",
+          "name": "Mazino",
+          "realName": "Roberto Rivas",
+          "country": "cl",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-verno",
+          "name": "Verno",
+          "realName": "Andrew Maust",
+          "country": "us",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-aspas",
+          "name": "aspas",
+          "realName": "Erick Santos",
+          "country": "br",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-nandinnn",
+          "name": "Nandinnn",
+          "realName": "",
+          "country": "br",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-frod",
+          "name": "fRoD",
+          "realName": "Daniel Montaner",
+          "country": "us",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-happy",
+          "name": "Happy",
+          "realName": "Vincent Schopenhauer",
+          "country": "fr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        }
+      ],
+      "matches": []
+    },
+    "lev": {
+      "name": "Leviatán",
+      "vlrId": "2359",
+      "roster": [
+        {
+          "id": "p-kingg",
+          "name": "kiNgg",
+          "realName": "Francisco Aravena",
+          "country": "cl",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-spike",
+          "name": "spike",
+          "realName": "Rodrigo Lombardi",
+          "country": "br",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-blowz",
+          "name": "blowz",
+          "realName": "Guilherme Oliviera",
+          "country": "br",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-neon",
+          "name": "Neon",
+          "realName": "Bruno Rodríguez",
+          "country": "ar",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-sato",
+          "name": "Sato",
+          "realName": "Eduardo Kenzo Nagahama Sato",
+          "country": "br",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-onur",
+          "name": "Onur",
+          "realName": "Rodrigo Dalmagro",
+          "country": "ar",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-jhein",
+          "name": "Jhein",
+          "realName": "Cristian Camaño",
+          "country": "ar",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        }
+      ],
+      "matches": []
+    },
+    "g2": {
+      "name": "G2 Esports",
+      "vlrId": "11058",
+      "roster": [
+        {
+          "id": "p-valyn",
+          "name": "valyn",
+          "realName": "Jacob Batio",
+          "country": "us",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-jawgemo",
+          "name": "jawgemo",
+          "realName": "Alexander Mor",
+          "country": "unknown",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-babybay",
+          "name": "BABYBAY",
+          "realName": "Andrej Francisty",
+          "country": "us",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-trent",
+          "name": "trent",
+          "realName": "Trent Cairns",
+          "country": "us",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-leaf",
+          "name": "leaf",
+          "realName": "Nathan Orf",
+          "country": "us",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-ambrose",
+          "name": "Ambrose",
+          "realName": "Ambrose Lai",
+          "country": "us",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-joshrt",
+          "name": "JoshRT",
+          "realName": "Josh Lee",
+          "country": "us",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-shhhack",
+          "name": "shhhack",
+          "realName": "Peter Belej",
+          "country": "unknown",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-robert",
+          "name": "Robert",
+          "realName": "Robert Yip",
+          "country": "unknown",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        }
+      ],
+      "matches": []
+    },
+    "loud": {
+      "name": "LOUD",
+      "vlrId": "6961",
+      "roster": [
+        {
+          "id": "p-erde",
+          "name": "erde",
+          "realName": "Roberto Lobos",
+          "country": "cl",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-lukxo",
+          "name": "lukxo",
+          "realName": "Lucca Travaioli",
+          "country": "br",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-davih",
+          "name": "DaviH",
+          "realName": "David Cruz",
+          "country": "pt",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-darker",
+          "name": "Darker",
+          "realName": "Sebastián Castro Cicuamia",
+          "country": "co",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-tkzin",
+          "name": "tkzin",
+          "realName": "Enzo Zimiani",
+          "country": "br",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-cauanzin",
+          "name": "cauanzin",
+          "realName": "Cauan Pereira",
+          "country": "br",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-wenty",
+          "name": "Wenty",
+          "realName": "Carlos Lira Portela",
+          "country": "br",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-romanilly",
+          "name": "Romanilly",
+          "realName": "Gonzalo Manzano",
+          "country": "ar",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-bati",
+          "name": "Bati",
+          "realName": "Miguel Batista",
+          "country": "pt",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-bajerski",
+          "name": "bajerski",
+          "realName": "Lucas Bajerski Pereira",
+          "country": "br",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        }
+      ],
+      "matches": []
+    },
+    "eg": {
+      "name": "Evil Geniuses",
+      "vlrId": "5248",
+      "roster": [
+        {
+          "id": "p-paincakes",
+          "name": "Paincakes",
+          "realName": "Jake Hass",
+          "country": "us",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-supamen",
+          "name": "supamen",
+          "realName": "Phat Le",
+          "country": "us",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-bao",
+          "name": "bao",
+          "realName": "Bao Nguyen",
+          "country": "vn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-dgzin",
+          "name": "dgzin",
+          "realName": "Douglas Silva",
+          "country": "br",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-zerona",
+          "name": "zerona",
+          "realName": "Javan Varela",
+          "country": "us",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-pho",
+          "name": "pho",
+          "realName": "Mike Panza",
+          "country": "us",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-potter",
+          "name": "potter",
+          "realName": "Christine Chi",
+          "country": "us",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-faded",
+          "name": "Faded",
+          "realName": "Daniel Hwang",
+          "country": "us",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-meco1e",
+          "name": "meco1e",
+          "realName": "Cole Lewis",
+          "country": "us",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        }
+      ],
+      "matches": []
+    },
+    "sen": {
+      "name": "Sentinels",
+      "vlrId": "2",
+      "roster": [
+        {
+          "id": "p-johnqt",
+          "name": "johnqt",
+          "realName": "Mohamed Amine Ouarid",
+          "country": "unknown",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-reduxx",
+          "name": "Reduxx",
+          "realName": "Yassin Aboulalazm",
+          "country": "us",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-jerrwin",
+          "name": "Jerrwin",
+          "realName": "Gurjiwan Gill",
+          "country": "in",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-cortezia",
+          "name": "cortezia",
+          "realName": "Gabriel Cortez",
+          "country": "br",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-jonahp",
+          "name": "JonahP",
+          "realName": "Jonah Pulice",
+          "country": "ca",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-marved",
+          "name": "Marved",
+          "realName": "Jimmy Nguyen",
+          "country": "ca",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-zyto",
+          "name": "Zyto",
+          "realName": "Bryan Ybanez",
+          "country": "us",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-ewok",
+          "name": "Ewok",
+          "realName": "Marthinus Jacobus Van Der Walt",
+          "country": "unknown",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-gunter",
+          "name": "GUNTER",
+          "realName": "Luke Clives",
+          "country": "gb",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        }
+      ],
+      "matches": []
+    },
+    "100t": {
+      "name": "100 Thieves",
+      "vlrId": "120",
+      "roster": [
+        {
+          "id": "p-vora",
+          "name": "vora",
+          "realName": "Jordan Pulwer",
+          "country": "ca",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-cryocells",
+          "name": "Cryocells",
+          "realName": "Matthew Panganiban",
+          "country": "us",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-asuna",
+          "name": "Asuna",
+          "realName": "Peter Mazuryk",
+          "country": "us",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-timotino",
+          "name": "Timotino",
+          "realName": "Timothée Lavigne Dupont",
+          "country": "ca",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-bang",
+          "name": "bang",
+          "realName": "Sean Bezerra",
+          "country": "us",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-nbs",
+          "name": "Nbs",
+          "realName": "Laurynas Kisielius",
+          "country": "lt",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-d00mbr0s",
+          "name": "d00mbr0s",
+          "realName": "Carl Erik Victor William Sandgren",
+          "country": "se",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        }
+      ],
+      "matches": []
+    },
+    "c9": {
+      "name": "Cloud9",
+      "vlrId": "188",
+      "roster": [
+        {
+          "id": "p-zellsis",
+          "name": "Zellsis",
+          "realName": "Jordan Montemurro",
+          "country": "us",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-fireballops",
+          "name": "FireBallOps",
+          "realName": "Cameron Tomaselli",
+          "country": "us",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-jackk",
+          "name": "Jackk",
+          "realName": "Jack Foote",
+          "country": "us",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-oxy",
+          "name": "OXY",
+          "realName": "Francis Hoang",
+          "country": "us",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-v1c",
+          "name": "v1c",
+          "realName": "Victor Truong",
+          "country": "us",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-veer",
+          "name": "Veer",
+          "realName": "Wyatt Blevins",
+          "country": "us",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-immi",
+          "name": "Immi",
+          "realName": "Ian Harding",
+          "country": "gb",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        }
+      ],
+      "matches": []
+    },
+    "furia": {
+      "name": "FURIA",
+      "vlrId": "2406",
+      "roster": [
+        {
+          "id": "p-artzin",
+          "name": "artzin",
+          "realName": "Arthur Araujo",
+          "country": "br",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-basic",
+          "name": "basic",
+          "realName": "Luis Henrique Ferlin Tessaro",
+          "country": "br",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-shyy",
+          "name": "Shyy",
+          "realName": "Fabian Usnayo",
+          "country": "cl",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-c0m",
+          "name": "C0M",
+          "realName": "Corbin Lee",
+          "country": "us",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-koalanoob",
+          "name": "koalanoob",
+          "realName": "Gianfranco Potestio",
+          "country": "ca",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-eeiu",
+          "name": "eeiu",
+          "realName": "Daniel Vucenovic",
+          "country": "ca",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-shaw",
+          "name": "shaW",
+          "realName": "Ian Jardim",
+          "country": "br",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-kamino",
+          "name": "Kamino",
+          "realName": "Lucas Kamino",
+          "country": "br",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        }
+      ],
+      "matches": []
+    },
+    "kru": {
+      "name": "KRÜ",
+      "vlrId": "2355",
+      "roster": [
+        {
+          "id": "p-saadhak",
+          "name": "saadhak",
+          "realName": "Matias Delipetro",
+          "country": "ar",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-mwzera",
+          "name": "mwzera",
+          "realName": "Leonardo Serrati",
+          "country": "br",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-less",
+          "name": "Less",
+          "realName": "Felipe de Loyola Basso",
+          "country": "br",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-dantedeu5",
+          "name": "Dantedeu5",
+          "realName": "Jesús Federico Larrosa",
+          "country": "ar",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-heat",
+          "name": "heat",
+          "realName": "Olavo Marcelo",
+          "country": "br",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-torito",
+          "name": "torito",
+          "realName": "Cristobal Quintana",
+          "country": "cl",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-zonyk",
+          "name": "ZONYK",
+          "realName": "Nicolas Carboni",
+          "country": "cl",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-fadeout",
+          "name": "Fadeout",
+          "realName": "Alex Argüello",
+          "country": "ar",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-psiarthurleon",
+          "name": "Psiarthurleon",
+          "realName": "Arthur Leon",
+          "country": "br",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        }
+      ],
+      "matches": []
+    },
+    "envy": {
+      "name": "ENVY",
+      "vlrId": "427",
+      "roster": [
+        {
+          "id": "p-eggsterr",
+          "name": "Eggsterr",
+          "realName": "Evan Grady",
+          "country": "us",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-nightz",
+          "name": "nightz",
+          "realName": "Christian Smith",
+          "country": "us",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-demon1",
+          "name": "Demon1",
+          "realName": "Max Mazanov",
+          "country": "us",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-rossy",
+          "name": "Rossy",
+          "realName": "Daniel Abedrabbo",
+          "country": "us",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-keznit",
+          "name": "keznit",
+          "realName": "Angelo Mori",
+          "country": "cl",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-glyph",
+          "name": "GLYPH",
+          "realName": "Conner Garcia",
+          "country": "ph",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-ion",
+          "name": "ion",
+          "realName": "Ayan Rastogi",
+          "country": "in",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-p0ppin",
+          "name": "P0PPIN",
+          "realName": "Matteo Weber",
+          "country": "us",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-stunner",
+          "name": "Stunner",
+          "realName": "Dakota MacLeod",
+          "country": "ca",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-wkn",
+          "name": "WKN",
+          "realName": "Alvaro Bustos",
+          "country": "cl",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        }
+      ],
+      "matches": []
+    },
+    "vit": {
+      "name": "Team Vitality",
+      "vlrId": "2059",
+      "roster": [
+        {
+          "id": "p-jamppi",
+          "name": "Jamppi",
+          "realName": "Elias Olkkonen",
+          "country": "fi",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-profek",
+          "name": "PROFEK",
+          "realName": "Dawid Święć",
+          "country": "pl",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-derke",
+          "name": "Derke",
+          "realName": "Nikita Niko Sirmitev",
+          "country": "fi",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-chronicle",
+          "name": "Chronicle",
+          "realName": "Timofey Khromov",
+          "country": "ru",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-sayonara",
+          "name": "Sayonara",
+          "realName": "Ștefan Mîtcu",
+          "country": "unknown",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-bangovic",
+          "name": "Bangovic",
+          "realName": "Andy Zajimovic",
+          "country": "de",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-pal",
+          "name": "PAL",
+          "realName": "Gregor Morton",
+          "country": "unknown",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-scuttt",
+          "name": "Scuttt",
+          "realName": "Benjamin Hutchinson",
+          "country": "unknown",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-slk",
+          "name": "slk",
+          "realName": "Aleksey Lynksov",
+          "country": "ru",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        }
+      ],
+      "matches": []
+    },
+    "th": {
+      "name": "Team Heretics",
+      "vlrId": "1001",
+      "roster": [
+        {
+          "id": "p-boo",
+          "name": "Boo",
+          "realName": "Ričardas Lukaševičius",
+          "country": "lt",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-koshmaras",
+          "name": "koshmaras",
+          "realName": "Martynas Namikas",
+          "country": "lt",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-wo0t",
+          "name": "Wo0t",
+          "realName": "Mert Alkan",
+          "country": "tr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-riens",
+          "name": "RieNs",
+          "realName": "Enes Ecirli",
+          "country": "tr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-benjyfishy",
+          "name": "benjyfishy",
+          "realName": "Benjamin David Fish",
+          "country": "gb",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-niklas",
+          "name": "Niklas",
+          "realName": "Niklas Geiss",
+          "country": "de",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-copper",
+          "name": "Copper",
+          "realName": "Daniel Blaimauer",
+          "country": "unknown",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-neilzinho",
+          "name": "neilzinho",
+          "realName": "Neil Finlay",
+          "country": "gb",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-weber",
+          "name": "weber",
+          "realName": "Brandon Weber",
+          "country": "gb",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-rob",
+          "name": "Rob",
+          "realName": "Robert William Davies",
+          "country": "unknown",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-beni",
+          "name": "Beni",
+          "realName": "Benedikt Baumann",
+          "country": "de",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        }
+      ],
+      "matches": []
+    },
+    "fnc": {
+      "name": "Fnatic",
+      "vlrId": "2593",
+      "roster": [
+        {
+          "id": "p-boaster",
+          "name": "Boaster",
+          "realName": "Jake Howlett",
+          "country": "gb",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-crashies",
+          "name": "crashies",
+          "realName": "Austin Roberts",
+          "country": "us",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-kaajak",
+          "name": "kaajak",
+          "realName": "Kajetan Haremski",
+          "country": "pl",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-cloud",
+          "name": "Cloud",
+          "realName": "Kirill Nehozhin",
+          "country": "ru",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-alfajer",
+          "name": "Alfajer",
+          "realName": "Emir Ali Beder",
+          "country": "tr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-veqaj",
+          "name": "Veqaj",
+          "realName": "Sylvain Pattyn",
+          "country": "fr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-cojo",
+          "name": "CoJo",
+          "realName": "Colin Johnson",
+          "country": "us",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-engh",
+          "name": "ENGH",
+          "realName": "Andrey Sholokhov",
+          "country": "ru",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-desmo",
+          "name": "Desmo",
+          "realName": "Casper Rasmussen",
+          "country": "dk",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-szed",
+          "name": "Szed",
+          "realName": "Philipp Schickor",
+          "country": "de",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        }
+      ],
+      "matches": []
+    },
+    "fut": {
+      "name": "FUT Esports",
+      "vlrId": "1184",
+      "roster": [
+        {
+          "id": "p-sociablee",
+          "name": "sociablEE",
+          "realName": "Volkan Yonal",
+          "country": "tr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-s0pp",
+          "name": "s0pp",
+          "realName": "Efe Tur",
+          "country": "tr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-xeus",
+          "name": "xeus",
+          "realName": "Doğan Gözgen",
+          "country": "tr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-yetujey",
+          "name": "yetujey",
+          "realName": "Eray Budak",
+          "country": "tr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-krostaly",
+          "name": "KROSTALY",
+          "realName": "Okan Alaçam",
+          "country": "tr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-mighty",
+          "name": "Mighty",
+          "realName": "Berkalp Kaan Yılmazoğlu",
+          "country": "tr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-vlad",
+          "name": "Vlad",
+          "realName": "Berke Kantürk",
+          "country": "tr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-bambino",
+          "name": "Bambino",
+          "realName": "Tyler Jay",
+          "country": "gb",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        }
+      ],
+      "matches": []
+    },
+    "tl": {
+      "name": "Team Liquid",
+      "vlrId": "474",
+      "roster": [
+        {
+          "id": "p-nats",
+          "name": "nAts",
+          "realName": "Ayaz Akhmetshin",
+          "country": "ru",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-purp0",
+          "name": "purp0",
+          "realName": "Semyon Borchev",
+          "country": "ru",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-kamo",
+          "name": "kamo",
+          "realName": "Kamil Frąckowiak",
+          "country": "pl",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-trexx",
+          "name": "trexx",
+          "realName": "Nikita Cherednichenko",
+          "country": "ru",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-kicks",
+          "name": "Kicks",
+          "realName": "Kimmie Laasner",
+          "country": "unknown",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-gsr",
+          "name": "GSR",
+          "realName": "Ognjen Bondžić",
+          "country": "unknown",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-wayne",
+          "name": "wayne",
+          "realName": "Wayne Chang",
+          "country": "sg",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-miniboo",
+          "name": "MiniBoo",
+          "realName": "Dominykas Lukaševičius",
+          "country": "lt",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-cauzed",
+          "name": "cauzed",
+          "realName": "Eamon Drea",
+          "country": "gb",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-mol",
+          "name": "Mol",
+          "realName": "Berke Mol",
+          "country": "tr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-lohan",
+          "name": "LohaN",
+          "realName": "Ivo Albino",
+          "country": "pt",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-yaotzin",
+          "name": "yaotziN.",
+          "realName": "Daniel Roczniak",
+          "country": "pl",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-bacon9",
+          "name": "Bacon9",
+          "realName": "Jake Lloyd",
+          "country": "gb",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        }
+      ],
+      "matches": []
+    },
+    "kc": {
+      "name": "Karmine Corp",
+      "vlrId": "8877",
+      "roster": [
+        {
+          "id": "p-avez",
+          "name": "Avez",
+          "realName": "Hazem Khaled",
+          "country": "unknown",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-dos9",
+          "name": "dos9",
+          "realName": "Zhumagali Dastan",
+          "country": "unknown",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-lewn",
+          "name": "LewN",
+          "realName": "Burak Alkan",
+          "country": "tr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-suygetsu",
+          "name": "SUYGETSU",
+          "realName": "Dmitry Ilyushin",
+          "country": "unknown",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-n4rrate",
+          "name": "N4RRATE",
+          "realName": "Marshall Massey",
+          "country": "us",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-chaza",
+          "name": "Chaza",
+          "realName": "Charlie Phillips",
+          "country": "gb",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-sheydos",
+          "name": "sheydos",
+          "realName": "Bogdan Naumov",
+          "country": "ru",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-ze1sh",
+          "name": "ZE1SH",
+          "realName": "Ahmed El Sheikh",
+          "country": "unknown",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-simoz",
+          "name": "simoz",
+          "realName": "Simone Giovannini",
+          "country": "it",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        }
+      ],
+      "matches": []
+    },
+    "navi": {
+      "name": "NAVI",
+      "vlrId": "4915",
+      "roster": [
+        {
+          "id": "p-chloric",
+          "name": "chloric",
+          "realName": "Caide Heaton",
+          "country": "us",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-exit",
+          "name": "ExiT",
+          "realName": "Abdullah Al-Twaijri",
+          "country": "unknown",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-ruxic",
+          "name": "Ruxic",
+          "realName": "Uğur Güç",
+          "country": "tr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-hiro",
+          "name": "hiro",
+          "realName": "Emirhan Kat",
+          "country": "tr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-kolosha",
+          "name": "Kolosha",
+          "realName": "Herman Skrypka",
+          "country": "ua",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-shao",
+          "name": "Shao",
+          "realName": "Andrey Kiprsky",
+          "country": "unknown",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-filu",
+          "name": "Filu",
+          "realName": "Dawid Czarnecki",
+          "country": "pl",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-cyvoph",
+          "name": "CyvOph",
+          "realName": "Clement Millard",
+          "country": "fr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-ange1",
+          "name": "ANGE1",
+          "realName": "Kyrylo Karasov",
+          "country": "ua",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-salah",
+          "name": "salah",
+          "realName": "Salah Barakat",
+          "country": "gb",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-zuzanna",
+          "name": "Zuzanna",
+          "realName": "Zuzanna Hejduk-Mostowy",
+          "country": "pl",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-flynn",
+          "name": "Flynn",
+          "realName": "Alaa Nasrallah",
+          "country": "unknown",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        }
+      ],
+      "matches": []
+    },
+    "bbl": {
+      "name": "BBL",
+      "vlrId": "397",
+      "roster": [
+        {
+          "id": "p-ros",
+          "name": "Rosé",
+          "realName": "Eren Erzan",
+          "country": "tr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-crewen",
+          "name": "Crewen",
+          "realName": "Ali Eren Sargin",
+          "country": "tr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-lar0k",
+          "name": "Lar0k",
+          "realName": "Yusuf Kaan Kanber",
+          "country": "tr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-loita",
+          "name": "Loita",
+          "realName": "Utku Kart",
+          "country": "tr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-loversrock",
+          "name": "lovers rock",
+          "realName": "Umut Pekdoğan",
+          "country": "tr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-key",
+          "name": "KEY",
+          "realName": "Mert Çelebi",
+          "country": "tr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-viento",
+          "name": "Viento",
+          "realName": "Göktuğ Alp Çebi",
+          "country": "tr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        }
+      ],
+      "matches": []
+    },
+    "m8": {
+      "name": "Gentle Mates",
+      "vlrId": "12694",
+      "roster": [
+        {
+          "id": "p-starxo",
+          "name": "starxo",
+          "realName": "Patryk Kopczynski",
+          "country": "pl",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-proxh",
+          "name": "Proxh",
+          "realName": "Yusuf Emre Tunc",
+          "country": "tr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-marteen",
+          "name": "marteen",
+          "realName": "Martin Pátek",
+          "country": "unknown",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-h1ber",
+          "name": "H1ber",
+          "realName": "Joona Parviainen",
+          "country": "fi",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-minny",
+          "name": "Minny",
+          "realName": "Patrik Hušek",
+          "country": "unknown",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-bipo",
+          "name": "bipo",
+          "realName": "Taranvir Singh",
+          "country": "it",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-manyfender",
+          "name": "ManyFender",
+          "realName": "Marc Kowolik",
+          "country": "fr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-kundikundi",
+          "name": "KUNDIKUNDI",
+          "realName": "Jiri Honkala",
+          "country": "fi",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-mavera",
+          "name": "Mavera",
+          "realName": "Erim Sasal",
+          "country": "tr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-luinwess",
+          "name": "Luinwess",
+          "realName": "Sinan Koyuncu",
+          "country": "tr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        }
+      ],
+      "matches": []
+    },
+    "gx": {
+      "name": "GiantX",
+      "vlrId": "14419",
+      "roster": [
+        {
+          "id": "p-flickless",
+          "name": "Flickless",
+          "realName": "Karel Maeckelbergh",
+          "country": "unknown",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-westside",
+          "name": "westside",
+          "realName": "Miłosz Duda",
+          "country": "pl",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-ara",
+          "name": "ara",
+          "realName": "Hanceriuc Eduard-George",
+          "country": "unknown",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-jesse",
+          "name": "Jesse",
+          "realName": "Adam Čtvrtníček",
+          "country": "unknown",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-net",
+          "name": "neT",
+          "realName": "Michael Bernet",
+          "country": "us",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-tomaszy",
+          "name": "tomaszy",
+          "realName": "Tomás Machado",
+          "country": "pt",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-hehnal",
+          "name": "Hehnal",
+          "realName": "Alexandra Hehn",
+          "country": "de",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-pipson",
+          "name": "pipsoN",
+          "realName": "Daniil Mesheryakov",
+          "country": "ru",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-waylander",
+          "name": "wayLander",
+          "realName": "Jan Rahkonen",
+          "country": "fi",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-mew",
+          "name": "Mew",
+          "realName": "Théo Ponzoni",
+          "country": "fr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        }
+      ],
+      "matches": []
+    },
+    "pcific": {
+      "name": "PCIFIC",
+      "vlrId": "3478",
+      "roster": [
+        {
+          "id": "p-qpert",
+          "name": "qpert",
+          "realName": "Mateja Mijovic",
+          "country": "unknown",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-al0rante",
+          "name": "al0rante",
+          "realName": "Felix Brandl",
+          "country": "de",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-ninja",
+          "name": "NINJA",
+          "realName": "Patryk Koczyba",
+          "country": "pl",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-seven",
+          "name": "seven",
+          "realName": "Johann Hernandez",
+          "country": "mx",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-waddle",
+          "name": "waddle",
+          "realName": "Wadir Taraki",
+          "country": "gb",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-thinkii",
+          "name": "thinkii",
+          "realName": "Manuel Martínez",
+          "country": "es",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-zaes",
+          "name": "ZaeS",
+          "realName": "Dario Gomez",
+          "country": "es",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-koyo",
+          "name": "Koyo",
+          "realName": "Koray Arpat",
+          "country": "de",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        }
+      ],
+      "matches": []
+    },
+    "ulf": {
+      "name": "ULF",
+      "vlrId": "18019",
+      "roster": [
+        {
+          "id": "p-nekky",
+          "name": "nekky",
+          "realName": "Anıl Dağdeviren",
+          "country": "tr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-audaz",
+          "name": "audaz",
+          "realName": "Soner Ekiz",
+          "country": "tr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-favian",
+          "name": "Favian",
+          "realName": "Enes Yiğiter",
+          "country": "tr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-s0pp",
+          "name": "s0pp",
+          "realName": "Efe Tur",
+          "country": "tr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-echo",
+          "name": "echo",
+          "realName": "Ömür Serkan Şenol",
+          "country": "tr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-draen",
+          "name": "Draen",
+          "realName": "Kaan Özgen",
+          "country": "tr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-afr0nfire",
+          "name": "afr0nfire",
+          "realName": "Hakan Pınarbaşı",
+          "country": "tr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-l7",
+          "name": "L7",
+          "realName": "Emirhan Şahintürk",
+          "country": "tr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        }
+      ],
+      "matches": []
+    },
+    "prx": {
+      "name": "Paper Rex",
+      "vlrId": "624",
+      "roster": [
+        {
+          "id": "p-invy",
+          "name": "invy",
+          "realName": "Adrian Jiggs Reyes",
+          "country": "ph",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-jinggg",
+          "name": "Jinggg",
+          "realName": "Wang Jing Jie",
+          "country": "sg",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-f0rsaken",
+          "name": "f0rsakeN",
+          "realName": "Jason Susanto",
+          "country": "id",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-d4v41",
+          "name": "d4v41",
+          "realName": "Khalish Rusyaidee",
+          "country": "my",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-something",
+          "name": "something",
+          "realName": "Ilya Petrov",
+          "country": "ru",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-tommy",
+          "name": "Tommy",
+          "realName": "Kumaresan Ramani",
+          "country": "sg",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-alecks",
+          "name": "alecks",
+          "realName": "Alexandre Sallé",
+          "country": "fr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-wendler",
+          "name": "Wendler",
+          "realName": "Ashton Wendler",
+          "country": "us",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-panda",
+          "name": "Panda",
+          "realName": "Laijhun Cheng",
+          "country": "us",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        }
+      ],
+      "matches": []
+    },
+    "gen": {
+      "name": "Gen.G",
+      "vlrId": "17",
+      "roster": [
+        {
+          "id": "p-ash",
+          "name": "Ash",
+          "realName": "Ha Hyun-cheol (하현철)",
+          "country": "kr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-karon",
+          "name": "Karon",
+          "realName": "Kim Won-tae (김원태)",
+          "country": "kr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-t3xture",
+          "name": "t3xture",
+          "realName": "Kim Na-ra (김나라)",
+          "country": "kr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-efina",
+          "name": "Efina",
+          "realName": "Kim Nak-yeon (김낙연)",
+          "country": "kr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-raxcal",
+          "name": "Raxcal",
+          "realName": "Kim Min-seok (김민석)",
+          "country": "kr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-xiesta",
+          "name": "Xiesta",
+          "realName": "Jung Si-hwan (정시환)",
+          "country": "kr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-zynx",
+          "name": "ZynX",
+          "realName": "Kim Dong-ha (김동하)",
+          "country": "kr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-solo",
+          "name": "solo",
+          "realName": "Kang Geun-chul (강근철)",
+          "country": "kr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-hsk",
+          "name": "HSK",
+          "realName": "Kim Hae-seong (김해성)",
+          "country": "kr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-peri",
+          "name": "peri",
+          "realName": "Jung Bum-ki (정범기)",
+          "country": "kr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        }
+      ],
+      "matches": []
+    },
+    "t1": {
+      "name": "T1",
+      "vlrId": "14",
+      "roster": [
+        {
+          "id": "p-munchkin",
+          "name": "Munchkin",
+          "realName": "Byeon Sang-beom (변상범)",
+          "country": "kr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-stax",
+          "name": "stax",
+          "realName": "Kim Gu-taek (김구택)",
+          "country": "kr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-meteor",
+          "name": "Meteor",
+          "realName": "Kim Tae-oh (김태오)",
+          "country": "kr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-buzz",
+          "name": "BuZz",
+          "realName": "Yu Byeong-cheol (유병철)",
+          "country": "kr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-dh",
+          "name": "DH",
+          "realName": "Kang Dong-ho (강동호)",
+          "country": "kr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-izu",
+          "name": "iZu",
+          "realName": "Ham Woo-ju (함우주)",
+          "country": "kr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-norman",
+          "name": "Norman",
+          "realName": "Shin Jun-ho",
+          "country": "kr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-kdg",
+          "name": "KDG",
+          "realName": "Kim Dong-gun (김동건)",
+          "country": "kr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-cheonggak",
+          "name": "CheongGak",
+          "realName": "Lee Il-ho (이일호)",
+          "country": "kr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        }
+      ],
+      "matches": []
+    },
+    "nsr": {
+      "name": "NS RedForce",
+      "vlrId": "11060",
+      "roster": [
+        {
+          "id": "p-rb",
+          "name": "Rb",
+          "realName": "Goo Sang-min (구상민)",
+          "country": "kr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-woohyun",
+          "name": "WoohyuN",
+          "realName": "Moon Woo-hyun (문우현)",
+          "country": "kr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-xross",
+          "name": "Xross",
+          "realName": "Jeonghwan (정환)",
+          "country": "kr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-francis",
+          "name": "Francis",
+          "realName": "Kim Mu-bin (김무빈)",
+          "country": "kr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-dambi",
+          "name": "Dambi",
+          "realName": "Lee Hyuk-kyu (이혁규)",
+          "country": "kr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-ivy",
+          "name": "Ivy",
+          "realName": "Park Sung-hyeon (박성현)",
+          "country": "kr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-silkanon",
+          "name": "SilKanoN",
+          "realName": "Kim Gyeong-min (김경민)",
+          "country": "kr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-yoman",
+          "name": "yoman",
+          "realName": "Chae Young-moon (채영문)",
+          "country": "kr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-sungmin",
+          "name": "Sungmin",
+          "realName": "So Seong-min (소성민)",
+          "country": "kr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        }
+      ],
+      "matches": []
+    },
+    "drx": {
+      "name": "KIWOOM DRX",
+      "vlrId": "8185",
+      "roster": [
+        {
+          "id": "p-beyn",
+          "name": "BeYN",
+          "realName": "Kang Ha-bin (강하빈)",
+          "country": "kr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-mako",
+          "name": "MaKo",
+          "realName": "Kim Myeong-gwan (김명관)",
+          "country": "kr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-free1ng",
+          "name": "free1ng",
+          "realName": "No Ha-jun (노하준)",
+          "country": "kr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-hyunmin",
+          "name": "HYUNMIN",
+          "realName": "Song Hyun-min (송현민)",
+          "country": "kr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-flicker",
+          "name": "Flicker",
+          "realName": "Kim Tae-hee (김태희)",
+          "country": "kr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-yong",
+          "name": "yong",
+          "realName": "Kim Ho-yong (김호용)",
+          "country": "kr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-termi",
+          "name": "termi",
+          "realName": "Pyeon Seon-ho (편선호)",
+          "country": "kr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-glow",
+          "name": "glow",
+          "realName": "Kim Min-soo (김민수)",
+          "country": "kr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-argency",
+          "name": "Argency",
+          "realName": "Kwon Soon-woo (권순우)",
+          "country": "kr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        }
+      ],
+      "matches": []
+    },
+    "ge": {
+      "name": "Global Esports",
+      "vlrId": "918",
+      "roster": [
+        {
+          "id": "p-xavi8k",
+          "name": "xavi8k",
+          "realName": "Xavier Juan",
+          "country": "ph",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-patmen",
+          "name": "PatMen",
+          "realName": "Patrick Mendoza",
+          "country": "ph",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-udotan",
+          "name": "UdoTan",
+          "realName": "Go Kyung-won (고경원)",
+          "country": "kr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-kr1stal",
+          "name": "Kr1stal",
+          "realName": "Savva Fedorov",
+          "country": "ru",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-autumn",
+          "name": "Autumn",
+          "realName": "Kale Dunne",
+          "country": "au",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-vatsal",
+          "name": "Vatsal",
+          "realName": "Vatsal Uniyal",
+          "country": "in",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-platoon",
+          "name": "Platoon",
+          "realName": "Daniel Zhou",
+          "country": "ca",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-aimixstrange",
+          "name": "Aimix Strange",
+          "realName": "Derren dela Cruz",
+          "country": "ph",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-fields",
+          "name": "Fields",
+          "realName": "Sam Greenfield",
+          "country": "gb",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-taeri",
+          "name": "taeri",
+          "realName": "Hose Son (손호세)",
+          "country": "kr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-unknown",
+          "name": "UnknowN",
+          "realName": "Minseong Kim",
+          "country": "kr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        }
+      ],
+      "matches": []
+    },
+    "rrq": {
+      "name": "RRQ",
+      "vlrId": "878",
+      "roster": [
+        {
+          "id": "p-crazyguy",
+          "name": "crazyguy",
+          "realName": "Ngô Công Anh",
+          "country": "vn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-monyet",
+          "name": "Monyet",
+          "realName": "Cahya Nugraha",
+          "country": "id",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-xffero",
+          "name": "xffero",
+          "realName": "David Monangin",
+          "country": "id",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-xan",
+          "name": "Xan",
+          "realName": "Xan Ng",
+          "country": "my",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-jemkin",
+          "name": "Jemkin",
+          "realName": "Maksim Batorov",
+          "country": "ru",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-kushy",
+          "name": "Kushy",
+          "realName": "Bryan Carlos Setiawan",
+          "country": "id",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-seasonz",
+          "name": "SeasoNz",
+          "realName": "Joe Lai",
+          "country": "my",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-jovi",
+          "name": "Jovi",
+          "realName": "Jovanni Vera",
+          "country": "unknown",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-warbirds",
+          "name": "Warbirds",
+          "realName": "Evan Olzem",
+          "country": "us",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-rebecca",
+          "name": "Rebecca",
+          "realName": "Rebecca Wong",
+          "country": "my",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-jomengz",
+          "name": "Jomengz",
+          "realName": "Jonathan Hoo",
+          "country": "id",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        }
+      ],
+      "matches": []
+    },
+    "tsec": {
+      "name": "Team Secret",
+      "vlrId": "6199",
+      "roster": [
+        {
+          "id": "p-kellys",
+          "name": "kellyS",
+          "realName": "Kelly Sedillo",
+          "country": "ph",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-natz",
+          "name": "natz",
+          "realName": "Jonathan Adiputra",
+          "country": "id",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-styron",
+          "name": "STYRON",
+          "realName": "Tidus Goh",
+          "country": "sg",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-zeus",
+          "name": "Zeus",
+          "realName": "Jhian Vega",
+          "country": "ph",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-sylvan",
+          "name": "Sylvan",
+          "realName": "Go Young-sup (고영섭)",
+          "country": "kr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-yamyamyui",
+          "name": "yamyam yui",
+          "realName": "Yamyam Villanueva Yui",
+          "country": "ph",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-spin",
+          "name": "Spin",
+          "realName": "Peter Bradford",
+          "country": "gb",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-skye",
+          "name": "skye",
+          "realName": "Felipe Skye Lim",
+          "country": "sg",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        }
+      ],
+      "matches": []
+    },
+    "dfm": {
+      "name": "DFM",
+      "vlrId": "278",
+      "roster": [
+        {
+          "id": "p-ssees",
+          "name": "SSeeS",
+          "realName": "Tomonori Okimura",
+          "country": "jp",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-meiy",
+          "name": "Meiy",
+          "realName": "Ibuki Seki",
+          "country": "jp",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-yatsuka",
+          "name": "yatsuka",
+          "realName": "Kazuya Ikeda",
+          "country": "jp",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-caedye",
+          "name": "Caedye",
+          "realName": "Amon Mateus Okakura",
+          "country": "jp",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-akame",
+          "name": "Akame",
+          "realName": "Yu Gwang-hui (유광희)",
+          "country": "kr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-vorz",
+          "name": "Vorz",
+          "realName": "Kakeru Ikarashi",
+          "country": "jp",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-melofovia",
+          "name": "Melofovia",
+          "realName": "Hirotaka Okazaki",
+          "country": "jp",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-northernlights",
+          "name": "NorthernLights",
+          "realName": "Tsubasa Ando",
+          "country": "jp",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        }
+      ],
+      "matches": []
+    },
+    "zeta": {
+      "name": "ZETA",
+      "vlrId": "5448",
+      "roster": [
+        {
+          "id": "p-sugarz3ro",
+          "name": "SugarZ3ro",
+          "realName": "Shota Watanabe",
+          "country": "jp",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-absol",
+          "name": "Absol",
+          "realName": "Kazuki Fujinoki",
+          "country": "jp",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-syouta",
+          "name": "SyouTa",
+          "realName": "Shota Aoki",
+          "country": "jp",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-eko",
+          "name": "eKo",
+          "realName": "Yeom Wang-ryong (염왕룡)",
+          "country": "kr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-xdll",
+          "name": "Xdll",
+          "realName": "Yuto Mizomori",
+          "country": "jp",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-ryota",
+          "name": "ryota-",
+          "realName": "Ryota Okayama",
+          "country": "jp",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-xqq",
+          "name": "XQQ",
+          "realName": "Motoyama Hibiki",
+          "country": "jp",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-gya9",
+          "name": "gya9",
+          "realName": "",
+          "country": "jp",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-mini",
+          "name": "Mini",
+          "realName": "Jacob Harris",
+          "country": "gb",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        }
+      ],
+      "matches": []
+    },
+    "varrel": {
+      "name": "VARREL",
+      "vlrId": "11229",
+      "roster": [
+        {
+          "id": "p-c1nder",
+          "name": "C1ndeR",
+          "realName": "Ko Jae-hyuk (고재혁)",
+          "country": "kr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-foxy9",
+          "name": "Foxy9",
+          "realName": "Jung Jae-sung (정재성)",
+          "country": "kr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-klaus",
+          "name": "Klaus",
+          "realName": "Kim Min-hyuk (김민혁)",
+          "country": "kr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-xuna",
+          "name": "XuNa",
+          "realName": "Kim Tae-geon (김태건)",
+          "country": "kr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-oonzmlp",
+          "name": "oonzmlp",
+          "realName": "Shin Sang-beom (신상범)",
+          "country": "kr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-zexy",
+          "name": "Zexy",
+          "realName": "Jang Suk-hyun (장석현)",
+          "country": "kr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-tk9",
+          "name": "TK9",
+          "realName": "Goo Tae-kyun (구태균)",
+          "country": "kr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-r3thme",
+          "name": "R3THME",
+          "realName": "Kim Ki-woon (김기운)",
+          "country": "kr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        }
+      ],
+      "matches": []
+    },
+    "fs": {
+      "name": "FULL SENSE",
+      "vlrId": "4050",
+      "roster": [
+        {
+          "id": "p-killua",
+          "name": "Killua",
+          "realName": "Tanate Teerasawad",
+          "country": "th",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-primmie",
+          "name": "primmie",
+          "realName": "Papaphat Sriprapha",
+          "country": "th",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-jitboys",
+          "name": "JitBoyS",
+          "realName": "Jittana Nokngam",
+          "country": "th",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-seph1roth",
+          "name": "seph1roth",
+          "realName": "Chinnakrit Phoojaroen",
+          "country": "th",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-thyy",
+          "name": "thyy",
+          "realName": "Anupong Preamsak",
+          "country": "th",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-leviathan",
+          "name": "Leviathan",
+          "realName": "Thanyathon Nakmee",
+          "country": "th",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-frost",
+          "name": "FrosT",
+          "realName": "Hector Rosario",
+          "country": "us",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-theelovefamily",
+          "name": "THEELOVEFAMILY",
+          "realName": "Thanaphat Limpaphan",
+          "country": "th",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-sushiboys",
+          "name": "Sushiboys",
+          "realName": "Panyawat Subsiriroj",
+          "country": "th",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        }
+      ],
+      "matches": []
+    },
+    "at": {
+      "name": "Attacking Soul",
+      "vlrId": "1837",
+      "roster": [
+        {
+          "id": "p-monk",
+          "name": "monk",
+          "realName": "Wang Haoyu (王浩宇)",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-yuicaw",
+          "name": "Yuicaw",
+          "realName": "Huang Yung-chieh (黃湧傑)",
+          "country": "tw",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-yhchen",
+          "name": "YHchen",
+          "realName": "Chen Yuhan (陳昱瀚)",
+          "country": "tw",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-zero1",
+          "name": "Zero1",
+          "realName": "Meng Zhen Ren (任梦真)",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-ego",
+          "name": "EGO",
+          "realName": "Yang Haozun (杨皓尊)",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        }
+      ],
+      "matches": []
+    },
+    "kbg": {
+      "name": "Kingback Gaming",
+      "vlrId": "12784",
+      "roster": [
+        {
+          "id": "p-akeman",
+          "name": "Akeman",
+          "realName": "Zhang Haoran (张浩然)",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-sibeastw0w",
+          "name": "sibeastw0w",
+          "realName": "Anton Govorukhin",
+          "country": "ru",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-tonk",
+          "name": "Tonk",
+          "realName": "",
+          "country": "unknown",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-ying",
+          "name": "Ying",
+          "realName": "Wang Chenxu (王晨旭)",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-krst1ng",
+          "name": "Krst1Ng",
+          "realName": "",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-coldfish",
+          "name": "coldfish",
+          "realName": "Xiang Pengzhi (向鹏志)",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-naint",
+          "name": "Naint",
+          "realName": "Mingiyan Goldaev",
+          "country": "ru",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        }
+      ],
+      "matches": []
+    }
+  },
   "errors": [],
-  "fetchedAt": "2026-08-22T22:50:10.239Z"
+  "fetchedAt": "2026-08-23T07:39:24.898Z"
 }

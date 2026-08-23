@@ -62,7 +62,17 @@ App.storyData = async function(){
     }
   }
 
-  return { merged, fetchedAt: App._fetchedTeams ? App._fetchedTeams.fetchedAt : null };
+  return {
+    merged,
+    fetchedAt: App._fetchedTeams ? App._fetchedTeams.fetchedAt : null,
+    /* 诊断信息：帮助运营判断「为何拉不到阵容」 */
+    diag: {
+      stateTeamCount: Object.keys(stateTeams).length,
+      fetchedTeamCount: Object.keys(fetchedTeams).length,
+      vlrIdMissing: Object.values(stateTeams).filter(t => !t.vlrId).length,
+      hasRoster: Object.values(fetchedTeams).some(t => (t.roster || []).length > 0)
+    }
+  };
 };
 
 /* 从字符串中解析战队 key（如 'AG vs TE' → ['ag', 'te']） */

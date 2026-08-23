@@ -185,7 +185,7 @@ async function fetchVLRSchedule(){
   return { days: allDays, errors, fetchedAt: new Date().toISOString() };
 }
 
-module.exports = { fetchVLRSchedule, fetchVLRTeams, VLR_EVENTS, parseVLRPage, parseDate, parseTime };
+module.exports = { fetchVLRSchedule, fetchVLRTeams, VLR_EVENTS, parseVLRPage, parseDate, parseTime, parseTeamRoster, parseTeamMatches };
 
 /* =====================================================
  * VLR 战队页面抓取（roster + 完赛记录）
@@ -212,42 +212,64 @@ const FLAG_MAP = {
   'mod-flag-sg':'sg','mod-flag-tw':'tw','mod-flag-pt':'pt','mod-flag-lt':'lt',
 };
 
-/* ---------- 解析战队页 roster ---------- */
+/* ---------- 解析战队页 roster ----------
+ * VLR 当前结构（2026 改版）：
+ *   <div class="team-roster-item">
+ *     <a href="/player/ID/slug" ...>
+ *       <div class="team-roster-item-img">...</div>
+ *       <div class="team-roster-item-name">
+ *         <div class="team-roster-item-name-alias">
+ *           <i class="flag mod-kr"></i> Ash          ← 别名 + 国旗
+ *         </div>
+ *         <div class="team-roster-item-name-real">Ha Hyun-cheol (하현철)</div>
+ *       </div>
+ *       <div class="wf-tag mod-light team-roster-item-name-role">IGL</div>
+ *     </a>
+ *   </div>
+ */
 function parseTeamRoster(html){
   const players = [];
-  /* VLR roster 区域：wf-card 内 player-row / player-name / flag / role */
-  const rowRegex = /player-row[\s\S]*?<\/div>\s*<\/div>/g;
-  const rows = html.match(rowRegex) || [];
+  /* 单个 item 块：<div class="team-roster-item"> ... </a> </div> */
+  const itemRegex = /<div class="team-roster-item">([\s\S]*?)<\/a>\s*<\/div>/g;
+  let block;
 
-  for(const row of rows){
-    /* 选手名 */
-    const nameMatch = row.match(/player-name[\s\S]*?text-of[^>]*>([\s\S]*?)<\//);
-    const name = nameMatch ? stripTags(nameMatch[1]).trim() : '';
+  while((block = itemRegex.exec(html)) !== null){
+    const item = block[1];
+
+    /* 选手别名（优先，即战队常用名） */
+    const aliasMatch = item.match(/team-roster-item-name-alias[^>]*>([\s\S]*?)<\/div>/);
+    const alias = aliasMatch ? stripTags(aliasMatch[1]).trim() : '';
+
+    /* 真实名（含国籍/本名，作补充） */
+    const realMatch = item.match(/team-roster-item-name-real[^>]*>([\s\S]*?)<\/div>/);
+    const real = realMatch ? stripTags(realMatch[1]).trim() : '';
+
+    const name = alias || real;
     if(!name) continue;
 
-    /* 国籍（flag CSS class） */
+    /* 国籍（flag CSS class：VLR 用 mod-kr / mod-us 形式） */
     let country = '';
-    const flagMatch = row.match(/mod-flag\s+(\S+)/);
-    if(flagMatch){
-      const flagCls = flagMatch[0].trim();
-      country = FLAG_MAP[flagCls] || '';
-    }
+    const flagMatch = item.match(/mod-(kr|us|ca|br|ar|cl|mx|co|pe|gb|fi|se|no|dk|de|fr|es|it|nl|pl|tr|ru|ua|jp|cn|th|id|ph|vn|in|au|my|sg|tw|pt|lt)/i);
+    if(flagMatch) country = flagMatch[1].toLowerCase();
 
     /* 角色（role 文本） */
     let role = '';
-    const roleMatch = row.match(/player-role[\s\S]*?>([\s\S]*?)<\//);
+    const roleMatch = item.match(/team-roster-item-name-role[^>]*>([\s\S]*?)<\/div>/);
     if(roleMatch){
       const roleText = stripTags(roleMatch[1]).toLowerCase().trim();
       if(roleText.includes('igl') || roleText.includes('指挥')) role = 'igl';
       else if(roleText.includes('duel') || roleText.includes('突破')) role = 'duelist';
-      else if(roleText.includes('init') || roleText.includes('先锋')) role = 'initiator';
+      else if(roleText.includes('init') || roleText.includes('先锋') || roleText.includes('initiator')) role = 'initiator';
       else if(roleText.includes('controller') || roleText.includes('控场')) role = 'controller';
       else if(roleText.includes('sentinel') || roleText.includes('哨位')) role = 'sentinel';
     }
 
     players.push({
       id: 'p-' + name.toLowerCase().replace(/[^a-z0-9]/g, ''),
-      name, country: country || 'unknown', role: role || '',
+      name,
+      realName: real || '',
+      country: country || 'unknown',
+      role: role || '',
       joined: '', formerTeams: [], source: 'vlr'
     });
   }
