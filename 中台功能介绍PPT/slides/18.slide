@@ -1,0 +1,10 @@
+<Slide style={{ width: '1280px', height: '720px', background: 'linear-gradient(135deg, #120A0B 0%, #241215 60%, #120A0B 100%)', padding: 0, position: 'relative' }}>
+  <Box style={{ position: 'absolute', top: 0, left: 0, width: 480, height: 480, background: 'linear-gradient(135deg, rgba(220,48,48,0.16) 0%, transparent 70%)' }} />
+  <Box style={{ position: 'absolute', bottom: 0, right: 0, width: 520, height: 520, background: 'linear-gradient(135deg, transparent 40%, rgba(253,38,89,0.16) 100%)' }} />
+  <Box style={{ position: 'absolute', left: 0, right: 0, top: 230, alignItems: 'center', zIndex: 2 }}>
+    <Text style={{ fontSize: 28, color: '#FD2659', fontWeight: 'bold', letterSpacing: 4 }}>THANK YOU</Text>
+    <Text style={{ fontSize: 56, color: '#F0E8E8', fontWeight: 800, marginTop: 18, textAlign: 'center', lineHeight: 1.2 }}>让运营更轻，<span style={{ color: '#DC3030' }}>让内容更准</span></Text>
+    <Box style={{ width: 110, height: 5, background: '#DC3030', marginTop: 28, borderRadius: 3 }} />
+    <Text style={{ fontSize: 20, color: '#B0A0A0', marginTop: 26, textAlign: 'center', lineHeight: 1.6 }}>瓦电赛事运营中台 · Jinx-Arms 团队<br />内部工具 · 持续演进中</Text>
+  </Box>
+</Slide>

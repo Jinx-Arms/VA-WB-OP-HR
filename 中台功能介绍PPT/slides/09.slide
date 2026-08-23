@@ -1,0 +1,42 @@
+<Slide style={{ width: '1280px', height: '720px', background: '#120A0B', padding: '40px 64px' }}>
+  <Box style={{ height: 80, justifyContent: 'flex-end', borderBottom: '2px solid rgba(220,48,48,0.3)' }}>
+    <Text style={{ fontSize: 34, color: '#F0E8E8', fontWeight: 700 }}>战队库与看点挖掘</Text>
+  </Box>
+  <Box style={{ flexDirection: 'row', gap: 44, marginTop: 26, height: 520 }}>
+    {/* 左 42%：要点 */}
+    <Box style={{ width: '42%', justifyContent: 'center', gap: 14 }}>
+      <Text style={{ fontSize: 21, color: '#F0E8E8', fontWeight: 700 }}>数据 + 规则双驱动</Text>
+      {[
+        { t: '50 队全赛区注册表', d: 'VCT CN/EMEA/Americas/Pacific 总库，运营可手动新建队伍补录' },
+        { t: '462 名选手阵容', d: 'VLR 自动抓取各队现役名单，灌入静态文件随每日定时更新' },
+        { t: '看点引擎', d: '按 H2H 交锋、转会恩怨、连胜势头自动生成预热看点文案' },
+        { t: '号角参考源', d: 'web.haojiao.cc 维基站作人工对照，仅存链接不爬取（登录墙）' },
+      ].map((it, i) => (
+        <Box key={i} style={{ background: 'rgba(220,48,48,0.08)', borderRadius: 10, padding: '11px 16px', borderLeft: '3px solid #DC3030' }}>
+          <Text style={{ fontSize: 17, color: '#F0E8E8', fontWeight: 600 }}>{it.t}</Text>
+          <Text style={{ fontSize: 14, color: '#B0A0A0', marginTop: 2, lineHeight: 1.4 }}>{it.d}</Text>
+        </Box>
+      ))}
+    </Box>
+    {/* 右 58%：数据分层 SVG */}
+    <Box style={{ width: '58%', justifyContent: 'center', alignItems: 'center', background: 'rgba(220,48,48,0.06)', borderRadius: 16 }}>
+      <svg width={540} height={420} viewBox='0 0 540 420'>
+        <text x='30' y='36' fill='#B0A0A0' fontSize='15'>数据分层：静态抓取层 + 手动补充层</text>
+        <rect x='30' y='60' width='480' height='110' rx='10' fill='#1A0D0E' stroke='#DC3030' strokeWidth='1.5' />
+        <text x='50' y='92' fill='#FD2659' fontSize='17' fontWeight='bold'>静态层 · fetched-teams.json</text>
+        <text x='50' y='120' fill='#F0E8E8' fontSize='14'>VLR 抓取 50 队 / 462 选手（大体量，不进 state）</text>
+        <text x='50' y='144' fill='#B0A0A0' fontSize='13'>每日定时更新，运营无需关心</text>
+        <rect x='30' y='200' width='480' height='110' rx='10' fill='#1A0D0E' stroke='#FD2659' strokeWidth='1.5' />
+        <text x='50' y='232' fill='#FD2659' fontSize='17' fontWeight='bold'>手动层 · App.state（Supabase 同步）</text>
+        <text x='50' y='260' fill='#F0E8E8' fontSize='14'>队伍覆盖 / 对阵备注 / 看点 highlight / 新建队伍</text>
+        <text x='50' y='284' fill='#B0A0A0' fontSize='13'>manual:true 的队不被自动同步覆盖</text>
+        <rect x='30' y='340' width='480' height='60' rx='10' fill='#120A0B' stroke='#FD2659' strokeWidth='1' />
+        <text x='50' y='376' fill='#F0E8E8' fontSize='15'>惰性合并：storyData() 静态为基，手动层叠加</text>
+        <line x1='270' y1='170' x2='270' y2='200' stroke='#FD2659' strokeWidth='2' />
+        <line x1='270' y1='310' x2='270' y2='340' stroke='#FD2659' strokeWidth='2' />
+      </svg>
+    </Box>
+  </Box>
+  <Box style={{ position: 'absolute', bottom: 20, left: 64, fontSize: 14, color: '#7B7F7D' }}>瓦电赛事运营中台</Box>
+  <Box style={{ position: 'absolute', bottom: 20, right: 64, fontSize: 14, color: '#7B7F7D' }}>09 / 18</Box>
+</Slide>

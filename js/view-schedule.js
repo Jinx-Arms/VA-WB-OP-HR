@@ -23,7 +23,7 @@ App.renderSchedule = function(){
       <span class="badge ${type}">${type === 'match' ? '赛' : '休'}${info && info.manual ? '·手' : ''}</span></div>`;
     if(type === 'match' && info){
       info.matches.forEach(mt => {
-        inner += `<div class="match-line"><b>${mt.time}</b> ${App.normalizeMatchup(mt.teams)} <span class="hint">${mt.bo||''}</span></div>`;
+        inner += `<div class="match-line"><b>${mt.time}</b><span class="tz-tag">北京时间</span> ${App.normalizeMatchup(mt.teams)} <span class="hint">${mt.bo||''}</span></div>`;
       });
       inner += `<div class="hint" style="margin-top:3px">${info.matches[0] ? info.matches[0].stage : ''}</div>`;
     }
@@ -43,7 +43,7 @@ App.renderSchedule = function(){
 
   return `
   <div class="card">
-    <h3><span class="left">官方赛程 <span class="hint">数据源：VLR.gg 自动抓取 · 每日 6:00 更新</span></span></h3>
+    <h3><span class="left">官方赛程 <span class="hint">数据源：VLR.gg 自动抓取 · 每日 6:00 更新 · 时间均为北京时间（UTC+8）</span></span></h3>
     <div class="toolbar">
       <input type="month" value="${monthStr}" style="width:150px" onchange="App.ui.scheduleMonth=this.value;App.renderView()">
       <button class="btn primary" id="btn-sync" onclick="App.doSync()">⟳ 同步官方赛程</button>

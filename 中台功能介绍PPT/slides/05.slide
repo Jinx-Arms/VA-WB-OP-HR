@@ -1,0 +1,49 @@
+<Slide style={{ width: '1280px', height: '720px', background: '#120A0B', padding: '40px 64px' }}>
+  <Box style={{ height: 80, justifyContent: 'flex-end', borderBottom: '2px solid rgba(220,48,48,0.3)' }}>
+    <Text style={{ fontSize: 34, color: '#F0E8E8', fontWeight: 700 }}>技术架构</Text>
+  </Box>
+  <Box style={{ flexDirection: 'row', gap: 44, marginTop: 26, height: 520 }}>
+    {/* 左 58%：架构分层图 */}
+    <Box style={{ width: '58%', justifyContent: 'center', background: 'rgba(220,48,48,0.06)', borderRadius: 16, padding: 20 }}>
+      <svg width={560} height={460} viewBox='0 0 560 460'>
+        {/* 层 1 前端 */}
+        <rect x='20' y='20' width='520' height='80' rx='10' fill='#1A0D0E' stroke='#DC3030' strokeWidth='1.5' />
+        <text x='40' y='50' fill='#FD2659' fontSize='16' fontWeight='bold'>前端 SPA（Vanilla JS · 全局 App）</text>
+        <text x='40' y='78' fill='#B0A0A0' fontSize='13'>9 大功能模块 · 撤销重做 · 会话独立登录</text>
+        {/* 层 2 托管 */}
+        <rect x='20' y='120' width='520' height='70' rx='10' fill='#1A0D0E' stroke='#FD2659' strokeWidth='1.5' />
+        <text x='40' y='148' fill='#F0E8E8' fontSize='16' fontWeight='bold'>静态托管 · GitHub Pages</text>
+        <text x='40' y='174' fill='#B0A0A0' fontSize='13'>纯静态文件，零服务器成本</text>
+        {/* 层 3 云端 */}
+        <rect x='20' y='210' width='520' height='80' rx='10' fill='#1A0D0E' stroke='#DC3030' strokeWidth='1.5' />
+        <text x='40' y='240' fill='#FD2659' fontSize='16' fontWeight='bold'>云端数据库 · Supabase</text>
+        <text x='40' y='268' fill='#B0A0A0' fontSize='13'>kv_store 实时同步 · Storage 素材库 · 30s 轮询</text>
+        {/* 层 4 数据 */}
+        <rect x='20' y='310' width='520' height='120' rx='10' fill='#1A0D0E' stroke='#FD2659' strokeWidth='1.5' />
+        <text x='40' y='340' fill='#FD2659' fontSize='16' fontWeight='bold'>数据链路</text>
+        <text x='40' y='366' fill='#F0E8E8' fontSize='13'>VLR.gg 零依赖抓取（https+regex，800ms 限速）</text>
+        <text x='40' y='390' fill='#F0E8E8' fontSize='13'>GitHub Actions 每日 06:00 定时拉赛程</text>
+        <text x='40' y='414' fill='#F0E8E8' fontSize='13'>号角 wiki 作人工参考源（不程序化爬取）</text>
+        {/* 连接箭头 */}
+        {[100,195,290].map((y,i)=>(<line key={i} x1='280' y1={y} x2='280' y2={y+20} stroke='#DC3030' strokeWidth='2' />))}
+      </svg>
+    </Box>
+    {/* 右 42%：要点 */}
+    <Box style={{ width: '42%', justifyContent: 'center', gap: 18 }}>
+      <Text style={{ fontSize: 21, color: '#F0E8E8', fontWeight: 700, lineHeight: 1.5 }}>为什么这么搭</Text>
+      {[
+        { t: '零后端', d: '静态托管 + BaaS，部署与运维成本极低' },
+        { t: '可离线', d: '本地磁盘模式可直接调试，云端自动激活' },
+        { t: '可控抓取', d: '自建 Node 抓取器，不被第三方 API 绑死' },
+        { t: '信任模型', d: '内部团队工具，anon 共享 key 简化协作' },
+      ].map((it, i) => (
+        <Box key={i} style={{ background: 'rgba(220,48,48,0.08)', borderRadius: 10, padding: '13px 18px', borderLeft: '3px solid #FD2659' }}>
+          <Text style={{ fontSize: 18, color: '#F0E8E8', fontWeight: 600 }}>{it.t}</Text>
+          <Text style={{ fontSize: 15, color: '#B0A0A0', marginTop: 3, lineHeight: 1.4 }}>{it.d}</Text>
+        </Box>
+      ))}
+    </Box>
+  </Box>
+  <Box style={{ position: 'absolute', bottom: 20, left: 64, fontSize: 14, color: '#7B7F7D' }}>瓦电赛事运营中台</Box>
+  <Box style={{ position: 'absolute', bottom: 20, right: 64, fontSize: 14, color: '#7B7F7D' }}>05 / 18</Box>
+</Slide>

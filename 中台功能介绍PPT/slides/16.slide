@@ -1,0 +1,44 @@
+<Slide style={{ width: '1280px', height: '720px', background: '#120A0B', padding: '40px 64px' }}>
+  <Box style={{ height: 80, justifyContent: 'flex-end', borderBottom: '2px solid rgba(253,38,89,0.4)' }}>
+    <Text style={{ fontSize: 34, color: '#F0E8E8', fontWeight: 700 }}>私有云部署与 AI 文案</Text>
+  </Box>
+  <Box style={{ flexDirection: 'row', gap: 44, marginTop: 26, height: 520 }}>
+    {/* 左 42%：要点 */}
+    <Box style={{ width: '42%', justifyContent: 'center', gap: 20 }}>
+      <Box style={{ background: 'rgba(220,48,48,0.08)', borderRadius: 12, padding: '18px 20px', borderLeft: '4px solid #DC3030' }}>
+        <Text style={{ fontSize: 21, color: '#FD2659', fontWeight: 700 }}>私有云空间</Text>
+        <Text style={{ fontSize: 16, color: '#B0A0A0', marginTop: 8, lineHeight: 1.5 }}>以自建私有云替代 GitHub Pages + 公有 Supabase，数据不出内网，权限与合规更可控。</Text>
+      </Box>
+      <Box style={{ background: 'rgba(253,38,89,0.08)', borderRadius: 12, padding: '18px 20px', borderLeft: '4px solid #FD2659' }}>
+        <Text style={{ fontSize: 21, color: '#FD2659', fontWeight: 700 }}>接入 AI 文案</Text>
+        <Text style={{ fontSize: 16, color: '#B0A0A0', marginTop: 8, lineHeight: 1.5 }}>LLM 生成多样化社媒文案、多语言版本、看点润色，从「模板固定」升级为「千人千面」。</Text>
+      </Box>
+    </Box>
+    {/* 右 58%：扩展架构 SVG */}
+    <Box style={{ width: '58%', justifyContent: 'center', alignItems: 'center', background: 'rgba(220,48,48,0.06)', borderRadius: 16 }}>
+      <svg width={540} height={400} viewBox='0 0 540 400'>
+        <rect x='180' y='30' width='180' height='56' rx='10' fill='#1A0D0E' stroke='#DC3030' strokeWidth='1.5' />
+        <text x='270' y='63' fill='#F0E8E8' fontSize='16' fontWeight='bold' textAnchor='middle'>运营中台</text>
+        {/* 私有云 */}
+        <rect x='40' y='150' width='200' height='90' rx='10' fill='#1A0D0E' stroke='#FD2659' strokeWidth='1.5' />
+        <text x='140' y='185' fill='#FD2659' fontSize='15' fontWeight='bold' textAnchor='middle'>私有云</text>
+        <text x='140' y='212' fill='#B0A0A0' fontSize='12' textAnchor='middle'>内网托管 + 自管数据库</text>
+        {/* AI */}
+        <rect x='300' y='150' width='200' height='90' rx='10' fill='#1A0D0E' stroke='#DC3030' strokeWidth='1.5' />
+        <text x='400' y='185' fill='#DC3030' fontSize='15' fontWeight='bold' textAnchor='middle'>AI 文案引擎</text>
+        <text x='400' y='212' fill='#B0A0A0' fontSize='12' textAnchor='middle'>LLM 多样化生成</text>
+        <line x1='270' y1='86' x2='140' y2='150' stroke='#FD2659' strokeWidth='2' />
+        <line x1='270' y1='86' x2='400' y2='150' stroke='#DC3030' strokeWidth='2' />
+        {/* 输出 */}
+        <rect x='40' y='300' width='200' height='70' rx='10' fill='#120A0B' stroke='#FD2659' strokeWidth='1' />
+        <text x='140' y='335' fill='#F0E8E8' fontSize='14' textAnchor='middle'>安全可控部署</text>
+        <rect x='300' y='300' width='200' height='70' rx='10' fill='#120A0B' stroke='#FD2659' strokeWidth='1' />
+        <text x='400' y='335' fill='#F0E8E8' fontSize='14' textAnchor='middle'>多样化社媒文案</text>
+        <line x1='140' y1='240' x2='140' y2='300' stroke='#FD2659' strokeWidth='2' />
+        <line x1='400' y1='240' x2='400' y2='300' stroke='#DC3030' strokeWidth='2' />
+      </svg>
+    </Box>
+  </Box>
+  <Box style={{ position: 'absolute', bottom: 20, left: 64, fontSize: 14, color: '#7B7F7D' }}>瓦电赛事运营中台</Box>
+  <Box style={{ position: 'absolute', bottom: 20, right: 64, fontSize: 14, color: '#7B7F7D' }}>16 / 18</Box>
+</Slide>

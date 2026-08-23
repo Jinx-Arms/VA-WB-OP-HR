@@ -1,0 +1,12 @@
+<Slide style={{ width: '1280px', height: '720px', background: 'linear-gradient(135deg, #120A0B 0%, #241215 100%)', padding: 0, position: 'relative' }}>
+  <Box style={{ position: 'absolute', top: 0, right: 0, width: 460, height: 460, background: 'linear-gradient(135deg, rgba(220,48,48,0.18) 0%, transparent 70%)' }} />
+  <Box style={{ position: 'absolute', left: 90, top: 250 }}>
+    <Text style={{ fontSize: 200, color: 'rgba(220,48,48,0.16)', fontWeight: 800, lineHeight: 1 }}>04</Text>
+  </Box>
+  <Box style={{ position: 'absolute', left: 130, top: 320, zIndex: 2 }}>
+    <Text style={{ fontSize: 22, color: '#FD2659', fontWeight: 'bold', letterSpacing: 4 }}>CHAPTER 04</Text>
+    <Text style={{ fontSize: 56, color: '#F0E8E8', fontWeight: 800, marginTop: 14 }}>未来扩展</Text>
+    <Box style={{ width: 90, height: 5, background: '#DC3030', marginTop: 22, borderRadius: 3 }} />
+    <Text style={{ fontSize: 20, color: '#B0A0A0', marginTop: 22 }}>私有云、AI 文案，以及更远的路线。</Text>
+  </Box>
+</Slide>

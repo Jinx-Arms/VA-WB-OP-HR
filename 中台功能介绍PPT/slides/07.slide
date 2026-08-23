@@ -1,0 +1,38 @@
+<Slide style={{ width: '1280px', height: '720px', background: 'linear-gradient(135deg, #120A0B 0%, #241215 100%)', padding: '40px 64px' }}>
+  <Box style={{ height: 80, justifyContent: 'flex-end', borderBottom: '2px solid rgba(253,38,89,0.4)' }}>
+    <Text style={{ fontSize: 34, color: '#F0E8E8', fontWeight: 700 }}>功能总览 · 10 大模块一图速览</Text>
+  </Box>
+  <Box style={{ flexDirection: 'row', gap: 40, marginTop: 24, height: 520 }}>
+    {/* 左：巨型数字锚点 */}
+    <Box style={{ width: '30%', justifyContent: 'center', alignItems: 'center' }}>
+      <Text style={{ fontSize: 180, color: '#FD2659', fontWeight: 800, lineHeight: 1 }}>10</Text>
+      <Text style={{ fontSize: 22, color: '#F0E8E8', fontWeight: 600, marginTop: 4 }}>大已上线功能模块</Text>
+      <Text style={{ fontSize: 16, color: '#B0A0A0', marginTop: 10, textAlign: 'center', lineHeight: 1.5 }}>覆盖赛事运营<br />全流程工作台</Text>
+    </Box>
+    {/* 右：模块矩阵（每个模块一行用途） */}
+    <Box style={{ width: '70%', flexWrap: 'wrap', flexDirection: 'row', gap: 12, alignContent: 'center' }}>
+      {[
+        { t: '赛程管理', d: 'VLR 抓取 VCT 赛程，UTC 自动转北京时间', i: 'calendar' },
+        { t: '运营排班', d: '值班/请假/班次可视化，避免人员冲突', i: 'users' },
+        { t: '战队库', d: '50 队全赛区注册表，支持手动新建队伍', i: 'shield' },
+        { t: '看点挖掘', d: 'H2H 交锋/阵容恩怨，自动生成预热文案', i: 'star' },
+        { t: '图形工厂', d: '底图+槽位拖拽，中英双图批量出图打包', i: 'image' },
+        { t: '赛况战报', d: '抓海外三联赛，固定模板一键出 Markdown', i: 'file-text' },
+        { t: '内容管理', d: '社媒文案/标题草稿集中编辑与归档', i: 'edit' },
+        { t: '知识库', d: '赛事规则/历史梗/素材规范统一沉淀', i: 'book' },
+        { t: '素材后台', d: '管理员录入队徽/头像/教练/解说图', i: 'folder' },
+        { t: '工作交接', d: '值班↔休假双向待办交付，自动归集+确认', i: 'exchange' },
+      ].map((m, i) => (
+        <Box key={i} style={{ width: '31.5%', flexDirection: 'row', alignItems: 'center', gap: 10, background: 'rgba(220,48,48,0.08)', borderRadius: 10, padding: '12px 14px' }}>
+          <FAIcon name={m.i} style={{ fill: '#FD2659', width: 22, height: 22, flexShrink: 0 }} />
+          <Box>
+            <Text style={{ fontSize: 16, color: '#F0E8E8', fontWeight: 600 }}>{m.t}</Text>
+            <Text style={{ fontSize: 12, color: '#B0A0A0', marginTop: 1, lineHeight: 1.3 }}>{m.d}</Text>
+          </Box>
+        </Box>
+      ))}
+    </Box>
+  </Box>
+  <Box style={{ position: 'absolute', bottom: 20, left: 64, fontSize: 14, color: '#7B7F7D' }}>瓦电赛事运营中台</Box>
+  <Box style={{ position: 'absolute', bottom: 20, right: 64, fontSize: 14, color: '#7B7F7D' }}>07 / 18</Box>
+</Slide>

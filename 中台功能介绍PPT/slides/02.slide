@@ -1,0 +1,30 @@
+<Slide style={{ width: '1280px', height: '720px', background: '#120A0B', padding: '40px 64px' }}>
+  <Box style={{ flexDirection: 'row', height: '100%' }}>
+    {/* 左：标题栏 */}
+    <Box style={{ width: '28%', justifyContent: 'center' }}>
+      <Text style={{ fontSize: 16, color: '#FD2659', fontWeight: 'bold', letterSpacing: 3 }}>CONTENTS</Text>
+      <Text style={{ fontSize: 46, color: '#F0E8E8', fontWeight: 800, marginTop: 10 }}>目录</Text>
+      <Box style={{ width: 64, height: 4, background: '#DC3030', marginTop: 18, borderRadius: 2 }} />
+      <Text style={{ fontSize: 17, color: '#B0A0A0', marginTop: 22, lineHeight: 1.6 }}>从能力概览到建设复盘，<br />再到下一步扩展路线。</Text>
+    </Box>
+    {/* 右：四章条目 */}
+    <Box style={{ width: '72%', justifyContent: 'center', gap: 22, paddingLeft: 40 }}>
+      {[
+        { n: '01', t: '中台概览', d: '中台是什么、整体技术架构与部署形态' },
+        { n: '02', t: '核心功能', d: '赛程排班 · 战队库看点 · 图形工厂 · 赛况战报' },
+        { n: '03', t: '开发经验教训', d: '白屏防御、数据源失效、诚实修正三大复盘' },
+        { n: '04', t: '未来扩展', d: '私有云部署、AI 文案多样化、扩展路线图' },
+      ].map((it, i) => (
+        <Box key={i} style={{ flexDirection: 'row', alignItems: 'center', gap: 22, background: 'rgba(220,48,48,0.08)', borderRadius: 12, padding: '18px 26px', borderLeft: '4px solid #DC3030' }}>
+          <Text style={{ fontSize: 40, color: '#DC3030', fontWeight: 800, width: 70 }}>{it.n}</Text>
+          <Box>
+            <Text style={{ fontSize: 24, color: '#F0E8E8', fontWeight: 700 }}>{it.t}</Text>
+            <Text style={{ fontSize: 17, color: '#B0A0A0', marginTop: 4 }}>{it.d}</Text>
+          </Box>
+        </Box>
+      ))}
+    </Box>
+  </Box>
+  <Box style={{ position: 'absolute', bottom: 20, left: 64, fontSize: 14, color: '#7B7F7D' }}>瓦电赛事运营中台</Box>
+  <Box style={{ position: 'absolute', bottom: 20, right: 64, fontSize: 14, color: '#7B7F7D' }}>02 / 18</Box>
+</Slide>

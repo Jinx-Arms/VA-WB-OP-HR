@@ -1,0 +1,45 @@
+<Slide style={{ width: '1280px', height: '720px', background: '#120A0B', padding: '40px 64px' }}>
+  <Box style={{ height: 80, justifyContent: 'flex-end', borderBottom: '2px solid rgba(220,48,48,0.3)' }}>
+    <Text style={{ fontSize: 34, color: '#F0E8E8', fontWeight: 700 }}>赛程与排班管理</Text>
+  </Box>
+  <Box style={{ flexDirection: 'row', gap: 44, marginTop: 26, height: 520 }}>
+    {/* 左 55%：日历示意 */}
+    <Box style={{ width: '55%', justifyContent: 'center', alignItems: 'center', background: 'rgba(220,48,48,0.06)', borderRadius: 16 }}>
+      <svg width={480} height={380} viewBox='0 0 480 380'>
+        <rect x='20' y='20' width='440' height='340' rx='12' fill='#1A0D0E' stroke='#DC3030' strokeWidth='1.5' />
+        <rect x='20' y='20' width='440' height='50' rx='12' fill='#DC3030' />
+        <text x='240' y='52' fill='#fff' fontSize='18' fontWeight='bold' textAnchor='middle'>VCT CN · 第二赛段（北京时间）</text>
+        {/* 对阵行 */}
+        {[['EDG', 'TE', '18:00', '#FD2659'],['WOL', 'JDG', '20:00', '#FD2659'],['TYL', 'AG', '21:00', '#FD2659']].map((r,i)=>(
+          <g key={i}>
+            <rect x='40' y={90+i*80} width='400' height='64' rx='8' fill='#120A0B' stroke='#FD2659' strokeWidth='1' />
+            <text x='70' y={128+i*80} fill='#F0E8E8' fontSize='18' fontWeight='bold'>{r[0]}</text>
+            <text x='240' y={128+i*80} fill='#B0A0A0' fontSize='16' textAnchor='middle'>VS</text>
+            <text x='410' y={128+i*80} fill='#F0E8E8' fontSize='18' fontWeight='bold' textAnchor='end'>{r[1]}</text>
+            <text x='420' y={104+i*80} fill={r[3]} fontSize='13' textAnchor='end'>{r[2]}</text>
+          </g>
+        ))}
+      </svg>
+    </Box>
+    {/* 右 45%：要点 */}
+    <Box style={{ width: '45%', justifyContent: 'center', gap: 16 }}>
+      <Text style={{ fontSize: 21, color: '#F0E8E8', fontWeight: 700, lineHeight: 1.5 }}>自动抓，本地管</Text>
+      {[
+        { t: '赛程自动抓取', d: 'VLR 海外赛程拉回本地，UTC 时间自动换算北京时间，免去人工查表' },
+        { t: '运营排班', d: '按班次/岗位排值班，支持请假、调班与跨日轮值' },
+        { t: '冲突可视化', d: '排班面板直观呈现人员重叠与空缺，防漏排错排' },
+        { t: '手动兜底', d: '抓取异常时可手工录入修正，自动与人工并行不冲突' },
+      ].map((it, i) => (
+        <Box key={i} style={{ flexDirection: 'row', gap: 14, alignItems: 'flex-start' }}>
+          <FAIcon name='check-circle' style={{ fill: '#49FFD3', width: 24, height: 24, marginTop: 2 }} />
+          <Box>
+            <Text style={{ fontSize: 18, color: '#F0E8E8', fontWeight: 600 }}>{it.t}</Text>
+            <Text style={{ fontSize: 15, color: '#B0A0A0', marginTop: 2, lineHeight: 1.4 }}>{it.d}</Text>
+          </Box>
+        </Box>
+      ))}
+    </Box>
+  </Box>
+  <Box style={{ position: 'absolute', bottom: 20, left: 64, fontSize: 14, color: '#7B7F7D' }}>瓦电赛事运营中台</Box>
+  <Box style={{ position: 'absolute', bottom: 20, right: 64, fontSize: 14, color: '#7B7F7D' }}>08 / 18</Box>
+</Slide>

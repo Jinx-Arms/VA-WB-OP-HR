@@ -1,0 +1,1203 @@
+=== boot pid=63740 ts=2026-08-23 16:12:37.029 cwd=E:\WorkBuddy\Jinx2\中台功能介绍PPT argv=C:\Users\Administrator\.workbuddy\binaries\node\versions\22.22.2\node_modules\@tencent\slidep\dist\slidep-start.js --project E:/WorkBuddy/Jinx2/中台功能介绍PPT --filename 瓦电赛事运营中台功能介绍.pptx ===
+[2026-08-23 16:12:37.027] [INFO ] [pid=63740] [start] invoked pid=63740 cwd=E:\WorkBuddy\Jinx2\中台功能介绍PPT daemonChild=no dev=no argv=[--project E:/WorkBuddy/Jinx2/中台功能介绍PPT --filename 瓦电赛事运营中台功能介绍.pptx]
+[2026-08-23 16:12:37.063] [INFO ] [pid=63740] [start] spawning daemon projectDir=E:\WorkBuddy\Jinx2\中台功能介绍PPT filename=瓦电赛事运营中台功能介绍.pptx
+[2026-08-23 16:12:37.090] [INFO ] [pid=63740] [start] daemon spawned childPid=14260; waiting started ipc
+=== boot pid=14260 ts=2026-08-23 16:12:38.520 cwd=E:\WorkBuddy\Jinx2\中台功能介绍PPT argv=C:\Users\Administrator\.workbuddy\binaries\node\versions\22.22.2\node_modules\@tencent\slidep\dist\slidep-start.js --project E:/WorkBuddy/Jinx2/中台功能介绍PPT --filename 瓦电赛事运营中台功能介绍.pptx --__daemon-child ===
+[2026-08-23 16:12:38.519] [INFO ] [pid=14260] [start] invoked pid=14260 cwd=E:\WorkBuddy\Jinx2\中台功能介绍PPT daemonChild=yes dev=no argv=[--project E:/WorkBuddy/Jinx2/中台功能介绍PPT --filename 瓦电赛事运营中台功能介绍.pptx --__daemon-child]
+[2026-08-23 16:12:38.521] [INFO ] [pid=14260] [start] daemon child runWorker ppid=63740
+[2026-08-23 16:12:38.521] [INFO ] [pid=14260] [worker] start projectDir=E:\WorkBuddy\Jinx2\中台功能介绍PPT filename=瓦电赛事运营中台功能介绍.pptx version=5.4.4
+[2026-08-23 16:12:38.522] [INFO ] [pid=14260] [worker] init ok dirs=ready
+[2026-08-23 16:12:38.523] [INFO ] [pid=14260] [server-url] env TENCENT_DOCS_LOCAL_MCP = http://127.0.0.1:39103/mcp
+[2026-08-23 16:12:38.523] [INFO ] [pid=14260] [worker] openFile start
+[2026-08-23 16:12:38.524] [INFO ] [pid=14260] [open-file] copy blank.pptx start src=C:\Users\Administrator\.workbuddy\binaries\node\versions\22.22.2\node_modules\@tencent\slidep\dist\resources\pptx\blank.pptx dest=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx
+[2026-08-23 16:12:38.528] [INFO ] [pid=14260] [open-file] copy blank.pptx ok dest=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx ms=3
+[2026-08-23 16:12:38.556] [ERROR] [pid=14260] [http] editorStatus http 404 url=http://127.0.0.1:39103/api/editor/status body={"code":-1,"message":"no editor open for file_path=E:\\WorkBuddy\\Jinx2\\中台功能介绍PPT\\瓦电赛事运营中台功能介绍.pptx"} ms=27
+[2026-08-23 16:12:38.557] [INFO ] [pid=14260] [open-file] open send url=http://127.0.0.1:39103/localapi/open filePath=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx
+[2026-08-23 16:12:38.562] [INFO ] [pid=14260] [open-file] open ok fileId=5C9699C8 fileType=slide filePath=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx ms=5
+[2026-08-23 16:12:38.562] [INFO ] [pid=14260] [worker] openFile ok fileId=5C9699C8 filePath=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx
+[2026-08-23 16:12:38.562] [INFO ] [pid=14260] [worker] previewUrl=http://127.0.0.1:39103/static/slide/pc.html?local_edit=1&client=sdk_local&localFilePath=E%3A%5CWorkBuddy%5CJinx2%5C%E4%B8%AD%E5%8F%B0%E5%8A%9F%E8%83%BD%E4%BB%8B%E7%BB%8DPPT%5C%E7%93%A6%E7%94%B5%E8%B5%9B%E4%BA%8B%E8%BF%90%E8%90%A5%E4%B8%AD%E5%8F%B0%E5%8A%9F%E8%83%BD%E4%BB%8B%E7%BB%8D.pptx
+[2026-08-23 16:12:38.563] [INFO ] [pid=14260] [state] state.json not found, creating path=E:\WorkBuddy\Jinx2\中台功能介绍PPT\.slidep\state.json filePath=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx
+[2026-08-23 16:12:38.565] [INFO ] [pid=14260] [worker] commitEndpoint=http://127.0.0.1:39103/localapi/commitrevision
+[2026-08-23 16:12:38.568] [INFO ] [pid=14260] [mcp] mcp:slide_get_info send url=http://127.0.0.1:39103/mcp args={"file_id":"5C9699C8-3DED-462A-A8E3-8ACC7B2DD961"}
+[2026-08-23 16:12:38.571] [INFO ] [pid=14260] [mcp] mcp:slide_get_info ok ms=3
+[2026-08-23 16:12:38.572] [INFO ] [pid=14260] [purge] purge start backendSlideCount=0
+[2026-08-23 16:12:38.572] [INFO ] [pid=14260] [purge] purge ok removed=0 ms=7
+[2026-08-23 16:12:38.573] [INFO ] [pid=14260] [worker] initial sync submitted pages=0
+[2026-08-23 16:12:38.573] [INFO ] [pid=14260] [sync] submit nextRound=1 dirty=<none> pendingDirtySize=0 merged=no
+[2026-08-23 16:12:38.574] [INFO ] [pid=14260] [sync] drain start round=1 pendingDirtySize=0
+[2026-08-23 16:12:38.574] [INFO ] [pid=14260] [sync] aligned round=1 attempt=1 size=0 desired=0 pendingDirtySize=0
+[2026-08-23 16:12:38.576] [INFO ] [pid=14260] [worker] ready fileId=5C9699C8 backendUrl=http://127.0.0.1:39103 initialPages=0 ms=55
+[2026-08-23 16:12:38.576] [INFO ] [pid=14260] [sync] reconcile ok round=1 attempt=1 ms=2
+[2026-08-23 16:12:38.576] [INFO ] [pid=14260] [sync] drain end round=1 reconciles=1 mergedSubmits=1 pendingDirtySize=0 ms=2
+[2026-08-23 16:12:38.576] [INFO ] [pid=63740] [start] daemon started childPid=14260 ms=1513
+[2026-08-23 16:12:38.581] [INFO ] [pid=14260] [watcher] ready dir=E:\WorkBuddy\Jinx2\中台功能介绍PPT\slides
+[2026-08-23 16:13:01.113] [INFO ] [pid=14260] [watcher] event=add file=slides\01.slide
+[2026-08-23 16:13:01.627] [INFO ] [pid=14260] [watcher] flush batch dirty=[01] size=1
+[2026-08-23 16:13:01.628] [INFO ] [pid=14260] [sync] submit nextRound=2 dirty=01 pendingDirtySize=1 merged=no
+[2026-08-23 16:13:01.628] [INFO ] [pid=14260] [sync] drain start round=2 pendingDirtySize=1
+[2026-08-23 16:13:01.628] [INFO ] [pid=14260] [sync] step=add round=2 attempt=1 pageId=01 index=0
+[2026-08-23 16:13:01.629] [INFO ] [pid=14260] [backend-ops] addSlideAt start pageId=01 index=0
+[2026-08-23 16:13:01.630] [INFO ] [pid=14260] [render] start pageId=01 file=E:\WorkBuddy\Jinx2\中台功能介绍PPT\slides\01.slide
+[2026-08-23 16:13:02.861] [INFO ] [pid=14260] [render] ok pageId=01 slides=1 ms=1232
+[2026-08-23 16:13:02.862] [INFO ] [pid=14260] [render] renderSlideData result.resources={ images: {}, videos: {}, audios: {}, fonts: {} }
+[2026-08-23 16:13:02.872] [INFO ] [pid=14260] [commit] commit send pageId=8dafb7 targetIndex=0 version=1 baseVersion=0 revisionBytes=8360
+[2026-08-23 16:13:02.876] [INFO ] [pid=14260] [commit] commit ok pageId=8dafb7 revisionId=e47c093d ms=4
+[2026-08-23 16:13:02.878] [INFO ] [pid=14260] [backend-ops] addSlideAt ok pageId=01 slideId=8dafb7 index=0 version=1 baseVersion=0 revisionId=e47c093d code=0 images=[local=0 remote=0 cached=0 failed=0] ms=1249
+[2026-08-23 16:13:02.878] [INFO ] [pid=14260] [sync] aligned round=2 attempt=1 size=1 desired=1 pendingDirtySize=0
+[2026-08-23 16:13:02.879] [INFO ] [pid=14260] [sync] reconcile ok round=2 attempt=1 ms=1251
+[2026-08-23 16:13:02.879] [INFO ] [pid=14260] [backend-ops] save start file=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx
+[2026-08-23 16:13:02.879] [INFO ] [pid=14260] [commit] save send filePath=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx
+[2026-08-23 16:13:02.894] [INFO ] [pid=14260] [commit] save ok file_path=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx ms=14
+[2026-08-23 16:13:02.894] [INFO ] [pid=14260] [backend-ops] save ok file_path=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx ms=15
+[2026-08-23 16:13:02.894] [INFO ] [pid=14260] [sync] drain end round=2 reconciles=1 mergedSubmits=1 pendingDirtySize=0 ms=1266
+[2026-08-23 16:13:10.065] [INFO ] [pid=14260] [watcher] event=add file=slides\02.slide
+[2026-08-23 16:13:10.576] [INFO ] [pid=14260] [watcher] flush batch dirty=[02] size=1
+[2026-08-23 16:13:10.576] [INFO ] [pid=14260] [sync] submit nextRound=3 dirty=02 pendingDirtySize=1 merged=no
+[2026-08-23 16:13:10.577] [INFO ] [pid=14260] [sync] drain start round=3 pendingDirtySize=1
+[2026-08-23 16:13:10.577] [INFO ] [pid=14260] [sync] step=add round=3 attempt=1 pageId=02 index=1
+[2026-08-23 16:13:10.577] [INFO ] [pid=14260] [backend-ops] addSlideAt start pageId=02 index=1
+[2026-08-23 16:13:10.578] [INFO ] [pid=14260] [render] start pageId=02 file=E:\WorkBuddy\Jinx2\中台功能介绍PPT\slides\02.slide
+[2026-08-23 16:13:10.672] [INFO ] [pid=14260] [render] ok pageId=02 slides=1 ms=94
+[2026-08-23 16:13:10.673] [INFO ] [pid=14260] [render] renderSlideData result.resources={ images: {}, videos: {}, audios: {}, fonts: {} }
+[2026-08-23 16:13:10.680] [INFO ] [pid=14260] [commit] commit send pageId=9734e7 targetIndex=1 version=2 baseVersion=1 revisionBytes=20264
+[2026-08-23 16:13:10.684] [INFO ] [pid=14260] [commit] commit ok pageId=9734e7 revisionId=adaa19c5 ms=4
+[2026-08-23 16:13:10.686] [INFO ] [pid=14260] [backend-ops] addSlideAt ok pageId=02 slideId=9734e7 index=1 version=2 baseVersion=1 revisionId=adaa19c5 code=0 images=[local=0 remote=0 cached=0 failed=0] ms=109
+[2026-08-23 16:13:10.686] [INFO ] [pid=14260] [sync] aligned round=3 attempt=1 size=2 desired=2 pendingDirtySize=0
+[2026-08-23 16:13:10.687] [INFO ] [pid=14260] [sync] reconcile ok round=3 attempt=1 ms=110
+[2026-08-23 16:13:10.687] [INFO ] [pid=14260] [backend-ops] save start file=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx
+[2026-08-23 16:13:10.687] [INFO ] [pid=14260] [commit] save send filePath=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx
+[2026-08-23 16:13:10.703] [INFO ] [pid=14260] [commit] save ok file_path=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx ms=16
+[2026-08-23 16:13:10.704] [INFO ] [pid=14260] [backend-ops] save ok file_path=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx ms=17
+[2026-08-23 16:13:10.704] [INFO ] [pid=14260] [sync] drain end round=3 reconciles=1 mergedSubmits=1 pendingDirtySize=0 ms=127
+[2026-08-23 16:13:16.042] [INFO ] [pid=14260] [watcher] event=add file=slides\03.slide
+[2026-08-23 16:13:16.551] [INFO ] [pid=14260] [watcher] flush batch dirty=[03] size=1
+[2026-08-23 16:13:16.552] [INFO ] [pid=14260] [sync] submit nextRound=4 dirty=03 pendingDirtySize=1 merged=no
+[2026-08-23 16:13:16.552] [INFO ] [pid=14260] [sync] drain start round=4 pendingDirtySize=1
+[2026-08-23 16:13:16.552] [INFO ] [pid=14260] [sync] step=add round=4 attempt=1 pageId=03 index=2
+[2026-08-23 16:13:16.553] [INFO ] [pid=14260] [backend-ops] addSlideAt start pageId=03 index=2
+[2026-08-23 16:13:16.553] [INFO ] [pid=14260] [render] start pageId=03 file=E:\WorkBuddy\Jinx2\中台功能介绍PPT\slides\03.slide
+[2026-08-23 16:13:16.573] [INFO ] [pid=14260] [render] ok pageId=03 slides=1 ms=20
+[2026-08-23 16:13:16.574] [INFO ] [pid=14260] [render] renderSlideData result.resources={ images: {}, videos: {}, audios: {}, fonts: {} }
+[2026-08-23 16:13:16.577] [INFO ] [pid=14260] [commit] commit send pageId=c0dae1 targetIndex=2 version=3 baseVersion=2 revisionBytes=5004
+[2026-08-23 16:13:16.581] [INFO ] [pid=14260] [commit] commit ok pageId=c0dae1 revisionId=dd7b115d ms=4
+[2026-08-23 16:13:16.583] [INFO ] [pid=14260] [backend-ops] addSlideAt ok pageId=03 slideId=c0dae1 index=2 version=3 baseVersion=2 revisionId=dd7b115d code=0 images=[local=0 remote=0 cached=0 failed=0] ms=30
+[2026-08-23 16:13:16.584] [INFO ] [pid=14260] [sync] aligned round=4 attempt=1 size=3 desired=3 pendingDirtySize=0
+[2026-08-23 16:13:16.584] [INFO ] [pid=14260] [sync] reconcile ok round=4 attempt=1 ms=32
+[2026-08-23 16:13:16.584] [INFO ] [pid=14260] [backend-ops] save start file=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx
+[2026-08-23 16:13:16.584] [INFO ] [pid=14260] [commit] save send filePath=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx
+[2026-08-23 16:13:16.604] [INFO ] [pid=14260] [commit] save ok file_path=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx ms=19
+[2026-08-23 16:13:16.605] [INFO ] [pid=14260] [backend-ops] save ok file_path=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx ms=21
+[2026-08-23 16:13:16.605] [INFO ] [pid=14260] [sync] drain end round=4 reconciles=1 mergedSubmits=1 pendingDirtySize=0 ms=53
+[2026-08-23 16:13:21.300] [INFO ] [pid=14260] [watcher] event=add file=slides\06.slide
+[2026-08-23 16:13:21.813] [INFO ] [pid=14260] [watcher] flush batch dirty=[06] size=1
+[2026-08-23 16:13:21.814] [INFO ] [pid=14260] [sync] submit nextRound=5 dirty=06 pendingDirtySize=1 merged=no
+[2026-08-23 16:13:21.814] [INFO ] [pid=14260] [sync] drain start round=5 pendingDirtySize=1
+[2026-08-23 16:13:21.814] [INFO ] [pid=14260] [sync] step=add round=5 attempt=1 pageId=06 index=3
+[2026-08-23 16:13:21.815] [INFO ] [pid=14260] [backend-ops] addSlideAt start pageId=06 index=3
+[2026-08-23 16:13:21.815] [INFO ] [pid=14260] [render] start pageId=06 file=E:\WorkBuddy\Jinx2\中台功能介绍PPT\slides\06.slide
+[2026-08-23 16:13:21.829] [INFO ] [pid=14260] [render] ok pageId=06 slides=1 ms=14
+[2026-08-23 16:13:21.830] [INFO ] [pid=14260] [render] renderSlideData result.resources={ images: {}, videos: {}, audios: {}, fonts: {} }
+[2026-08-23 16:13:21.832] [INFO ] [pid=14260] [commit] commit send pageId=61d890 targetIndex=3 version=4 baseVersion=3 revisionBytes=5028
+[2026-08-23 16:13:21.835] [INFO ] [pid=14260] [commit] commit ok pageId=61d890 revisionId=8a05f937 ms=3
+[2026-08-23 16:13:21.837] [INFO ] [pid=14260] [backend-ops] addSlideAt ok pageId=06 slideId=61d890 index=3 version=4 baseVersion=3 revisionId=8a05f937 code=0 images=[local=0 remote=0 cached=0 failed=0] ms=22
+[2026-08-23 16:13:21.837] [INFO ] [pid=14260] [sync] aligned round=5 attempt=1 size=4 desired=4 pendingDirtySize=0
+[2026-08-23 16:13:21.837] [INFO ] [pid=14260] [sync] reconcile ok round=5 attempt=1 ms=23
+[2026-08-23 16:13:21.838] [INFO ] [pid=14260] [backend-ops] save start file=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx
+[2026-08-23 16:13:21.838] [INFO ] [pid=14260] [commit] save send filePath=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx
+[2026-08-23 16:13:21.855] [INFO ] [pid=14260] [commit] save ok file_path=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx ms=17
+[2026-08-23 16:13:21.856] [INFO ] [pid=14260] [backend-ops] save ok file_path=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx ms=18
+[2026-08-23 16:13:21.856] [INFO ] [pid=14260] [sync] drain end round=5 reconciles=1 mergedSubmits=1 pendingDirtySize=0 ms=42
+[2026-08-23 16:13:26.422] [INFO ] [pid=14260] [watcher] event=add file=slides\12.slide
+[2026-08-23 16:13:26.935] [INFO ] [pid=14260] [watcher] flush batch dirty=[12] size=1
+[2026-08-23 16:13:26.935] [INFO ] [pid=14260] [sync] submit nextRound=6 dirty=12 pendingDirtySize=1 merged=no
+[2026-08-23 16:13:26.935] [INFO ] [pid=14260] [sync] drain start round=6 pendingDirtySize=1
+[2026-08-23 16:13:26.936] [INFO ] [pid=14260] [sync] step=add round=6 attempt=1 pageId=12 index=4
+[2026-08-23 16:13:26.936] [INFO ] [pid=14260] [backend-ops] addSlideAt start pageId=12 index=4
+[2026-08-23 16:13:26.936] [INFO ] [pid=14260] [render] start pageId=12 file=E:\WorkBuddy\Jinx2\中台功能介绍PPT\slides\12.slide
+[2026-08-23 16:13:26.946] [INFO ] [pid=14260] [render] ok pageId=12 slides=1 ms=10
+[2026-08-23 16:13:26.947] [INFO ] [pid=14260] [render] renderSlideData result.resources={ images: {}, videos: {}, audios: {}, fonts: {} }
+[2026-08-23 16:13:26.950] [INFO ] [pid=14260] [commit] commit send pageId=75bfa0 targetIndex=4 version=5 baseVersion=4 revisionBytes=5008
+[2026-08-23 16:13:26.952] [INFO ] [pid=14260] [commit] commit ok pageId=75bfa0 revisionId=8bd4ee5c ms=2
+[2026-08-23 16:13:26.954] [INFO ] [pid=14260] [backend-ops] addSlideAt ok pageId=12 slideId=75bfa0 index=4 version=5 baseVersion=4 revisionId=8bd4ee5c code=0 images=[local=0 remote=0 cached=0 failed=0] ms=18
+[2026-08-23 16:13:26.955] [INFO ] [pid=14260] [sync] aligned round=6 attempt=1 size=5 desired=5 pendingDirtySize=0
+[2026-08-23 16:13:26.955] [INFO ] [pid=14260] [sync] reconcile ok round=6 attempt=1 ms=20
+[2026-08-23 16:13:26.955] [INFO ] [pid=14260] [backend-ops] save start file=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx
+[2026-08-23 16:13:26.956] [INFO ] [pid=14260] [commit] save send filePath=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx
+[2026-08-23 16:13:26.982] [INFO ] [pid=14260] [commit] save ok file_path=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx ms=26
+[2026-08-23 16:13:26.982] [INFO ] [pid=14260] [backend-ops] save ok file_path=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx ms=27
+[2026-08-23 16:13:26.982] [INFO ] [pid=14260] [sync] drain end round=6 reconciles=1 mergedSubmits=1 pendingDirtySize=0 ms=47
+[2026-08-23 16:13:31.672] [INFO ] [pid=14260] [watcher] event=add file=slides\15.slide
+[2026-08-23 16:13:32.186] [INFO ] [pid=14260] [watcher] flush batch dirty=[15] size=1
+[2026-08-23 16:13:32.187] [INFO ] [pid=14260] [sync] submit nextRound=7 dirty=15 pendingDirtySize=1 merged=no
+[2026-08-23 16:13:32.187] [INFO ] [pid=14260] [sync] drain start round=7 pendingDirtySize=1
+[2026-08-23 16:13:32.187] [INFO ] [pid=14260] [sync] step=add round=7 attempt=1 pageId=15 index=5
+[2026-08-23 16:13:32.187] [INFO ] [pid=14260] [backend-ops] addSlideAt start pageId=15 index=5
+[2026-08-23 16:13:32.188] [INFO ] [pid=14260] [render] start pageId=15 file=E:\WorkBuddy\Jinx2\中台功能介绍PPT\slides\15.slide
+[2026-08-23 16:13:32.200] [INFO ] [pid=14260] [render] ok pageId=15 slides=1 ms=12
+[2026-08-23 16:13:32.201] [INFO ] [pid=14260] [render] renderSlideData result.resources={ images: {}, videos: {}, audios: {}, fonts: {} }
+[2026-08-23 16:13:32.206] [INFO ] [pid=14260] [commit] commit send pageId=8cff5f targetIndex=5 version=6 baseVersion=5 revisionBytes=5244
+[2026-08-23 16:13:32.210] [INFO ] [pid=14260] [commit] commit ok pageId=8cff5f revisionId=ebfea15e ms=4
+[2026-08-23 16:13:32.212] [INFO ] [pid=14260] [backend-ops] addSlideAt ok pageId=15 slideId=8cff5f index=5 version=6 baseVersion=5 revisionId=ebfea15e code=0 images=[local=0 remote=0 cached=0 failed=0] ms=25
+[2026-08-23 16:13:32.213] [INFO ] [pid=14260] [sync] aligned round=7 attempt=1 size=6 desired=6 pendingDirtySize=0
+[2026-08-23 16:13:32.213] [INFO ] [pid=14260] [sync] reconcile ok round=7 attempt=1 ms=26
+[2026-08-23 16:13:32.213] [INFO ] [pid=14260] [backend-ops] save start file=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx
+[2026-08-23 16:13:32.213] [INFO ] [pid=14260] [commit] save send filePath=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx
+[2026-08-23 16:13:32.232] [INFO ] [pid=14260] [commit] save ok file_path=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx ms=18
+[2026-08-23 16:13:32.232] [INFO ] [pid=14260] [backend-ops] save ok file_path=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx ms=19
+[2026-08-23 16:13:32.233] [INFO ] [pid=14260] [sync] drain end round=7 reconciles=1 mergedSubmits=1 pendingDirtySize=0 ms=46
+[2026-08-23 16:13:45.067] [INFO ] [pid=14260] [watcher] event=add file=slides\04.slide
+[2026-08-23 16:13:45.580] [INFO ] [pid=14260] [watcher] flush batch dirty=[04] size=1
+[2026-08-23 16:13:45.580] [INFO ] [pid=14260] [sync] submit nextRound=8 dirty=04 pendingDirtySize=1 merged=no
+[2026-08-23 16:13:45.581] [INFO ] [pid=14260] [sync] drain start round=8 pendingDirtySize=1
+[2026-08-23 16:13:45.581] [INFO ] [pid=14260] [sync] step=add round=8 attempt=1 pageId=04 index=3
+[2026-08-23 16:13:45.581] [INFO ] [pid=14260] [backend-ops] addSlideAt start pageId=04 index=3
+[2026-08-23 16:13:45.582] [INFO ] [pid=14260] [render] start pageId=04 file=E:\WorkBuddy\Jinx2\中台功能介绍PPT\slides\04.slide
+[2026-08-23 16:13:45.647] [INFO ] [pid=14260] [render] ok pageId=04 slides=1 ms=65
+[2026-08-23 16:13:45.648] [INFO ] [pid=14260] [render] renderSlideData result.resources={
+  images: {
+    'rel:00c3uv3f': {
+      id: 'rel:00c3uv3f',
+      src: 'E:\\WorkBuddy\\Jinx2\\中台功能介绍PPT\\.cache\\media\\images\\334a2bbb3041f307165ac7cca3ee9e90.svg'
+    }
+  },
+  videos: {},
+  audios: {},
+  fonts: {}
+}
+[2026-08-23 16:13:45.651] [INFO ] [pid=14260] [commit] commit send pageId=e73f0b targetIndex=3 version=7 baseVersion=6 revisionBytes=18048
+[2026-08-23 16:13:45.656] [INFO ] [pid=14260] [commit] commit ok pageId=e73f0b revisionId=2a2ff7cb ms=5
+[2026-08-23 16:13:45.658] [INFO ] [pid=14260] [backend-ops] addSlideAt ok pageId=04 slideId=e73f0b index=3 version=7 baseVersion=6 revisionId=2a2ff7cb code=0 images=[local=1 remote=0 cached=0 failed=0] ms=77
+[2026-08-23 16:13:45.658] [INFO ] [pid=14260] [sync] aligned round=8 attempt=1 size=7 desired=7 pendingDirtySize=0
+[2026-08-23 16:13:45.658] [INFO ] [pid=14260] [sync] reconcile ok round=8 attempt=1 ms=77
+[2026-08-23 16:13:45.659] [INFO ] [pid=14260] [backend-ops] save start file=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx
+[2026-08-23 16:13:45.659] [INFO ] [pid=14260] [commit] save send filePath=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx
+[2026-08-23 16:13:45.681] [INFO ] [pid=14260] [commit] save ok file_path=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx ms=22
+[2026-08-23 16:13:45.681] [INFO ] [pid=14260] [backend-ops] save ok file_path=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx ms=22
+[2026-08-23 16:13:45.681] [INFO ] [pid=14260] [sync] drain end round=8 reconciles=1 mergedSubmits=1 pendingDirtySize=0 ms=100
+[2026-08-23 16:13:59.393] [INFO ] [pid=14260] [watcher] event=add file=slides\05.slide
+[2026-08-23 16:13:59.894] [INFO ] [pid=14260] [watcher] flush batch dirty=[05] size=1
+[2026-08-23 16:13:59.895] [INFO ] [pid=14260] [sync] submit nextRound=9 dirty=05 pendingDirtySize=1 merged=no
+[2026-08-23 16:13:59.895] [INFO ] [pid=14260] [sync] drain start round=9 pendingDirtySize=1
+[2026-08-23 16:13:59.896] [INFO ] [pid=14260] [sync] step=add round=9 attempt=1 pageId=05 index=4
+[2026-08-23 16:13:59.896] [INFO ] [pid=14260] [backend-ops] addSlideAt start pageId=05 index=4
+[2026-08-23 16:13:59.897] [INFO ] [pid=14260] [render] start pageId=05 file=E:\WorkBuddy\Jinx2\中台功能介绍PPT\slides\05.slide
+[2026-08-23 16:13:59.945] [INFO ] [pid=14260] [render] ok pageId=05 slides=1 ms=48
+[2026-08-23 16:13:59.945] [INFO ] [pid=14260] [render] renderSlideData result.resources={
+  images: {
+    'rel:00ek6xx4': {
+      id: 'rel:00ek6xx4',
+      src: 'E:\\WorkBuddy\\Jinx2\\中台功能介绍PPT\\.cache\\media\\images\\1d2b6b1d5e3767ac626da1c1d4302ea2.svg'
+    }
+  },
+  videos: {},
+  audios: {},
+  fonts: {}
+}
+[2026-08-23 16:13:59.949] [INFO ] [pid=14260] [commit] commit send pageId=0552d6 targetIndex=4 version=8 baseVersion=7 revisionBytes=23412
+[2026-08-23 16:13:59.954] [INFO ] [pid=14260] [commit] commit ok pageId=0552d6 revisionId=91357fcb ms=4
+[2026-08-23 16:13:59.956] [INFO ] [pid=14260] [backend-ops] addSlideAt ok pageId=05 slideId=0552d6 index=4 version=8 baseVersion=7 revisionId=91357fcb code=0 images=[local=1 remote=0 cached=0 failed=0] ms=60
+[2026-08-23 16:13:59.956] [INFO ] [pid=14260] [sync] aligned round=9 attempt=1 size=8 desired=8 pendingDirtySize=0
+[2026-08-23 16:13:59.956] [INFO ] [pid=14260] [sync] reconcile ok round=9 attempt=1 ms=60
+[2026-08-23 16:13:59.957] [INFO ] [pid=14260] [backend-ops] save start file=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx
+[2026-08-23 16:13:59.957] [INFO ] [pid=14260] [commit] save send filePath=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx
+[2026-08-23 16:13:59.982] [INFO ] [pid=14260] [commit] save ok file_path=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx ms=25
+[2026-08-23 16:13:59.983] [INFO ] [pid=14260] [backend-ops] save ok file_path=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx ms=26
+[2026-08-23 16:13:59.983] [INFO ] [pid=14260] [sync] drain end round=9 reconciles=1 mergedSubmits=1 pendingDirtySize=0 ms=88
+[2026-08-23 16:14:07.958] [INFO ] [pid=14260] [watcher] event=add file=slides\07.slide
+[2026-08-23 16:14:08.472] [INFO ] [pid=14260] [watcher] flush batch dirty=[07] size=1
+[2026-08-23 16:14:08.473] [INFO ] [pid=14260] [sync] submit nextRound=10 dirty=07 pendingDirtySize=1 merged=no
+[2026-08-23 16:14:08.474] [INFO ] [pid=14260] [sync] drain start round=10 pendingDirtySize=1
+[2026-08-23 16:14:08.474] [INFO ] [pid=14260] [sync] step=add round=10 attempt=1 pageId=07 index=6
+[2026-08-23 16:14:08.475] [INFO ] [pid=14260] [backend-ops] addSlideAt start pageId=07 index=6
+[2026-08-23 16:14:08.476] [INFO ] [pid=14260] [render] start pageId=07 file=E:\WorkBuddy\Jinx2\中台功能介绍PPT\slides\07.slide
+[2026-08-23 16:14:08.608] [INFO ] [pid=14260] [render] ok pageId=07 slides=1 ms=132
+[2026-08-23 16:14:08.608] [INFO ] [pid=14260] [render] renderSlideData result.resources={
+  images: {
+    'rel:00pjevu4': {
+      id: 'rel:00pjevu4',
+      src: 'E:\\WorkBuddy\\Jinx2\\中台功能介绍PPT\\.cache\\media\\images\\0c2f95b2cd46aa102fe89db779077fe7.svg'
+    },
+    'rel:004cync1': {
+      id: 'rel:004cync1',
+      src: 'E:\\WorkBuddy\\Jinx2\\中台功能介绍PPT\\.cache\\media\\images\\c8128fc728b7fc16a0ea1c7257943daa.svg'
+    },
+    'rel:01i8y31b': {
+      id: 'rel:01i8y31b',
+      src: 'E:\\WorkBuddy\\Jinx2\\中台功能介绍PPT\\.cache\\media\\images\\bb5bd542cac1b73805896a2bd8be8326.svg'
+    },
+    'rel:019u0mfr': {
+      id: 'rel:019u0mfr',
+      src: 'E:\\WorkBuddy\\Jinx2\\中台功能介绍PPT\\.cache\\media\\images\\0a13af42358eb600143acce66b742c62.svg'
+    },
+    'rel:01atlrpp': {
+      id: 'rel:01atlrpp',
+      src: 'E:\\WorkBuddy\\Jinx2\\中台功能介绍PPT\\.cache\\media\\images\\8e8a6410331fba39c9360e60dc20e923.svg'
+    },
+    'rel:00p760k3': {
+      id: 'rel:00p760k3',
+      src: 'E:\\WorkBuddy\\Jinx2\\中台功能介绍PPT\\.cache\\media\\images\\b4c78bfd51296b6f02fc538b515e753b.svg'
+    },
+    'rel:00xn4wqz': {
+      id: 'rel:00xn4wqz',
+      src: 'E:\\WorkBuddy\\Jinx2\\中台功能介绍PPT\\.cache\\media\\images\\6ba04b068a7a198ec1b75912178dc898.svg'
+    },
+    'rel:00j5ttfj': {
+      id: 'rel:00j5ttfj',
+      src: 'E:\\WorkBuddy\\Jinx2\\中台功能介绍PPT\\.cache\\media\\images\\3424ee1dd15e1d0eb093ed27e54ef546.svg'
+    },
+    'rel:00x1t5w7': {
+      id: 'rel:00x1t5w7',
+      src: 'E:\\WorkBuddy\\Jinx2\\中台功能介绍PPT\\.cache\\media\\images\\2ff64ff0216dd213a0eea55fa77d10db.svg'
+    }
+  },
+  videos: {},
+  audios: {},
+  fonts: {}
+}
+[2026-08-23 16:14:08.616] [INFO ] [pid=14260] [commit] commit send pageId=5a6c32 targetIndex=6 version=9 baseVersion=8 revisionBytes=32228
+[2026-08-23 16:14:08.625] [INFO ] [pid=14260] [commit] commit ok pageId=5a6c32 revisionId=0d36f3e1 ms=8
+[2026-08-23 16:14:08.627] [INFO ] [pid=14260] [backend-ops] addSlideAt ok pageId=07 slideId=5a6c32 index=6 version=9 baseVersion=8 revisionId=0d36f3e1 code=0 images=[local=9 remote=0 cached=0 failed=0] ms=152
+[2026-08-23 16:14:08.627] [INFO ] [pid=14260] [sync] aligned round=10 attempt=1 size=9 desired=9 pendingDirtySize=0
+[2026-08-23 16:14:08.627] [INFO ] [pid=14260] [sync] reconcile ok round=10 attempt=1 ms=153
+[2026-08-23 16:14:08.628] [INFO ] [pid=14260] [backend-ops] save start file=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx
+[2026-08-23 16:14:08.628] [INFO ] [pid=14260] [commit] save send filePath=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx
+[2026-08-23 16:14:08.659] [INFO ] [pid=14260] [commit] save ok file_path=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx ms=31
+[2026-08-23 16:14:08.659] [INFO ] [pid=14260] [backend-ops] save ok file_path=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx ms=31
+[2026-08-23 16:14:08.660] [INFO ] [pid=14260] [sync] drain end round=10 reconciles=1 mergedSubmits=1 pendingDirtySize=0 ms=186
+[2026-08-23 16:14:19.783] [INFO ] [pid=14260] [watcher] event=add file=slides\08.slide
+[2026-08-23 16:14:20.297] [INFO ] [pid=14260] [watcher] flush batch dirty=[08] size=1
+[2026-08-23 16:14:20.298] [INFO ] [pid=14260] [sync] submit nextRound=11 dirty=08 pendingDirtySize=1 merged=no
+[2026-08-23 16:14:20.298] [INFO ] [pid=14260] [sync] drain start round=11 pendingDirtySize=1
+[2026-08-23 16:14:20.298] [INFO ] [pid=14260] [sync] step=add round=11 attempt=1 pageId=08 index=7
+[2026-08-23 16:14:20.299] [INFO ] [pid=14260] [backend-ops] addSlideAt start pageId=08 index=7
+[2026-08-23 16:14:20.299] [INFO ] [pid=14260] [render] start pageId=08 file=E:\WorkBuddy\Jinx2\中台功能介绍PPT\slides\08.slide
+[2026-08-23 16:14:20.369] [INFO ] [pid=14260] [render] ok pageId=08 slides=1 ms=70
+[2026-08-23 16:14:20.369] [INFO ] [pid=14260] [render] renderSlideData result.resources={
+  images: {
+    'rel:01b0rile': {
+      id: 'rel:01b0rile',
+      src: 'E:\\WorkBuddy\\Jinx2\\中台功能介绍PPT\\.cache\\media\\images\\821f7b53bc680f539e00ce7bf9ac3662.svg'
+    },
+    'rel:01ttgyox': {
+      id: 'rel:01ttgyox',
+      src: 'E:\\WorkBuddy\\Jinx2\\中台功能介绍PPT\\.cache\\media\\images\\487ee42328ba3095035d6af3767103d9.svg'
+    }
+  },
+  videos: {},
+  audios: {},
+  fonts: {}
+}
+[2026-08-23 16:14:20.373] [INFO ] [pid=14260] [commit] commit send pageId=e9bbf6 targetIndex=7 version=10 baseVersion=9 revisionBytes=19188
+[2026-08-23 16:14:20.379] [INFO ] [pid=14260] [commit] commit ok pageId=e9bbf6 revisionId=cce71e00 ms=5
+[2026-08-23 16:14:20.380] [INFO ] [pid=14260] [backend-ops] addSlideAt ok pageId=08 slideId=e9bbf6 index=7 version=10 baseVersion=9 revisionId=cce71e00 code=0 images=[local=2 remote=0 cached=0 failed=0] ms=81
+[2026-08-23 16:14:20.381] [INFO ] [pid=14260] [sync] aligned round=11 attempt=1 size=10 desired=10 pendingDirtySize=0
+[2026-08-23 16:14:20.381] [INFO ] [pid=14260] [sync] reconcile ok round=11 attempt=1 ms=83
+[2026-08-23 16:14:20.381] [INFO ] [pid=14260] [backend-ops] save start file=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx
+[2026-08-23 16:14:20.381] [INFO ] [pid=14260] [commit] save send filePath=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx
+[2026-08-23 16:14:20.424] [INFO ] [pid=14260] [commit] save ok file_path=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx ms=42
+[2026-08-23 16:14:20.425] [INFO ] [pid=14260] [backend-ops] save ok file_path=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx ms=44
+[2026-08-23 16:14:20.425] [INFO ] [pid=14260] [sync] drain end round=11 reconciles=1 mergedSubmits=1 pendingDirtySize=0 ms=127
+[2026-08-23 16:14:32.361] [INFO ] [pid=14260] [watcher] event=add file=slides\09.slide
+[2026-08-23 16:14:32.876] [INFO ] [pid=14260] [watcher] flush batch dirty=[09] size=1
+[2026-08-23 16:14:32.876] [INFO ] [pid=14260] [sync] submit nextRound=12 dirty=09 pendingDirtySize=1 merged=no
+[2026-08-23 16:14:32.876] [INFO ] [pid=14260] [sync] drain start round=12 pendingDirtySize=1
+[2026-08-23 16:14:32.877] [INFO ] [pid=14260] [sync] step=add round=12 attempt=1 pageId=09 index=8
+[2026-08-23 16:14:32.877] [INFO ] [pid=14260] [backend-ops] addSlideAt start pageId=09 index=8
+[2026-08-23 16:14:32.877] [INFO ] [pid=14260] [render] start pageId=09 file=E:\WorkBuddy\Jinx2\中台功能介绍PPT\slides\09.slide
+[2026-08-23 16:14:32.913] [INFO ] [pid=14260] [render] ok pageId=09 slides=1 ms=36
+[2026-08-23 16:14:32.913] [INFO ] [pid=14260] [render] renderSlideData result.resources={
+  images: {
+    'rel:01azyjwo': {
+      id: 'rel:01azyjwo',
+      src: 'E:\\WorkBuddy\\Jinx2\\中台功能介绍PPT\\.cache\\media\\images\\4f1c1d051f829fca875b1f9fab8bc303.svg'
+    }
+  },
+  videos: {},
+  audios: {},
+  fonts: {}
+}
+[2026-08-23 16:14:32.916] [INFO ] [pid=14260] [commit] commit send pageId=56c37e targetIndex=8 version=11 baseVersion=10 revisionBytes=21844
+[2026-08-23 16:14:32.921] [INFO ] [pid=14260] [commit] commit ok pageId=56c37e revisionId=71d375a1 ms=4
+[2026-08-23 16:14:32.923] [INFO ] [pid=14260] [backend-ops] addSlideAt ok pageId=09 slideId=56c37e index=8 version=11 baseVersion=10 revisionId=71d375a1 code=0 images=[local=1 remote=0 cached=0 failed=0] ms=46
+[2026-08-23 16:14:32.923] [INFO ] [pid=14260] [sync] aligned round=12 attempt=1 size=11 desired=11 pendingDirtySize=0
+[2026-08-23 16:14:32.923] [INFO ] [pid=14260] [sync] reconcile ok round=12 attempt=1 ms=47
+[2026-08-23 16:14:32.924] [INFO ] [pid=14260] [backend-ops] save start file=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx
+[2026-08-23 16:14:32.924] [INFO ] [pid=14260] [commit] save send filePath=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx
+[2026-08-23 16:14:32.961] [INFO ] [pid=14260] [commit] save ok file_path=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx ms=37
+[2026-08-23 16:14:32.961] [INFO ] [pid=14260] [backend-ops] save ok file_path=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx ms=37
+[2026-08-23 16:14:32.961] [INFO ] [pid=14260] [sync] drain end round=12 reconciles=1 mergedSubmits=1 pendingDirtySize=0 ms=85
+[2026-08-23 16:14:45.372] [INFO ] [pid=14260] [watcher] event=add file=slides\10.slide
+[2026-08-23 16:14:45.881] [INFO ] [pid=14260] [watcher] flush batch dirty=[10] size=1
+[2026-08-23 16:14:45.881] [INFO ] [pid=14260] [sync] submit nextRound=13 dirty=10 pendingDirtySize=1 merged=no
+[2026-08-23 16:14:45.881] [INFO ] [pid=14260] [sync] drain start round=13 pendingDirtySize=1
+[2026-08-23 16:14:45.882] [INFO ] [pid=14260] [sync] step=add round=13 attempt=1 pageId=10 index=9
+[2026-08-23 16:14:45.882] [INFO ] [pid=14260] [backend-ops] addSlideAt start pageId=10 index=9
+[2026-08-23 16:14:45.882] [INFO ] [pid=14260] [render] start pageId=10 file=E:\WorkBuddy\Jinx2\中台功能介绍PPT\slides\10.slide
+[2026-08-23 16:14:45.928] [INFO ] [pid=14260] [render] ok pageId=10 slides=1 ms=46
+[2026-08-23 16:14:45.929] [INFO ] [pid=14260] [render] renderSlideData result.resources={
+  images: {
+    'rel:01c4s10f': {
+      id: 'rel:01c4s10f',
+      src: 'E:\\WorkBuddy\\Jinx2\\中台功能介绍PPT\\.cache\\media\\images\\35440441da9bc944e31a5f21587e07c7.svg'
+    },
+    'rel:01atlrpp': {
+      id: 'rel:01atlrpp',
+      src: 'E:\\WorkBuddy\\Jinx2\\中台功能介绍PPT\\.cache\\media\\images\\8e8a6410331fba39c9360e60dc20e923.svg'
+    }
+  },
+  videos: {},
+  audios: {},
+  fonts: {}
+}
+[2026-08-23 16:14:45.932] [INFO ] [pid=14260] [commit] commit send pageId=6a3297 targetIndex=9 version=12 baseVersion=11 revisionBytes=20632
+[2026-08-23 16:14:45.938] [INFO ] [pid=14260] [commit] commit ok pageId=6a3297 revisionId=33df7fed ms=6
+[2026-08-23 16:14:45.940] [INFO ] [pid=14260] [backend-ops] addSlideAt ok pageId=10 slideId=6a3297 index=9 version=12 baseVersion=11 revisionId=33df7fed code=0 images=[local=2 remote=0 cached=0 failed=0] ms=58
+[2026-08-23 16:14:45.940] [INFO ] [pid=14260] [sync] aligned round=13 attempt=1 size=12 desired=12 pendingDirtySize=0
+[2026-08-23 16:14:45.940] [INFO ] [pid=14260] [sync] reconcile ok round=13 attempt=1 ms=58
+[2026-08-23 16:14:45.940] [INFO ] [pid=14260] [backend-ops] save start file=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx
+[2026-08-23 16:14:45.941] [INFO ] [pid=14260] [commit] save send filePath=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx
+[2026-08-23 16:14:45.981] [INFO ] [pid=14260] [commit] save ok file_path=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx ms=40
+[2026-08-23 16:14:45.981] [INFO ] [pid=14260] [backend-ops] save ok file_path=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx ms=41
+[2026-08-23 16:14:45.981] [INFO ] [pid=14260] [sync] drain end round=13 reconciles=1 mergedSubmits=1 pendingDirtySize=0 ms=100
+[2026-08-23 16:14:55.865] [INFO ] [pid=14260] [watcher] event=add file=slides\11.slide
+[2026-08-23 16:14:56.377] [INFO ] [pid=14260] [watcher] flush batch dirty=[11] size=1
+[2026-08-23 16:14:56.377] [INFO ] [pid=14260] [sync] submit nextRound=14 dirty=11 pendingDirtySize=1 merged=no
+[2026-08-23 16:14:56.377] [INFO ] [pid=14260] [sync] drain start round=14 pendingDirtySize=1
+[2026-08-23 16:14:56.378] [INFO ] [pid=14260] [sync] step=add round=14 attempt=1 pageId=11 index=10
+[2026-08-23 16:14:56.378] [INFO ] [pid=14260] [backend-ops] addSlideAt start pageId=11 index=10
+[2026-08-23 16:14:56.378] [INFO ] [pid=14260] [render] start pageId=11 file=E:\WorkBuddy\Jinx2\中台功能介绍PPT\slides\11.slide
+[2026-08-23 16:14:56.421] [INFO ] [pid=14260] [render] ok pageId=11 slides=1 ms=43
+[2026-08-23 16:14:56.422] [INFO ] [pid=14260] [render] renderSlideData result.resources={
+  images: {
+    'rel:01ya52pp': {
+      id: 'rel:01ya52pp',
+      src: 'E:\\WorkBuddy\\Jinx2\\中台功能介绍PPT\\.cache\\media\\images\\046c881b754ca58af7df5f62ae720518.svg'
+    }
+  },
+  videos: {},
+  audios: {},
+  fonts: {}
+}
+[2026-08-23 16:14:56.425] [INFO ] [pid=14260] [commit] commit send pageId=6c65df targetIndex=10 version=13 baseVersion=12 revisionBytes=22444
+[2026-08-23 16:14:56.431] [INFO ] [pid=14260] [commit] commit ok pageId=6c65df revisionId=1379d69d ms=5
+[2026-08-23 16:14:56.433] [INFO ] [pid=14260] [backend-ops] addSlideAt ok pageId=11 slideId=6c65df index=10 version=13 baseVersion=12 revisionId=1379d69d code=0 images=[local=1 remote=0 cached=0 failed=0] ms=55
+[2026-08-23 16:14:56.433] [INFO ] [pid=14260] [sync] aligned round=14 attempt=1 size=13 desired=13 pendingDirtySize=0
+[2026-08-23 16:14:56.433] [INFO ] [pid=14260] [sync] reconcile ok round=14 attempt=1 ms=55
+[2026-08-23 16:14:56.433] [INFO ] [pid=14260] [backend-ops] save start file=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx
+[2026-08-23 16:14:56.434] [INFO ] [pid=14260] [commit] save send filePath=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx
+[2026-08-23 16:14:56.477] [INFO ] [pid=14260] [commit] save ok file_path=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx ms=43
+[2026-08-23 16:14:56.477] [INFO ] [pid=14260] [backend-ops] save ok file_path=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx ms=44
+[2026-08-23 16:14:56.477] [INFO ] [pid=14260] [sync] drain end round=14 reconciles=1 mergedSubmits=1 pendingDirtySize=0 ms=100
+[2026-08-23 16:15:05.702] [INFO ] [pid=14260] [watcher] event=add file=slides\13.slide
+[2026-08-23 16:15:06.203] [INFO ] [pid=14260] [watcher] flush batch dirty=[13] size=1
+[2026-08-23 16:15:06.203] [INFO ] [pid=14260] [sync] submit nextRound=15 dirty=13 pendingDirtySize=1 merged=no
+[2026-08-23 16:15:06.204] [INFO ] [pid=14260] [sync] drain start round=15 pendingDirtySize=1
+[2026-08-23 16:15:06.204] [INFO ] [pid=14260] [sync] step=add round=15 attempt=1 pageId=13 index=12
+[2026-08-23 16:15:06.204] [INFO ] [pid=14260] [backend-ops] addSlideAt start pageId=13 index=12
+[2026-08-23 16:15:06.205] [INFO ] [pid=14260] [render] start pageId=13 file=E:\WorkBuddy\Jinx2\中台功能介绍PPT\slides\13.slide
+[2026-08-23 16:15:06.254] [INFO ] [pid=14260] [render] ok pageId=13 slides=1 ms=49
+[2026-08-23 16:15:06.254] [INFO ] [pid=14260] [render] renderSlideData result.resources={ images: {}, videos: {}, audios: {}, fonts: {} }
+[2026-08-23 16:15:06.257] [INFO ] [pid=14260] [commit] commit send pageId=622177 targetIndex=12 version=14 baseVersion=13 revisionBytes=20344
+[2026-08-23 16:15:06.261] [INFO ] [pid=14260] [commit] commit ok pageId=622177 revisionId=fa70ba2f ms=3
+[2026-08-23 16:15:06.263] [INFO ] [pid=14260] [backend-ops] addSlideAt ok pageId=13 slideId=622177 index=12 version=14 baseVersion=13 revisionId=fa70ba2f code=0 images=[local=0 remote=0 cached=0 failed=0] ms=59
+[2026-08-23 16:15:06.263] [INFO ] [pid=14260] [sync] aligned round=15 attempt=1 size=14 desired=14 pendingDirtySize=0
+[2026-08-23 16:15:06.264] [INFO ] [pid=14260] [sync] reconcile ok round=15 attempt=1 ms=60
+[2026-08-23 16:15:06.264] [INFO ] [pid=14260] [backend-ops] save start file=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx
+[2026-08-23 16:15:06.264] [INFO ] [pid=14260] [commit] save send filePath=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx
+[2026-08-23 16:15:06.309] [INFO ] [pid=14260] [commit] save ok file_path=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx ms=45
+[2026-08-23 16:15:06.309] [INFO ] [pid=14260] [backend-ops] save ok file_path=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx ms=45
+[2026-08-23 16:15:06.310] [INFO ] [pid=14260] [sync] drain end round=15 reconciles=1 mergedSubmits=1 pendingDirtySize=0 ms=106
+[2026-08-23 16:15:14.316] [INFO ] [pid=14260] [watcher] event=add file=slides\14.slide
+[2026-08-23 16:15:14.816] [INFO ] [pid=14260] [watcher] flush batch dirty=[14] size=1
+[2026-08-23 16:15:14.817] [INFO ] [pid=14260] [sync] submit nextRound=16 dirty=14 pendingDirtySize=1 merged=no
+[2026-08-23 16:15:14.817] [INFO ] [pid=14260] [sync] drain start round=16 pendingDirtySize=1
+[2026-08-23 16:15:14.817] [INFO ] [pid=14260] [sync] step=add round=16 attempt=1 pageId=14 index=13
+[2026-08-23 16:15:14.818] [INFO ] [pid=14260] [backend-ops] addSlideAt start pageId=14 index=13
+[2026-08-23 16:15:14.818] [INFO ] [pid=14260] [render] start pageId=14 file=E:\WorkBuddy\Jinx2\中台功能介绍PPT\slides\14.slide
+[2026-08-23 16:15:14.846] [INFO ] [pid=14260] [render] ok pageId=14 slides=1 ms=28
+[2026-08-23 16:15:14.846] [INFO ] [pid=14260] [render] renderSlideData result.resources={ images: {}, videos: {}, audios: {}, fonts: {} }
+[2026-08-23 16:15:14.848] [INFO ] [pid=14260] [commit] commit send pageId=a680f1 targetIndex=13 version=15 baseVersion=14 revisionBytes=12948
+[2026-08-23 16:15:14.853] [INFO ] [pid=14260] [commit] commit ok pageId=a680f1 revisionId=01109085 ms=4
+[2026-08-23 16:15:14.855] [INFO ] [pid=14260] [backend-ops] addSlideAt ok pageId=14 slideId=a680f1 index=13 version=15 baseVersion=14 revisionId=01109085 code=0 images=[local=0 remote=0 cached=0 failed=0] ms=37
+[2026-08-23 16:15:14.856] [INFO ] [pid=14260] [sync] aligned round=16 attempt=1 size=15 desired=15 pendingDirtySize=0
+[2026-08-23 16:15:14.856] [INFO ] [pid=14260] [sync] reconcile ok round=16 attempt=1 ms=39
+[2026-08-23 16:15:14.857] [INFO ] [pid=14260] [backend-ops] save start file=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx
+[2026-08-23 16:15:14.857] [INFO ] [pid=14260] [commit] save send filePath=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx
+[2026-08-23 16:15:14.908] [INFO ] [pid=14260] [commit] save ok file_path=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx ms=50
+[2026-08-23 16:15:14.909] [INFO ] [pid=14260] [backend-ops] save ok file_path=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx ms=52
+[2026-08-23 16:15:14.909] [INFO ] [pid=14260] [sync] drain end round=16 reconciles=1 mergedSubmits=1 pendingDirtySize=0 ms=92
+[2026-08-23 16:15:28.777] [INFO ] [pid=14260] [watcher] event=add file=slides\16.slide
+[2026-08-23 16:15:29.290] [INFO ] [pid=14260] [watcher] flush batch dirty=[16] size=1
+[2026-08-23 16:15:29.290] [INFO ] [pid=14260] [sync] submit nextRound=17 dirty=16 pendingDirtySize=1 merged=no
+[2026-08-23 16:15:29.291] [INFO ] [pid=14260] [sync] drain start round=17 pendingDirtySize=1
+[2026-08-23 16:15:29.291] [INFO ] [pid=14260] [sync] step=add round=17 attempt=1 pageId=16 index=15
+[2026-08-23 16:15:29.291] [INFO ] [pid=14260] [backend-ops] addSlideAt start pageId=16 index=15
+[2026-08-23 16:15:29.292] [INFO ] [pid=14260] [render] start pageId=16 file=E:\WorkBuddy\Jinx2\中台功能介绍PPT\slides\16.slide
+[2026-08-23 16:15:29.319] [INFO ] [pid=14260] [render] ok pageId=16 slides=1 ms=27
+[2026-08-23 16:15:29.319] [INFO ] [pid=14260] [render] renderSlideData result.resources={
+  images: {
+    'rel:01onqd7s': {
+      id: 'rel:01onqd7s',
+      src: 'E:\\WorkBuddy\\Jinx2\\中台功能介绍PPT\\.cache\\media\\images\\2ef800eeb1dc553a305bbab7068ffcd6.svg'
+    }
+  },
+  videos: {},
+  audios: {},
+  fonts: {}
+}
+[2026-08-23 16:15:29.323] [INFO ] [pid=14260] [commit] commit send pageId=91423e targetIndex=15 version=16 baseVersion=15 revisionBytes=17552
+[2026-08-23 16:15:29.328] [INFO ] [pid=14260] [commit] commit ok pageId=91423e revisionId=ad8874f4 ms=4
+[2026-08-23 16:15:29.329] [INFO ] [pid=14260] [backend-ops] addSlideAt ok pageId=16 slideId=91423e index=15 version=16 baseVersion=15 revisionId=ad8874f4 code=0 images=[local=1 remote=0 cached=0 failed=0] ms=38
+[2026-08-23 16:15:29.330] [INFO ] [pid=14260] [sync] aligned round=17 attempt=1 size=16 desired=16 pendingDirtySize=0
+[2026-08-23 16:15:29.330] [INFO ] [pid=14260] [sync] reconcile ok round=17 attempt=1 ms=39
+[2026-08-23 16:15:29.330] [INFO ] [pid=14260] [backend-ops] save start file=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx
+[2026-08-23 16:15:29.330] [INFO ] [pid=14260] [commit] save send filePath=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx
+[2026-08-23 16:15:29.382] [INFO ] [pid=14260] [commit] save ok file_path=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx ms=52
+[2026-08-23 16:15:29.383] [INFO ] [pid=14260] [backend-ops] save ok file_path=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx ms=53
+[2026-08-23 16:15:29.383] [INFO ] [pid=14260] [sync] drain end round=17 reconciles=1 mergedSubmits=1 pendingDirtySize=0 ms=92
+[2026-08-23 16:15:39.191] [INFO ] [pid=14260] [watcher] event=add file=slides\17.slide
+[2026-08-23 16:15:39.692] [INFO ] [pid=14260] [watcher] flush batch dirty=[17] size=1
+[2026-08-23 16:15:39.692] [INFO ] [pid=14260] [sync] submit nextRound=18 dirty=17 pendingDirtySize=1 merged=no
+[2026-08-23 16:15:39.692] [INFO ] [pid=14260] [sync] drain start round=18 pendingDirtySize=1
+[2026-08-23 16:15:39.693] [INFO ] [pid=14260] [sync] step=add round=18 attempt=1 pageId=17 index=16
+[2026-08-23 16:15:39.693] [INFO ] [pid=14260] [backend-ops] addSlideAt start pageId=17 index=16
+[2026-08-23 16:15:39.694] [INFO ] [pid=14260] [render] start pageId=17 file=E:\WorkBuddy\Jinx2\中台功能介绍PPT\slides\17.slide
+[2026-08-23 16:15:39.744] [INFO ] [pid=14260] [render] ok pageId=17 slides=1 ms=51
+[2026-08-23 16:15:39.745] [INFO ] [pid=14260] [render] renderSlideData result.resources={
+  images: {
+    'rel:00z3l8wt': {
+      id: 'rel:00z3l8wt',
+      src: 'E:\\WorkBuddy\\Jinx2\\中台功能介绍PPT\\.cache\\media\\images\\42a1acdcce3e0c5e46922fae77aa1681.svg'
+    }
+  },
+  videos: {},
+  audios: {},
+  fonts: {}
+}
+[2026-08-23 16:15:39.747] [INFO ] [pid=14260] [commit] commit send pageId=0205a9 targetIndex=16 version=17 baseVersion=16 revisionBytes=11484
+[2026-08-23 16:15:39.751] [INFO ] [pid=14260] [commit] commit ok pageId=0205a9 revisionId=6765d488 ms=4
+[2026-08-23 16:15:39.752] [INFO ] [pid=14260] [backend-ops] addSlideAt ok pageId=17 slideId=0205a9 index=16 version=17 baseVersion=16 revisionId=6765d488 code=0 images=[local=1 remote=0 cached=0 failed=0] ms=59
+[2026-08-23 16:15:39.753] [INFO ] [pid=14260] [sync] aligned round=18 attempt=1 size=17 desired=17 pendingDirtySize=0
+[2026-08-23 16:15:39.753] [INFO ] [pid=14260] [sync] reconcile ok round=18 attempt=1 ms=60
+[2026-08-23 16:15:39.753] [INFO ] [pid=14260] [backend-ops] save start file=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx
+[2026-08-23 16:15:39.753] [INFO ] [pid=14260] [commit] save send filePath=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx
+[2026-08-23 16:15:39.806] [INFO ] [pid=14260] [commit] save ok file_path=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx ms=53
+[2026-08-23 16:15:39.806] [INFO ] [pid=14260] [backend-ops] save ok file_path=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx ms=53
+[2026-08-23 16:15:39.806] [INFO ] [pid=14260] [sync] drain end round=18 reconciles=1 mergedSubmits=1 pendingDirtySize=0 ms=114
+[2026-08-23 16:15:44.824] [INFO ] [pid=14260] [watcher] event=add file=slides\18.slide
+[2026-08-23 16:15:45.332] [INFO ] [pid=14260] [watcher] flush batch dirty=[18] size=1
+[2026-08-23 16:15:45.332] [INFO ] [pid=14260] [sync] submit nextRound=19 dirty=18 pendingDirtySize=1 merged=no
+[2026-08-23 16:15:45.332] [INFO ] [pid=14260] [sync] drain start round=19 pendingDirtySize=1
+[2026-08-23 16:15:45.333] [INFO ] [pid=14260] [sync] step=add round=19 attempt=1 pageId=18 index=17
+[2026-08-23 16:15:45.333] [INFO ] [pid=14260] [backend-ops] addSlideAt start pageId=18 index=17
+[2026-08-23 16:15:45.334] [INFO ] [pid=14260] [render] start pageId=18 file=E:\WorkBuddy\Jinx2\中台功能介绍PPT\slides\18.slide
+[2026-08-23 16:15:45.346] [INFO ] [pid=14260] [render] ok pageId=18 slides=1 ms=12
+[2026-08-23 16:15:45.347] [INFO ] [pid=14260] [render] renderSlideData result.resources={ images: {}, videos: {}, audios: {}, fonts: {} }
+[2026-08-23 16:15:45.349] [INFO ] [pid=14260] [commit] commit send pageId=50987d targetIndex=17 version=18 baseVersion=17 revisionBytes=5852
+[2026-08-23 16:15:45.351] [INFO ] [pid=14260] [commit] commit ok pageId=50987d revisionId=f6cdc8fa ms=2
+[2026-08-23 16:15:45.353] [INFO ] [pid=14260] [backend-ops] addSlideAt ok pageId=18 slideId=50987d index=17 version=18 baseVersion=17 revisionId=f6cdc8fa code=0 images=[local=0 remote=0 cached=0 failed=0] ms=20
+[2026-08-23 16:15:45.353] [INFO ] [pid=14260] [sync] aligned round=19 attempt=1 size=18 desired=18 pendingDirtySize=0
+[2026-08-23 16:15:45.354] [INFO ] [pid=14260] [sync] reconcile ok round=19 attempt=1 ms=21
+[2026-08-23 16:15:45.354] [INFO ] [pid=14260] [backend-ops] save start file=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx
+[2026-08-23 16:15:45.354] [INFO ] [pid=14260] [commit] save send filePath=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx
+[2026-08-23 16:15:45.407] [INFO ] [pid=14260] [commit] save ok file_path=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx ms=53
+[2026-08-23 16:15:45.407] [INFO ] [pid=14260] [backend-ops] save ok file_path=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx ms=53
+[2026-08-23 16:15:45.407] [INFO ] [pid=14260] [sync] drain end round=19 reconciles=1 mergedSubmits=1 pendingDirtySize=0 ms=75
+[2026-08-23 16:34:22.124] [INFO ] [pid=14260] [watcher] event=change file=slides\07.slide
+[2026-08-23 16:34:22.624] [INFO ] [pid=14260] [watcher] flush batch dirty=[07] size=1
+[2026-08-23 16:34:22.625] [INFO ] [pid=14260] [sync] submit nextRound=20 dirty=07 pendingDirtySize=1 merged=no
+[2026-08-23 16:34:22.625] [INFO ] [pid=14260] [sync] drain start round=20 pendingDirtySize=1
+[2026-08-23 16:34:22.625] [INFO ] [pid=14260] [sync] step=remove-dirty round=20 attempt=1 pageId=07 index=6
+[2026-08-23 16:34:22.625] [INFO ] [pid=14260] [backend-ops] removeSlideAt start index=6
+[2026-08-23 16:34:22.629] [INFO ] [pid=14260] [mcp] mcp:slide_remove_slide send url=http://127.0.0.1:39103/mcp args={"file_id":"sid_mt5j4qo7_5ljhifxb","page_index":6}
+[2026-08-23 16:34:22.631] [INFO ] [pid=14260] [mcp] mcp:slide_remove_slide ok ms=2
+[2026-08-23 16:34:22.632] [INFO ] [pid=14260] [backend-ops] removeSlideAt ok index=6 serverVersion=19 ms=7
+[2026-08-23 16:34:22.632] [INFO ] [pid=14260] [sync] step=add round=20 attempt=1 pageId=07 index=6
+[2026-08-23 16:34:22.632] [INFO ] [pid=14260] [backend-ops] addSlideAt start pageId=07 index=6
+[2026-08-23 16:34:22.633] [INFO ] [pid=14260] [render] start pageId=07 file=E:\WorkBuddy\Jinx2\中台功能介绍PPT\slides\07.slide
+[2026-08-23 16:34:22.786] [INFO ] [pid=14260] [render] ok pageId=07 slides=1 ms=153
+[2026-08-23 16:34:22.786] [INFO ] [pid=14260] [render] renderSlideData result.resources={
+  images: {
+    'rel:005x578f': {
+      id: 'rel:005x578f',
+      src: 'E:\\WorkBuddy\\Jinx2\\中台功能介绍PPT\\.cache\\media\\images\\e6f4e4f53e0b2889900af4ccee8a5cbf.svg'
+    },
+    'rel:00ucpqn6': {
+      id: 'rel:00ucpqn6',
+      src: 'E:\\WorkBuddy\\Jinx2\\中台功能介绍PPT\\.cache\\media\\images\\2c7fcba171c3229fcc87ec134224ade9.svg'
+    },
+    'rel:01byr8q0': {
+      id: 'rel:01byr8q0',
+      src: 'E:\\WorkBuddy\\Jinx2\\中台功能介绍PPT\\.cache\\media\\images\\0595c6d97dd62c7b67673bc4a6b5e8ab.svg'
+    },
+    'rel:00zu3auy': {
+      id: 'rel:00zu3auy',
+      src: 'E:\\WorkBuddy\\Jinx2\\中台功能介绍PPT\\.cache\\media\\images\\fa18be93c7d9105352a71cb29ae85136.svg'
+    },
+    'rel:01dsqp6t': {
+      id: 'rel:01dsqp6t',
+      src: 'E:\\WorkBuddy\\Jinx2\\中台功能介绍PPT\\.cache\\media\\images\\a678c9f840cb78d2e7e621cfe6682ee1.svg'
+    },
+    'rel:01ovz1io': {
+      id: 'rel:01ovz1io',
+      src: 'E:\\WorkBuddy\\Jinx2\\中台功能介绍PPT\\.cache\\media\\images\\d263efa24fb07dbcf50c9fdde05b19f6.svg'
+    },
+    'rel:017hbfnw': {
+      id: 'rel:017hbfnw',
+      src: 'E:\\WorkBuddy\\Jinx2\\中台功能介绍PPT\\.cache\\media\\images\\741e4ca7826073b3aec2bd09caf6d40c.svg'
+    },
+    'rel:01y7dxhj': {
+      id: 'rel:01y7dxhj',
+      src: 'E:\\WorkBuddy\\Jinx2\\中台功能介绍PPT\\.cache\\media\\images\\d1610e3e71568d5d0770872f1db60321.svg'
+    },
+    'rel:016bua2k': {
+      id: 'rel:016bua2k',
+      src: 'E:\\WorkBuddy\\Jinx2\\中台功能介绍PPT\\.cache\\media\\images\\6e75b431d74baa0fbd4054571a3da67d.svg'
+    }
+  },
+  videos: {},
+  audios: {},
+  fonts: {}
+}
+[2026-08-23 16:34:22.792] [INFO ] [pid=14260] [commit] commit send pageId=bb9f34 targetIndex=6 version=19 baseVersion=19 revisionBytes=42812
+[2026-08-23 16:34:22.802] [INFO ] [pid=14260] [commit] commit ok pageId=bb9f34 revisionId=0893a2ed ms=10
+[2026-08-23 16:34:22.803] [INFO ] [pid=14260] [backend-ops] addSlideAt ok pageId=07 slideId=bb9f34 index=6 version=19 baseVersion=19 revisionId=0893a2ed code=0 images=[local=9 remote=0 cached=0 failed=0] ms=171
+[2026-08-23 16:34:22.804] [INFO ] [pid=14260] [sync] aligned round=20 attempt=1 size=18 desired=18 pendingDirtySize=0
+[2026-08-23 16:34:22.804] [INFO ] [pid=14260] [sync] reconcile ok round=20 attempt=1 ms=179
+[2026-08-23 16:34:22.804] [INFO ] [pid=14260] [backend-ops] save start file=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx
+[2026-08-23 16:34:22.804] [INFO ] [pid=14260] [commit] save send filePath=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx
+[2026-08-23 16:34:22.861] [INFO ] [pid=14260] [commit] save ok file_path=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx ms=56
+[2026-08-23 16:34:22.861] [INFO ] [pid=14260] [backend-ops] save ok file_path=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx ms=57
+[2026-08-23 16:34:22.861] [INFO ] [pid=14260] [sync] drain end round=20 reconciles=1 mergedSubmits=1 pendingDirtySize=0 ms=236
+[2026-08-23 16:34:32.990] [INFO ] [pid=14260] [watcher] event=change file=slides\08.slide
+[2026-08-23 16:34:33.501] [INFO ] [pid=14260] [watcher] flush batch dirty=[08] size=1
+[2026-08-23 16:34:33.501] [INFO ] [pid=14260] [sync] submit nextRound=21 dirty=08 pendingDirtySize=1 merged=no
+[2026-08-23 16:34:33.501] [INFO ] [pid=14260] [sync] drain start round=21 pendingDirtySize=1
+[2026-08-23 16:34:33.502] [INFO ] [pid=14260] [sync] step=remove-dirty round=21 attempt=1 pageId=08 index=7
+[2026-08-23 16:34:33.502] [INFO ] [pid=14260] [backend-ops] removeSlideAt start index=7
+[2026-08-23 16:34:33.504] [INFO ] [pid=14260] [mcp] mcp:slide_remove_slide send url=http://127.0.0.1:39103/mcp args={"file_id":"sid_mt5j4qo7_5ljhifxb","page_index":7}
+[2026-08-23 16:34:33.505] [INFO ] [pid=14260] [mcp] mcp:slide_remove_slide ok ms=1
+[2026-08-23 16:34:33.506] [INFO ] [pid=14260] [backend-ops] removeSlideAt ok index=7 serverVersion=21 ms=4
+[2026-08-23 16:34:33.507] [INFO ] [pid=14260] [sync] step=add round=21 attempt=1 pageId=08 index=7
+[2026-08-23 16:34:33.507] [INFO ] [pid=14260] [backend-ops] addSlideAt start pageId=08 index=7
+[2026-08-23 16:34:33.508] [INFO ] [pid=14260] [render] start pageId=08 file=E:\WorkBuddy\Jinx2\中台功能介绍PPT\slides\08.slide
+[2026-08-23 16:34:33.568] [INFO ] [pid=14260] [render] ok pageId=08 slides=1 ms=60
+[2026-08-23 16:34:33.568] [INFO ] [pid=14260] [render] renderSlideData result.resources={
+  images: {
+    'rel:01fozek2': {
+      id: 'rel:01fozek2',
+      src: 'E:\\WorkBuddy\\Jinx2\\中台功能介绍PPT\\.cache\\media\\images\\b8ef0bf758d9de5a079b638cd2737c21.svg'
+    },
+    'rel:01as3z3u': {
+      id: 'rel:01as3z3u',
+      src: 'E:\\WorkBuddy\\Jinx2\\中台功能介绍PPT\\.cache\\media\\images\\a93a9dbd57fe7766809e2e43986b3189.svg'
+    }
+  },
+  videos: {},
+  audios: {},
+  fonts: {}
+}
+[2026-08-23 16:34:33.571] [INFO ] [pid=14260] [commit] commit send pageId=aa959b targetIndex=7 version=20 baseVersion=21 revisionBytes=19716
+[2026-08-23 16:34:33.577] [INFO ] [pid=14260] [commit] commit ok pageId=aa959b revisionId=a8e215d3 ms=5
+[2026-08-23 16:34:33.578] [INFO ] [pid=14260] [backend-ops] addSlideAt ok pageId=08 slideId=aa959b index=7 version=20 baseVersion=21 revisionId=a8e215d3 code=0 images=[local=2 remote=0 cached=0 failed=0] ms=71
+[2026-08-23 16:34:33.579] [INFO ] [pid=14260] [sync] aligned round=21 attempt=1 size=18 desired=18 pendingDirtySize=0
+[2026-08-23 16:34:33.580] [INFO ] [pid=14260] [sync] reconcile ok round=21 attempt=1 ms=78
+[2026-08-23 16:34:33.580] [INFO ] [pid=14260] [backend-ops] save start file=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx
+[2026-08-23 16:34:33.580] [INFO ] [pid=14260] [commit] save send filePath=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx
+[2026-08-23 16:34:33.637] [INFO ] [pid=14260] [commit] save ok file_path=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx ms=56
+[2026-08-23 16:34:33.637] [INFO ] [pid=14260] [backend-ops] save ok file_path=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx ms=57
+[2026-08-23 16:34:33.637] [INFO ] [pid=14260] [sync] drain end round=21 reconciles=1 mergedSubmits=1 pendingDirtySize=0 ms=136
+[2026-08-23 16:34:44.659] [INFO ] [pid=14260] [watcher] event=change file=slides\09.slide
+[2026-08-23 16:34:45.173] [INFO ] [pid=14260] [watcher] flush batch dirty=[09] size=1
+[2026-08-23 16:34:45.174] [INFO ] [pid=14260] [sync] submit nextRound=22 dirty=09 pendingDirtySize=1 merged=no
+[2026-08-23 16:34:45.174] [INFO ] [pid=14260] [sync] drain start round=22 pendingDirtySize=1
+[2026-08-23 16:34:45.174] [INFO ] [pid=14260] [sync] step=remove-dirty round=22 attempt=1 pageId=09 index=8
+[2026-08-23 16:34:45.175] [INFO ] [pid=14260] [backend-ops] removeSlideAt start index=8
+[2026-08-23 16:34:45.176] [INFO ] [pid=14260] [mcp] mcp:slide_remove_slide send url=http://127.0.0.1:39103/mcp args={"file_id":"sid_mt5j4qo7_5ljhifxb","page_index":8}
+[2026-08-23 16:34:45.178] [INFO ] [pid=14260] [mcp] mcp:slide_remove_slide ok ms=1
+[2026-08-23 16:34:45.178] [INFO ] [pid=14260] [backend-ops] removeSlideAt ok index=8 serverVersion=23 ms=3
+[2026-08-23 16:34:45.179] [INFO ] [pid=14260] [sync] step=add round=22 attempt=1 pageId=09 index=8
+[2026-08-23 16:34:45.179] [INFO ] [pid=14260] [backend-ops] addSlideAt start pageId=09 index=8
+[2026-08-23 16:34:45.180] [INFO ] [pid=14260] [render] start pageId=09 file=E:\WorkBuddy\Jinx2\中台功能介绍PPT\slides\09.slide
+[2026-08-23 16:34:45.215] [INFO ] [pid=14260] [render] ok pageId=09 slides=1 ms=35
+[2026-08-23 16:34:45.215] [INFO ] [pid=14260] [render] renderSlideData result.resources={
+  images: {
+    'rel:003cet6s': {
+      id: 'rel:003cet6s',
+      src: 'E:\\WorkBuddy\\Jinx2\\中台功能介绍PPT\\.cache\\media\\images\\67848b7fcea20d119af18d6d238527e6.svg'
+    }
+  },
+  videos: {},
+  audios: {},
+  fonts: {}
+}
+[2026-08-23 16:34:45.219] [INFO ] [pid=14260] [commit] commit send pageId=6e9a0b targetIndex=8 version=21 baseVersion=23 revisionBytes=22456
+[2026-08-23 16:34:45.227] [INFO ] [pid=14260] [commit] commit ok pageId=6e9a0b revisionId=099caf1a ms=7
+[2026-08-23 16:34:45.229] [INFO ] [pid=14260] [backend-ops] addSlideAt ok pageId=09 slideId=6e9a0b index=8 version=21 baseVersion=23 revisionId=099caf1a code=0 images=[local=1 remote=0 cached=0 failed=0] ms=50
+[2026-08-23 16:34:45.230] [INFO ] [pid=14260] [sync] aligned round=22 attempt=1 size=18 desired=18 pendingDirtySize=0
+[2026-08-23 16:34:45.230] [INFO ] [pid=14260] [sync] reconcile ok round=22 attempt=1 ms=56
+[2026-08-23 16:34:45.230] [INFO ] [pid=14260] [backend-ops] save start file=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx
+[2026-08-23 16:34:45.230] [INFO ] [pid=14260] [commit] save send filePath=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx
+[2026-08-23 16:34:45.289] [INFO ] [pid=14260] [commit] save ok file_path=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx ms=58
+[2026-08-23 16:34:45.290] [INFO ] [pid=14260] [backend-ops] save ok file_path=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx ms=60
+[2026-08-23 16:34:45.290] [INFO ] [pid=14260] [sync] drain end round=22 reconciles=1 mergedSubmits=1 pendingDirtySize=0 ms=116
+[2026-08-23 16:34:56.760] [INFO ] [pid=14260] [watcher] event=change file=slides\10.slide
+[2026-08-23 16:34:57.270] [INFO ] [pid=14260] [watcher] flush batch dirty=[10] size=1
+[2026-08-23 16:34:57.270] [INFO ] [pid=14260] [sync] submit nextRound=23 dirty=10 pendingDirtySize=1 merged=no
+[2026-08-23 16:34:57.271] [INFO ] [pid=14260] [sync] drain start round=23 pendingDirtySize=1
+[2026-08-23 16:34:57.271] [INFO ] [pid=14260] [sync] step=remove-dirty round=23 attempt=1 pageId=10 index=9
+[2026-08-23 16:34:57.271] [INFO ] [pid=14260] [backend-ops] removeSlideAt start index=9
+[2026-08-23 16:34:57.273] [INFO ] [pid=14260] [mcp] mcp:slide_remove_slide send url=http://127.0.0.1:39103/mcp args={"file_id":"sid_mt5j4qo7_5ljhifxb","page_index":9}
+[2026-08-23 16:34:57.275] [INFO ] [pid=14260] [mcp] mcp:slide_remove_slide ok ms=1
+[2026-08-23 16:34:57.276] [INFO ] [pid=14260] [backend-ops] removeSlideAt ok index=9 serverVersion=25 ms=5
+[2026-08-23 16:34:57.277] [INFO ] [pid=14260] [sync] step=add round=23 attempt=1 pageId=10 index=9
+[2026-08-23 16:34:57.277] [INFO ] [pid=14260] [backend-ops] addSlideAt start pageId=10 index=9
+[2026-08-23 16:34:57.277] [INFO ] [pid=14260] [render] start pageId=10 file=E:\WorkBuddy\Jinx2\中台功能介绍PPT\slides\10.slide
+[2026-08-23 16:34:57.354] [INFO ] [pid=14260] [render] ok pageId=10 slides=1 ms=77
+[2026-08-23 16:34:57.354] [INFO ] [pid=14260] [render] renderSlideData result.resources={
+  images: {
+    'rel:012fha0j': {
+      id: 'rel:012fha0j',
+      src: 'E:\\WorkBuddy\\Jinx2\\中台功能介绍PPT\\.cache\\media\\images\\62275050deea2debf84d77ffe14c8dcd.svg'
+    },
+    'rel:01dsqp6t': {
+      id: 'rel:01dsqp6t',
+      src: 'E:\\WorkBuddy\\Jinx2\\中台功能介绍PPT\\.cache\\media\\images\\a678c9f840cb78d2e7e621cfe6682ee1.svg'
+    }
+  },
+  videos: {},
+  audios: {},
+  fonts: {}
+}
+[2026-08-23 16:34:57.357] [INFO ] [pid=14260] [commit] commit send pageId=ac6ad1 targetIndex=9 version=22 baseVersion=25 revisionBytes=20744
+[2026-08-23 16:34:57.362] [INFO ] [pid=14260] [commit] commit ok pageId=ac6ad1 revisionId=9d6c1bff ms=4
+[2026-08-23 16:34:57.364] [INFO ] [pid=14260] [backend-ops] addSlideAt ok pageId=10 slideId=ac6ad1 index=9 version=22 baseVersion=25 revisionId=9d6c1bff code=0 images=[local=2 remote=0 cached=0 failed=0] ms=87
+[2026-08-23 16:34:57.364] [INFO ] [pid=14260] [sync] aligned round=23 attempt=1 size=18 desired=18 pendingDirtySize=0
+[2026-08-23 16:34:57.365] [INFO ] [pid=14260] [sync] reconcile ok round=23 attempt=1 ms=94
+[2026-08-23 16:34:57.365] [INFO ] [pid=14260] [backend-ops] save start file=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx
+[2026-08-23 16:34:57.365] [INFO ] [pid=14260] [commit] save send filePath=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx
+[2026-08-23 16:34:57.428] [INFO ] [pid=14260] [commit] save ok file_path=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx ms=62
+[2026-08-23 16:34:57.429] [INFO ] [pid=14260] [backend-ops] save ok file_path=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx ms=64
+[2026-08-23 16:34:57.429] [INFO ] [pid=14260] [sync] drain end round=23 reconciles=1 mergedSubmits=1 pendingDirtySize=0 ms=158
+[2026-08-23 16:35:07.003] [INFO ] [pid=14260] [watcher] event=change file=slides\11.slide
+[2026-08-23 16:35:07.511] [INFO ] [pid=14260] [watcher] flush batch dirty=[11] size=1
+[2026-08-23 16:35:07.511] [INFO ] [pid=14260] [sync] submit nextRound=24 dirty=11 pendingDirtySize=1 merged=no
+[2026-08-23 16:35:07.511] [INFO ] [pid=14260] [sync] drain start round=24 pendingDirtySize=1
+[2026-08-23 16:35:07.512] [INFO ] [pid=14260] [sync] step=remove-dirty round=24 attempt=1 pageId=11 index=10
+[2026-08-23 16:35:07.512] [INFO ] [pid=14260] [backend-ops] removeSlideAt start index=10
+[2026-08-23 16:35:07.514] [INFO ] [pid=14260] [mcp] mcp:slide_remove_slide send url=http://127.0.0.1:39103/mcp args={"file_id":"sid_mt5j4qo7_5ljhifxb","page_index":10}
+[2026-08-23 16:35:07.516] [INFO ] [pid=14260] [mcp] mcp:slide_remove_slide ok ms=1
+[2026-08-23 16:35:07.516] [INFO ] [pid=14260] [backend-ops] removeSlideAt ok index=10 serverVersion=27 ms=4
+[2026-08-23 16:35:07.516] [INFO ] [pid=14260] [sync] step=add round=24 attempt=1 pageId=11 index=10
+[2026-08-23 16:35:07.517] [INFO ] [pid=14260] [backend-ops] addSlideAt start pageId=11 index=10
+[2026-08-23 16:35:07.517] [INFO ] [pid=14260] [render] start pageId=11 file=E:\WorkBuddy\Jinx2\中台功能介绍PPT\slides\11.slide
+[2026-08-23 16:35:07.558] [INFO ] [pid=14260] [render] ok pageId=11 slides=1 ms=41
+[2026-08-23 16:35:07.558] [INFO ] [pid=14260] [render] renderSlideData result.resources={
+  images: {
+    'rel:01ah3n7e': {
+      id: 'rel:01ah3n7e',
+      src: 'E:\\WorkBuddy\\Jinx2\\中台功能介绍PPT\\.cache\\media\\images\\efe43300d29eb872f2a36ae048845923.svg'
+    }
+  },
+  videos: {},
+  audios: {},
+  fonts: {}
+}
+[2026-08-23 16:35:07.562] [INFO ] [pid=14260] [commit] commit send pageId=ff0278 targetIndex=10 version=23 baseVersion=27 revisionBytes=23396
+[2026-08-23 16:35:07.567] [INFO ] [pid=14260] [commit] commit ok pageId=ff0278 revisionId=213b85f4 ms=5
+[2026-08-23 16:35:07.599] [INFO ] [pid=14260] [backend-ops] addSlideAt ok pageId=11 slideId=ff0278 index=10 version=23 baseVersion=27 revisionId=213b85f4 code=0 images=[local=1 remote=0 cached=0 failed=0] ms=83
+[2026-08-23 16:35:07.600] [INFO ] [pid=14260] [sync] aligned round=24 attempt=1 size=18 desired=18 pendingDirtySize=0
+[2026-08-23 16:35:07.600] [INFO ] [pid=14260] [sync] reconcile ok round=24 attempt=1 ms=88
+[2026-08-23 16:35:07.600] [INFO ] [pid=14260] [backend-ops] save start file=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx
+[2026-08-23 16:35:07.600] [INFO ] [pid=14260] [commit] save send filePath=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx
+[2026-08-23 16:35:07.666] [INFO ] [pid=14260] [commit] save ok file_path=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx ms=66
+[2026-08-23 16:35:07.667] [INFO ] [pid=14260] [backend-ops] save ok file_path=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx ms=67
+[2026-08-23 16:35:07.667] [INFO ] [pid=14260] [sync] drain end round=24 reconciles=1 mergedSubmits=1 pendingDirtySize=0 ms=156
+[2026-08-23 16:35:17.104] [INFO ] [pid=14260] [watcher] event=change file=slides\01.slide
+[2026-08-23 16:35:17.617] [INFO ] [pid=14260] [watcher] flush batch dirty=[01] size=1
+[2026-08-23 16:35:17.618] [INFO ] [pid=14260] [sync] submit nextRound=25 dirty=01 pendingDirtySize=1 merged=no
+[2026-08-23 16:35:17.618] [INFO ] [pid=14260] [sync] drain start round=25 pendingDirtySize=1
+[2026-08-23 16:35:17.618] [INFO ] [pid=14260] [sync] step=remove-dirty round=25 attempt=1 pageId=01 index=0
+[2026-08-23 16:35:17.618] [INFO ] [pid=14260] [backend-ops] removeSlideAt start index=0
+[2026-08-23 16:35:17.620] [INFO ] [pid=14260] [mcp] mcp:slide_remove_slide send url=http://127.0.0.1:39103/mcp args={"file_id":"sid_mt5j4qo7_5ljhifxb","page_index":0}
+[2026-08-23 16:35:17.623] [INFO ] [pid=14260] [mcp] mcp:slide_remove_slide ok ms=2
+[2026-08-23 16:35:17.623] [INFO ] [pid=14260] [backend-ops] removeSlideAt ok index=0 serverVersion=29 ms=5
+[2026-08-23 16:35:17.624] [INFO ] [pid=14260] [sync] step=add round=25 attempt=1 pageId=01 index=0
+[2026-08-23 16:35:17.624] [INFO ] [pid=14260] [backend-ops] addSlideAt start pageId=01 index=0
+[2026-08-23 16:35:17.625] [INFO ] [pid=14260] [render] start pageId=01 file=E:\WorkBuddy\Jinx2\中台功能介绍PPT\slides\01.slide
+[2026-08-23 16:35:17.642] [INFO ] [pid=14260] [render] ok pageId=01 slides=1 ms=17
+[2026-08-23 16:35:17.643] [INFO ] [pid=14260] [render] renderSlideData result.resources={ images: {}, videos: {}, audios: {}, fonts: {} }
+[2026-08-23 16:35:17.645] [INFO ] [pid=14260] [commit] commit send pageId=970bf5 targetIndex=0 version=24 baseVersion=29 revisionBytes=8368
+[2026-08-23 16:35:17.649] [INFO ] [pid=14260] [commit] commit ok pageId=970bf5 revisionId=75abad57 ms=3
+[2026-08-23 16:35:17.650] [INFO ] [pid=14260] [backend-ops] addSlideAt ok pageId=01 slideId=970bf5 index=0 version=24 baseVersion=29 revisionId=75abad57 code=0 images=[local=0 remote=0 cached=0 failed=0] ms=26
+[2026-08-23 16:35:17.651] [INFO ] [pid=14260] [sync] aligned round=25 attempt=1 size=18 desired=18 pendingDirtySize=0
+[2026-08-23 16:35:17.651] [INFO ] [pid=14260] [sync] reconcile ok round=25 attempt=1 ms=33
+[2026-08-23 16:35:17.652] [INFO ] [pid=14260] [backend-ops] save start file=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx
+[2026-08-23 16:35:17.652] [INFO ] [pid=14260] [commit] save send filePath=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx
+[2026-08-23 16:35:17.721] [INFO ] [pid=14260] [commit] save ok file_path=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx ms=69
+[2026-08-23 16:35:17.721] [INFO ] [pid=14260] [backend-ops] save ok file_path=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx ms=69
+[2026-08-23 16:35:17.722] [INFO ] [pid=14260] [sync] drain end round=25 reconciles=1 mergedSubmits=1 pendingDirtySize=0 ms=104
+[2026-08-23 16:35:24.152] [INFO ] [pid=14260] [watcher] event=change file=slides\02.slide
+[2026-08-23 16:35:24.665] [INFO ] [pid=14260] [watcher] flush batch dirty=[02] size=1
+[2026-08-23 16:35:24.665] [INFO ] [pid=14260] [sync] submit nextRound=26 dirty=02 pendingDirtySize=1 merged=no
+[2026-08-23 16:35:24.666] [INFO ] [pid=14260] [sync] drain start round=26 pendingDirtySize=1
+[2026-08-23 16:35:24.666] [INFO ] [pid=14260] [sync] step=remove-dirty round=26 attempt=1 pageId=02 index=1
+[2026-08-23 16:35:24.666] [INFO ] [pid=14260] [backend-ops] removeSlideAt start index=1
+[2026-08-23 16:35:24.669] [INFO ] [pid=14260] [mcp] mcp:slide_remove_slide send url=http://127.0.0.1:39103/mcp args={"file_id":"sid_mt5j4qo7_5ljhifxb","page_index":1}
+[2026-08-23 16:35:24.671] [INFO ] [pid=14260] [mcp] mcp:slide_remove_slide ok ms=2
+[2026-08-23 16:35:24.671] [INFO ] [pid=14260] [backend-ops] removeSlideAt ok index=1 serverVersion=31 ms=5
+[2026-08-23 16:35:24.672] [INFO ] [pid=14260] [sync] step=add round=26 attempt=1 pageId=02 index=1
+[2026-08-23 16:35:24.672] [INFO ] [pid=14260] [backend-ops] addSlideAt start pageId=02 index=1
+[2026-08-23 16:35:24.673] [INFO ] [pid=14260] [render] start pageId=02 file=E:\WorkBuddy\Jinx2\中台功能介绍PPT\slides\02.slide
+[2026-08-23 16:35:24.716] [INFO ] [pid=14260] [render] ok pageId=02 slides=1 ms=43
+[2026-08-23 16:35:24.716] [INFO ] [pid=14260] [render] renderSlideData result.resources={ images: {}, videos: {}, audios: {}, fonts: {} }
+[2026-08-23 16:35:24.720] [INFO ] [pid=14260] [commit] commit send pageId=83d6e7 targetIndex=1 version=25 baseVersion=31 revisionBytes=20256
+[2026-08-23 16:35:24.725] [INFO ] [pid=14260] [commit] commit ok pageId=83d6e7 revisionId=96e5be75 ms=5
+[2026-08-23 16:35:24.728] [INFO ] [pid=14260] [backend-ops] addSlideAt ok pageId=02 slideId=83d6e7 index=1 version=25 baseVersion=31 revisionId=96e5be75 code=0 images=[local=0 remote=0 cached=0 failed=0] ms=56
+[2026-08-23 16:35:24.728] [INFO ] [pid=14260] [sync] aligned round=26 attempt=1 size=18 desired=18 pendingDirtySize=0
+[2026-08-23 16:35:24.728] [INFO ] [pid=14260] [sync] reconcile ok round=26 attempt=1 ms=62
+[2026-08-23 16:35:24.729] [INFO ] [pid=14260] [backend-ops] save start file=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx
+[2026-08-23 16:35:24.729] [INFO ] [pid=14260] [commit] save send filePath=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx
+[2026-08-23 16:35:24.813] [INFO ] [pid=14260] [commit] save ok file_path=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx ms=82
+[2026-08-23 16:35:24.813] [INFO ] [pid=14260] [backend-ops] save ok file_path=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx ms=84
+[2026-08-23 16:35:24.813] [INFO ] [pid=14260] [sync] drain end round=26 reconciles=1 mergedSubmits=1 pendingDirtySize=0 ms=147
+[2026-08-23 16:35:28.667] [INFO ] [pid=14260] [watcher] event=change file=slides\03.slide
+[2026-08-23 16:35:29.180] [INFO ] [pid=14260] [watcher] flush batch dirty=[03] size=1
+[2026-08-23 16:35:29.181] [INFO ] [pid=14260] [sync] submit nextRound=27 dirty=03 pendingDirtySize=1 merged=no
+[2026-08-23 16:35:29.181] [INFO ] [pid=14260] [sync] drain start round=27 pendingDirtySize=1
+[2026-08-23 16:35:29.181] [INFO ] [pid=14260] [sync] step=remove-dirty round=27 attempt=1 pageId=03 index=2
+[2026-08-23 16:35:29.182] [INFO ] [pid=14260] [backend-ops] removeSlideAt start index=2
+[2026-08-23 16:35:29.184] [INFO ] [pid=14260] [mcp] mcp:slide_remove_slide send url=http://127.0.0.1:39103/mcp args={"file_id":"sid_mt5j4qo7_5ljhifxb","page_index":2}
+[2026-08-23 16:35:29.185] [INFO ] [pid=14260] [mcp] mcp:slide_remove_slide ok ms=1
+[2026-08-23 16:35:29.186] [INFO ] [pid=14260] [backend-ops] removeSlideAt ok index=2 serverVersion=33 ms=4
+[2026-08-23 16:35:29.186] [INFO ] [pid=14260] [sync] step=add round=27 attempt=1 pageId=03 index=2
+[2026-08-23 16:35:29.187] [INFO ] [pid=14260] [backend-ops] addSlideAt start pageId=03 index=2
+[2026-08-23 16:35:29.187] [INFO ] [pid=14260] [render] start pageId=03 file=E:\WorkBuddy\Jinx2\中台功能介绍PPT\slides\03.slide
+[2026-08-23 16:35:29.195] [INFO ] [pid=14260] [render] ok pageId=03 slides=1 ms=8
+[2026-08-23 16:35:29.195] [INFO ] [pid=14260] [render] renderSlideData result.resources={ images: {}, videos: {}, audios: {}, fonts: {} }
+[2026-08-23 16:35:29.199] [INFO ] [pid=14260] [commit] commit send pageId=d1a957 targetIndex=2 version=26 baseVersion=33 revisionBytes=5004
+[2026-08-23 16:35:29.202] [INFO ] [pid=14260] [commit] commit ok pageId=d1a957 revisionId=69db454d ms=3
+[2026-08-23 16:35:29.203] [INFO ] [pid=14260] [backend-ops] addSlideAt ok pageId=03 slideId=d1a957 index=2 version=26 baseVersion=33 revisionId=69db454d code=0 images=[local=0 remote=0 cached=0 failed=0] ms=16
+[2026-08-23 16:35:29.204] [INFO ] [pid=14260] [sync] aligned round=27 attempt=1 size=18 desired=18 pendingDirtySize=0
+[2026-08-23 16:35:29.204] [INFO ] [pid=14260] [sync] reconcile ok round=27 attempt=1 ms=23
+[2026-08-23 16:35:29.204] [INFO ] [pid=14260] [backend-ops] save start file=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx
+[2026-08-23 16:35:29.204] [INFO ] [pid=14260] [commit] save send filePath=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx
+[2026-08-23 16:35:29.260] [INFO ] [pid=14260] [commit] save ok file_path=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx ms=56
+[2026-08-23 16:35:29.260] [INFO ] [pid=14260] [backend-ops] save ok file_path=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx ms=56
+[2026-08-23 16:35:29.261] [INFO ] [pid=14260] [sync] drain end round=27 reconciles=1 mergedSubmits=1 pendingDirtySize=0 ms=80
+[2026-08-23 16:35:39.307] [INFO ] [pid=14260] [watcher] event=change file=slides\04.slide
+[2026-08-23 16:35:39.822] [INFO ] [pid=14260] [watcher] flush batch dirty=[04] size=1
+[2026-08-23 16:35:39.822] [INFO ] [pid=14260] [sync] submit nextRound=28 dirty=04 pendingDirtySize=1 merged=no
+[2026-08-23 16:35:39.822] [INFO ] [pid=14260] [sync] drain start round=28 pendingDirtySize=1
+[2026-08-23 16:35:39.823] [INFO ] [pid=14260] [sync] step=remove-dirty round=28 attempt=1 pageId=04 index=3
+[2026-08-23 16:35:39.823] [INFO ] [pid=14260] [backend-ops] removeSlideAt start index=3
+[2026-08-23 16:35:39.825] [INFO ] [pid=14260] [mcp] mcp:slide_remove_slide send url=http://127.0.0.1:39103/mcp args={"file_id":"sid_mt5j4qo7_5ljhifxb","page_index":3}
+[2026-08-23 16:35:39.827] [INFO ] [pid=14260] [mcp] mcp:slide_remove_slide ok ms=2
+[2026-08-23 16:35:39.827] [INFO ] [pid=14260] [backend-ops] removeSlideAt ok index=3 serverVersion=35 ms=4
+[2026-08-23 16:35:39.827] [INFO ] [pid=14260] [sync] step=add round=28 attempt=1 pageId=04 index=3
+[2026-08-23 16:35:39.828] [INFO ] [pid=14260] [backend-ops] addSlideAt start pageId=04 index=3
+[2026-08-23 16:35:39.828] [INFO ] [pid=14260] [render] start pageId=04 file=E:\WorkBuddy\Jinx2\中台功能介绍PPT\slides\04.slide
+[2026-08-23 16:35:39.877] [INFO ] [pid=14260] [render] ok pageId=04 slides=1 ms=49
+[2026-08-23 16:35:39.878] [INFO ] [pid=14260] [render] renderSlideData result.resources={
+  images: {
+    'rel:00aq9aho': {
+      id: 'rel:00aq9aho',
+      src: 'E:\\WorkBuddy\\Jinx2\\中台功能介绍PPT\\.cache\\media\\images\\433772540b604714d26cf62eeedcd163.svg'
+    }
+  },
+  videos: {},
+  audios: {},
+  fonts: {}
+}
+[2026-08-23 16:35:39.881] [INFO ] [pid=14260] [commit] commit send pageId=96a241 targetIndex=3 version=27 baseVersion=35 revisionBytes=18044
+[2026-08-23 16:35:39.885] [INFO ] [pid=14260] [commit] commit ok pageId=96a241 revisionId=baa8c8e0 ms=4
+[2026-08-23 16:35:39.887] [INFO ] [pid=14260] [backend-ops] addSlideAt ok pageId=04 slideId=96a241 index=3 version=27 baseVersion=35 revisionId=baa8c8e0 code=0 images=[local=1 remote=0 cached=0 failed=0] ms=59
+[2026-08-23 16:35:39.887] [INFO ] [pid=14260] [sync] aligned round=28 attempt=1 size=18 desired=18 pendingDirtySize=0
+[2026-08-23 16:35:39.888] [INFO ] [pid=14260] [sync] reconcile ok round=28 attempt=1 ms=65
+[2026-08-23 16:35:39.888] [INFO ] [pid=14260] [backend-ops] save start file=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx
+[2026-08-23 16:35:39.888] [INFO ] [pid=14260] [commit] save send filePath=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx
+[2026-08-23 16:35:39.941] [INFO ] [pid=14260] [commit] save ok file_path=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx ms=53
+[2026-08-23 16:35:39.942] [INFO ] [pid=14260] [backend-ops] save ok file_path=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx ms=54
+[2026-08-23 16:35:39.942] [INFO ] [pid=14260] [sync] drain end round=28 reconciles=1 mergedSubmits=1 pendingDirtySize=0 ms=120
+[2026-08-23 16:35:51.838] [INFO ] [pid=14260] [watcher] event=change file=slides\05.slide
+[2026-08-23 16:35:52.351] [INFO ] [pid=14260] [watcher] flush batch dirty=[05] size=1
+[2026-08-23 16:35:52.351] [INFO ] [pid=14260] [sync] submit nextRound=29 dirty=05 pendingDirtySize=1 merged=no
+[2026-08-23 16:35:52.351] [INFO ] [pid=14260] [sync] drain start round=29 pendingDirtySize=1
+[2026-08-23 16:35:52.352] [INFO ] [pid=14260] [sync] step=remove-dirty round=29 attempt=1 pageId=05 index=4
+[2026-08-23 16:35:52.352] [INFO ] [pid=14260] [backend-ops] removeSlideAt start index=4
+[2026-08-23 16:35:52.354] [INFO ] [pid=14260] [mcp] mcp:slide_remove_slide send url=http://127.0.0.1:39103/mcp args={"file_id":"sid_mt5j4qo7_5ljhifxb","page_index":4}
+[2026-08-23 16:35:52.357] [INFO ] [pid=14260] [mcp] mcp:slide_remove_slide ok ms=2
+[2026-08-23 16:35:52.357] [INFO ] [pid=14260] [backend-ops] removeSlideAt ok index=4 serverVersion=37 ms=5
+[2026-08-23 16:35:52.357] [INFO ] [pid=14260] [sync] step=add round=29 attempt=1 pageId=05 index=4
+[2026-08-23 16:35:52.358] [INFO ] [pid=14260] [backend-ops] addSlideAt start pageId=05 index=4
+[2026-08-23 16:35:52.358] [INFO ] [pid=14260] [render] start pageId=05 file=E:\WorkBuddy\Jinx2\中台功能介绍PPT\slides\05.slide
+[2026-08-23 16:35:52.388] [INFO ] [pid=14260] [render] ok pageId=05 slides=1 ms=30
+[2026-08-23 16:35:52.388] [INFO ] [pid=14260] [render] renderSlideData result.resources={
+  images: {
+    'rel:00x98rad': {
+      id: 'rel:00x98rad',
+      src: 'E:\\WorkBuddy\\Jinx2\\中台功能介绍PPT\\.cache\\media\\images\\32ae3ac0e5a1aad8813509a9a3a3c693.svg'
+    }
+  },
+  videos: {},
+  audios: {},
+  fonts: {}
+}
+[2026-08-23 16:35:52.392] [INFO ] [pid=14260] [commit] commit send pageId=0736a2 targetIndex=4 version=28 baseVersion=37 revisionBytes=23408
+[2026-08-23 16:35:52.396] [INFO ] [pid=14260] [commit] commit ok pageId=0736a2 revisionId=f5ac04cf ms=4
+[2026-08-23 16:35:52.398] [INFO ] [pid=14260] [backend-ops] addSlideAt ok pageId=05 slideId=0736a2 index=4 version=28 baseVersion=37 revisionId=f5ac04cf code=0 images=[local=1 remote=0 cached=0 failed=0] ms=40
+[2026-08-23 16:35:52.398] [INFO ] [pid=14260] [sync] aligned round=29 attempt=1 size=18 desired=18 pendingDirtySize=0
+[2026-08-23 16:35:52.398] [INFO ] [pid=14260] [sync] reconcile ok round=29 attempt=1 ms=46
+[2026-08-23 16:35:52.398] [INFO ] [pid=14260] [backend-ops] save start file=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx
+[2026-08-23 16:35:52.399] [INFO ] [pid=14260] [commit] save send filePath=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx
+[2026-08-23 16:35:52.456] [INFO ] [pid=14260] [commit] save ok file_path=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx ms=57
+[2026-08-23 16:35:52.456] [INFO ] [pid=14260] [backend-ops] save ok file_path=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx ms=58
+[2026-08-23 16:35:52.456] [INFO ] [pid=14260] [sync] drain end round=29 reconciles=1 mergedSubmits=1 pendingDirtySize=0 ms=105
+[2026-08-23 16:36:01.376] [INFO ] [pid=14260] [watcher] event=change file=slides\06.slide
+[2026-08-23 16:36:01.892] [INFO ] [pid=14260] [watcher] flush batch dirty=[06] size=1
+[2026-08-23 16:36:01.892] [INFO ] [pid=14260] [sync] submit nextRound=30 dirty=06 pendingDirtySize=1 merged=no
+[2026-08-23 16:36:01.892] [INFO ] [pid=14260] [sync] drain start round=30 pendingDirtySize=1
+[2026-08-23 16:36:01.893] [INFO ] [pid=14260] [sync] step=remove-dirty round=30 attempt=1 pageId=06 index=5
+[2026-08-23 16:36:01.893] [INFO ] [pid=14260] [backend-ops] removeSlideAt start index=5
+[2026-08-23 16:36:01.894] [INFO ] [pid=14260] [mcp] mcp:slide_remove_slide send url=http://127.0.0.1:39103/mcp args={"file_id":"sid_mt5j4qo7_5ljhifxb","page_index":5}
+[2026-08-23 16:36:01.896] [INFO ] [pid=14260] [mcp] mcp:slide_remove_slide ok ms=1
+[2026-08-23 16:36:01.896] [INFO ] [pid=14260] [backend-ops] removeSlideAt ok index=5 serverVersion=39 ms=3
+[2026-08-23 16:36:01.897] [INFO ] [pid=14260] [sync] step=add round=30 attempt=1 pageId=06 index=5
+[2026-08-23 16:36:01.897] [INFO ] [pid=14260] [backend-ops] addSlideAt start pageId=06 index=5
+[2026-08-23 16:36:01.898] [INFO ] [pid=14260] [render] start pageId=06 file=E:\WorkBuddy\Jinx2\中台功能介绍PPT\slides\06.slide
+[2026-08-23 16:36:01.906] [INFO ] [pid=14260] [render] ok pageId=06 slides=1 ms=9
+[2026-08-23 16:36:01.906] [INFO ] [pid=14260] [render] renderSlideData result.resources={ images: {}, videos: {}, audios: {}, fonts: {} }
+[2026-08-23 16:36:01.910] [INFO ] [pid=14260] [commit] commit send pageId=26b926 targetIndex=5 version=29 baseVersion=39 revisionBytes=5036
+[2026-08-23 16:36:01.913] [INFO ] [pid=14260] [commit] commit ok pageId=26b926 revisionId=c75799a1 ms=2
+[2026-08-23 16:36:01.945] [INFO ] [pid=14260] [backend-ops] addSlideAt ok pageId=06 slideId=26b926 index=5 version=29 baseVersion=39 revisionId=c75799a1 code=0 images=[local=0 remote=0 cached=0 failed=0] ms=48
+[2026-08-23 16:36:01.945] [INFO ] [pid=14260] [sync] aligned round=30 attempt=1 size=18 desired=18 pendingDirtySize=0
+[2026-08-23 16:36:01.946] [INFO ] [pid=14260] [sync] reconcile ok round=30 attempt=1 ms=54
+[2026-08-23 16:36:01.946] [INFO ] [pid=14260] [backend-ops] save start file=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx
+[2026-08-23 16:36:01.946] [INFO ] [pid=14260] [commit] save send filePath=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx
+[2026-08-23 16:36:02.001] [INFO ] [pid=14260] [commit] save ok file_path=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx ms=54
+[2026-08-23 16:36:02.001] [INFO ] [pid=14260] [backend-ops] save ok file_path=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx ms=55
+[2026-08-23 16:36:02.001] [INFO ] [pid=14260] [sync] drain end round=30 reconciles=1 mergedSubmits=1 pendingDirtySize=0 ms=109
+[2026-08-23 16:36:06.103] [INFO ] [pid=14260] [watcher] event=change file=slides\12.slide
+[2026-08-23 16:36:06.616] [INFO ] [pid=14260] [watcher] flush batch dirty=[12] size=1
+[2026-08-23 16:36:06.616] [INFO ] [pid=14260] [sync] submit nextRound=31 dirty=12 pendingDirtySize=1 merged=no
+[2026-08-23 16:36:06.616] [INFO ] [pid=14260] [sync] drain start round=31 pendingDirtySize=1
+[2026-08-23 16:36:06.617] [INFO ] [pid=14260] [sync] step=remove-dirty round=31 attempt=1 pageId=12 index=11
+[2026-08-23 16:36:06.617] [INFO ] [pid=14260] [backend-ops] removeSlideAt start index=11
+[2026-08-23 16:36:06.619] [INFO ] [pid=14260] [mcp] mcp:slide_remove_slide send url=http://127.0.0.1:39103/mcp args={"file_id":"sid_mt5j4qo7_5ljhifxb","page_index":11}
+[2026-08-23 16:36:06.621] [INFO ] [pid=14260] [mcp] mcp:slide_remove_slide ok ms=2
+[2026-08-23 16:36:06.621] [INFO ] [pid=14260] [backend-ops] removeSlideAt ok index=11 serverVersion=41 ms=4
+[2026-08-23 16:36:06.621] [INFO ] [pid=14260] [sync] step=add round=31 attempt=1 pageId=12 index=11
+[2026-08-23 16:36:06.622] [INFO ] [pid=14260] [backend-ops] addSlideAt start pageId=12 index=11
+[2026-08-23 16:36:06.622] [INFO ] [pid=14260] [render] start pageId=12 file=E:\WorkBuddy\Jinx2\中台功能介绍PPT\slides\12.slide
+[2026-08-23 16:36:06.630] [INFO ] [pid=14260] [render] ok pageId=12 slides=1 ms=8
+[2026-08-23 16:36:06.631] [INFO ] [pid=14260] [render] renderSlideData result.resources={ images: {}, videos: {}, audios: {}, fonts: {} }
+[2026-08-23 16:36:06.634] [INFO ] [pid=14260] [commit] commit send pageId=a9755f targetIndex=11 version=30 baseVersion=41 revisionBytes=5000
+[2026-08-23 16:36:06.637] [INFO ] [pid=14260] [commit] commit ok pageId=a9755f revisionId=29bae9c0 ms=3
+[2026-08-23 16:36:06.640] [INFO ] [pid=14260] [backend-ops] addSlideAt ok pageId=12 slideId=a9755f index=11 version=30 baseVersion=41 revisionId=29bae9c0 code=0 images=[local=0 remote=0 cached=0 failed=0] ms=18
+[2026-08-23 16:36:06.640] [INFO ] [pid=14260] [sync] aligned round=31 attempt=1 size=18 desired=18 pendingDirtySize=0
+[2026-08-23 16:36:06.640] [INFO ] [pid=14260] [sync] reconcile ok round=31 attempt=1 ms=23
+[2026-08-23 16:36:06.641] [INFO ] [pid=14260] [backend-ops] save start file=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx
+[2026-08-23 16:36:06.641] [INFO ] [pid=14260] [commit] save send filePath=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx
+[2026-08-23 16:36:06.704] [INFO ] [pid=14260] [commit] save ok file_path=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx ms=63
+[2026-08-23 16:36:06.705] [INFO ] [pid=14260] [backend-ops] save ok file_path=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx ms=64
+[2026-08-23 16:36:06.705] [INFO ] [pid=14260] [sync] drain end round=31 reconciles=1 mergedSubmits=1 pendingDirtySize=0 ms=89
+[2026-08-23 16:36:10.673] [INFO ] [pid=14260] [watcher] event=change file=slides\15.slide
+[2026-08-23 16:36:11.176] [INFO ] [pid=14260] [watcher] flush batch dirty=[15] size=1
+[2026-08-23 16:36:11.176] [INFO ] [pid=14260] [sync] submit nextRound=32 dirty=15 pendingDirtySize=1 merged=no
+[2026-08-23 16:36:11.177] [INFO ] [pid=14260] [sync] drain start round=32 pendingDirtySize=1
+[2026-08-23 16:36:11.177] [INFO ] [pid=14260] [sync] step=remove-dirty round=32 attempt=1 pageId=15 index=14
+[2026-08-23 16:36:11.177] [INFO ] [pid=14260] [backend-ops] removeSlideAt start index=14
+[2026-08-23 16:36:11.179] [INFO ] [pid=14260] [mcp] mcp:slide_remove_slide send url=http://127.0.0.1:39103/mcp args={"file_id":"sid_mt5j4qo7_5ljhifxb","page_index":14}
+[2026-08-23 16:36:11.181] [INFO ] [pid=14260] [mcp] mcp:slide_remove_slide ok ms=2
+[2026-08-23 16:36:11.181] [INFO ] [pid=14260] [backend-ops] removeSlideAt ok index=14 serverVersion=43 ms=4
+[2026-08-23 16:36:11.182] [INFO ] [pid=14260] [sync] step=add round=32 attempt=1 pageId=15 index=14
+[2026-08-23 16:36:11.182] [INFO ] [pid=14260] [backend-ops] addSlideAt start pageId=15 index=14
+[2026-08-23 16:36:11.183] [INFO ] [pid=14260] [render] start pageId=15 file=E:\WorkBuddy\Jinx2\中台功能介绍PPT\slides\15.slide
+[2026-08-23 16:36:11.190] [INFO ] [pid=14260] [render] ok pageId=15 slides=1 ms=7
+[2026-08-23 16:36:11.191] [INFO ] [pid=14260] [render] renderSlideData result.resources={ images: {}, videos: {}, audios: {}, fonts: {} }
+[2026-08-23 16:36:11.194] [INFO ] [pid=14260] [commit] commit send pageId=df43b3 targetIndex=14 version=31 baseVersion=43 revisionBytes=5240
+[2026-08-23 16:36:11.197] [INFO ] [pid=14260] [commit] commit ok pageId=df43b3 revisionId=86361943 ms=3
+[2026-08-23 16:36:11.198] [INFO ] [pid=14260] [backend-ops] addSlideAt ok pageId=15 slideId=df43b3 index=14 version=31 baseVersion=43 revisionId=86361943 code=0 images=[local=0 remote=0 cached=0 failed=0] ms=16
+[2026-08-23 16:36:11.199] [INFO ] [pid=14260] [sync] aligned round=32 attempt=1 size=18 desired=18 pendingDirtySize=0
+[2026-08-23 16:36:11.199] [INFO ] [pid=14260] [sync] reconcile ok round=32 attempt=1 ms=22
+[2026-08-23 16:36:11.199] [INFO ] [pid=14260] [backend-ops] save start file=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx
+[2026-08-23 16:36:11.199] [INFO ] [pid=14260] [commit] save send filePath=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx
+[2026-08-23 16:36:11.263] [INFO ] [pid=14260] [commit] save ok file_path=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx ms=63
+[2026-08-23 16:36:11.264] [INFO ] [pid=14260] [backend-ops] save ok file_path=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx ms=65
+[2026-08-23 16:36:11.264] [INFO ] [pid=14260] [sync] drain end round=32 reconciles=1 mergedSubmits=1 pendingDirtySize=0 ms=87
+[2026-08-23 16:36:19.537] [INFO ] [pid=14260] [watcher] event=change file=slides\13.slide
+[2026-08-23 16:36:20.050] [INFO ] [pid=14260] [watcher] flush batch dirty=[13] size=1
+[2026-08-23 16:36:20.051] [INFO ] [pid=14260] [sync] submit nextRound=33 dirty=13 pendingDirtySize=1 merged=no
+[2026-08-23 16:36:20.051] [INFO ] [pid=14260] [sync] drain start round=33 pendingDirtySize=1
+[2026-08-23 16:36:20.051] [INFO ] [pid=14260] [sync] step=remove-dirty round=33 attempt=1 pageId=13 index=12
+[2026-08-23 16:36:20.051] [INFO ] [pid=14260] [backend-ops] removeSlideAt start index=12
+[2026-08-23 16:36:20.053] [INFO ] [pid=14260] [mcp] mcp:slide_remove_slide send url=http://127.0.0.1:39103/mcp args={"file_id":"sid_mt5j4qo7_5ljhifxb","page_index":12}
+[2026-08-23 16:36:20.055] [INFO ] [pid=14260] [mcp] mcp:slide_remove_slide ok ms=1
+[2026-08-23 16:36:20.055] [INFO ] [pid=14260] [backend-ops] removeSlideAt ok index=12 serverVersion=45 ms=4
+[2026-08-23 16:36:20.056] [INFO ] [pid=14260] [sync] step=add round=33 attempt=1 pageId=13 index=12
+[2026-08-23 16:36:20.056] [INFO ] [pid=14260] [backend-ops] addSlideAt start pageId=13 index=12
+[2026-08-23 16:36:20.056] [INFO ] [pid=14260] [render] start pageId=13 file=E:\WorkBuddy\Jinx2\中台功能介绍PPT\slides\13.slide
+[2026-08-23 16:36:20.091] [INFO ] [pid=14260] [render] ok pageId=13 slides=1 ms=35
+[2026-08-23 16:36:20.092] [INFO ] [pid=14260] [render] renderSlideData result.resources={ images: {}, videos: {}, audios: {}, fonts: {} }
+[2026-08-23 16:36:20.095] [INFO ] [pid=14260] [commit] commit send pageId=b58d44 targetIndex=12 version=32 baseVersion=45 revisionBytes=20332
+[2026-08-23 16:36:20.099] [INFO ] [pid=14260] [commit] commit ok pageId=b58d44 revisionId=2ee1fd99 ms=4
+[2026-08-23 16:36:20.101] [INFO ] [pid=14260] [backend-ops] addSlideAt ok pageId=13 slideId=b58d44 index=12 version=32 baseVersion=45 revisionId=2ee1fd99 code=0 images=[local=0 remote=0 cached=0 failed=0] ms=45
+[2026-08-23 16:36:20.102] [INFO ] [pid=14260] [sync] aligned round=33 attempt=1 size=18 desired=18 pendingDirtySize=0
+[2026-08-23 16:36:20.102] [INFO ] [pid=14260] [sync] reconcile ok round=33 attempt=1 ms=51
+[2026-08-23 16:36:20.102] [INFO ] [pid=14260] [backend-ops] save start file=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx
+[2026-08-23 16:36:20.102] [INFO ] [pid=14260] [commit] save send filePath=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx
+[2026-08-23 16:36:20.162] [INFO ] [pid=14260] [commit] save ok file_path=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx ms=60
+[2026-08-23 16:36:20.163] [INFO ] [pid=14260] [backend-ops] save ok file_path=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx ms=61
+[2026-08-23 16:36:20.163] [INFO ] [pid=14260] [sync] drain end round=33 reconciles=1 mergedSubmits=1 pendingDirtySize=0 ms=112
+[2026-08-23 16:36:27.420] [INFO ] [pid=14260] [watcher] event=change file=slides\14.slide
+[2026-08-23 16:36:27.932] [INFO ] [pid=14260] [watcher] flush batch dirty=[14] size=1
+[2026-08-23 16:36:27.932] [INFO ] [pid=14260] [sync] submit nextRound=34 dirty=14 pendingDirtySize=1 merged=no
+[2026-08-23 16:36:27.933] [INFO ] [pid=14260] [sync] drain start round=34 pendingDirtySize=1
+[2026-08-23 16:36:27.933] [INFO ] [pid=14260] [sync] step=remove-dirty round=34 attempt=1 pageId=14 index=13
+[2026-08-23 16:36:27.933] [INFO ] [pid=14260] [backend-ops] removeSlideAt start index=13
+[2026-08-23 16:36:27.935] [INFO ] [pid=14260] [mcp] mcp:slide_remove_slide send url=http://127.0.0.1:39103/mcp args={"file_id":"sid_mt5j4qo7_5ljhifxb","page_index":13}
+[2026-08-23 16:36:27.937] [INFO ] [pid=14260] [mcp] mcp:slide_remove_slide ok ms=2
+[2026-08-23 16:36:27.938] [INFO ] [pid=14260] [backend-ops] removeSlideAt ok index=13 serverVersion=47 ms=5
+[2026-08-23 16:36:27.938] [INFO ] [pid=14260] [sync] step=add round=34 attempt=1 pageId=14 index=13
+[2026-08-23 16:36:27.938] [INFO ] [pid=14260] [backend-ops] addSlideAt start pageId=14 index=13
+[2026-08-23 16:36:27.940] [INFO ] [pid=14260] [render] start pageId=14 file=E:\WorkBuddy\Jinx2\中台功能介绍PPT\slides\14.slide
+[2026-08-23 16:36:27.969] [INFO ] [pid=14260] [render] ok pageId=14 slides=1 ms=30
+[2026-08-23 16:36:27.969] [INFO ] [pid=14260] [render] renderSlideData result.resources={ images: {}, videos: {}, audios: {}, fonts: {} }
+[2026-08-23 16:36:27.972] [INFO ] [pid=14260] [commit] commit send pageId=6c2516 targetIndex=13 version=33 baseVersion=47 revisionBytes=12936
+[2026-08-23 16:36:27.976] [INFO ] [pid=14260] [commit] commit ok pageId=6c2516 revisionId=64ccf113 ms=3
+[2026-08-23 16:36:27.978] [INFO ] [pid=14260] [backend-ops] addSlideAt ok pageId=14 slideId=6c2516 index=13 version=33 baseVersion=47 revisionId=64ccf113 code=0 images=[local=0 remote=0 cached=0 failed=0] ms=40
+[2026-08-23 16:36:27.979] [INFO ] [pid=14260] [sync] aligned round=34 attempt=1 size=18 desired=18 pendingDirtySize=0
+[2026-08-23 16:36:27.979] [INFO ] [pid=14260] [sync] reconcile ok round=34 attempt=1 ms=46
+[2026-08-23 16:36:27.979] [INFO ] [pid=14260] [backend-ops] save start file=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx
+[2026-08-23 16:36:27.980] [INFO ] [pid=14260] [commit] save send filePath=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx
+[2026-08-23 16:36:28.033] [INFO ] [pid=14260] [commit] save ok file_path=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx ms=53
+[2026-08-23 16:36:28.034] [INFO ] [pid=14260] [backend-ops] save ok file_path=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx ms=55
+[2026-08-23 16:36:28.034] [INFO ] [pid=14260] [sync] drain end round=34 reconciles=1 mergedSubmits=1 pendingDirtySize=0 ms=101
+[2026-08-23 16:36:39.888] [INFO ] [pid=14260] [watcher] event=change file=slides\16.slide
+[2026-08-23 16:36:40.400] [INFO ] [pid=14260] [watcher] flush batch dirty=[16] size=1
+[2026-08-23 16:36:40.400] [INFO ] [pid=14260] [sync] submit nextRound=35 dirty=16 pendingDirtySize=1 merged=no
+[2026-08-23 16:36:40.401] [INFO ] [pid=14260] [sync] drain start round=35 pendingDirtySize=1
+[2026-08-23 16:36:40.401] [INFO ] [pid=14260] [sync] step=remove-dirty round=35 attempt=1 pageId=16 index=15
+[2026-08-23 16:36:40.401] [INFO ] [pid=14260] [backend-ops] removeSlideAt start index=15
+[2026-08-23 16:36:40.403] [INFO ] [pid=14260] [mcp] mcp:slide_remove_slide send url=http://127.0.0.1:39103/mcp args={"file_id":"sid_mt5j4qo7_5ljhifxb","page_index":15}
+[2026-08-23 16:36:40.405] [INFO ] [pid=14260] [mcp] mcp:slide_remove_slide ok ms=2
+[2026-08-23 16:36:40.406] [INFO ] [pid=14260] [backend-ops] removeSlideAt ok index=15 serverVersion=49 ms=5
+[2026-08-23 16:36:40.406] [INFO ] [pid=14260] [sync] step=add round=35 attempt=1 pageId=16 index=15
+[2026-08-23 16:36:40.407] [INFO ] [pid=14260] [backend-ops] addSlideAt start pageId=16 index=15
+[2026-08-23 16:36:40.407] [INFO ] [pid=14260] [render] start pageId=16 file=E:\WorkBuddy\Jinx2\中台功能介绍PPT\slides\16.slide
+[2026-08-23 16:36:40.457] [INFO ] [pid=14260] [render] ok pageId=16 slides=1 ms=50
+[2026-08-23 16:36:40.457] [INFO ] [pid=14260] [render] renderSlideData result.resources={
+  images: {
+    'rel:01xbgbnf': {
+      id: 'rel:01xbgbnf',
+      src: 'E:\\WorkBuddy\\Jinx2\\中台功能介绍PPT\\.cache\\media\\images\\8f9e52972383815ca0c8dab26a5d37e3.svg'
+    }
+  },
+  videos: {},
+  audios: {},
+  fonts: {}
+}
+[2026-08-23 16:36:40.460] [INFO ] [pid=14260] [commit] commit send pageId=c61c73 targetIndex=15 version=34 baseVersion=49 revisionBytes=17556
+[2026-08-23 16:36:40.465] [INFO ] [pid=14260] [commit] commit ok pageId=c61c73 revisionId=1adaee07 ms=3
+[2026-08-23 16:36:40.466] [INFO ] [pid=14260] [backend-ops] addSlideAt ok pageId=16 slideId=c61c73 index=15 version=34 baseVersion=49 revisionId=1adaee07 code=0 images=[local=1 remote=0 cached=0 failed=0] ms=59
+[2026-08-23 16:36:40.467] [INFO ] [pid=14260] [sync] aligned round=35 attempt=1 size=18 desired=18 pendingDirtySize=0
+[2026-08-23 16:36:40.467] [INFO ] [pid=14260] [sync] reconcile ok round=35 attempt=1 ms=66
+[2026-08-23 16:36:40.467] [INFO ] [pid=14260] [backend-ops] save start file=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx
+[2026-08-23 16:36:40.467] [INFO ] [pid=14260] [commit] save send filePath=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx
+[2026-08-23 16:36:40.523] [INFO ] [pid=14260] [commit] save ok file_path=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx ms=55
+[2026-08-23 16:36:40.524] [INFO ] [pid=14260] [backend-ops] save ok file_path=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx ms=57
+[2026-08-23 16:36:40.525] [INFO ] [pid=14260] [sync] drain end round=35 reconciles=1 mergedSubmits=1 pendingDirtySize=0 ms=124
+[2026-08-23 16:36:48.224] [INFO ] [pid=14260] [watcher] event=change file=slides\17.slide
+[2026-08-23 16:36:48.725] [INFO ] [pid=14260] [watcher] flush batch dirty=[17] size=1
+[2026-08-23 16:36:48.725] [INFO ] [pid=14260] [sync] submit nextRound=36 dirty=17 pendingDirtySize=1 merged=no
+[2026-08-23 16:36:48.725] [INFO ] [pid=14260] [sync] drain start round=36 pendingDirtySize=1
+[2026-08-23 16:36:48.726] [INFO ] [pid=14260] [sync] step=remove-dirty round=36 attempt=1 pageId=17 index=16
+[2026-08-23 16:36:48.726] [INFO ] [pid=14260] [backend-ops] removeSlideAt start index=16
+[2026-08-23 16:36:48.728] [INFO ] [pid=14260] [mcp] mcp:slide_remove_slide send url=http://127.0.0.1:39103/mcp args={"file_id":"sid_mt5j4qo7_5ljhifxb","page_index":16}
+[2026-08-23 16:36:48.729] [INFO ] [pid=14260] [mcp] mcp:slide_remove_slide ok ms=1
+[2026-08-23 16:36:48.730] [INFO ] [pid=14260] [backend-ops] removeSlideAt ok index=16 serverVersion=51 ms=4
+[2026-08-23 16:36:48.730] [INFO ] [pid=14260] [sync] step=add round=36 attempt=1 pageId=17 index=16
+[2026-08-23 16:36:48.730] [INFO ] [pid=14260] [backend-ops] addSlideAt start pageId=17 index=16
+[2026-08-23 16:36:48.731] [INFO ] [pid=14260] [render] start pageId=17 file=E:\WorkBuddy\Jinx2\中台功能介绍PPT\slides\17.slide
+[2026-08-23 16:36:48.746] [INFO ] [pid=14260] [render] ok pageId=17 slides=1 ms=15
+[2026-08-23 16:36:48.746] [INFO ] [pid=14260] [render] renderSlideData result.resources={
+  images: {
+    'rel:01rwmigp': {
+      id: 'rel:01rwmigp',
+      src: 'E:\\WorkBuddy\\Jinx2\\中台功能介绍PPT\\.cache\\media\\images\\a64b8ba95af3195ca286aa70a8b4985d.svg'
+    }
+  },
+  videos: {},
+  audios: {},
+  fonts: {}
+}
+[2026-08-23 16:36:48.749] [INFO ] [pid=14260] [commit] commit send pageId=3a3159 targetIndex=16 version=35 baseVersion=51 revisionBytes=11480
+[2026-08-23 16:36:48.753] [INFO ] [pid=14260] [commit] commit ok pageId=3a3159 revisionId=98aefd78 ms=4
+[2026-08-23 16:36:48.755] [INFO ] [pid=14260] [backend-ops] addSlideAt ok pageId=17 slideId=3a3159 index=16 version=35 baseVersion=51 revisionId=98aefd78 code=0 images=[local=1 remote=0 cached=0 failed=0] ms=25
+[2026-08-23 16:36:48.756] [INFO ] [pid=14260] [sync] aligned round=36 attempt=1 size=18 desired=18 pendingDirtySize=0
+[2026-08-23 16:36:48.756] [INFO ] [pid=14260] [sync] reconcile ok round=36 attempt=1 ms=30
+[2026-08-23 16:36:48.757] [INFO ] [pid=14260] [backend-ops] save start file=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx
+[2026-08-23 16:36:48.757] [INFO ] [pid=14260] [commit] save send filePath=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx
+[2026-08-23 16:36:48.815] [INFO ] [pid=14260] [commit] save ok file_path=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx ms=58
+[2026-08-23 16:36:48.815] [INFO ] [pid=14260] [backend-ops] save ok file_path=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx ms=58
+[2026-08-23 16:36:48.815] [INFO ] [pid=14260] [sync] drain end round=36 reconciles=1 mergedSubmits=1 pendingDirtySize=0 ms=90
+[2026-08-23 16:36:53.385] [INFO ] [pid=14260] [watcher] event=change file=slides\18.slide
+[2026-08-23 16:36:53.899] [INFO ] [pid=14260] [watcher] flush batch dirty=[18] size=1
+[2026-08-23 16:36:53.900] [INFO ] [pid=14260] [sync] submit nextRound=37 dirty=18 pendingDirtySize=1 merged=no
+[2026-08-23 16:36:53.900] [INFO ] [pid=14260] [sync] drain start round=37 pendingDirtySize=1
+[2026-08-23 16:36:53.901] [INFO ] [pid=14260] [sync] step=remove-dirty round=37 attempt=1 pageId=18 index=17
+[2026-08-23 16:36:53.901] [INFO ] [pid=14260] [backend-ops] removeSlideAt start index=17
+[2026-08-23 16:36:53.903] [INFO ] [pid=14260] [mcp] mcp:slide_remove_slide send url=http://127.0.0.1:39103/mcp args={"file_id":"sid_mt5j4qo7_5ljhifxb","page_index":17}
+[2026-08-23 16:36:53.905] [INFO ] [pid=14260] [mcp] mcp:slide_remove_slide ok ms=2
+[2026-08-23 16:36:53.905] [INFO ] [pid=14260] [backend-ops] removeSlideAt ok index=17 serverVersion=53 ms=4
+[2026-08-23 16:36:53.906] [INFO ] [pid=14260] [sync] step=add round=37 attempt=1 pageId=18 index=17
+[2026-08-23 16:36:53.906] [INFO ] [pid=14260] [backend-ops] addSlideAt start pageId=18 index=17
+[2026-08-23 16:36:53.906] [INFO ] [pid=14260] [render] start pageId=18 file=E:\WorkBuddy\Jinx2\中台功能介绍PPT\slides\18.slide
+[2026-08-23 16:36:53.915] [INFO ] [pid=14260] [render] ok pageId=18 slides=1 ms=9
+[2026-08-23 16:36:53.916] [INFO ] [pid=14260] [render] renderSlideData result.resources={ images: {}, videos: {}, audios: {}, fonts: {} }
+[2026-08-23 16:36:53.918] [INFO ] [pid=14260] [commit] commit send pageId=a5ba23 targetIndex=17 version=36 baseVersion=53 revisionBytes=5868
+[2026-08-23 16:36:53.921] [INFO ] [pid=14260] [commit] commit ok pageId=a5ba23 revisionId=c58106a1 ms=2
+[2026-08-23 16:36:53.922] [INFO ] [pid=14260] [backend-ops] addSlideAt ok pageId=18 slideId=a5ba23 index=17 version=36 baseVersion=53 revisionId=c58106a1 code=0 images=[local=0 remote=0 cached=0 failed=0] ms=16
+[2026-08-23 16:36:53.923] [INFO ] [pid=14260] [sync] aligned round=37 attempt=1 size=18 desired=18 pendingDirtySize=0
+[2026-08-23 16:36:53.923] [INFO ] [pid=14260] [sync] reconcile ok round=37 attempt=1 ms=23
+[2026-08-23 16:36:53.923] [INFO ] [pid=14260] [backend-ops] save start file=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx
+[2026-08-23 16:36:53.924] [INFO ] [pid=14260] [commit] save send filePath=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx
+[2026-08-23 16:36:53.979] [INFO ] [pid=14260] [commit] save ok file_path=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx ms=54
+[2026-08-23 16:36:53.979] [INFO ] [pid=14260] [backend-ops] save ok file_path=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx ms=56
+[2026-08-23 16:36:53.979] [INFO ] [pid=14260] [sync] drain end round=37 reconciles=1 mergedSubmits=1 pendingDirtySize=0 ms=79
+[2026-08-23 17:02:57.682] [INFO ] [pid=14260] [watcher] event=change file=slides\07.slide
+[2026-08-23 17:02:58.195] [INFO ] [pid=14260] [watcher] flush batch dirty=[07] size=1
+[2026-08-23 17:02:58.195] [INFO ] [pid=14260] [sync] submit nextRound=38 dirty=07 pendingDirtySize=1 merged=no
+[2026-08-23 17:02:58.195] [INFO ] [pid=14260] [sync] drain start round=38 pendingDirtySize=1
+[2026-08-23 17:02:58.196] [INFO ] [pid=14260] [sync] step=remove-dirty round=38 attempt=1 pageId=07 index=6
+[2026-08-23 17:02:58.196] [INFO ] [pid=14260] [backend-ops] removeSlideAt start index=6
+[2026-08-23 17:02:58.198] [INFO ] [pid=14260] [mcp] mcp:slide_remove_slide send url=http://127.0.0.1:39103/mcp args={"file_id":"sid_mt5j4qo7_5ljhifxb","page_index":6}
+[2026-08-23 17:02:58.200] [INFO ] [pid=14260] [mcp] mcp:slide_remove_slide ok ms=1
+[2026-08-23 17:02:58.201] [INFO ] [pid=14260] [backend-ops] removeSlideAt ok index=6 serverVersion=55 ms=5
+[2026-08-23 17:02:58.201] [INFO ] [pid=14260] [sync] step=add round=38 attempt=1 pageId=07 index=6
+[2026-08-23 17:02:58.201] [INFO ] [pid=14260] [backend-ops] addSlideAt start pageId=07 index=6
+[2026-08-23 17:02:58.202] [INFO ] [pid=14260] [render] start pageId=07 file=E:\WorkBuddy\Jinx2\中台功能介绍PPT\slides\07.slide
+[2026-08-23 17:02:58.288] [INFO ] [pid=14260] [render] ok pageId=07 slides=1 ms=86
+[2026-08-23 17:02:58.288] [INFO ] [pid=14260] [render] renderSlideData result.resources={
+  images: {
+    'rel:005x578f': {
+      id: 'rel:005x578f',
+      src: 'E:\\WorkBuddy\\Jinx2\\中台功能介绍PPT\\.cache\\media\\images\\e6f4e4f53e0b2889900af4ccee8a5cbf.svg'
+    },
+    'rel:00ucpqn6': {
+      id: 'rel:00ucpqn6',
+      src: 'E:\\WorkBuddy\\Jinx2\\中台功能介绍PPT\\.cache\\media\\images\\2c7fcba171c3229fcc87ec134224ade9.svg'
+    },
+    'rel:01byr8q0': {
+      id: 'rel:01byr8q0',
+      src: 'E:\\WorkBuddy\\Jinx2\\中台功能介绍PPT\\.cache\\media\\images\\0595c6d97dd62c7b67673bc4a6b5e8ab.svg'
+    },
+    'rel:00zu3auy': {
+      id: 'rel:00zu3auy',
+      src: 'E:\\WorkBuddy\\Jinx2\\中台功能介绍PPT\\.cache\\media\\images\\fa18be93c7d9105352a71cb29ae85136.svg'
+    },
+    'rel:01dsqp6t': {
+      id: 'rel:01dsqp6t',
+      src: 'E:\\WorkBuddy\\Jinx2\\中台功能介绍PPT\\.cache\\media\\images\\a678c9f840cb78d2e7e621cfe6682ee1.svg'
+    },
+    'rel:01ovz1io': {
+      id: 'rel:01ovz1io',
+      src: 'E:\\WorkBuddy\\Jinx2\\中台功能介绍PPT\\.cache\\media\\images\\d263efa24fb07dbcf50c9fdde05b19f6.svg'
+    },
+    'rel:017hbfnw': {
+      id: 'rel:017hbfnw',
+      src: 'E:\\WorkBuddy\\Jinx2\\中台功能介绍PPT\\.cache\\media\\images\\741e4ca7826073b3aec2bd09caf6d40c.svg'
+    },
+    'rel:01y7dxhj': {
+      id: 'rel:01y7dxhj',
+      src: 'E:\\WorkBuddy\\Jinx2\\中台功能介绍PPT\\.cache\\media\\images\\d1610e3e71568d5d0770872f1db60321.svg'
+    },
+    'rel:016bua2k': {
+      id: 'rel:016bua2k',
+      src: 'E:\\WorkBuddy\\Jinx2\\中台功能介绍PPT\\.cache\\media\\images\\6e75b431d74baa0fbd4054571a3da67d.svg'
+    }
+  },
+  videos: {},
+  audios: {},
+  fonts: {}
+}
+[2026-08-23 17:02:58.296] [INFO ] [pid=14260] [commit] commit send pageId=da5232 targetIndex=6 version=37 baseVersion=55 revisionBytes=42836
+[2026-08-23 17:02:58.307] [INFO ] [pid=14260] [commit] commit ok pageId=da5232 revisionId=01aae3bb ms=11
+[2026-08-23 17:02:58.309] [INFO ] [pid=14260] [backend-ops] addSlideAt ok pageId=07 slideId=da5232 index=6 version=37 baseVersion=55 revisionId=01aae3bb code=0 images=[local=9 remote=0 cached=0 failed=0] ms=108
+[2026-08-23 17:02:58.309] [INFO ] [pid=14260] [sync] aligned round=38 attempt=1 size=18 desired=18 pendingDirtySize=0
+[2026-08-23 17:02:58.310] [INFO ] [pid=14260] [sync] reconcile ok round=38 attempt=1 ms=115
+[2026-08-23 17:02:58.310] [INFO ] [pid=14260] [backend-ops] save start file=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx
+[2026-08-23 17:02:58.310] [INFO ] [pid=14260] [commit] save send filePath=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx
+[2026-08-23 17:02:58.363] [INFO ] [pid=14260] [commit] save ok file_path=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx ms=53
+[2026-08-23 17:02:58.363] [INFO ] [pid=14260] [backend-ops] save ok file_path=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx ms=53
+[2026-08-23 17:02:58.363] [INFO ] [pid=14260] [sync] drain end round=38 reconciles=1 mergedSubmits=1 pendingDirtySize=0 ms=168
+[2026-08-23 17:03:00.723] [INFO ] [pid=14260] [watcher] event=change file=slides\07.slide
+[2026-08-23 17:03:01.223] [INFO ] [pid=14260] [watcher] flush batch dirty=[07] size=1
+[2026-08-23 17:03:01.224] [INFO ] [pid=14260] [sync] submit nextRound=39 dirty=07 pendingDirtySize=1 merged=no
+[2026-08-23 17:03:01.224] [INFO ] [pid=14260] [sync] drain start round=39 pendingDirtySize=1
+[2026-08-23 17:03:01.224] [INFO ] [pid=14260] [sync] step=remove-dirty round=39 attempt=1 pageId=07 index=6
+[2026-08-23 17:03:01.224] [INFO ] [pid=14260] [backend-ops] removeSlideAt start index=6
+[2026-08-23 17:03:01.226] [INFO ] [pid=14260] [mcp] mcp:slide_remove_slide send url=http://127.0.0.1:39103/mcp args={"file_id":"sid_mt5j4qo7_5ljhifxb","page_index":6}
+[2026-08-23 17:03:01.228] [INFO ] [pid=14260] [mcp] mcp:slide_remove_slide ok ms=1
+[2026-08-23 17:03:01.228] [INFO ] [pid=14260] [backend-ops] removeSlideAt ok index=6 serverVersion=57 ms=4
+[2026-08-23 17:03:01.229] [INFO ] [pid=14260] [sync] step=add round=39 attempt=1 pageId=07 index=6
+[2026-08-23 17:03:01.229] [INFO ] [pid=14260] [backend-ops] addSlideAt start pageId=07 index=6
+[2026-08-23 17:03:01.229] [INFO ] [pid=14260] [render] start pageId=07 file=E:\WorkBuddy\Jinx2\中台功能介绍PPT\slides\07.slide
+[2026-08-23 17:03:01.327] [INFO ] [pid=14260] [render] ok pageId=07 slides=1 ms=98
+[2026-08-23 17:03:01.328] [INFO ] [pid=14260] [render] renderSlideData result.resources={
+  images: {
+    'rel:005x578f': {
+      id: 'rel:005x578f',
+      src: 'E:\\WorkBuddy\\Jinx2\\中台功能介绍PPT\\.cache\\media\\images\\e6f4e4f53e0b2889900af4ccee8a5cbf.svg'
+    },
+    'rel:00ucpqn6': {
+      id: 'rel:00ucpqn6',
+      src: 'E:\\WorkBuddy\\Jinx2\\中台功能介绍PPT\\.cache\\media\\images\\2c7fcba171c3229fcc87ec134224ade9.svg'
+    },
+    'rel:01byr8q0': {
+      id: 'rel:01byr8q0',
+      src: 'E:\\WorkBuddy\\Jinx2\\中台功能介绍PPT\\.cache\\media\\images\\0595c6d97dd62c7b67673bc4a6b5e8ab.svg'
+    },
+    'rel:00zu3auy': {
+      id: 'rel:00zu3auy',
+      src: 'E:\\WorkBuddy\\Jinx2\\中台功能介绍PPT\\.cache\\media\\images\\fa18be93c7d9105352a71cb29ae85136.svg'
+    },
+    'rel:01dsqp6t': {
+      id: 'rel:01dsqp6t',
+      src: 'E:\\WorkBuddy\\Jinx2\\中台功能介绍PPT\\.cache\\media\\images\\a678c9f840cb78d2e7e621cfe6682ee1.svg'
+    },
+    'rel:01ovz1io': {
+      id: 'rel:01ovz1io',
+      src: 'E:\\WorkBuddy\\Jinx2\\中台功能介绍PPT\\.cache\\media\\images\\d263efa24fb07dbcf50c9fdde05b19f6.svg'
+    },
+    'rel:017hbfnw': {
+      id: 'rel:017hbfnw',
+      src: 'E:\\WorkBuddy\\Jinx2\\中台功能介绍PPT\\.cache\\media\\images\\741e4ca7826073b3aec2bd09caf6d40c.svg'
+    },
+    'rel:01y7dxhj': {
+      id: 'rel:01y7dxhj',
+      src: 'E:\\WorkBuddy\\Jinx2\\中台功能介绍PPT\\.cache\\media\\images\\d1610e3e71568d5d0770872f1db60321.svg'
+    },
+    'rel:016bua2k': {
+      id: 'rel:016bua2k',
+      src: 'E:\\WorkBuddy\\Jinx2\\中台功能介绍PPT\\.cache\\media\\images\\6e75b431d74baa0fbd4054571a3da67d.svg'
+    },
+    'rel:016yeo4y': {
+      id: 'rel:016yeo4y',
+      src: 'E:\\WorkBuddy\\Jinx2\\中台功能介绍PPT\\.cache\\media\\images\\5ce044693de4e91f1b8d8fd3fd6a3fe6.svg'
+    }
+  },
+  videos: {},
+  audios: {},
+  fonts: {}
+}
+[2026-08-23 17:03:01.333] [INFO ] [pid=14260] [commit] commit send pageId=e0964d targetIndex=6 version=38 baseVersion=57 revisionBytes=46828
+[2026-08-23 17:03:01.343] [INFO ] [pid=14260] [commit] commit ok pageId=e0964d revisionId=e89b862f ms=10
+[2026-08-23 17:03:01.344] [INFO ] [pid=14260] [backend-ops] addSlideAt ok pageId=07 slideId=e0964d index=6 version=38 baseVersion=57 revisionId=e89b862f code=0 images=[local=10 remote=0 cached=0 failed=0] ms=115
+[2026-08-23 17:03:01.345] [INFO ] [pid=14260] [sync] aligned round=39 attempt=1 size=18 desired=18 pendingDirtySize=0
+[2026-08-23 17:03:01.345] [INFO ] [pid=14260] [sync] reconcile ok round=39 attempt=1 ms=121
+[2026-08-23 17:03:01.345] [INFO ] [pid=14260] [backend-ops] save start file=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx
+[2026-08-23 17:03:01.345] [INFO ] [pid=14260] [commit] save send filePath=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx
+[2026-08-23 17:03:01.400] [INFO ] [pid=14260] [commit] save ok file_path=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx ms=55
+[2026-08-23 17:03:01.400] [INFO ] [pid=14260] [backend-ops] save ok file_path=E:\WorkBuddy\Jinx2\中台功能介绍PPT\瓦电赛事运营中台功能介绍.pptx ms=55
+[2026-08-23 17:03:01.400] [INFO ] [pid=14260] [sync] drain end round=39 reconciles=1 mergedSubmits=1 pendingDirtySize=0 ms=176

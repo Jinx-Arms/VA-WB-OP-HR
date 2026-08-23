@@ -1,0 +1,12 @@
+=== boot pid=69916 ts=2026-08-23 16:15:59.249 cwd=e:\WorkBuddy\Jinx2 argv=C:\Users\Administrator\.workbuddy\binaries\node\versions\22.22.2\node_modules\@tencent\slidep\dist\slidep-validate.js --all --project E:/WorkBuddy/Jinx2/中台功能介绍PPT ===
+[2026-08-23 16:15:59.248] [INFO ] [pid=69916] [validate] --all mode: found 18 files in E:\WorkBuddy\Jinx2\中台功能介绍PPT\slides
+[2026-08-23 16:15:59.267] [INFO ] [pid=69916] [validate] batch start files=18 checkOverflow=true
+[2026-08-23 16:16:01.440] [INFO ] [pid=69916] [validate] batch done total=18 passed=18 failed=0 ms=2193
+=== boot pid=56428 ts=2026-08-23 16:36:57.421 cwd=e:\WorkBuddy\Jinx2 argv=C:\Users\Administrator\.workbuddy\binaries\node\versions\22.22.2\node_modules\@tencent\slidep\dist\slidep-validate.js --all --project E:/WorkBuddy/Jinx2/中台功能介绍PPT ===
+[2026-08-23 16:36:57.420] [INFO ] [pid=56428] [validate] --all mode: found 18 files in E:\WorkBuddy\Jinx2\中台功能介绍PPT\slides
+[2026-08-23 16:36:57.422] [INFO ] [pid=56428] [validate] batch start files=18 checkOverflow=true
+[2026-08-23 16:36:59.397] [INFO ] [pid=56428] [validate] batch done total=18 passed=18 failed=0 ms=1977
+=== boot pid=52820 ts=2026-08-23 17:03:06.742 cwd=e:\WorkBuddy\Jinx2 argv=C:\Users\Administrator\.workbuddy\binaries\node\versions\22.22.2\node_modules\@tencent\slidep\dist\slidep-validate.js --all --project E:/WorkBuddy/Jinx2/中台功能介绍PPT ===
+[2026-08-23 17:03:06.741] [INFO ] [pid=52820] [validate] --all mode: found 18 files in E:\WorkBuddy\Jinx2\中台功能介绍PPT\slides
+[2026-08-23 17:03:06.745] [INFO ] [pid=52820] [validate] batch start files=18 checkOverflow=true
+[2026-08-23 17:03:08.800] [INFO ] [pid=52820] [validate] batch done total=18 passed=18 failed=0 ms=2059

@@ -1,0 +1,30 @@
+<Slide style={{ width: '1280px', height: '720px', background: '#120A0B', padding: '40px 64px' }}>
+  <Box style={{ height: 80, justifyContent: 'flex-end', borderBottom: '2px solid rgba(253,38,89,0.4)' }}>
+    <Text style={{ fontSize: 34, color: '#F0E8E8', fontWeight: 700 }}>扩展路线图</Text>
+  </Box>
+  <Box style={{ flexDirection: 'row', gap: 44, marginTop: 26, height: 520 }}>
+    {/* 左 32%：标题 */}
+    <Box style={{ width: '32%', justifyContent: 'center' }}>
+      <Text style={{ fontSize: 22, color: '#FD2659', fontWeight: 'bold', letterSpacing: 2 }}>ROADMAP</Text>
+      <Text style={{ fontSize: 38, color: '#F0E8E8', fontWeight: 800, marginTop: 12, lineHeight: 1.2 }}>下一步<br />往哪走</Text>
+      <Box style={{ width: 70, height: 4, background: '#DC3030', marginTop: 20, borderRadius: 2 }} />
+      <Text style={{ fontSize: 16, color: '#B0A0A0', marginTop: 20, lineHeight: 1.6 }}>分三阶段推进，<br />每阶段都有可交付成果。</Text>
+    </Box>
+    {/* 右 68%：时间轴 */}
+    <Box style={{ width: '68%', justifyContent: 'center' }}>
+      <svg width={640} height={400} viewBox='0 0 640 400'>
+        <line x1='60' y1='120' x2='600' y2='120' stroke='#DC3030' strokeWidth='3' />
+        {[['近期','私有云部署\n数据内网化',120,'#DC3030'],['中期','AI 文案多样化\n完赛记录修复',310,'#FD2659'],['远期','多赛事扩展\n开放 API',500,'#49FFD3']].map((p,i)=>(
+          <g key={i}>
+            <circle cx={p[2]} cy='120' r='14' fill={p[3]} />
+            <text x={p[2]} y='80' fill={p[3]} fontSize='18' fontWeight='bold' textAnchor='middle'>{p[0]}</text>
+            <rect x={p[2]-95} y='160' width='190' height='150' rx='10' fill='#1A0D0E' stroke={p[3]} strokeWidth='1.5' />
+            {p[1].split('\n').map((ln,j)=>(<text key={j} x={p[2]} y={200+j*34} fill='#F0E8E8' fontSize='15' textAnchor='middle'>{ln}</text>))}
+          </g>
+        ))}
+      </svg>
+    </Box>
+  </Box>
+  <Box style={{ position: 'absolute', bottom: 20, left: 64, fontSize: 14, color: '#7B7F7D' }}>瓦电赛事运营中台</Box>
+  <Box style={{ position: 'absolute', bottom: 20, right: 64, fontSize: 14, color: '#7B7F7D' }}>17 / 18</Box>
+</Slide>

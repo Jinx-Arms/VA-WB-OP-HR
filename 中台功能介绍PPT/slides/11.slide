@@ -1,0 +1,38 @@
+<Slide style={{ width: '1280px', height: '720px', background: '#120A0B', padding: '40px 64px' }}>
+  <Box style={{ height: 80, justifyContent: 'flex-end', borderBottom: '2px solid rgba(220,48,48,0.3)' }}>
+    <Text style={{ fontSize: 34, color: '#F0E8E8', fontWeight: 700 }}>赛况战报</Text>
+  </Box>
+  <Box style={{ flexDirection: 'row', gap: 44, marginTop: 26, height: 520 }}>
+    {/* 左 42%：要点 */}
+    <Box style={{ width: '42%', justifyContent: 'center', gap: 14 }}>
+      <Text style={{ fontSize: 21, color: '#F0E8E8', fontWeight: 700 }}>拉数据，出文案</Text>
+      {[
+        { t: '三联赛覆盖', d: 'EMEA / Americas / Pacific 海外赛区事件页抓取，专注非 CN 战场' },
+        { t: '固定模板', d: '赛果 / 声明 / 分组名单 / 进度段 / 后续预告 五锚点结构化' },
+        { t: '北京时间', d: 'PDT 等赛区时间自动换算 +8，自动处理跨日场次' },
+        { t: '一键复制', d: '生成 Markdown 直发社媒，不落库、不改源数据，安全可逆' },
+      ].map((it, i) => (
+        <Box key={i} style={{ background: 'rgba(220,48,48,0.08)', borderRadius: 10, padding: '11px 16px', borderLeft: '3px solid #FD2659' }}>
+          <Text style={{ fontSize: 17, color: '#F0E8E8', fontWeight: 600 }}>{it.t}</Text>
+          <Text style={{ fontSize: 14, color: '#B0A0A0', marginTop: 2, lineHeight: 1.4 }}>{it.d}</Text>
+        </Box>
+      ))}
+    </Box>
+    {/* 右 58%：流程 SVG */}
+    <Box style={{ width: '58%', justifyContent: 'center', alignItems: 'center', background: 'rgba(220,48,48,0.06)', borderRadius: 16 }}>
+      <svg width={540} height={400} viewBox='0 0 540 400'>
+        {[['VLR 事件页','抓取赛果',90],['队名归一化','简称映射',230],['固定模板渲染','5锚点',370],['Markdown 复制','社媒直发',510]].map((s,i)=>(
+          <g key={i}>
+            <rect x='40' y={s[2]-30} width='150' height='60' rx='10' fill='#1A0D0E' stroke='#DC3030' strokeWidth='1.5' />
+            <text x='115' y={s[2]-4} fill='#F0E8E8' fontSize='14' fontWeight='bold' textAnchor='middle'>{s[0]}</text>
+            <text x='115' y={s[2]+16} fill='#B0A0A0' fontSize='12' textAnchor='middle'>{s[1]}</text>
+            {i<3 && <g><line x1='190' y1={s[2]} x2='220' y2={s[2]} stroke='#FD2659' strokeWidth='3' /><polygon points='220,{s[2]-6} 232,{s[2]} 220,{s[2]+6}' fill='#FD2659' /></g>}
+          </g>
+        ))}
+        <text x='270' y='40' fill='#B0A0A0' fontSize='14'>战报生成流水线</text>
+      </svg>
+    </Box>
+  </Box>
+  <Box style={{ position: 'absolute', bottom: 20, left: 64, fontSize: 14, color: '#7B7F7D' }}>瓦电赛事运营中台</Box>
+  <Box style={{ position: 'absolute', bottom: 20, right: 64, fontSize: 14, color: '#7B7F7D' }}>11 / 18</Box>
+</Slide>

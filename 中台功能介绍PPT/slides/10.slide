@@ -1,0 +1,50 @@
+<Slide style={{ width: '1280px', height: '720px', background: '#120A0B', padding: '40px 64px' }}>
+  <Box style={{ height: 80, justifyContent: 'flex-end', borderBottom: '2px solid rgba(220,48,48,0.3)' }}>
+    <Text style={{ fontSize: 34, color: '#F0E8E8', fontWeight: 700 }}>图形工厂</Text>
+  </Box>
+  <Box style={{ flexDirection: 'row', gap: 44, marginTop: 26, height: 520 }}>
+    {/* 左 55%：出图示意 */}
+    <Box style={{ width: '55%', justifyContent: 'center', alignItems: 'center', background: 'rgba(220,48,48,0.06)', borderRadius: 16 }}>
+      <svg width={470} height={380} viewBox='0 0 470 380'>
+        {/* 底图 */}
+        <rect x='20' y='40' width='200' height='300' rx='10' fill='#1A0D0E' stroke='#DC3030' strokeWidth='1.5' />
+        <text x='120' y='70' fill='#B0A0A0' fontSize='13' textAnchor='middle'>底图（皮肤）</text>
+        <rect x='40' y='200' width='160' height='110' rx='6' fill='#DC3030' opacity='0.25' />
+        <text x='120' y='260' fill='#F0E8E8' fontSize='13' textAnchor='middle'>品牌色装饰</text>
+        {/* 箭头 */}
+        <line x1='230' y1='190' x2='280' y2='190' stroke='#FD2659' strokeWidth='3' />
+        <polygon points='280,184 295,190 280,196' fill='#FD2659' />
+        {/* 成品 */}
+        <rect x='300' y='40' width='150' height='300' rx='10' fill='#120A0B' stroke='#FD2659' strokeWidth='1.5' />
+        <text x='375' y='70' fill='#FD2659' fontSize='13' textAnchor='middle'>成品图</text>
+        <circle cx='340' cy='120' r='18' fill='#DC3030' />
+        <circle cx='410' cy='120' r='18' fill='#FD2659' />
+        <text x='375' y='180' fill='#F0E8E8' fontSize='14' textAnchor='middle' fontWeight='bold'>EDG vs TE</text>
+        <text x='375' y='204' fill='#B0A0A0' fontSize='12' textAnchor='middle'>今日 18:00</text>
+        <rect x='320' y='230' width='110' height='24' rx='4' fill='#DC3030' opacity='0.4' />
+        <rect x='320' y='264' width='110' height='24' rx='4' fill='#FD2659' opacity='0.4' />
+        <text x='375' y='320' fill='#B0A0A0' fontSize='11' textAnchor='middle'>中英双图 + zip</text>
+      </svg>
+    </Box>
+    {/* 右 45%：要点 */}
+    <Box style={{ width: '45%', justifyContent: 'center', gap: 14 }}>
+      <Text style={{ fontSize: 21, color: '#F0E8E8', fontWeight: 700, lineHeight: 1.5 }}>底图驱动出图</Text>
+      {[
+        { t: '可视化编辑', d: '拖拽槽位对齐 + 表单微调文案/配色，改完即所见即所得导出' },
+        { t: '多图种模板', d: '今日预告 / 解说海报 / 首发阵容三套模板一键套用' },
+        { t: '双语 + 批量', d: '中英双版本同出，按日期批量生成并打包 zip 下载' },
+        { t: '素材后台', d: '管理员统一录入队徽、选手头像、教练与解说图，供全模块调用' },
+      ].map((it, i) => (
+        <Box key={i} style={{ flexDirection: 'row', gap: 14, alignItems: 'flex-start' }}>
+          <FAIcon name='image' style={{ fill: '#FD2659', width: 24, height: 24, marginTop: 2 }} />
+          <Box>
+            <Text style={{ fontSize: 17, color: '#F0E8E8', fontWeight: 600 }}>{it.t}</Text>
+            <Text style={{ fontSize: 14, color: '#B0A0A0', marginTop: 2, lineHeight: 1.4 }}>{it.d}</Text>
+          </Box>
+        </Box>
+      ))}
+    </Box>
+  </Box>
+  <Box style={{ position: 'absolute', bottom: 20, left: 64, fontSize: 14, color: '#7B7F7D' }}>瓦电赛事运营中台</Box>
+  <Box style={{ position: 'absolute', bottom: 20, right: 64, fontSize: 14, color: '#7B7F7D' }}>10 / 18</Box>
+</Slide>

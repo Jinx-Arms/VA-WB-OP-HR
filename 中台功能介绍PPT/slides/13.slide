@@ -1,0 +1,32 @@
+<Slide style={{ width: '1280px', height: '720px', background: '#120A0B', padding: '40px 64px' }}>
+  <Box style={{ height: 80, justifyContent: 'flex-end', borderBottom: '2px solid rgba(253,38,89,0.4)' }}>
+    <Text style={{ fontSize: 34, color: '#F0E8E8', fontWeight: 700 }}>三大开发教训</Text>
+  </Box>
+  <Box style={{ flexDirection: 'row', gap: 40, marginTop: 28, height: 520 }}>
+    {/* 左 30%：标题 */}
+    <Box style={{ width: '30%', justifyContent: 'center' }}>
+      <Text style={{ fontSize: 22, color: '#FD2659', fontWeight: 'bold', letterSpacing: 2 }}>LESSONS</Text>
+      <Text style={{ fontSize: 40, color: '#F0E8E8', fontWeight: 800, marginTop: 12, lineHeight: 1.2 }}>踩坑<br />才长记性</Text>
+      <Box style={{ width: 70, height: 4, background: '#DC3030', marginTop: 20, borderRadius: 2 }} />
+      <Text style={{ fontSize: 16, color: '#B0A0A0', marginTop: 20, lineHeight: 1.6 }}>这些纪律已写进代码与项目记忆，避免重蹈。</Text>
+    </Box>
+    {/* 右 70%：三要点卡（竖排非对称） */}
+    <Box style={{ width: '70%', justifyContent: 'space-between' }}>
+      {[
+        { n: '01', t: '白屏防御', d: 'renderView() 必须 try/catch 兜底——任一视图同步抛错会清空整页控件。改为 toast 报错，而非静默白屏。', c: '#DC3030' },
+        { n: '02', t: '数据源会失效', d: 'VLR 改版导致旧 class 解析 roster 永远返回 0 人。抓取器要随上游结构演进重写，不能一劳永逸。', c: '#FD2659' },
+        { n: '03', t: '诚实修正', d: '原定「抓 standings 自动算分组」因 VLR JS 渲染不可爬而走不通——MVP 改为手动录入，不埋坑、不硬编。', c: '#49FFD3' },
+      ].map((it, i) => (
+        <Box key={i} style={{ flexDirection: 'row', gap: 20, background: 'rgba(220,48,48,0.07)', borderRadius: 12, padding: '20px 24px', borderLeft: `4px solid ${it.c}`, alignItems: 'flex-start' }}>
+          <Text style={{ fontSize: 44, color: it.c, fontWeight: 800, width: 70 }}>{it.n}</Text>
+          <Box>
+            <Text style={{ fontSize: 22, color: '#F0E8E8', fontWeight: 700 }}>{it.t}</Text>
+            <Text style={{ fontSize: 17, color: '#B0A0A0', marginTop: 6, lineHeight: 1.5 }}>{it.d}</Text>
+          </Box>
+        </Box>
+      ))}
+    </Box>
+  </Box>
+  <Box style={{ position: 'absolute', bottom: 20, left: 64, fontSize: 14, color: '#7B7F7D' }}>瓦电赛事运营中台</Box>
+  <Box style={{ position: 'absolute', bottom: 20, right: 64, fontSize: 14, color: '#7B7F7D' }}>13 / 18</Box>
+</Slide>

@@ -1,0 +1,18 @@
+<Slide style={{ width: '1280px', height: '720px', background: 'linear-gradient(135deg, #120A0B 0%, #241215 60%, #120A0B 100%)', padding: 0, position: 'relative' }}>
+  {/* 装饰：右上电竞红斜光 */}
+  <Box style={{ position: 'absolute', top: 0, right: 0, width: 520, height: 520, background: 'linear-gradient(135deg, rgba(253,38,89,0.20) 0%, transparent 70%)', opacity: 0.9 }} />
+  <Box style={{ position: 'absolute', bottom: 0, left: 0, width: 420, height: 420, background: 'linear-gradient(135deg, transparent 40%, rgba(220,48,48,0.16) 100%)' }} />
+  {/* 左侧大字标题区 */}
+  <Box style={{ position: 'absolute', left: 80, top: 210, zIndex: 2 }}>
+    <Text style={{ fontSize: 24, color: '#FD2659', fontWeight: 'bold', letterSpacing: 4 }}>VALORANT · 电竞运营工具</Text>
+    <Text style={{ fontSize: 72, color: '#F0E8E8', fontWeight: 800, marginTop: 18, lineHeight: 1.1 }}>瓦电赛事<span style={{ color: '#DC3030' }}>运营中台</span></Text>
+    <Text style={{ fontSize: 30, color: '#B0A0A0', marginTop: 26, fontWeight: 400 }}>功能介绍 · 建设复盘 · 扩展方向</Text>
+    <Box style={{ width: 120, height: 5, background: '#DC3030', marginTop: 34, borderRadius: 3 }} />
+    <Text style={{ fontSize: 18, color: '#7B7F7D', marginTop: 28 }}>内部团队工具 · 部署版本 v=20260823e</Text>
+  </Box>
+  {/* 右下角徽标 */}
+  <Box style={{ position: 'absolute', right: 80, bottom: 48, zIndex: 2, flexDirection: 'row', alignItems: 'center', gap: 12 }}>
+    <Box style={{ width: 14, height: 14, background: '#DC3030', borderRadius: 3 }} />
+    <Text style={{ fontSize: 16, color: '#B0A0A0' }}>Jinx-Arms · VCT CN Operations</Text>
+  </Box>
+</Slide>

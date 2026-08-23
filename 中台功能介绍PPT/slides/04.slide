@@ -1,0 +1,49 @@
+<Slide style={{ width: '1280px', height: '720px', background: '#120A0B', padding: '40px 64px' }}>
+  {/* A 标题块 */}
+  <Box style={{ height: 80, justifyContent: 'flex-end', borderBottom: '2px solid rgba(220,48,48,0.3)' }}>
+    <Text style={{ fontSize: 34, color: '#F0E8E8', fontWeight: 700 }}>中台是什么</Text>
+  </Box>
+  {/* B 内容区 */}
+  <Box style={{ flexDirection: 'row', gap: 48, marginTop: 28, height: 520 }}>
+    {/* 左：定义文字 */}
+    <Box style={{ width: '48%', justifyContent: 'center' }}>
+      <Text style={{ fontSize: 22, color: '#F0E8E8', lineHeight: 1.7 }}>
+        一套面向 <span style={{ color: '#FD2659', fontWeight: 'bold' }}>VCT CN 赛事运营</span> 的纯前端中台，把赛程、阵容、内容、图形四类高频工作收拢到一个工具里。
+      </Text>
+      <Box style={{ marginTop: 26, gap: 18 }}>
+        {[
+          { t: '定位', d: '运营团队的「工作台」，非对外产品' },
+          { t: '形态', d: '纯前端 SPA + 云端数据库，零后端服务' },
+          { t: '覆盖', d: '赛程排班 / 战队看点 / 图形出图 / 战报生成' },
+          { t: '协同', d: '7 名成员账号，数据实时同步' },
+        ].map((it, i) => (
+          <Box key={i} style={{ flexDirection: 'row', gap: 16, alignItems: 'flex-start' }}>
+            <Box style={{ width: 10, height: 10, background: '#DC3030', borderRadius: 2, marginTop: 8 }} />
+            <Text style={{ fontSize: 19, color: '#B0A0A0', lineHeight: 1.5 }}>
+              <span style={{ color: '#F0E8E8', fontWeight: 'bold' }}>{it.t}：</span>{it.d}
+            </Text>
+          </Box>
+        ))}
+      </Box>
+    </Box>
+    {/* 右：定位示意 SVG */}
+    <Box style={{ width: '52%', justifyContent: 'center', alignItems: 'center', background: 'rgba(220,48,48,0.06)', borderRadius: 16 }}>
+      <svg width={440} height={340} viewBox='0 0 440 340'>
+        <rect x='150' y='130' width='140' height='80' rx='10' fill='#DC3030' />
+        <text x='220' y='160' fill='#fff' fontSize='20' fontWeight='bold' textAnchor='middle'>运营中台</text>
+        <text x='220' y='188' fill='#F0E8E8' fontSize='13' textAnchor='middle'>单一工作台</text>
+        {[['赛程','70','60'],['战队','175','60'],['图形','290','60'],['战报','365','60']].map((n,i)=>(
+          <g key={i}>
+            <line x1={220} y1={170} x2={parseInt(n[1])+30} y2={parseInt(n[2])+40} stroke='#FD2659' strokeWidth='2' />
+            <rect x={n[1]} y={n[2]} width='60' height='40' rx='8' fill='#1A0D0E' stroke='#FD2659' strokeWidth='1.5' />
+            <text x={parseInt(n[1])+30} y={parseInt(n[2])+25} fill='#F0E8E8' fontSize='13' textAnchor='middle'>{n[0]}</text>
+          </g>
+        ))}
+        <text x='220' y='40' fill='#B0A0A0' fontSize='14' textAnchor='middle'>VCT CN 赛事运营全流程</text>
+        <line x1='60' y1='40' x2='380' y2='40' stroke='#DC3030' strokeWidth='1' strokeDasharray='4 4' />
+      </svg>
+    </Box>
+  </Box>
+  <Box style={{ position: 'absolute', bottom: 20, left: 64, fontSize: 14, color: '#7B7F7D' }}>瓦电赛事运营中台</Box>
+  <Box style={{ position: 'absolute', bottom: 20, right: 64, fontSize: 14, color: '#7B7F7D' }}>04 / 18</Box>
+</Slide>

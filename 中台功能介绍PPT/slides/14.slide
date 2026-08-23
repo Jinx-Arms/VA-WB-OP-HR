@@ -1,0 +1,28 @@
+<Slide style={{ width: '1280px', height: '720px', background: 'linear-gradient(135deg, #120A0B 0%, #241215 100%)', padding: '40px 64px' }}>
+  <Box style={{ height: 80, justifyContent: 'flex-end', borderBottom: '2px solid rgba(253,38,89,0.4)' }}>
+    <Text style={{ fontSize: 34, color: '#F0E8E8', fontWeight: 700 }}>数据分层与诚实修正</Text>
+  </Box>
+  <Box style={{ flexDirection: 'row', gap: 50, marginTop: 24, height: 520, alignItems: 'center' }}>
+    {/* 左：巨型数字锚点 */}
+    <Box style={{ width: '40%', alignItems: 'center' }}>
+      <Text style={{ fontSize: 150, color: '#FD2659', fontWeight: 800, lineHeight: 1 }}>462</Text>
+      <Text style={{ fontSize: 24, color: '#F0E8E8', fontWeight: 600, marginTop: 6 }}>名选手已入库</Text>
+      <Text style={{ fontSize: 17, color: '#B0A0A0', marginTop: 8 }}>来自 50 支战队 · VLR 抓取</Text>
+    </Box>
+    {/* 右：洞察 */}
+    <Box style={{ width: '60%', gap: 22 }}>
+      <Text style={{ fontSize: 22, color: '#F0E8E8', fontWeight: 700, lineHeight: 1.5 }}>分层是稳健的关键</Text>
+      <Text style={{ fontSize: 19, color: '#B0A0A0', lineHeight: 1.7 }}>
+        大体量抓取数据走静态文件，手动补充走云端 state——两层惰性合并，互不覆盖。<span style={{ color: '#FD2659' }}>手动层永远优先</span>，保证运营标注不被自动同步冲掉。
+      </Text>
+      <Box style={{ background: 'rgba(253,38,89,0.1)', borderRadius: 10, padding: '16px 20px', borderLeft: '4px solid #FD2659' }}>
+        <Text style={{ fontSize: 18, color: '#F0E8E8', lineHeight: 1.6 }}>
+          诚实修正：当「自动算分组」因上游不可爬而走不通，没有硬编假数据，而是把决策权交还运营——手动录入分组，阶段二再本地算积分。
+        </Text>
+      </Box>
+      <Text style={{ fontSize: 16, color: '#7B7F7D', lineHeight: 1.6 }}>这一取舍让中台可信、可维护，也避免了「看起来能用实则失真」的陷阱。</Text>
+    </Box>
+  </Box>
+  <Box style={{ position: 'absolute', bottom: 20, left: 64, fontSize: 14, color: '#7B7F7D' }}>瓦电赛事运营中台</Box>
+  <Box style={{ position: 'absolute', bottom: 20, right: 64, fontSize: 14, color: '#7B7F7D' }}>14 / 18</Box>
+</Slide>
