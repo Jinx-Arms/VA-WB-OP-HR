@@ -9,11 +9,11 @@ App.renderStaff = function(){
   const list = st.staff.filter(s => showLeft || s.status === 'active');
   const rows = list.map(s => `
     <tr class="${s.status==='left'?'left':''}">
-      <td><b>${s.name}</b></td>
+      <td><b>${App.escHtml(s.name)}</b></td>
       <td><span class="badge role-${s.role}">${roleCN(s.role)}</span></td>
-      <td>${s.position}</td>
-      <td>${s.phone}</td>
-      <td><code class="uname">${s.username || s.id.toLowerCase()}</code></td>
+      <td>${App.escHtml(s.position)}</td>
+      <td>${App.escHtml(s.phone)}</td>
+      <td><code class="uname">${App.escHtml(s.username || s.id.toLowerCase())}</code></td>
       <td>${s.joinDate}</td>
       <td>${s.status === 'active'
         ? '<span class="badge st-approved">在职</span>'
@@ -112,10 +112,10 @@ App.staffSave = function(id){
 /* ---------- 管理员重置密码 ---------- */
 App.resetPasswordOpen = function(id){
   const s = App.staffById(id);
-  App.modal(`重置密码 · ${s.name}`, `
+  App.modal(`重置密码 · ${App.escHtml(s.name)}`, `
     <div class="form-row single"><label>新密码</label><input type="password" id="rp-pwd" placeholder="至少 6 位" autocomplete="new-password" oninput="App._modalDirty=true"></div>
     <div class="form-row single"><label>确认新密码</label><input type="password" id="rp-confirm" placeholder="再次输入新密码" autocomplete="new-password" oninput="App._modalDirty=true"></div>
-    <div class="hint">重置后请将新密码告知 ${s.name}，建议登录后自行修改。</div>
+    <div class="hint">重置后请将新密码告知 ${App.escHtml(s.name)}，建议登录后自行修改。</div>
   `, `
     <button class="btn" onclick="App.closeModal()">取消</button>
     <button class="btn primary" onclick="App._modalDirty=false;App.resetPasswordConfirm('${id}')">确认重置</button>
@@ -145,7 +145,7 @@ App.staffLeaveOpen = function(id){
   let futureDays = 0;
   Object.keys(st.shifts).forEach(ds => { if(ds >= today && st.shifts[ds][id]) futureDays++; });
   const futureTasks = st.content.filter(c => c.assigneeId === id && c.date >= today && c.status !== 'cancelled').length;
-  App.modal(`离职办理 · ${s.name}`, `
+  App.modal(`离职办理 · ${App.escHtml(s.name)}`, `
     <div class="conflict-item warn">⚠️ 离职后该成员将无法登录，未来 ${futureDays} 天排班自动移除${futureTasks ? `，${futureTasks} 条待发布内容需重新分配负责人` : ''}。历史记录将完整保留。</div>
     <div class="form-row single" style="margin-top:14px"><label>离职日期</label><input type="date" id="sf-leave" value="${today}" onchange="App._modalDirty=true"></div>
     <div class="hint">离职交接提示：导出其历史排班（排班管理 → 显示已离职 → 导出 CSV）交由接手人。</div>

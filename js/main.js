@@ -549,7 +549,7 @@ App._renderBellPanel = function(){
   panel.innerHTML = `
     <h4>通知 <button class="btn sm" onclick="App.readAll()">全部已读</button></h4>
     ${mine.length ? mine.map(n => `
-      <div class="notif ${n.read ? '' : 'unread'}">${n.text}<time>${new Date(n.time).toLocaleString('zh-CN',{month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit'})}</time></div>`).join('')
+      <div class="notif ${n.read ? '' : 'unread'}">${App.escHtml(n.text)}<time>${new Date(n.time).toLocaleString('zh-CN',{month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit'})}</time></div>`).join('')
       : '<div class="empty">暂无通知</div>'}`;
 };
 App.readAll = function(){

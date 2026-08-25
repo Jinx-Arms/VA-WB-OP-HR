@@ -97,7 +97,7 @@ App.renderAssets = function(){
         <table class="al-font-tbl">
           <tr><th>字体族</th><th>来源</th><th>操作</th></tr>
           ${(App.state.fonts||[]).map((f,i)=>`
-            <tr><td>${escHtml(f.family)}</td><td>${f.scope==='local'?'本地':'Storage'}</td>
+            <tr><td>${App.escHtml(f.family)}</td><td>${f.scope==='local'?'本地':'Storage'}</td>
               <td><button class="btn sm danger" onclick="App.assetsRemoveFont(${i})">移除白名单</button></td></tr>`).join('')}
         </table>
       </div>
@@ -201,6 +201,4 @@ App.assetsRemoveFont = function(idx){
   App.save(); App.renderView();
 };
 
-/* 转义辅助 */
-function escHtml(s){ return String(s==null?'':s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
-function escAttr(s){ return escHtml(s).replace(/'/g, '&#39;'); }
+/* HTML 转义 helper 已统一在 store.js 全局提供（App.escHtml / App.escAttr），此处不再重复定义 */

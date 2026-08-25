@@ -37,8 +37,8 @@ App.renderContentMonth = function(){
     const chips = items.map(c => {
       const a = c.assigneeId ? App.staffById(c.assigneeId) : null;
       const title = `${c.time} ${c.title}｜${c.type}｜${CONTENT_STATUS[c.status]}${a ? '｜负责：' + a.name : '｜未分配'}${c.note ? '｜备注：' + c.note : ''}`;
-      return `<span class="chip t-${c.type} s-${c.status}" title="${title}"
-        ${isAdmin ? `onclick="event.stopPropagation();App.contentFormOpen('${c.id}')"` : ''}>${c.time} ${c.title}${a ? ' · ' + a.name : ' · 未分配'}</span>`;
+      return `<span class="chip t-${c.type} s-${c.status}" title="${App.escAttr(title)}"
+        ${isAdmin ? `onclick="event.stopPropagation();App.contentFormOpen('${c.id}')"` : ''}>${App.escHtml(c.time)} ${App.escHtml(c.title)}${a ? ' · ' + App.escHtml(a.name) : ' · 未分配'}</span>`;
     }).join('');
     // 点击日期数字进入单日视图
     cells += `<div class="cal-cell ${isAdmin ? 'clickable' : ''} ${ds===D.today()?'today':''}" ${isAdmin ? `onclick="App.contentFormOpen(null,'${ds}')"` : ''}>
@@ -118,15 +118,15 @@ App.renderContentDay = function(){
       const shift = a ? (st.shifts[ds]||{})[a.id] : null;
       const shiftTxt = shift === 'early' ? '早班' : shift === 'late' ? '晚班' : '不在班';
       return `<div class="cd-item">
-        <div class="cd-time">${c.time}</div>
+        <div class="cd-time">${App.escHtml(c.time)}</div>
         <div class="cd-body">
-          <div class="cd-title">${c.title}</div>
+          <div class="cd-title">${App.escHtml(c.title)}</div>
           <div class="cd-meta">
             <span class="chip t-${c.type} s-${c.status}" style="display:inline-block;margin:0;pointer-events:none">${c.type}</span>
             <span class="badge st-${c.status}" style="pointer-events:none">${CONTENT_STATUS[c.status]}</span>
             <span class="cd-assignee">负责人：${a ? '<b>' + a.name + '</b>（' + roleCN(a.role) + '·' + shiftTxt + '）' : '<b style="color:var(--warn)">未分配</b>'}</span>
           </div>
-          ${c.note ? `<div class="cd-note">备注：${c.note}</div>` : ''}
+          ${c.note ? `<div class="cd-note">备注：${App.escHtml(c.note)}</div>` : ''}
         </div>
         ${isAdmin ? `<div class="cd-actions"><button class="btn sm" onclick="App.contentFormOpen('${c.id}')">编辑</button></div>` : ''}
       </div>`;
@@ -178,7 +178,7 @@ App.contentFormOpen = function(id, presetDate){
       <div><label>发布日期 *</label><input type="date" id="cf-date" value="${date}"></div>
       <div><label>发布时间 *</label><input type="time" id="cf-time" value="${c ? c.time : '20:00'}"></div>
     </div>
-    <div class="form-row single"><label>标题 *</label><input id="cf-title" value="${c ? c.title : ''}" placeholder="如：赛前预热：今日对阵前瞻"></div>
+    <div class="form-row single"><label>标题 *</label><input id="cf-title" value="${App.escAttr(c ? c.title : '')}" placeholder="如：赛前预热：今日对阵前瞻"></div>
     <div class="form-row">
       <div><label>内容类型</label>
         <select id="cf-type">${CONTENT_TYPES.map(t=>`<option value="${t}" ${c && c.type===t?'selected':''}>${t}</option>`).join('')}</select>
@@ -187,7 +187,7 @@ App.contentFormOpen = function(id, presetDate){
         <select id="cf-status">${Object.keys(CONTENT_STATUS).map(k=>`<option value="${k}" ${c && c.status===k?'selected':''}>${CONTENT_STATUS[k]}</option>`).join('')}</select>
       </div>
     </div>
-    <div class="form-row single"><label>备注</label><input id="cf-note" value="${c ? c.note : ''}" placeholder="素材链接、注意事项等"></div>
+    <div class="form-row single"><label>备注</label><input id="cf-note" value="${App.escAttr(c ? c.note : '')}" placeholder="素材链接、注意事项等"></div>
     ${c ? `<div class="hint">当前负责人：${a ? a.name + '（' + roleCN(a.role) + '）' : '未分配'} · 当天班次：${a && (st.shifts[c.date]||{})[a.id] === 'early' ? '早班' : a && (st.shifts[c.date]||{})[a.id] === 'late' ? '晚班' : '不在班/未分配'}</div>` : ''}
   `, `
     ${c ? `<button class="btn danger" onclick="App.contentDelete('${c.id}')">删除</button>` : ''}

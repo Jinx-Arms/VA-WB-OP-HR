@@ -16,6 +16,18 @@ const App = window.App = { state: null, ui: {}, _serverOK: null, _pendingSave: n
   _syncing: false,
 };
 
+/* ---------- HTML 转义（全局 helper，供 XSS 防御）----------
+ * escHtml: 用于 HTML 文本节点（& < > "）
+ * escAttr: 用于 HTML 属性值（额外转义 '，避免 onclick="App.x('${value}')" 破坏）
+ * 注：store.js 在 index.html 里加载顺序最早，所有 view 文件都能用 App.escHtml/App.escAttr
+ */
+App.escHtml = function(s){
+  return String(s == null ? '' : s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+};
+App.escAttr = function(s){
+  return App.escHtml(s).replace(/'/g, '&#39;');
+};
+
 /* ---------- 密码哈希（浏览器 Web Crypto API） ---------- */
 async function sha256(text){
   const buf = new TextEncoder().encode(text);

@@ -8,8 +8,8 @@ App.renderMine = function(){
   if(!me) return '';
   return `
   <div style="margin-bottom:18px">
-    <h2 style="font-size:20px">你好，${me.name} 👋</h2>
-    <div class="muted" style="font-size:13px">${me.position} · ${roleCN(me.role)}${me.role === 'intern' ? '（实习生不承担内容发布任务，但需按排班到岗）' : ''}</div>
+    <h2 style="font-size:20px">你好，${App.escHtml(me.name)} 👋</h2>
+    <div class="muted" style="font-size:13px">${App.escHtml(me.position)} · ${roleCN(me.role)}${me.role === 'intern' ? '（实习生不承担内容发布任务，但需按排班到岗）' : ''}</div>
   </div>
   <div class="mine-grid">
     ${mineScheduleCard(me)}
@@ -79,9 +79,9 @@ function mineLeaveCard(me){
     .sort((a, b) => b.createdAt - a.createdAt);
   const rows = mine.map(l => `<tr>
     <td>${l.start} ~ ${l.end}</td>
-    <td style="white-space:normal;max-width:160px">${l.reason}</td>
+    <td style="white-space:normal;max-width:160px">${App.escHtml(l.reason)}</td>
     <td><span class="badge st-${l.status}">${{pending:'待审批',approved:'已批准',rejected:'已驳回'}[l.status]}</span></td>
-    <td>${l.comment || '—'}</td>
+    <td>${App.escHtml(l.comment || '—')}</td>
   </tr>`).join('');
   return `
   <div class="card">

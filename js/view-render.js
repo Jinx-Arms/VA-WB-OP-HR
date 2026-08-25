@@ -36,7 +36,7 @@ App.renderRender = function(){
     if(first){ App.rfSelectTemplate(first.id, true); tpl = rfTpl(); }
   }
   const isAdmin = App.can('manage');
-  const list = tpls.map(t => `<option value="${t.id}" ${t.id===App.state.render.currentTemplateId?'selected':''}>${escHtml(t.name)}</option>`).join('');
+  const list = tpls.map(t => `<option value="${t.id}" ${t.id===App.state.render.currentTemplateId?'selected':''}>${App.escHtml(t.name)}</option>`).join('');
   const kind = tpl ? tpl.kind : '';
   const dateVal = (App.state.render.currentSource && App.state.render.currentSource.kind==='date') ? App.state.render.currentSource.value : D.today();
   const teamVal = (App.state.render.currentSource && App.state.render.currentSource.kind==='team') ? App.state.render.currentSource.value : '';
@@ -141,7 +141,7 @@ function rfTeamChecks(date){
   return ids.map(id => {
     const t = App.state.teams[id];
     const checked = App._rf && App._rf.teams && App._rf.teams.includes(id) ? 'checked' : (App._rf && App._rf.teams ? '' : 'checked');
-    return `<label class="rf-tc"><input type="checkbox" value="${id}" ${checked} onchange="App.rfToggleTeam('${id}',this.checked)"> ${t?escHtml(t.shortName):id}</label>`;
+    return `<label class="rf-tc"><input type="checkbox" value="${id}" ${checked} onchange="App.rfToggleTeam('${id}',this.checked)"> ${t?App.escHtml(t.shortName):id}</label>`;
   }).join('');
 }
 function rfCasterAssign(date){
@@ -153,8 +153,8 @@ function rfCasterAssign(date){
     const [a,b] = App.findTeamKey(m.teams||'');
     const ta = a?App.state.teams[a]:null, tb = b?App.state.teams[b]:null;
     const assigned = m.casterIds || [];
-    const opts = pool.map(c => `<label class="rf-tc"><input type="checkbox" value="${c.id}" ${assigned.includes(c.id)?'checked':''} onchange="App.rfToggleCaster(${i},'${c.id}',this.checked)"> ${escHtml(c.name||'未命名')}<small>${escHtml(c.role||'')}</small></label>`).join('');
-    return `<div class="rf-match"><b>${ta?escHtml(ta.shortName):'?'} vs ${tb?escHtml(tb.shortName):'?'}</b> <span class="muted">${m.time}</span><div class="rf-caster-pool">${opts||'<span class="muted">解说池为空，请到素材后台录入</span>'}</div></div>`;
+    const opts = pool.map(c => `<label class="rf-tc"><input type="checkbox" value="${c.id}" ${assigned.includes(c.id)?'checked':''} onchange="App.rfToggleCaster(${i},'${c.id}',this.checked)"> ${App.escHtml(c.name||'未命名')}<small>${App.escHtml(c.role||'')}</small></label>`).join('');
+    return `<div class="rf-match"><b>${ta?App.escHtml(ta.shortName):'?'} vs ${tb?App.escHtml(tb.shortName):'?'}</b> <span class="muted">${m.time}</span><div class="rf-caster-pool">${opts||'<span class="muted">解说池为空，请到素材后台录入</span>'}</div></div>`;
   }).join('');
 }
 function rfSlotList(tpl, isAdmin){
@@ -162,7 +162,7 @@ function rfSlotList(tpl, isAdmin){
     const editable = s.editable ? ' <span class="tag ok">可改</span>' : '';
     const sys = s.createdBy==='admin' ? ' <span class="tag">自定义</span>' : '';
     return `<div class="rf-slot ${App._rf&&App._rf.sel===s.key?'active':''}" onclick="App.rfSelectSlot('${s.key}')">
-      <span class="rf-sk">${escHtml(s.key)}</span> <span class="muted">${s.type}/${s.group||'static'}</span>${editable}${sys}
+      <span class="rf-sk">${App.escHtml(s.key)}</span> <span class="muted">${s.type}/${s.group||'static'}</span>${editable}${sys}
       ${isAdmin?`<button class="btn sm danger" onclick="event.stopPropagation();App.rfDeleteSlot('${s.key}')">删</button>`:''}
     </div>`;
   }).join('');
@@ -173,7 +173,7 @@ function rfInspector(tpl, isAdmin){
   if(!s) return '<div class="empty">选择一个槽位查看 / 编辑</div>';
   const isImg = s.type==='image';
   return `
-    <h3>槽位：${escHtml(s.key)}</h3>
+    <h3>槽位：${App.escHtml(s.key)}</h3>
     ${isAdmin?`
     <div class="rf-form">
       <div class="rf-fr"><label>x</label><input type="number" value="${s.x}" oninput="App.rfSetSlot('${s.key}','x',+this.value)"></div>
@@ -499,7 +499,7 @@ App.rfDraw = function(){
     const banner = document.getElementById('rf-banner');
     if(banner){
       if(res.missing.length){
-        banner.innerHTML = `<div class="rf-missing">⚠ 缺失素材（禁止导出残图）：<br>${res.missing.map(m=>escHtml(m.label)).join('；')}</div>`;
+        banner.innerHTML = `<div class="rf-missing">⚠ 缺失素材（禁止导出残图）：<br>${res.missing.map(m=>App.escHtml(m.label)).join('；')}</div>`;
       } else banner.innerHTML = '';
     }
     const hint = document.getElementById('rf-export-hint');
