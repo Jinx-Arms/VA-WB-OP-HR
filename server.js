@@ -15,6 +15,10 @@
  * 启动：node server.js  （或 npm start）
  * 本地访问：http://localhost:3000
  * 云端访问：Render 自动分配的公网 URL
+ *
+ * 可选鉴权（保护本地 POST 写操作不被匿名覆盖）：
+ *   ENABLE_AUTH=1 AUTH_USER=admin AUTH_PASSWORD=xxx node server.js
+ * 默认不启用（向后兼容；云端走 Supabase RLS）
  * ===================================================== */
 const http  = require('http');
 const fs    = require('fs');
@@ -28,6 +32,22 @@ const DATA_DIR    = path.join(ROOT, 'data');
 const STATE_FILE  = path.join(DATA_DIR, 'state.json');
 const FETCH_FILE  = path.join(DATA_DIR, 'fetched-schedule.json');
 const FETCH_TEAMS_FILE = path.join(DATA_DIR, 'fetched-teams.json');
+
+/* =====================================================
+ * Basic Auth 鉴权（可选，通过环境变量启用）
+ * 目的：保护本地磁盘模式下 /api/state 等写操作不被匿名 POST 覆盖
+ * 启用方式：
+ *   ENABLE_AUTH=1 AUTH_USER=admin AUTH_PASSWORD=vct2026 node server.js
+ * 默认禁用（保持向后兼容，云端 GitHub Pages 走 Supabase RLS 鉴权，不依赖 server.js）
+ * 设计要点：
+ *  · 只保护 POST 写操作（/api/state /api/reset /api/schedule-fetch /api/teams-fetch）
+ *  · GET /api/health / 静态文件 不保护（保持前端可访问）
+ *  · 浏览器同源请求会自动弹 basic auth 对话框；用户输一次后浏览器缓存 credentials
+ *  · 启用鉴权时 CORS 收紧（不能 * + credentials，会被浏览器拒绝）
+ * ===================================================== */
+const AUTH_ENABLED = process.env.ENABLE_AUTH === '1';
+const AUTH_USER = process.env.AUTH_USER || 'admin';
+const AUTH_PASSWORD = process.env.AUTH_PASSWORD || 'vct2026';
 
 /* =====================================================
  * 存储抽象层
@@ -186,11 +206,33 @@ const server = http.createServer(async (req, res) => {
   const url = new URL(req.url, `http://localhost:${PORT}`);
   const p = url.pathname;
 
-  /* CORS */
-  res.setHeader('Access-Control-Allow-Origin', '*');
+  /* CORS：鉴权启用时收紧为同源，避免 * + credentials 被浏览器拒绝；
+     鉴权禁用时保持 * 以便外部工具调试 */
+  if(AUTH_ENABLED){
+    res.setHeader('Access-Control-Allow-Origin', `http://localhost:${PORT}`);
+    res.setHeader('Access-Control-Allow-Credentials', 'true');
+  } else {
+    res.setHeader('Access-Control-Allow-Origin', '*');
+  }
   res.setHeader('Access-Control-Allow-Methods', 'GET,POST,OPTIONS');
-  res.setHeader('Access-Control-Allow-Headers', 'Content-Type');
+  res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Authorization');
   if(req.method === 'OPTIONS'){ res.writeHead(204); res.end(); return; }
+
+  /* ---------- Basic Auth 守卫（仅保护 POST 写操作）---------- */
+  if(AUTH_ENABLED && req.method === 'POST' && p.startsWith('/api/') && p !== '/api/health'){
+    const auth = req.headers['authorization'] || '';
+    const m = auth.match(/^Basic\s+(.+)$/i);
+    if(!m){ res.writeHead(401, { 'WWW-Authenticate': 'Basic realm="VCT Ops HR" ' }); res.end('Unauthorized'); return; }
+    try{
+      const decoded = Buffer.from(m[1], 'base64').toString('utf8');
+      const [u, pwd] = decoded.split(':');
+      if(u !== AUTH_USER || pwd !== AUTH_PASSWORD){
+        res.writeHead(401, { 'WWW-Authenticate': 'Basic realm="VCT Ops HR" ' }); res.end('Unauthorized'); return;
+      }
+    }catch(e){
+      res.writeHead(401, { 'WWW-Authenticate': 'Basic realm="VCT Ops HR" ' }); res.end('Unauthorized'); return;
+    }
+  }
 
   /* ---------- API: 状态读写 ---------- */
   if(p === '/api/state') {

@@ -38,17 +38,29 @@ const RENDER = {
 
   _imgCache: {},
 
-  /* 加载图片（缓存 + crossOrigin 防污染） */
+  /* 加载图片（缓存 + crossOrigin 防污染）
+   * 设计要点：
+   *  · 同一 URL 并发请求共享一个 Promise（避免重复下载）
+   *  · 加载成功的 image 永久缓存（提高重复渲染性能）
+   *  · 加载失败时**不缓存失败状态**——删除缓存条目，下次再调可重试
+   *  （修复：失败后永久卡死 bug，原版 onerror 不清缓存导致 CORS/超时等场景一直走 reject） */
   loadImage(url){
     if(!url) return Promise.reject(new Error('empty url'));
     if(this._imgCache[url]) return this._imgCache[url];
     const p = new Promise((resolve, reject) => {
       const img = new Image();
       img.crossOrigin = 'anonymous';
-      img.onload = () => { this._imgCache[url] = Promise.resolve(img); resolve(img); };
-      img.onerror = () => { reject(new Error('图片加载失败: ' + url)); };
+      img.onload = () => {
+        this._imgCache[url] = Promise.resolve(img);   // 成功后冻结缓存
+        resolve(img);
+      };
+      img.onerror = () => {
+        delete this._imgCache[url];                   // 失败不缓存，允许重试
+        reject(new Error('图片加载失败: ' + url));
+      };
       img.src = url;
     });
+    /* 暂存 pending promise 让并发请求共享；失败/成功后会被 onload/onerror 覆盖 */
     this._imgCache[url] = p;
     return p;
   },
