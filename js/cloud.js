@@ -6,11 +6,19 @@
  *
  * Supabase anon key 可安全暴露在前端（受 RLS 策略保护）。
  * 本地开发（localhost）自动走 server.js 磁盘模式。
+ *
+ * 测试护栏：所有写入接口都检查 __testDryRun 标志位。
+ * 测试脚本在浏览器内 stub CLOUD.isCloudMode = () => true 时，
+ * 一旦设置 CLOUD.__testDryRun = true，所有写入都会被拦截，
+ * 避免 Playwright 跑测试时把测试数据真写到生产 Supabase。
  * ===================================================== */
 const CLOUD = {
   /* ---- Supabase 配置（部署时填写）---- */
   SUPABASE_URL: 'https://woutedgxmovxjnrfylpr.supabase.co',
   SUPABASE_KEY: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6IndvdXRlZGd4bW92eGpucmZ5bHByIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODcxMzk5MTIsImV4cCI6MjEwMjcxNTkxMn0.NfmGbkuWHHnEJ6vZ4Zy7IFdFY4Z6hF_AlZOud2SrAac',
+
+  /* ---- 测试 dry-run 开关（默认 false，正常读写；true 时所有写入 no-op 返回）---- */
+  __testDryRun: false,
 
   /* ---- 检测是否处于云端模式 ---- */
   isCloudMode() {
@@ -42,6 +50,8 @@ const CLOUD = {
 
   /* ---- 写入 state（upsert）---- */
   async setState(state) {
+    /* 测试 dry-run：拦截写入，避免污染生产数据 */
+    if (this.__testDryRun) return { ok: true, dryRun: true };
     const url = this.SUPABASE_URL + '/rest/v1/kv_store';
     const res = await fetch(url, {
       method: 'POST',
@@ -53,6 +63,8 @@ const CLOUD = {
 
   /* ---- 页面关闭时尽力刷写（fetch keepalive）---- */
   async setStateBeacon(state) {
+    /* 测试 dry-run：拦截写入，避免污染生产数据 */
+    if (this.__testDryRun) return { ok: true, dryRun: true };
     try {
       await fetch(this.SUPABASE_URL + '/rest/v1/kv_store', {
         method: 'POST',

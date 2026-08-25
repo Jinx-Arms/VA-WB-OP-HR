@@ -1,0 +1,4505 @@
+{
+  "updated_at": "2026-08-19T13:09:53.261569+00:00",
+  "value": {
+    "seq": 106,
+    "fonts": [],
+    "leave": [
+      {
+        "id": "L1",
+        "end": "2026-08-30",
+        "start": "2026-08-29",
+        "reason": "年假出行",
+        "status": "approved",
+        "comment": "批准，注意交接",
+        "staffId": "S3",
+        "createdAt": 1786878408496,
+        "decidedAt": 1786964808496,
+        "decidedBy": "S1"
+      },
+      {
+        "id": "L2",
+        "end": "2026-08-26",
+        "start": "2026-08-24",
+        "reason": "家中事务",
+        "status": "pending",
+        "comment": "",
+        "staffId": "S2",
+        "createdAt": 1787119608496,
+        "decidedAt": null,
+        "decidedBy": null
+      },
+      {
+        "id": "L102",
+        "end": "2026-08-26",
+        "start": "2026-08-25",
+        "reason": "(已清理 XSS 测试残留)",
+        "status": "pending",
+        "comment": "(已清理 XSS 测试残留)",
+        "staffId": "S2",
+        "createdAt": 1787627341629,
+        "decidedAt": null,
+        "decidedBy": null
+      },
+      {
+        "id": "L104",
+        "end": "2026-08-26",
+        "start": "2026-08-25",
+        "reason": "(已清理 XSS 测试残留)",
+        "status": "pending",
+        "comment": "",
+        "staffId": "S2",
+        "createdAt": 1787627699375,
+        "decidedAt": null,
+        "decidedBy": null
+      }
+    ],
+    "staff": [
+      {
+        "id": "S1",
+        "name": "MODIFIED_LOCAL",
+        "role": "admin",
+        "phone": "138-0000-0001",
+        "status": "active",
+        "joinDate": "2024-03-01",
+        "position": "运营主管",
+        "username": "s1",
+        "leaveDate": null,
+        "passwordHash": "b5a557a3cd3d0259f4908630a9df88b081cf9a42a56728371ced9f370460ce5c"
+      },
+      {
+        "id": "S2",
+        "name": "林小满",
+        "role": "employee",
+        "phone": "139-0000-0002",
+        "status": "active",
+        "joinDate": "2024-06-15",
+        "position": "内容运营",
+        "username": "s2",
+        "leaveDate": null,
+        "passwordHash": "b5a557a3cd3d0259f4908630a9df88b081cf9a42a56728371ced9f370460ce5c"
+      },
+      {
+        "id": "S3",
+        "name": "王锐",
+        "role": "employee",
+        "phone": "137-0000-0003",
+        "status": "active",
+        "joinDate": "2025-01-10",
+        "position": "<script>window.__pwn5=1</script>",
+        "username": "s3",
+        "leaveDate": null,
+        "passwordHash": "b5a557a3cd3d0259f4908630a9df88b081cf9a42a56728371ced9f370460ce5c"
+      },
+      {
+        "id": "S4",
+        "name": "周舟",
+        "role": "employee",
+        "phone": "136-0000-0004",
+        "status": "active",
+        "joinDate": "2025-02-20",
+        "position": "视频运营",
+        "username": "s4",
+        "leaveDate": null,
+        "passwordHash": "b5a557a3cd3d0259f4908630a9df88b081cf9a42a56728371ced9f370460ce5c"
+      },
+      {
+        "id": "S5",
+        "name": "苏晴",
+        "role": "employee",
+        "phone": "135-0000-0005",
+        "status": "active",
+        "joinDate": "2025-05-06",
+        "position": "社群运营",
+        "username": "s5",
+        "leaveDate": null,
+        "passwordHash": "b5a557a3cd3d0259f4908630a9df88b081cf9a42a56728371ced9f370460ce5c"
+      },
+      {
+        "id": "S6",
+        "name": "小新",
+        "role": "intern",
+        "phone": "134-0000-0006",
+        "status": "active",
+        "joinDate": "2026-07-01",
+        "position": "运营实习生",
+        "username": "s6",
+        "leaveDate": null,
+        "passwordHash": "b5a557a3cd3d0259f4908630a9df88b081cf9a42a56728371ced9f370460ce5c"
+      },
+      {
+        "id": "S7",
+        "name": "阿禾",
+        "role": "intern",
+        "phone": "133-0000-0007",
+        "status": "active",
+        "joinDate": "2026-08-03",
+        "position": "运营实习生",
+        "username": "s7",
+        "leaveDate": null,
+        "passwordHash": "b5a557a3cd3d0259f4908630a9df88b081cf9a42a56728371ced9f370460ce5c"
+      },
+      {
+        "id": "JIN",
+        "seq": 105,
+        "name": "金金",
+        "role": "admin",
+        "status": "active",
+        "position": "管理",
+        "username": "jinjin",
+        "passwordHash": "REMOTE_HASH_123"
+      },
+      {
+        "id": "JIN2",
+        "seq": 999,
+        "name": "金金2",
+        "role": "admin",
+        "status": "active",
+        "position": "管理",
+        "username": "jinjin2",
+        "passwordHash": "X"
+      }
+    ],
+    "teams": {
+      "ag": {
+        "id": "ag",
+        "logo": "",
+        "name": "All Gamers",
+        "short": "AG",
+        "vlrId": "1119",
+        "manual": false,
+        "nameEn": "All Gamers",
+        "region": "cn",
+        "roster": [
+          {
+            "id": "p-bunt",
+            "name": "Bunt",
+            "role": "igl",
+            "avatar": "",
+            "joined": "2022-01",
+            "source": "seed",
+            "country": "cn",
+            "formerTeams": []
+          },
+          {
+            "id": "p-delb",
+            "name": "DeLb",
+            "role": "duelist",
+            "avatar": "",
+            "joined": "2022-01",
+            "source": "seed",
+            "country": "cn",
+            "formerTeams": []
+          },
+          {
+            "id": "p-monk",
+            "name": "monk",
+            "role": "sentinel",
+            "avatar": "",
+            "joined": "2023-01",
+            "source": "seed",
+            "country": "cn",
+            "formerTeams": []
+          }
+        ],
+        "aliases": [
+          "AllGamers",
+          "AG"
+        ],
+        "coaches": [],
+        "shortName": "AG",
+        "updatedAt": 0,
+        "shortNameEn": "AG"
+      },
+      "at": {
+        "id": "at",
+        "logo": "",
+        "name": "Attacking Soul",
+        "short": "AT",
+        "vlrId": "1837",
+        "manual": false,
+        "nameEn": "Attacking Soul",
+        "region": "cn-challenger",
+        "roster": [],
+        "aliases": [
+          "AT",
+          "Attacking Soul"
+        ],
+        "coaches": [],
+        "shortName": "AT",
+        "updatedAt": 0,
+        "shortNameEn": "AT"
+      },
+      "c9": {
+        "id": "c9",
+        "logo": "",
+        "name": "Cloud9",
+        "short": "C9",
+        "vlrId": "188",
+        "manual": false,
+        "nameEn": "Cloud9",
+        "region": "americas",
+        "roster": [],
+        "aliases": [
+          "Cloud9",
+          "C9"
+        ],
+        "coaches": [],
+        "shortName": "C9",
+        "updatedAt": 0,
+        "shortNameEn": "C9"
+      },
+      "eg": {
+        "id": "eg",
+        "logo": "",
+        "name": "Evil Geniuses",
+        "short": "EG",
+        "vlrId": "5248",
+        "manual": false,
+        "nameEn": "Evil Geniuses",
+        "region": "americas",
+        "roster": [],
+        "aliases": [
+          "Evil Geniuses",
+          "EG"
+        ],
+        "coaches": [],
+        "shortName": "EG",
+        "updatedAt": 0,
+        "shortNameEn": "EG"
+      },
+      "fs": {
+        "id": "fs",
+        "logo": "",
+        "name": "FULL SENSE",
+        "short": "FS",
+        "vlrId": "4050",
+        "manual": false,
+        "nameEn": "FULL SENSE",
+        "region": "pacific",
+        "roster": [],
+        "aliases": [
+          "FULL SENSE",
+          "FS",
+          "FullSense"
+        ],
+        "coaches": [],
+        "shortName": "FS",
+        "updatedAt": 0,
+        "shortNameEn": "FS"
+      },
+      "g2": {
+        "id": "g2",
+        "logo": "",
+        "name": "G2 Esports",
+        "short": "G2",
+        "vlrId": "11058",
+        "manual": false,
+        "nameEn": "G2 Esports",
+        "region": "americas",
+        "roster": [
+          {
+            "id": "p-valyn",
+            "name": "valyn",
+            "role": "igl",
+            "avatar": "",
+            "joined": "2024-01",
+            "source": "seed",
+            "country": "us",
+            "formerTeams": []
+          },
+          {
+            "id": "p-trent",
+            "name": "trent",
+            "role": "initiator",
+            "avatar": "",
+            "joined": "2024-01",
+            "source": "seed",
+            "country": "us",
+            "formerTeams": []
+          },
+          {
+            "id": "p-leaf",
+            "name": "leaf",
+            "role": "duelist",
+            "avatar": "",
+            "joined": "2024-01",
+            "source": "seed",
+            "country": "us",
+            "formerTeams": []
+          },
+          {
+            "id": "p-jawgemo",
+            "name": "jawgemo",
+            "role": "sentinel",
+            "avatar": "",
+            "joined": "2024-01",
+            "source": "seed",
+            "country": "us",
+            "formerTeams": []
+          }
+        ],
+        "aliases": [
+          "G2 Esports"
+        ],
+        "coaches": [],
+        "shortName": "G2",
+        "updatedAt": 0,
+        "shortNameEn": "G2"
+      },
+      "ge": {
+        "id": "ge",
+        "logo": "",
+        "name": "Global Esports",
+        "short": "GE",
+        "vlrId": "918",
+        "manual": false,
+        "nameEn": "Global Esports",
+        "region": "pacific",
+        "roster": [],
+        "aliases": [
+          "Global Esports",
+          "GE"
+        ],
+        "coaches": [],
+        "shortName": "GE",
+        "updatedAt": 0,
+        "shortNameEn": "GE"
+      },
+      "gx": {
+        "id": "gx",
+        "logo": "",
+        "name": "GiantX",
+        "short": "GX",
+        "vlrId": "14419",
+        "manual": false,
+        "nameEn": "GiantX",
+        "region": "emea",
+        "roster": [],
+        "aliases": [
+          "GiantX",
+          "GX"
+        ],
+        "coaches": [],
+        "shortName": "GX",
+        "updatedAt": 0,
+        "shortNameEn": "GX"
+      },
+      "kc": {
+        "id": "kc",
+        "logo": "",
+        "name": "Karmine Corp",
+        "short": "KC",
+        "vlrId": "8877",
+        "manual": false,
+        "nameEn": "Karmine Corp",
+        "region": "emea",
+        "roster": [],
+        "aliases": [
+          "Karmine Corp",
+          "KC"
+        ],
+        "coaches": [],
+        "shortName": "KC",
+        "updatedAt": 0,
+        "shortNameEn": "KC"
+      },
+      "m8": {
+        "id": "m8",
+        "logo": "",
+        "name": "Gentle Mates",
+        "short": "M8",
+        "vlrId": "12694",
+        "manual": false,
+        "nameEn": "Gentle Mates",
+        "region": "emea",
+        "roster": [],
+        "aliases": [
+          "Gentle Mates",
+          "GM8"
+        ],
+        "coaches": [],
+        "shortName": "M8",
+        "updatedAt": 0,
+        "shortNameEn": "M8"
+      },
+      "t1": {
+        "id": "t1",
+        "logo": "",
+        "name": "T1",
+        "short": "T1",
+        "vlrId": "14",
+        "manual": false,
+        "nameEn": "T1",
+        "region": "pacific",
+        "roster": [
+          {
+            "id": "p-stax",
+            "name": "stax",
+            "role": "sentinel",
+            "avatar": "",
+            "joined": "2024-01",
+            "source": "seed",
+            "country": "kr",
+            "formerTeams": []
+          },
+          {
+            "id": "p-munchkin",
+            "name": "Munchkin",
+            "role": "igl",
+            "avatar": "",
+            "joined": "2024-01",
+            "source": "seed",
+            "country": "kr",
+            "formerTeams": []
+          },
+          {
+            "id": "p-buzz",
+            "name": "BuZz",
+            "role": "duelist",
+            "avatar": "",
+            "joined": "2024-01",
+            "source": "seed",
+            "country": "kr",
+            "formerTeams": []
+          },
+          {
+            "id": "p-meteor",
+            "name": "Meteor",
+            "role": "initiator",
+            "avatar": "",
+            "joined": "2024-01",
+            "source": "seed",
+            "country": "kr",
+            "formerTeams": []
+          },
+          {
+            "id": "p-izu",
+            "name": "iZu",
+            "role": "controller",
+            "avatar": "",
+            "joined": "2024-01",
+            "source": "seed",
+            "country": "kr",
+            "formerTeams": []
+          }
+        ],
+        "aliases": [
+          "T1"
+        ],
+        "coaches": [],
+        "shortName": "T1",
+        "updatedAt": 0,
+        "shortNameEn": "T1"
+      },
+      "te": {
+        "id": "te",
+        "logo": "",
+        "name": "Trace Esports",
+        "short": "TE",
+        "vlrId": "12685",
+        "manual": false,
+        "nameEn": "Trace Esports",
+        "region": "cn",
+        "roster": [
+          {
+            "id": "p-kai",
+            "name": "Kai",
+            "role": "duelist",
+            "avatar": "",
+            "joined": "2023-01",
+            "source": "seed",
+            "country": "cn",
+            "formerTeams": []
+          },
+          {
+            "id": "p-luok1ng",
+            "name": "LuoK1ng",
+            "role": "initiator",
+            "avatar": "",
+            "joined": "2023-01",
+            "source": "seed",
+            "country": "cn",
+            "formerTeams": [
+              "ag"
+            ]
+          }
+        ],
+        "aliases": [
+          "Trace"
+        ],
+        "coaches": [],
+        "shortName": "TE",
+        "updatedAt": 0,
+        "shortNameEn": "TE"
+      },
+      "th": {
+        "id": "th",
+        "logo": "",
+        "name": "Team Heretics",
+        "short": "TH",
+        "vlrId": "1001",
+        "manual": false,
+        "nameEn": "Team Heretics",
+        "region": "emea",
+        "roster": [
+          {
+            "id": "p-boo",
+            "name": "Boo",
+            "role": "igl",
+            "avatar": "",
+            "joined": "2024-01",
+            "source": "seed",
+            "country": "es",
+            "formerTeams": []
+          },
+          {
+            "id": "p-benjyfishy",
+            "name": "benjyfishy",
+            "role": "initiator",
+            "avatar": "",
+            "joined": "2024-01",
+            "source": "seed",
+            "country": "gb",
+            "formerTeams": []
+          },
+          {
+            "id": "p-riens",
+            "name": "RieNs",
+            "role": "duelist",
+            "avatar": "",
+            "joined": "2024-01",
+            "source": "seed",
+            "country": "es",
+            "formerTeams": []
+          },
+          {
+            "id": "p-wo0t",
+            "name": "Wo0t",
+            "role": "sentinel",
+            "avatar": "",
+            "joined": "2024-01",
+            "source": "seed",
+            "country": "es",
+            "formerTeams": []
+          },
+          {
+            "id": "p-comeback",
+            "name": "ComeBack",
+            "role": "controller",
+            "avatar": "",
+            "joined": "2024-01",
+            "source": "seed",
+            "country": "es",
+            "formerTeams": []
+          }
+        ],
+        "aliases": [
+          "Team Heretics",
+          "Heretics",
+          "TH"
+        ],
+        "coaches": [],
+        "shortName": "TH",
+        "updatedAt": 0,
+        "shortNameEn": "TH"
+      },
+      "tl": {
+        "id": "tl",
+        "logo": "",
+        "name": "Team Liquid",
+        "short": "TL",
+        "vlrId": "474",
+        "manual": false,
+        "nameEn": "Team Liquid",
+        "region": "emea",
+        "roster": [],
+        "aliases": [
+          "Team Liquid",
+          "TL",
+          "Liquid"
+        ],
+        "coaches": [],
+        "shortName": "TL",
+        "updatedAt": 0,
+        "shortNameEn": "TL"
+      },
+      "bbl": {
+        "id": "bbl",
+        "logo": "",
+        "name": "BBL",
+        "short": "BBL",
+        "vlrId": "397",
+        "manual": false,
+        "nameEn": "BBL",
+        "region": "emea",
+        "roster": [],
+        "aliases": [
+          "BBL"
+        ],
+        "coaches": [],
+        "shortName": "BBL",
+        "updatedAt": 0,
+        "shortNameEn": "BBL"
+      },
+      "blg": {
+        "id": "blg",
+        "logo": "",
+        "name": "Bilibili Gaming",
+        "short": "BLG",
+        "vlrId": "12010",
+        "manual": false,
+        "nameEn": "Bilibili Gaming",
+        "region": "cn",
+        "roster": [
+          {
+            "id": "p-knight",
+            "name": "Knight",
+            "role": "duelist",
+            "avatar": "",
+            "joined": "2023-06",
+            "source": "seed",
+            "country": "cn",
+            "formerTeams": []
+          },
+          {
+            "id": "p-b3ar",
+            "name": "B3Ar",
+            "role": "initiator",
+            "avatar": "",
+            "joined": "2023-06",
+            "source": "seed",
+            "country": "cn",
+            "formerTeams": []
+          },
+          {
+            "id": "p-biank",
+            "name": "Biank",
+            "role": "igl",
+            "avatar": "",
+            "joined": "2022-06",
+            "source": "seed",
+            "country": "cn",
+            "formerTeams": []
+          },
+          {
+            "id": "p-whzy",
+            "name": "whzy",
+            "role": "sentinel",
+            "avatar": "",
+            "joined": "2023-01",
+            "source": "seed",
+            "country": "cn",
+            "formerTeams": []
+          },
+          {
+            "id": "p-yosemite",
+            "name": "yosemite",
+            "role": "controller",
+            "avatar": "",
+            "joined": "2023-06",
+            "source": "seed",
+            "country": "cn",
+            "formerTeams": []
+          }
+        ],
+        "aliases": [
+          "Bilibili"
+        ],
+        "coaches": [],
+        "shortName": "BLG",
+        "updatedAt": 0,
+        "shortNameEn": "BLG"
+      },
+      "dfm": {
+        "id": "dfm",
+        "logo": "",
+        "name": "DFM",
+        "short": "DFM",
+        "vlrId": "278",
+        "manual": false,
+        "nameEn": "DFM",
+        "region": "pacific",
+        "roster": [],
+        "aliases": [
+          "DFM",
+          "DetonatioN FM"
+        ],
+        "coaches": [],
+        "shortName": "DFM",
+        "updatedAt": 0,
+        "shortNameEn": "DFM"
+      },
+      "drg": {
+        "id": "drg",
+        "logo": "",
+        "name": "Dragon Ranger Gaming",
+        "short": "DRG",
+        "vlrId": "11981",
+        "manual": false,
+        "nameEn": "Dragon Ranger Gaming",
+        "region": "cn",
+        "roster": [
+          {
+            "id": "p-nicc",
+            "name": "Nicc",
+            "role": "igl",
+            "avatar": "",
+            "joined": "2023-01",
+            "source": "seed",
+            "country": "cn",
+            "formerTeams": []
+          },
+          {
+            "id": "p-vo0kashu",
+            "name": "vo0kashu",
+            "role": "duelist",
+            "avatar": "",
+            "joined": "2023-01",
+            "source": "seed",
+            "country": "cn",
+            "formerTeams": []
+          },
+          {
+            "id": "p-tvirusluke",
+            "name": "TvirusLuke",
+            "role": "sentinel",
+            "avatar": "",
+            "joined": "2023-01",
+            "source": "seed",
+            "country": "cn",
+            "formerTeams": []
+          },
+          {
+            "id": "p-nizhaotzh",
+            "name": "nizhaoTZH",
+            "role": "controller",
+            "avatar": "",
+            "joined": "2023-06",
+            "source": "seed",
+            "country": "cn",
+            "formerTeams": []
+          }
+        ],
+        "aliases": [
+          "Dragon Ranger",
+          "DRG"
+        ],
+        "coaches": [],
+        "shortName": "DRG",
+        "updatedAt": 0,
+        "shortNameEn": "DRG"
+      },
+      "drx": {
+        "id": "drx",
+        "logo": "",
+        "name": "KIWOOM DRX",
+        "short": "DRX",
+        "vlrId": "8185",
+        "manual": false,
+        "nameEn": "KIWOOM DRX",
+        "region": "pacific",
+        "roster": [],
+        "aliases": [
+          "KIWOOM DRX",
+          "DRX",
+          "Kiwoom"
+        ],
+        "coaches": [],
+        "shortName": "DRX",
+        "updatedAt": 0,
+        "shortNameEn": "DRX"
+      },
+      "edg": {
+        "id": "edg",
+        "logo": "",
+        "name": "EDward Gaming",
+        "short": "EDG",
+        "vlrId": "1120",
+        "manual": false,
+        "nameEn": "EDward Gaming",
+        "region": "cn",
+        "roster": [
+          {
+            "id": "p-zmjjkk",
+            "name": "ZmjjKK",
+            "role": "duelist",
+            "avatar": "",
+            "joined": "2021-06",
+            "source": "seed",
+            "country": "cn",
+            "formerTeams": []
+          },
+          {
+            "id": "p-chichoo",
+            "name": "CHICHOO",
+            "role": "initiator",
+            "avatar": "",
+            "joined": "2023-01",
+            "source": "seed",
+            "country": "cn",
+            "formerTeams": []
+          },
+          {
+            "id": "p-nobody",
+            "name": "nobody",
+            "role": "igl",
+            "avatar": "",
+            "joined": "2021-06",
+            "source": "seed",
+            "country": "cn",
+            "formerTeams": []
+          },
+          {
+            "id": "p-smoggy",
+            "name": "Smoggy",
+            "role": "controller",
+            "avatar": "",
+            "joined": "2022-03",
+            "source": "seed",
+            "country": "cn",
+            "formerTeams": []
+          },
+          {
+            "id": "p-haodong",
+            "name": "Haodong",
+            "role": "sentinel",
+            "avatar": "",
+            "joined": "2021-06",
+            "source": "seed",
+            "country": "cn",
+            "formerTeams": []
+          }
+        ],
+        "aliases": [
+          "Edward Gaming",
+          "爱德"
+        ],
+        "coaches": [],
+        "shortName": "EDG",
+        "updatedAt": 0,
+        "shortNameEn": "EDG"
+      },
+      "fnc": {
+        "id": "fnc",
+        "logo": "",
+        "name": "Fnatic",
+        "short": "FNC",
+        "vlrId": "2593",
+        "manual": false,
+        "nameEn": "Fnatic",
+        "region": "emea",
+        "roster": [
+          {
+            "id": "p-boaster",
+            "name": "Boaster",
+            "role": "igl",
+            "avatar": "",
+            "joined": "2022-01",
+            "source": "seed",
+            "country": "gb",
+            "formerTeams": []
+          },
+          {
+            "id": "p-alfajer",
+            "name": "Alfajer",
+            "role": "sentinel",
+            "avatar": "",
+            "joined": "2022-06",
+            "source": "seed",
+            "country": "tr",
+            "formerTeams": []
+          },
+          {
+            "id": "p-kaajak",
+            "name": "kaajak",
+            "role": "duelist",
+            "avatar": "",
+            "joined": "2024-01",
+            "source": "seed",
+            "country": "tr",
+            "formerTeams": []
+          },
+          {
+            "id": "p-crashies",
+            "name": "crashies",
+            "role": "initiator",
+            "avatar": "",
+            "joined": "2024-06",
+            "source": "seed",
+            "country": "us",
+            "formerTeams": []
+          },
+          {
+            "id": "p-veqaj",
+            "name": "Veqaj",
+            "role": "controller",
+            "avatar": "",
+            "joined": "2024-06",
+            "source": "seed",
+            "country": "tr",
+            "formerTeams": []
+          }
+        ],
+        "aliases": [
+          "Fnatic",
+          "FNC"
+        ],
+        "coaches": [],
+        "shortName": "FNC",
+        "updatedAt": 0,
+        "shortNameEn": "FNC"
+      },
+      "fpx": {
+        "id": "fpx",
+        "logo": "",
+        "name": "FunPlus Phoenix",
+        "short": "FPX",
+        "vlrId": "11328",
+        "manual": false,
+        "nameEn": "FunPlus Phoenix",
+        "region": "cn",
+        "roster": [
+          {
+            "id": "p-life",
+            "name": "Life",
+            "role": "duelist",
+            "avatar": "",
+            "joined": "2023-06",
+            "source": "seed",
+            "country": "cn",
+            "formerTeams": [
+              "edg"
+            ]
+          },
+          {
+            "id": "p-autumn",
+            "name": "autumn",
+            "role": "initiator",
+            "avatar": "",
+            "joined": "2022-01",
+            "source": "seed",
+            "country": "cn",
+            "formerTeams": []
+          },
+          {
+            "id": "p-aaaay",
+            "name": "AAAAY",
+            "role": "controller",
+            "avatar": "",
+            "joined": "2022-01",
+            "source": "seed",
+            "country": "cn",
+            "formerTeams": []
+          },
+          {
+            "id": "p-berlin",
+            "name": "BerLIN",
+            "role": "sentinel",
+            "avatar": "",
+            "joined": "2022-01",
+            "source": "seed",
+            "country": "cn",
+            "formerTeams": []
+          },
+          {
+            "id": "p-lysoar",
+            "name": "Lysoar",
+            "role": "igl",
+            "avatar": "",
+            "joined": "2023-01",
+            "source": "seed",
+            "country": "cn",
+            "formerTeams": []
+          }
+        ],
+        "aliases": [
+          "FunPlus",
+          "FPX"
+        ],
+        "coaches": [],
+        "shortName": "FPX",
+        "updatedAt": 0,
+        "shortNameEn": "FPX"
+      },
+      "fut": {
+        "id": "fut",
+        "logo": "",
+        "name": "FUT Esports",
+        "short": "FUT",
+        "vlrId": "1184",
+        "manual": false,
+        "nameEn": "FUT Esports",
+        "region": "emea",
+        "roster": [
+          {
+            "id": "p-mrfalin",
+            "name": "MrFaliN",
+            "role": "igl",
+            "avatar": "",
+            "joined": "2023-01",
+            "source": "seed",
+            "country": "tr",
+            "formerTeams": []
+          },
+          {
+            "id": "p-qraxs",
+            "name": "qRaxs",
+            "role": "duelist",
+            "avatar": "",
+            "joined": "2023-01",
+            "source": "seed",
+            "country": "tr",
+            "formerTeams": []
+          },
+          {
+            "id": "p-xeus",
+            "name": "xeus",
+            "role": "initiator",
+            "avatar": "",
+            "joined": "2023-01",
+            "source": "seed",
+            "country": "tr",
+            "formerTeams": []
+          },
+          {
+            "id": "p-yetujey",
+            "name": "yetujey",
+            "role": "sentinel",
+            "avatar": "",
+            "joined": "2023-01",
+            "source": "seed",
+            "country": "tr",
+            "formerTeams": []
+          }
+        ],
+        "aliases": [
+          "FUT",
+          "FUT Esports"
+        ],
+        "coaches": [],
+        "shortName": "FUT",
+        "updatedAt": 0,
+        "shortNameEn": "FUT"
+      },
+      "gen": {
+        "id": "gen",
+        "logo": "",
+        "name": "Gen.G",
+        "short": "GEN",
+        "vlrId": "17",
+        "manual": false,
+        "nameEn": "Gen.G",
+        "region": "pacific",
+        "roster": [
+          {
+            "id": "p-t3xture",
+            "name": "t3xture",
+            "role": "duelist",
+            "avatar": "",
+            "joined": "2024-01",
+            "source": "seed",
+            "country": "kr",
+            "formerTeams": []
+          },
+          {
+            "id": "p-karon",
+            "name": "Karon",
+            "role": "sentinel",
+            "avatar": "",
+            "joined": "2024-01",
+            "source": "seed",
+            "country": "kr",
+            "formerTeams": []
+          },
+          {
+            "id": "p-ash",
+            "name": "Ash",
+            "role": "controller",
+            "avatar": "",
+            "joined": "2024-01",
+            "source": "seed",
+            "country": "kr",
+            "formerTeams": []
+          },
+          {
+            "id": "p-efina",
+            "name": "Efina",
+            "role": "initiator",
+            "avatar": "",
+            "joined": "2024-01",
+            "source": "seed",
+            "country": "kr",
+            "formerTeams": []
+          },
+          {
+            "id": "p-lakia",
+            "name": "Lakia",
+            "role": "igl",
+            "avatar": "",
+            "joined": "2024-01",
+            "source": "seed",
+            "country": "kr",
+            "formerTeams": []
+          }
+        ],
+        "aliases": [
+          "Gen.G",
+          "GEN",
+          "GenG"
+        ],
+        "coaches": [],
+        "shortName": "GEN",
+        "updatedAt": 0,
+        "shortNameEn": "GEN"
+      },
+      "jdg": {
+        "id": "jdg",
+        "logo": "",
+        "name": "JD Gaming",
+        "short": "JDG",
+        "vlrId": "13576",
+        "manual": false,
+        "nameEn": "JD Gaming",
+        "region": "cn",
+        "roster": [],
+        "aliases": [
+          "JDG",
+          "JingDong"
+        ],
+        "coaches": [],
+        "shortName": "JDG",
+        "updatedAt": 0,
+        "shortNameEn": "JDG"
+      },
+      "kbg": {
+        "id": "kbg",
+        "logo": "",
+        "name": "Kingback Gaming",
+        "short": "KBG",
+        "vlrId": "12784",
+        "manual": false,
+        "nameEn": "Kingback Gaming",
+        "region": "cn-challenger",
+        "roster": [],
+        "aliases": [
+          "KBG",
+          "Kingback"
+        ],
+        "coaches": [],
+        "shortName": "KBG",
+        "updatedAt": 0,
+        "shortNameEn": "KBG"
+      },
+      "kru": {
+        "id": "kru",
+        "logo": "",
+        "name": "KRÜ",
+        "short": "KRÜ",
+        "vlrId": "2355",
+        "manual": false,
+        "nameEn": "KRÜ",
+        "region": "americas",
+        "roster": [],
+        "aliases": [
+          "KRÜ",
+          "KRU",
+          "kru"
+        ],
+        "coaches": [],
+        "shortName": "KRÜ",
+        "updatedAt": 0,
+        "shortNameEn": "KRÜ"
+      },
+      "lev": {
+        "id": "lev",
+        "logo": "",
+        "name": "Leviatán",
+        "short": "LEV",
+        "vlrId": "2359",
+        "manual": false,
+        "nameEn": "Leviatán",
+        "region": "americas",
+        "roster": [
+          {
+            "id": "p-kingg",
+            "name": "kiNgg",
+            "role": "igl",
+            "avatar": "",
+            "joined": "2024-01",
+            "source": "seed",
+            "country": "cl",
+            "formerTeams": []
+          },
+          {
+            "id": "p-neon",
+            "name": "Neon",
+            "role": "duelist",
+            "avatar": "",
+            "joined": "2024-01",
+            "source": "seed",
+            "country": "cl",
+            "formerTeams": []
+          },
+          {
+            "id": "p-spikezin",
+            "name": "spikeziN",
+            "role": "initiator",
+            "avatar": "",
+            "joined": "2024-01",
+            "source": "seed",
+            "country": "br",
+            "formerTeams": []
+          },
+          {
+            "id": "p-sato",
+            "name": "Sato",
+            "role": "sentinel",
+            "avatar": "",
+            "joined": "2024-01",
+            "source": "seed",
+            "country": "br",
+            "formerTeams": []
+          },
+          {
+            "id": "p-blowz",
+            "name": "blowz",
+            "role": "controller",
+            "avatar": "",
+            "joined": "2024-01",
+            "source": "seed",
+            "country": "br",
+            "formerTeams": []
+          }
+        ],
+        "aliases": [
+          "Leviatan",
+          "LEV"
+        ],
+        "coaches": [],
+        "shortName": "LEV",
+        "updatedAt": 0,
+        "shortNameEn": "LEV"
+      },
+      "nrg": {
+        "id": "nrg",
+        "logo": "",
+        "name": "NRG",
+        "short": "NRG",
+        "vlrId": "1034",
+        "manual": false,
+        "nameEn": "NRG",
+        "region": "americas",
+        "roster": [
+          {
+            "id": "p-ethan",
+            "name": "Ethan",
+            "role": "igl",
+            "avatar": "",
+            "joined": "2024-01",
+            "source": "seed",
+            "country": "us",
+            "formerTeams": []
+          },
+          {
+            "id": "p-mada",
+            "name": "mada",
+            "role": "duelist",
+            "avatar": "",
+            "joined": "2024-01",
+            "source": "seed",
+            "country": "us",
+            "formerTeams": []
+          },
+          {
+            "id": "p-brawk",
+            "name": "brawk",
+            "role": "initiator",
+            "avatar": "",
+            "joined": "2024-01",
+            "source": "seed",
+            "country": "us",
+            "formerTeams": []
+          },
+          {
+            "id": "p-skuba",
+            "name": "skuba",
+            "role": "controller",
+            "avatar": "",
+            "joined": "2024-01",
+            "source": "seed",
+            "country": "us",
+            "formerTeams": []
+          },
+          {
+            "id": "p-keiko",
+            "name": "keiko",
+            "role": "sentinel",
+            "avatar": "",
+            "joined": "2024-01",
+            "source": "seed",
+            "country": "us",
+            "formerTeams": []
+          }
+        ],
+        "aliases": [],
+        "coaches": [],
+        "shortName": "NRG",
+        "updatedAt": 0,
+        "shortNameEn": "NRG"
+      },
+      "nsr": {
+        "id": "nsr",
+        "logo": "",
+        "name": "NS RedForce",
+        "short": "NSR",
+        "vlrId": "11060",
+        "manual": false,
+        "nameEn": "NS RedForce",
+        "region": "pacific",
+        "roster": [
+          {
+            "id": "p-rb",
+            "name": "Rb",
+            "role": "igl",
+            "avatar": "",
+            "joined": "2024-06",
+            "source": "seed",
+            "country": "kr",
+            "formerTeams": []
+          },
+          {
+            "id": "p-dambi",
+            "name": "Dambi",
+            "role": "duelist",
+            "avatar": "",
+            "joined": "2024-06",
+            "source": "seed",
+            "country": "kr",
+            "formerTeams": []
+          },
+          {
+            "id": "p-francis",
+            "name": "Francis",
+            "role": "initiator",
+            "avatar": "",
+            "joined": "2024-06",
+            "source": "seed",
+            "country": "kr",
+            "formerTeams": []
+          },
+          {
+            "id": "p-ivy",
+            "name": "Ivy",
+            "role": "sentinel",
+            "avatar": "",
+            "joined": "2024-06",
+            "source": "seed",
+            "country": "kr",
+            "formerTeams": []
+          },
+          {
+            "id": "p-xross",
+            "name": "Xross",
+            "role": "controller",
+            "avatar": "",
+            "joined": "2024-06",
+            "source": "seed",
+            "country": "kr",
+            "formerTeams": []
+          }
+        ],
+        "aliases": [
+          "NS RedForce",
+          "NSR",
+          "NSRF"
+        ],
+        "coaches": [],
+        "shortName": "NSR",
+        "updatedAt": 0,
+        "shortNameEn": "NSR"
+      },
+      "prx": {
+        "id": "prx",
+        "logo": "",
+        "name": "Paper Rex",
+        "short": "PRX",
+        "vlrId": "624",
+        "manual": false,
+        "nameEn": "Paper Rex",
+        "region": "pacific",
+        "roster": [
+          {
+            "id": "p-f0rsaken",
+            "name": "f0rsakeN",
+            "role": "igl",
+            "avatar": "",
+            "joined": "2021-06",
+            "source": "seed",
+            "country": "id",
+            "formerTeams": []
+          },
+          {
+            "id": "p-jinggg",
+            "name": "Jinggg",
+            "role": "duelist",
+            "avatar": "",
+            "joined": "2022-01",
+            "source": "seed",
+            "country": "id",
+            "formerTeams": []
+          },
+          {
+            "id": "p-d4v41",
+            "name": "d4v41",
+            "role": "initiator",
+            "avatar": "",
+            "joined": "2021-06",
+            "source": "seed",
+            "country": "th",
+            "formerTeams": []
+          },
+          {
+            "id": "p-invy",
+            "name": "invy",
+            "role": "sentinel",
+            "avatar": "",
+            "joined": "2023-01",
+            "source": "seed",
+            "country": "id",
+            "formerTeams": []
+          },
+          {
+            "id": "p-something",
+            "name": "something",
+            "role": "controller",
+            "avatar": "",
+            "joined": "2023-06",
+            "source": "seed",
+            "country": "id",
+            "formerTeams": []
+          }
+        ],
+        "aliases": [
+          "Paper Rex",
+          "PRX"
+        ],
+        "coaches": [],
+        "shortName": "PRX",
+        "updatedAt": 0,
+        "shortNameEn": "PRX"
+      },
+      "rrq": {
+        "id": "rrq",
+        "logo": "",
+        "name": "RRQ",
+        "short": "RRQ",
+        "vlrId": "878",
+        "manual": false,
+        "nameEn": "RRQ",
+        "region": "pacific",
+        "roster": [],
+        "aliases": [
+          "RRQ",
+          "Rex Regum Qeon"
+        ],
+        "coaches": [],
+        "shortName": "RRQ",
+        "updatedAt": 0,
+        "shortNameEn": "RRQ"
+      },
+      "sen": {
+        "id": "sen",
+        "logo": "",
+        "name": "Sentinels",
+        "short": "SEN",
+        "vlrId": "2",
+        "manual": false,
+        "nameEn": "Sentinels",
+        "region": "americas",
+        "roster": [],
+        "aliases": [
+          "Sentinels",
+          "SEN"
+        ],
+        "coaches": [],
+        "shortName": "SEN",
+        "updatedAt": 0,
+        "shortNameEn": "SEN"
+      },
+      "tec": {
+        "id": "tec",
+        "logo": "",
+        "name": "Titan EC",
+        "short": "TEC",
+        "vlrId": "14137",
+        "manual": false,
+        "nameEn": "Titan EC",
+        "region": "cn",
+        "roster": [],
+        "aliases": [
+          "TitanEC",
+          "Titan Esports Club",
+          "TEC"
+        ],
+        "coaches": [],
+        "shortName": "TEC",
+        "updatedAt": 0,
+        "shortNameEn": "TEC"
+      },
+      "tyl": {
+        "id": "tyl",
+        "logo": "",
+        "name": "TYLOO",
+        "short": "TYL",
+        "vlrId": "731",
+        "manual": false,
+        "nameEn": "TYLOO",
+        "region": "cn",
+        "roster": [],
+        "aliases": [
+          "TYLOO",
+          "TyLoo"
+        ],
+        "coaches": [],
+        "shortName": "TYL",
+        "updatedAt": 0,
+        "shortNameEn": "TYL"
+      },
+      "ulf": {
+        "id": "ulf",
+        "logo": "",
+        "name": "ULF",
+        "short": "ULF",
+        "vlrId": "18019",
+        "manual": false,
+        "nameEn": "ULF",
+        "region": "emea",
+        "roster": [],
+        "aliases": [
+          "ULF"
+        ],
+        "coaches": [],
+        "shortName": "ULF",
+        "updatedAt": 0,
+        "shortNameEn": "ULF"
+      },
+      "vit": {
+        "id": "vit",
+        "logo": "",
+        "name": "Team Vitality",
+        "short": "VIT",
+        "vlrId": "2059",
+        "manual": false,
+        "nameEn": "Team Vitality",
+        "region": "emea",
+        "roster": [
+          {
+            "id": "p-jamppi",
+            "name": "Jamppi",
+            "role": "igl",
+            "avatar": "",
+            "joined": "2024-01",
+            "source": "seed",
+            "country": "fi",
+            "formerTeams": []
+          },
+          {
+            "id": "p-derke",
+            "name": "Derke",
+            "role": "duelist",
+            "avatar": "",
+            "joined": "2024-01",
+            "source": "seed",
+            "country": "fi",
+            "formerTeams": [
+              "fnc"
+            ]
+          },
+          {
+            "id": "p-chronicle",
+            "name": "Chronicle",
+            "role": "initiator",
+            "avatar": "",
+            "joined": "2024-01",
+            "source": "seed",
+            "country": "ru",
+            "formerTeams": []
+          },
+          {
+            "id": "p-profek",
+            "name": "PROFEK",
+            "role": "sentinel",
+            "avatar": "",
+            "joined": "2024-01",
+            "source": "seed",
+            "country": "pl",
+            "formerTeams": []
+          },
+          {
+            "id": "p-sayonara",
+            "name": "Sayonara",
+            "role": "controller",
+            "avatar": "",
+            "joined": "2024-01",
+            "source": "seed",
+            "country": "ru",
+            "formerTeams": []
+          }
+        ],
+        "aliases": [
+          "Team Vitality",
+          "Vitality",
+          "VIT"
+        ],
+        "coaches": [],
+        "shortName": "VIT",
+        "updatedAt": 0,
+        "shortNameEn": "VIT"
+      },
+      "wol": {
+        "id": "wol",
+        "logo": "",
+        "name": "Wolves Esports",
+        "short": "WOL",
+        "vlrId": "13790",
+        "manual": false,
+        "nameEn": "Wolves Esports",
+        "region": "cn",
+        "roster": [],
+        "aliases": [
+          "Wolves",
+          "WOL"
+        ],
+        "coaches": [],
+        "shortName": "WOL",
+        "updatedAt": 0,
+        "shortNameEn": "WOL"
+      },
+      "xlg": {
+        "id": "xlg",
+        "logo": "",
+        "name": "XLG Esports",
+        "short": "XLG",
+        "vlrId": "13581",
+        "manual": false,
+        "nameEn": "XLG Esports",
+        "region": "cn",
+        "roster": [],
+        "aliases": [
+          "XLG"
+        ],
+        "coaches": [],
+        "shortName": "XLG",
+        "updatedAt": 0,
+        "shortNameEn": "XLG"
+      },
+      "100t": {
+        "id": "100t",
+        "logo": "",
+        "name": "100 Thieves",
+        "short": "100T",
+        "vlrId": "120",
+        "manual": false,
+        "nameEn": "100 Thieves",
+        "region": "americas",
+        "roster": [],
+        "aliases": [
+          "100 Thieves",
+          "100T"
+        ],
+        "coaches": [],
+        "shortName": "100T",
+        "updatedAt": 0,
+        "shortNameEn": "100T"
+      },
+      "envy": {
+        "id": "envy",
+        "logo": "",
+        "name": "ENVY",
+        "short": "ENVY",
+        "vlrId": "427",
+        "manual": false,
+        "nameEn": "ENVY",
+        "region": "americas",
+        "roster": [],
+        "aliases": [
+          "ENVY",
+          "Envy"
+        ],
+        "coaches": [],
+        "shortName": "ENVY",
+        "updatedAt": 0,
+        "shortNameEn": "ENVY"
+      },
+      "loud": {
+        "id": "loud",
+        "logo": "",
+        "name": "LOUD",
+        "short": "LOUD",
+        "vlrId": "6961",
+        "manual": false,
+        "nameEn": "LOUD",
+        "region": "americas",
+        "roster": [],
+        "aliases": [
+          "LOUD"
+        ],
+        "coaches": [],
+        "shortName": "LOUD",
+        "updatedAt": 0,
+        "shortNameEn": "LOUD"
+      },
+      "mibr": {
+        "id": "mibr",
+        "logo": "",
+        "name": "MIBR",
+        "short": "MIBR",
+        "vlrId": "7386",
+        "manual": false,
+        "nameEn": "MIBR",
+        "region": "americas",
+        "roster": [
+          {
+            "id": "p-aspas",
+            "name": "aspas",
+            "role": "duelist",
+            "avatar": "",
+            "joined": "2024-06",
+            "source": "seed",
+            "country": "br",
+            "formerTeams": [
+              "lev"
+            ]
+          },
+          {
+            "id": "p-xenom",
+            "name": "xenom",
+            "role": "sentinel",
+            "avatar": "",
+            "joined": "2024-01",
+            "source": "seed",
+            "country": "br",
+            "formerTeams": []
+          },
+          {
+            "id": "p-verno",
+            "name": "Verno",
+            "role": "initiator",
+            "avatar": "",
+            "joined": "2024-01",
+            "source": "seed",
+            "country": "br",
+            "formerTeams": []
+          }
+        ],
+        "aliases": [
+          "MIBR"
+        ],
+        "coaches": [],
+        "shortName": "MIBR",
+        "updatedAt": 0,
+        "shortNameEn": "MIBR"
+      },
+      "navi": {
+        "id": "navi",
+        "logo": "",
+        "name": "NAVI",
+        "short": "NAVI",
+        "vlrId": "4915",
+        "manual": false,
+        "nameEn": "NAVI",
+        "region": "emea",
+        "roster": [],
+        "aliases": [
+          "NAVI",
+          "Natus Vincere"
+        ],
+        "coaches": [],
+        "shortName": "NAVI",
+        "updatedAt": 0,
+        "shortNameEn": "NAVI"
+      },
+      "nova": {
+        "id": "nova",
+        "logo": "",
+        "name": "Nova Esports",
+        "short": "NOVA",
+        "vlrId": "12064",
+        "manual": false,
+        "nameEn": "Nova Esports",
+        "region": "cn",
+        "roster": [],
+        "aliases": [
+          "Nova"
+        ],
+        "coaches": [],
+        "shortName": "NOVA",
+        "updatedAt": 0,
+        "shortNameEn": "NOVA"
+      },
+      "tsec": {
+        "id": "tsec",
+        "logo": "",
+        "name": "Team Secret",
+        "short": "TSEC",
+        "vlrId": "6199",
+        "manual": false,
+        "nameEn": "Team Secret",
+        "region": "pacific",
+        "roster": [],
+        "aliases": [
+          "Team Secret",
+          "TSEC",
+          "Secret"
+        ],
+        "coaches": [],
+        "shortName": "TSEC",
+        "updatedAt": 0,
+        "shortNameEn": "TSEC"
+      },
+      "zeta": {
+        "id": "zeta",
+        "logo": "",
+        "name": "ZETA",
+        "short": "ZETA",
+        "vlrId": "5448",
+        "manual": false,
+        "nameEn": "ZETA",
+        "region": "pacific",
+        "roster": [],
+        "aliases": [
+          "ZETA",
+          "Zeta Division"
+        ],
+        "coaches": [],
+        "shortName": "ZETA",
+        "updatedAt": 0,
+        "shortNameEn": "ZETA"
+      },
+      "furia": {
+        "id": "furia",
+        "logo": "",
+        "name": "FURIA",
+        "short": "FURIA",
+        "vlrId": "2406",
+        "manual": false,
+        "nameEn": "FURIA",
+        "region": "americas",
+        "roster": [],
+        "aliases": [
+          "FURIA",
+          "Furia"
+        ],
+        "coaches": [],
+        "shortName": "FURIA",
+        "updatedAt": 0,
+        "shortNameEn": "FURIA"
+      },
+      "pcific": {
+        "id": "pcific",
+        "logo": "",
+        "name": "PCIFIC",
+        "short": "PCIFIC",
+        "vlrId": "3478",
+        "manual": false,
+        "nameEn": "PCIFIC",
+        "region": "emea",
+        "roster": [],
+        "aliases": [
+          "PCIFIC"
+        ],
+        "coaches": [],
+        "shortName": "PCIFIC",
+        "updatedAt": 0,
+        "shortNameEn": "PCIFIC"
+      },
+      "varrel": {
+        "id": "varrel",
+        "logo": "",
+        "name": "VARREL",
+        "short": "VARREL",
+        "vlrId": "11229",
+        "manual": false,
+        "nameEn": "VARREL",
+        "region": "pacific",
+        "roster": [],
+        "aliases": [
+          "VARREL"
+        ],
+        "coaches": [],
+        "shortName": "VARREL",
+        "updatedAt": 0,
+        "shortNameEn": "VARREL"
+      }
+    },
+    "render": {
+      "templates": [],
+      "draftSlots": null,
+      "currentSource": 0,
+      "currentTemplateId": null
+    },
+    "shifts": {
+      "2026-08-01": {
+        "S1": "early",
+        "S2": "late"
+      },
+      "2026-08-02": {
+        "S3": "early",
+        "S4": "late"
+      },
+      "2026-08-03": {
+        "S5": "early",
+        "S6": "late"
+      },
+      "2026-08-04": {
+        "S1": "late",
+        "S7": "early"
+      },
+      "2026-08-05": {
+        "S2": "early",
+        "S3": "late",
+        "S4": "early",
+        "S5": "late"
+      },
+      "2026-08-06": {
+        "S1": "early",
+        "S2": "late",
+        "S6": "early",
+        "S7": "late"
+      },
+      "2026-08-07": {
+        "S3": "early",
+        "S4": "late",
+        "S5": "early",
+        "S6": "late"
+      },
+      "2026-08-08": {
+        "S1": "late",
+        "S2": "early",
+        "S3": "late",
+        "S7": "early"
+      },
+      "2026-08-09": {
+        "S4": "early",
+        "S5": "late",
+        "S6": "early",
+        "S7": "late"
+      },
+      "2026-08-10": {
+        "S1": "early",
+        "S2": "late",
+        "S3": "early",
+        "S4": "late"
+      },
+      "2026-08-11": {
+        "S1": "late",
+        "S5": "early",
+        "S6": "late",
+        "S7": "early"
+      },
+      "2026-08-12": {
+        "S2": "early",
+        "S3": "late",
+        "S4": "early",
+        "S5": "late"
+      },
+      "2026-08-13": {
+        "S6": "early",
+        "S7": "late"
+      },
+      "2026-08-14": {
+        "S1": "early",
+        "S2": "late",
+        "S3": "early",
+        "S4": "late"
+      },
+      "2026-08-15": {
+        "S1": "late",
+        "S5": "early",
+        "S6": "late",
+        "S7": "early"
+      },
+      "2026-08-16": {
+        "S2": "early",
+        "S3": "late",
+        "S4": "early",
+        "S5": "late"
+      },
+      "2026-08-17": {
+        "S6": "early",
+        "S7": "late"
+      },
+      "2026-08-18": {
+        "S1": "early",
+        "S2": "late"
+      },
+      "2026-08-19": {
+        "S3": "early",
+        "S4": "late",
+        "S5": "early",
+        "S6": "late"
+      },
+      "2026-08-20": {
+        "S1": "late",
+        "S2": "early",
+        "S3": "late",
+        "S7": "early"
+      },
+      "2026-08-21": {
+        "S4": "early",
+        "S5": "late",
+        "S6": "early",
+        "S7": "late"
+      },
+      "2026-08-22": {
+        "S1": "early",
+        "S2": "late",
+        "S3": "early",
+        "S4": "late"
+      },
+      "2026-08-23": {
+        "S1": "late",
+        "S5": "early",
+        "S6": "late",
+        "S7": "early"
+      },
+      "2026-08-24": {
+        "S2": "early",
+        "S3": "late"
+      },
+      "2026-08-25": {
+        "S4": "early",
+        "S5": "late"
+      },
+      "2026-08-26": {
+        "S6": "early",
+        "S7": "late"
+      },
+      "2026-08-27": {
+        "S1": "early",
+        "S2": "late"
+      },
+      "2026-08-28": {
+        "S3": "early",
+        "S4": "late"
+      },
+      "2026-08-29": {
+        "S5": "early",
+        "S6": "late"
+      },
+      "2026-08-30": {
+        "S1": "late",
+        "S7": "early"
+      },
+      "2026-08-31": {
+        "S2": "early",
+        "S3": "late"
+      }
+    },
+    "casters": [],
+    "content": [
+      {
+        "id": "C1",
+        "date": "2026-08-16",
+        "note": "",
+        "time": "15:00",
+        "type": "赛前预热",
+        "title": "赛前预热：今日对阵前瞻",
+        "status": "published",
+        "assigneeId": null
+      },
+      {
+        "id": "C2",
+        "date": "2026-08-16",
+        "note": "",
+        "time": "23:30",
+        "type": "赛果战报",
+        "title": "赛果战报：今日比赛速递",
+        "status": "published",
+        "assigneeId": null
+      },
+      {
+        "id": "C3",
+        "date": "2026-08-17",
+        "note": "",
+        "time": "20:00",
+        "type": "互动话题",
+        "title": "休赛日互动话题：聊聊本周最佳操作",
+        "status": "published",
+        "assigneeId": null
+      },
+      {
+        "id": "C4",
+        "date": "2026-08-18",
+        "note": "",
+        "time": "20:00",
+        "type": "互动话题",
+        "title": "休赛日互动话题：聊聊本周最佳操作",
+        "status": "published",
+        "assigneeId": null
+      },
+      {
+        "id": "C5",
+        "date": "2026-08-19",
+        "note": "",
+        "time": "15:00",
+        "type": "赛前预热",
+        "title": "赛前预热：今日对阵前瞻",
+        "status": "planned",
+        "assigneeId": "S3"
+      },
+      {
+        "id": "C6",
+        "date": "2026-08-19",
+        "note": "",
+        "time": "23:30",
+        "type": "赛果战报",
+        "title": "赛果战报：今日比赛速递",
+        "status": "planned",
+        "assigneeId": "S4"
+      },
+      {
+        "id": "C7",
+        "date": "2026-08-20",
+        "note": "",
+        "time": "15:00",
+        "type": "赛前预热",
+        "title": "赛前预热：今日对阵前瞻",
+        "status": "planned",
+        "assigneeId": "S1"
+      },
+      {
+        "id": "C8",
+        "date": "2026-08-20",
+        "note": "",
+        "time": "23:30",
+        "type": "赛果战报",
+        "title": "赛果战报：今日比赛速递",
+        "status": "planned",
+        "assigneeId": "S2"
+      },
+      {
+        "id": "C9",
+        "date": "2026-08-21",
+        "note": "",
+        "time": "15:00",
+        "type": "赛前预热",
+        "title": "赛前预热：今日对阵前瞻",
+        "status": "planned",
+        "assigneeId": "S5"
+      },
+      {
+        "id": "C10",
+        "date": "2026-08-21",
+        "note": "",
+        "time": "23:30",
+        "type": "赛果战报",
+        "title": "赛果战报：今日比赛速递",
+        "status": "planned",
+        "assigneeId": "S4"
+      },
+      {
+        "id": "C11",
+        "date": "2026-08-22",
+        "note": "",
+        "time": "15:00",
+        "type": "赛前预热",
+        "title": "赛前预热：今日对阵前瞻",
+        "status": "planned",
+        "assigneeId": "S1"
+      },
+      {
+        "id": "C12",
+        "date": "2026-08-22",
+        "note": "",
+        "time": "23:30",
+        "type": "赛果战报",
+        "title": "赛果战报：今日比赛速递",
+        "status": "planned",
+        "assigneeId": "S2"
+      },
+      {
+        "id": "C13",
+        "date": "2026-08-23",
+        "note": "",
+        "time": "15:00",
+        "type": "赛前预热",
+        "title": "赛前预热：今日对阵前瞻",
+        "status": "planned",
+        "assigneeId": "S5"
+      },
+      {
+        "id": "C14",
+        "date": "2026-08-23",
+        "note": "",
+        "time": "23:30",
+        "type": "赛果战报",
+        "title": "赛果战报：今日比赛速递",
+        "status": "planned",
+        "assigneeId": "S5"
+      },
+      {
+        "id": "C15",
+        "date": "2026-08-24",
+        "note": "",
+        "time": "20:00",
+        "type": "互动话题",
+        "title": "休赛日互动话题：聊聊本周最佳操作",
+        "status": "planned",
+        "assigneeId": "S3"
+      },
+      {
+        "id": "C16",
+        "date": "2026-08-25",
+        "note": "",
+        "time": "20:00",
+        "type": "互动话题",
+        "title": "休赛日互动话题：聊聊本周最佳操作",
+        "status": "planned",
+        "assigneeId": "S4"
+      },
+      {
+        "id": "C17",
+        "date": "2026-08-26",
+        "note": "",
+        "time": "20:00",
+        "type": "互动话题",
+        "title": "休赛日互动话题：聊聊本周最佳操作",
+        "status": "planned",
+        "assigneeId": null
+      },
+      {
+        "id": "C18",
+        "date": "2026-08-27",
+        "note": "",
+        "time": "20:00",
+        "type": "互动话题",
+        "title": "休赛日互动话题：聊聊本周最佳操作",
+        "status": "planned",
+        "assigneeId": "S1"
+      },
+      {
+        "id": "C19",
+        "date": "2026-08-28",
+        "note": "",
+        "time": "20:00",
+        "type": "互动话题",
+        "title": "休赛日互动话题：聊聊本周最佳操作",
+        "status": "planned",
+        "assigneeId": "S3"
+      },
+      {
+        "id": "C20",
+        "date": "2026-08-29",
+        "note": "",
+        "time": "20:00",
+        "type": "互动话题",
+        "title": "休赛日互动话题：聊聊本周最佳操作",
+        "status": "planned",
+        "assigneeId": "S5"
+      },
+      {
+        "id": "C101",
+        "date": "2026-08-25",
+        "note": "(已清理 XSS 测试残留)",
+        "time": "12:00",
+        "type": "其他",
+        "title": "(已清理 XSS 测试残留)",
+        "status": "planned",
+        "assigneeId": null
+      }
+    ],
+    "syncLog": [
+      {
+        "note": "VLR 赛程同步（2026-08-25 03:15）",
+        "time": 1787627735930,
+        "source": "vlr",
+        "changes": [],
+        "affected": 0
+      },
+      {
+        "note": "VLR 赛程同步（2026-08-25 03:15）",
+        "time": 1787627718973,
+        "source": "vlr",
+        "changes": [],
+        "affected": 0
+      },
+      {
+        "note": "VLR 赛程同步（2026-08-25 03:15）",
+        "time": 1787627716256,
+        "source": "vlr",
+        "changes": [],
+        "affected": 0
+      },
+      {
+        "note": "VLR 赛程同步（2026-08-25 03:15）",
+        "time": 1787627700942,
+        "source": "vlr",
+        "changes": [
+          {
+            "date": "2026-08-25",
+            "desc": "比赛场次/时间调整"
+          },
+          {
+            "date": "2026-10-02",
+            "desc": "比赛场次/时间调整"
+          }
+        ],
+        "affected": 1
+      },
+      {
+        "note": "VLR 赛程同步（2026-08-25 02:59）",
+        "time": 1787626771791,
+        "source": "vlr",
+        "changes": [],
+        "affected": 0
+      },
+      {
+        "note": "VLR 赛程同步（2026-08-25 02:58）",
+        "time": 1787626738517,
+        "source": "vlr",
+        "changes": [],
+        "affected": 0
+      },
+      {
+        "note": "VLR 赛程同步（2026-08-25 02:57）",
+        "time": 1787626631570,
+        "source": "vlr",
+        "changes": [],
+        "affected": 0
+      },
+      {
+        "note": "VLR 赛程同步（2026-08-24 09:24）",
+        "time": 1787563496195,
+        "source": "vlr",
+        "changes": [],
+        "affected": 0
+      },
+      {
+        "note": "VLR 赛程同步（2026-08-24 09:24）",
+        "time": 1787563491886,
+        "source": "vlr",
+        "changes": [],
+        "affected": 0
+      },
+      {
+        "note": "VLR 赛程同步（2026-08-23 10:45）",
+        "time": 1787481910877,
+        "source": "vlr",
+        "changes": [],
+        "affected": 0
+      },
+      {
+        "note": "VLR 赛程同步（2026-08-23 10:45）",
+        "time": 1787481904775,
+        "source": "vlr",
+        "changes": [],
+        "affected": 0
+      },
+      {
+        "note": "VLR 赛程同步（2026-08-23 10:37）",
+        "time": 1787481428897,
+        "source": "vlr",
+        "changes": [],
+        "affected": 0
+      },
+      {
+        "note": "VLR 赛程同步（2026-08-23 10:37）",
+        "time": 1787481428526,
+        "source": "vlr",
+        "changes": [],
+        "affected": 0
+      },
+      {
+        "note": "VLR 赛程同步（2026-08-23 10:30）",
+        "time": 1787481052070,
+        "source": "vlr",
+        "changes": [],
+        "affected": 0
+      },
+      {
+        "note": "VLR 赛程同步（2026-08-23 10:30）",
+        "time": 1787481026614,
+        "source": "vlr",
+        "changes": [],
+        "affected": 0
+      },
+      {
+        "note": "VLR 赛程同步（2026-08-23 09:45）",
+        "time": 1787478323778,
+        "source": "vlr",
+        "changes": [
+          {
+            "date": "2026-08-05",
+            "desc": "比赛场次/时间调整"
+          },
+          {
+            "date": "2026-08-06",
+            "desc": "比赛场次/时间调整"
+          },
+          {
+            "date": "2026-08-07",
+            "desc": "比赛场次/时间调整"
+          },
+          {
+            "date": "2026-08-08",
+            "desc": "比赛场次/时间调整"
+          },
+          {
+            "date": "2026-08-09",
+            "desc": "比赛场次/时间调整"
+          },
+          {
+            "date": "2026-08-10",
+            "desc": "比赛场次/时间调整"
+          },
+          {
+            "date": "2026-08-11",
+            "desc": "比赛场次/时间调整"
+          },
+          {
+            "date": "2026-08-12",
+            "desc": "比赛场次/时间调整"
+          },
+          {
+            "date": "2026-08-14",
+            "desc": "比赛场次/时间调整"
+          },
+          {
+            "date": "2026-08-15",
+            "desc": "比赛场次/时间调整"
+          },
+          {
+            "date": "2026-08-16",
+            "desc": "比赛场次/时间调整"
+          },
+          {
+            "date": "2026-08-19",
+            "desc": "比赛场次/时间调整"
+          },
+          {
+            "date": "2026-08-20",
+            "desc": "比赛场次/时间调整"
+          },
+          {
+            "date": "2026-08-21",
+            "desc": "比赛场次/时间调整"
+          },
+          {
+            "date": "2026-08-22",
+            "desc": "比赛场次/时间调整"
+          },
+          {
+            "date": "2026-08-23",
+            "desc": "比赛场次/时间调整"
+          },
+          {
+            "date": "2026-07-09",
+            "desc": "新增赛程"
+          },
+          {
+            "date": "2026-07-10",
+            "desc": "新增赛程"
+          },
+          {
+            "date": "2026-07-11",
+            "desc": "新增赛程"
+          },
+          {
+            "date": "2026-07-12",
+            "desc": "新增赛程"
+          },
+          {
+            "date": "2026-07-14",
+            "desc": "新增赛程"
+          },
+          {
+            "date": "2026-07-15",
+            "desc": "新增赛程"
+          },
+          {
+            "date": "2026-07-16",
+            "desc": "新增赛程"
+          },
+          {
+            "date": "2026-07-17",
+            "desc": "新增赛程"
+          },
+          {
+            "date": "2026-07-18",
+            "desc": "新增赛程"
+          },
+          {
+            "date": "2026-07-19",
+            "desc": "新增赛程"
+          },
+          {
+            "date": "2026-07-20",
+            "desc": "新增赛程"
+          },
+          {
+            "date": "2026-07-21",
+            "desc": "新增赛程"
+          },
+          {
+            "date": "2026-07-22",
+            "desc": "新增赛程"
+          },
+          {
+            "date": "2026-07-23",
+            "desc": "新增赛程"
+          },
+          {
+            "date": "2026-07-24",
+            "desc": "新增赛程"
+          },
+          {
+            "date": "2026-07-25",
+            "desc": "新增赛程"
+          },
+          {
+            "date": "2026-07-26",
+            "desc": "新增赛程"
+          }
+        ],
+        "affected": 16
+      },
+      {
+        "note": "系统初始化：导入 VCT CN 联赛与上海全球冠军赛赛程",
+        "time": 1787137608496,
+        "changes": []
+      }
+    ],
+    "lastSync": 1787627735930,
+    "matchups": {
+      "test-vs-test": {
+        "notes": [
+          {
+            "by": "s1",
+            "id": "note1",
+            "ts": 1787627702265,
+            "text": "(已清理 XSS 测试残留)"
+          }
+        ]
+      }
+    },
+    "handovers": [
+      {
+        "id": "H105",
+        "note": "(已清理 XSS 测试残留)",
+        "toId": "S2",
+        "type": "pre-leave",
+        "items": [
+          {
+            "date": "2026-08-25",
+            "done": false,
+            "refId": "C1",
+            "title": "(已清理 XSS 测试残留)",
+            "ownerId": "S1",
+            "refType": "content",
+            "priority": "中"
+          }
+        ],
+        "fromId": "S1",
+        "status": "delivered",
+        "createdAt": 1787627699375,
+        "deliveredAt": 1787627699375,
+        "acknowledgedAt": null
+      }
+    ],
+    "remoteRev": 13,
+    "templates": [
+      {
+        "id": "preview-portrait-v1",
+        "base": "",
+        "kind": "preview",
+        "lang": [
+          "zh",
+          "en"
+        ],
+        "meta": {
+          "title": "赛事预告",
+          "titleEn": "MATCH PREVIEW",
+          "subtitle": "TOURNAMENT PREVIEW",
+          "subtitleEn": "TOURNAMENT PREVIEW"
+        },
+        "name": "今日预告(竖版)",
+        "size": {
+          "h": 1620,
+          "w": 1080
+        },
+        "slots": [
+          {
+            "h": 80,
+            "w": 960,
+            "x": 60,
+            "y": 80,
+            "key": "title",
+            "font": "Noto Sans SC",
+            "size": 60,
+            "type": "text",
+            "align": "center",
+            "color": "#ffffff",
+            "group": "static",
+            "source": "meta.title",
+            "weight": 700,
+            "editable": true,
+            "createdBy": "system",
+            "staticText": "赛事预告",
+            "defaultValue": "赛事预告"
+          },
+          {
+            "h": 40,
+            "w": 960,
+            "x": 60,
+            "y": 175,
+            "key": "subtitle",
+            "font": "Noto Sans SC",
+            "size": 28,
+            "type": "text",
+            "align": "center",
+            "color": "#ffffff",
+            "group": "static",
+            "source": "meta.subtitle",
+            "weight": 400,
+            "editable": true,
+            "createdBy": "system",
+            "staticText": "TOURNAMENT PREVIEW",
+            "defaultValue": "TOURNAMENT PREVIEW"
+          },
+          {
+            "h": 60,
+            "w": 960,
+            "x": 60,
+            "y": 240,
+            "key": "date",
+            "font": "Noto Sans SC",
+            "size": 48,
+            "type": "text",
+            "align": "center",
+            "color": "#ffffff",
+            "group": "static",
+            "source": "meta.date",
+            "weight": 400,
+            "editable": true,
+            "createdBy": "system",
+            "defaultValue": "8月21日"
+          },
+          {
+            "h": 40,
+            "w": 960,
+            "x": 60,
+            "y": 310,
+            "key": "weekday",
+            "font": "Noto Sans SC",
+            "size": 30,
+            "type": "text",
+            "align": "center",
+            "color": "#ffffff",
+            "group": "static",
+            "source": "meta.weekday",
+            "weight": 400,
+            "editable": true,
+            "createdBy": "system",
+            "defaultValue": "星期五"
+          },
+          {
+            "h": 160,
+            "w": 160,
+            "x": 300,
+            "y": 420,
+            "key": "matchA_logo",
+            "type": "image",
+            "group": "match",
+            "shape": "circle",
+            "source": "matches[i].teamA.logo",
+            "editable": false,
+            "createdBy": "system"
+          },
+          {
+            "h": 40,
+            "w": 320,
+            "x": 220,
+            "y": 590,
+            "key": "matchA_name",
+            "font": "Noto Sans SC",
+            "size": 30,
+            "type": "text",
+            "align": "center",
+            "color": "#ffffff",
+            "group": "match",
+            "source": "matches[i].teamA.shortName",
+            "weight": 400,
+            "editable": true,
+            "createdBy": "system",
+            "defaultValue": "TBD"
+          },
+          {
+            "h": 50,
+            "w": 140,
+            "x": 470,
+            "y": 480,
+            "key": "match_vs",
+            "font": "Noto Sans SC",
+            "size": 36,
+            "type": "text",
+            "align": "center",
+            "color": "#ffffff",
+            "group": "match",
+            "source": "literal",
+            "weight": 700,
+            "editable": false,
+            "createdBy": "system",
+            "staticText": "VS"
+          },
+          {
+            "h": 160,
+            "w": 160,
+            "x": 620,
+            "y": 420,
+            "key": "matchB_logo",
+            "type": "image",
+            "group": "match",
+            "shape": "circle",
+            "source": "matches[i].teamB.logo",
+            "editable": false,
+            "createdBy": "system"
+          },
+          {
+            "h": 40,
+            "w": 320,
+            "x": 540,
+            "y": 590,
+            "key": "matchB_name",
+            "font": "Noto Sans SC",
+            "size": 30,
+            "type": "text",
+            "align": "center",
+            "color": "#ffffff",
+            "group": "match",
+            "source": "matches[i].teamB.shortName",
+            "weight": 400,
+            "editable": true,
+            "createdBy": "system",
+            "defaultValue": "TBD"
+          },
+          {
+            "h": 50,
+            "w": 960,
+            "x": 60,
+            "y": 650,
+            "key": "match_time",
+            "font": "Noto Sans SC",
+            "size": 34,
+            "type": "text",
+            "align": "center",
+            "color": "#ffffff",
+            "group": "match",
+            "source": "matches[i].time",
+            "weight": 400,
+            "editable": true,
+            "createdBy": "system",
+            "defaultValue": "00:00"
+          }
+        ],
+        "groups": {
+          "match": {
+            "stride": 320,
+            "maxCount": 3,
+            "repeatGap": 160,
+            "repeatDirection": "vertical"
+          }
+        },
+        "createdBy": "system",
+        "updatedAt": 1787626736818,
+        "exportScale": 1,
+        "orientation": "portrait"
+      },
+      {
+        "id": "today-casters-v1",
+        "base": "",
+        "kind": "casters",
+        "lang": [
+          "zh",
+          "en"
+        ],
+        "meta": {
+          "title": "今日解说",
+          "titleEn": "TODAY'S CASTERS",
+          "subtitle": "TODAY'S CASTERS",
+          "subtitleEn": "TODAY'S CASTERS"
+        },
+        "name": "今日解说(横版)",
+        "size": {
+          "h": 1080,
+          "w": 1920
+        },
+        "slots": [
+          {
+            "h": 90,
+            "w": 1800,
+            "x": 60,
+            "y": 60,
+            "key": "title",
+            "font": "Noto Sans SC",
+            "size": 60,
+            "type": "text",
+            "align": "center",
+            "color": "#ffffff",
+            "group": "static",
+            "source": "meta.title",
+            "weight": 700,
+            "editable": true,
+            "createdBy": "system",
+            "defaultValue": "今日解说"
+          },
+          {
+            "h": 40,
+            "w": 1800,
+            "x": 60,
+            "y": 160,
+            "key": "subtitle",
+            "font": "Noto Sans SC",
+            "size": 28,
+            "type": "text",
+            "align": "center",
+            "color": "#ffffff",
+            "group": "static",
+            "source": "meta.subtitle",
+            "weight": 400,
+            "editable": true,
+            "createdBy": "system"
+          },
+          {
+            "h": 160,
+            "w": 160,
+            "x": 120,
+            "y": 280,
+            "key": "matchA_logo",
+            "type": "image",
+            "group": "match",
+            "shape": "circle",
+            "source": "matches[i].teamA.logo",
+            "editable": false,
+            "createdBy": "system"
+          },
+          {
+            "h": 160,
+            "w": 160,
+            "x": 740,
+            "y": 280,
+            "key": "matchB_logo",
+            "type": "image",
+            "group": "match",
+            "shape": "circle",
+            "source": "matches[i].teamB.logo",
+            "editable": false,
+            "createdBy": "system"
+          },
+          {
+            "h": 50,
+            "w": 420,
+            "x": 440,
+            "y": 300,
+            "key": "match_time",
+            "font": "Noto Sans SC",
+            "size": 30,
+            "type": "text",
+            "align": "center",
+            "color": "#ffffff",
+            "group": "match",
+            "source": "matches[i].time",
+            "weight": 400,
+            "editable": true,
+            "createdBy": "system",
+            "defaultValue": "00:00"
+          },
+          {
+            "h": 140,
+            "w": 140,
+            "x": 120,
+            "y": 460,
+            "key": "caster_portrait",
+            "type": "image",
+            "group": "caster",
+            "shape": "circle",
+            "source": "matches[i].casters[j].portrait",
+            "editable": false,
+            "createdBy": "system"
+          },
+          {
+            "h": 36,
+            "w": 140,
+            "x": 120,
+            "y": 610,
+            "key": "caster_name",
+            "font": "Noto Sans SC",
+            "size": 22,
+            "type": "text",
+            "align": "center",
+            "color": "#ffffff",
+            "group": "caster",
+            "source": "matches[i].casters[j].name",
+            "weight": 400,
+            "editable": true,
+            "createdBy": "system",
+            "defaultValue": "解说"
+          },
+          {
+            "h": 28,
+            "w": 140,
+            "x": 120,
+            "y": 648,
+            "key": "caster_role",
+            "font": "Noto Sans SC",
+            "size": 18,
+            "type": "text",
+            "align": "center",
+            "color": "#dddddd",
+            "group": "caster",
+            "source": "matches[i].casters[j].role",
+            "weight": 400,
+            "editable": true,
+            "createdBy": "system",
+            "defaultValue": "主解说"
+          }
+        ],
+        "groups": {
+          "match": {
+            "stride": 900,
+            "maxCount": 2,
+            "repeatGap": 80,
+            "repeatDirection": "horizontal"
+          },
+          "caster": {
+            "stride": 200,
+            "maxCount": 3,
+            "repeatGap": 36,
+            "matchIndex": "any",
+            "repeatDirection": "horizontal"
+          }
+        },
+        "createdBy": "system",
+        "exportScale": 1,
+        "orientation": "landscape"
+      },
+      {
+        "id": "today-lineup-v1",
+        "base": "",
+        "kind": "lineup",
+        "lang": [
+          "zh",
+          "en"
+        ],
+        "meta": {
+          "title": "",
+          "titleEn": "",
+          "subtitle": "STARTING LINEUP",
+          "subtitleEn": "STARTING LINEUP"
+        },
+        "name": "今日首发(横版)",
+        "size": {
+          "h": 1080,
+          "w": 1920
+        },
+        "slots": [
+          {
+            "h": 80,
+            "w": 1400,
+            "x": 60,
+            "y": 60,
+            "key": "main_title",
+            "font": "Noto Sans SC",
+            "size": 64,
+            "type": "text",
+            "align": "left",
+            "color": "#ffffff",
+            "group": "static",
+            "source": "team.nameEn",
+            "weight": 800,
+            "editable": true,
+            "createdBy": "system",
+            "defaultValue": "TEAM NAME"
+          },
+          {
+            "h": 40,
+            "w": 1400,
+            "x": 60,
+            "y": 150,
+            "key": "sub_title",
+            "font": "Noto Sans SC",
+            "size": 28,
+            "type": "text",
+            "align": "left",
+            "color": "#ffffff",
+            "group": "static",
+            "source": "team.nameEn",
+            "weight": 400,
+            "editable": true,
+            "createdBy": "system",
+            "defaultValue": "TEAM",
+            "letterSpacing": 6
+          },
+          {
+            "h": 300,
+            "w": 300,
+            "x": 1560,
+            "y": 60,
+            "key": "team_logo",
+            "type": "image",
+            "group": "static",
+            "shape": "rect",
+            "source": "team.logo",
+            "editable": false,
+            "createdBy": "system"
+          },
+          {
+            "h": 30,
+            "w": 240,
+            "x": 60,
+            "y": 360,
+            "key": "player_label",
+            "font": "Noto Sans SC",
+            "size": 20,
+            "type": "text",
+            "align": "center",
+            "color": "#ffffff",
+            "group": "player",
+            "source": "literal",
+            "weight": 400,
+            "editable": false,
+            "createdBy": "system",
+            "staticText": "PLAYER"
+          },
+          {
+            "h": 240,
+            "w": 240,
+            "x": 60,
+            "y": 400,
+            "key": "player_portrait",
+            "type": "image",
+            "group": "player",
+            "shape": "circle",
+            "source": "team.roster[i].avatar",
+            "editable": false,
+            "createdBy": "system"
+          },
+          {
+            "h": 40,
+            "w": 240,
+            "x": 60,
+            "y": 660,
+            "key": "player_id",
+            "font": "Noto Sans SC",
+            "size": 30,
+            "type": "text",
+            "align": "center",
+            "color": "#ffffff",
+            "group": "player",
+            "source": "team.roster[i].id",
+            "weight": 400,
+            "editable": true,
+            "createdBy": "system",
+            "defaultValue": "ID"
+          },
+          {
+            "h": 30,
+            "w": 200,
+            "x": 60,
+            "y": 720,
+            "key": "coach_label",
+            "font": "Noto Sans SC",
+            "size": 20,
+            "type": "text",
+            "align": "left",
+            "color": "#ffffff",
+            "group": "static",
+            "source": "literal",
+            "weight": 400,
+            "editable": false,
+            "createdBy": "system",
+            "staticText": "COACH"
+          },
+          {
+            "h": 120,
+            "w": 120,
+            "x": 60,
+            "y": 760,
+            "key": "coach_portrait",
+            "type": "image",
+            "group": "coach",
+            "shape": "circle",
+            "source": "team.coaches[i].avatar",
+            "editable": false,
+            "createdBy": "system"
+          },
+          {
+            "h": 40,
+            "w": 260,
+            "x": 200,
+            "y": 765,
+            "key": "coach_name",
+            "font": "Noto Sans SC",
+            "size": 26,
+            "type": "text",
+            "align": "left",
+            "color": "#ffffff",
+            "group": "coach",
+            "source": "team.coaches[i].name",
+            "weight": 400,
+            "editable": true,
+            "createdBy": "system",
+            "defaultValue": "教练"
+          },
+          {
+            "h": 30,
+            "w": 260,
+            "x": 200,
+            "y": 805,
+            "key": "coach_role",
+            "font": "Noto Sans SC",
+            "size": 18,
+            "type": "text",
+            "align": "left",
+            "color": "#bbbbbb",
+            "group": "coach",
+            "source": "team.coaches[i].role",
+            "weight": 400,
+            "editable": true,
+            "createdBy": "system",
+            "defaultValue": "主教练"
+          }
+        ],
+        "groups": {
+          "coach": {
+            "stride": 180,
+            "maxCount": 3,
+            "repeatGap": 32,
+            "repeatDirection": "vertical"
+          },
+          "player": {
+            "stride": 340,
+            "maxCount": 5,
+            "repeatGap": 24,
+            "repeatDirection": "horizontal"
+          }
+        },
+        "createdBy": "system",
+        "exportScale": 1,
+        "orientation": "landscape"
+      }
+    ],
+    "highlights": [],
+    "shiftTypes": [
+      {
+        "bg": "rgba(32,72,142,.25)",
+        "end": "17:00",
+        "key": "early",
+        "color": "#4D7FCC",
+        "label": "早班",
+        "short": "早",
+        "start": "09:00"
+      },
+      {
+        "bg": "rgba(111,74,204,.22)",
+        "end": "01:00",
+        "key": "late",
+        "color": "#9B7DE0",
+        "label": "晚班",
+        "short": "晚",
+        "start": "17:00"
+      }
+    ],
+    "allowedFonts": [],
+    "scheduleDays": {
+      "2026-07-09": {
+        "type": "match",
+        "manual": false,
+        "matches": [
+          {
+            "bo": "BO3",
+            "name": "VCT CN 2026 第二赛段 第1周",
+            "time": "16:00",
+            "stage": "第1周",
+            "teams": "Wolves Esports vs Titan Esports Club"
+          },
+          {
+            "bo": "BO3",
+            "name": "VCT CN 2026 第二赛段 第1周",
+            "time": "18:20",
+            "stage": "第1周",
+            "teams": "Dragon Ranger Gaming vs Bilibili Gaming"
+          }
+        ]
+      },
+      "2026-07-10": {
+        "type": "match",
+        "manual": false,
+        "matches": [
+          {
+            "bo": "BO3",
+            "name": "VCT CN 2026 第二赛段 第1周",
+            "time": "16:00",
+            "stage": "第1周",
+            "teams": "FunPlus Phoenix vs Trace Esports"
+          },
+          {
+            "bo": "BO3",
+            "name": "VCT CN 2026 第二赛段 第1周",
+            "time": "18:10",
+            "stage": "第1周",
+            "teams": "JD Gaming vs TYLOO"
+          }
+        ]
+      },
+      "2026-07-11": {
+        "type": "match",
+        "manual": false,
+        "matches": [
+          {
+            "bo": "BO3",
+            "name": "VCT CN 2026 第二赛段 第1周",
+            "time": "16:00",
+            "stage": "第1周",
+            "teams": "Dragon Ranger Gaming vs Titan Esports Club"
+          },
+          {
+            "bo": "BO3",
+            "name": "VCT CN 2026 第二赛段 第1周",
+            "time": "19:35",
+            "stage": "第1周",
+            "teams": "Bilibili Gaming vs Wolves Esports"
+          }
+        ]
+      },
+      "2026-07-12": {
+        "type": "match",
+        "manual": false,
+        "matches": [
+          {
+            "bo": "BO3",
+            "name": "VCT CN 2026 第二赛段 第1周",
+            "time": "16:00",
+            "stage": "第1周",
+            "teams": "Nova Esports vs FunPlus Phoenix"
+          },
+          {
+            "bo": "BO3",
+            "name": "VCT CN 2026 第二赛段 第1周",
+            "time": "18:10",
+            "stage": "第1周",
+            "teams": "TYLOO vs Trace Esports"
+          }
+        ]
+      },
+      "2026-07-14": {
+        "type": "match",
+        "manual": false,
+        "matches": [
+          {
+            "bo": "BO3",
+            "name": "VCT CN 2026 第二赛段 第2周",
+            "time": "17:00",
+            "stage": "第2周",
+            "teams": "Wolves Esports vs All Gamers"
+          },
+          {
+            "bo": "BO3",
+            "name": "VCT CN 2026 第二赛段 第2周",
+            "time": "19:15",
+            "stage": "第2周",
+            "teams": "Xi Lai Gaming vs Titan Esports Club"
+          }
+        ]
+      },
+      "2026-07-15": {
+        "type": "match",
+        "manual": false,
+        "matches": [
+          {
+            "bo": "BO3",
+            "name": "VCT CN 2026 第二赛段 第2周",
+            "time": "17:00",
+            "stage": "第2周",
+            "teams": "JD Gaming vs FunPlus Phoenix"
+          },
+          {
+            "bo": "BO3",
+            "name": "VCT CN 2026 第二赛段 第2周",
+            "time": "19:20",
+            "stage": "第2周",
+            "teams": "EDward Gaming vs TYLOO"
+          }
+        ]
+      },
+      "2026-07-16": {
+        "type": "match",
+        "manual": false,
+        "matches": [
+          {
+            "bo": "BO3",
+            "name": "VCT CN 2026 第二赛段 第2周",
+            "time": "17:00",
+            "stage": "第2周",
+            "teams": "All Gamers vs Bilibili Gaming"
+          },
+          {
+            "bo": "BO3",
+            "name": "VCT CN 2026 第二赛段 第2周",
+            "time": "20:25",
+            "stage": "第2周",
+            "teams": "Xi Lai Gaming vs Dragon Ranger Gaming"
+          }
+        ]
+      },
+      "2026-07-17": {
+        "type": "match",
+        "manual": false,
+        "matches": [
+          {
+            "bo": "BO3",
+            "name": "VCT CN 2026 第二赛段 第2周",
+            "time": "15:00",
+            "stage": "第2周",
+            "teams": "Nova Esports vs JD Gaming"
+          },
+          {
+            "bo": "BO3",
+            "name": "VCT CN 2026 第二赛段 第2周",
+            "time": "18:00",
+            "stage": "第2周",
+            "teams": "TYLOO vs FunPlus Phoenix"
+          },
+          {
+            "bo": "BO3",
+            "name": "VCT CN 2026 第二赛段 第2周",
+            "time": "21:30",
+            "stage": "第2周",
+            "teams": "Trace Esports vs EDward Gaming"
+          }
+        ]
+      },
+      "2026-07-18": {
+        "type": "match",
+        "manual": false,
+        "matches": [
+          {
+            "bo": "BO3",
+            "name": "VCT CN 2026 第二赛段 第2周",
+            "time": "17:00",
+            "stage": "第2周",
+            "teams": "Titan Esports Club vs Bilibili Gaming"
+          },
+          {
+            "bo": "BO3",
+            "name": "VCT CN 2026 第二赛段 第2周",
+            "time": "21:00",
+            "stage": "第2周",
+            "teams": "All Gamers vs Xi Lai Gaming"
+          }
+        ]
+      },
+      "2026-07-19": {
+        "type": "match",
+        "manual": false,
+        "matches": [
+          {
+            "bo": "BO3",
+            "name": "VCT CN 2026 第二赛段 第2周",
+            "time": "15:00",
+            "stage": "第2周",
+            "teams": "Trace Esports vs Nova Esports"
+          },
+          {
+            "bo": "BO3",
+            "name": "VCT CN 2026 第二赛段 第2周",
+            "time": "18:25",
+            "stage": "第2周",
+            "teams": "Dragon Ranger Gaming vs Wolves Esports"
+          },
+          {
+            "bo": "BO3",
+            "name": "VCT CN 2026 第二赛段 第2周",
+            "time": "21:45",
+            "stage": "第2周",
+            "teams": "EDward Gaming vs JD Gaming"
+          }
+        ]
+      },
+      "2026-07-20": {
+        "type": "match",
+        "manual": false,
+        "matches": [
+          {
+            "bo": "BO3",
+            "name": "VCT CN 2026 第二赛段 第3周",
+            "time": "17:00",
+            "stage": "第3周",
+            "teams": "Titan Esports Club vs All Gamers"
+          },
+          {
+            "bo": "BO3",
+            "name": "VCT CN 2026 第二赛段 第3周",
+            "time": "19:25",
+            "stage": "第3周",
+            "teams": "Bilibili Gaming vs Xi Lai Gaming"
+          }
+        ]
+      },
+      "2026-07-21": {
+        "type": "match",
+        "manual": false,
+        "matches": [
+          {
+            "bo": "BO3",
+            "name": "VCT CN 2026 第二赛段 第3周",
+            "time": "17:00",
+            "stage": "第3周",
+            "teams": "JD Gaming vs Trace Esports"
+          },
+          {
+            "bo": "BO3",
+            "name": "VCT CN 2026 第二赛段 第3周",
+            "time": "19:15",
+            "stage": "第3周",
+            "teams": "EDward Gaming vs Nova Esports"
+          }
+        ]
+      },
+      "2026-07-22": {
+        "type": "match",
+        "manual": false,
+        "matches": [
+          {
+            "bo": "BO3",
+            "name": "VCT CN 2026 第二赛段 第3周",
+            "time": "17:00",
+            "stage": "第3周",
+            "teams": "Xi Lai Gaming vs Wolves Esports"
+          },
+          {
+            "bo": "BO3",
+            "name": "VCT CN 2026 第二赛段 第3周",
+            "time": "20:20",
+            "stage": "第3周",
+            "teams": "All Gamers vs Dragon Ranger Gaming"
+          }
+        ]
+      },
+      "2026-07-23": {
+        "type": "match",
+        "manual": false,
+        "matches": [
+          {
+            "bo": "BO3",
+            "name": "VCT CN 2026 第二赛段 第3周",
+            "time": "17:00",
+            "stage": "第3周",
+            "teams": "TYLOO vs Nova Esports"
+          },
+          {
+            "bo": "BO3",
+            "name": "VCT CN 2026 第二赛段 第3周",
+            "time": "19:35",
+            "stage": "第3周",
+            "teams": "FunPlus Phoenix vs EDward Gaming"
+          }
+        ]
+      },
+      "2026-07-24": {
+        "type": "match",
+        "manual": false,
+        "matches": [
+          {
+            "bo": "BO3",
+            "name": "VCT CN 2026 第二赛段 种子排位赛",
+            "time": "17:00",
+            "stage": "种子排位赛",
+            "teams": "Trace Esports vs Titan Esports Club"
+          },
+          {
+            "bo": "BO3",
+            "name": "VCT CN 2026 第二赛段 种子排位赛",
+            "time": "19:35",
+            "stage": "种子排位赛",
+            "teams": "EDward Gaming vs All Gamers"
+          }
+        ]
+      },
+      "2026-07-25": {
+        "type": "match",
+        "manual": false,
+        "matches": [
+          {
+            "bo": "BO3",
+            "name": "VCT CN 2026 第二赛段 种子排位赛",
+            "time": "17:00",
+            "stage": "种子排位赛",
+            "teams": "JD Gaming vs Dragon Ranger Gaming"
+          },
+          {
+            "bo": "BO3",
+            "name": "VCT CN 2026 第二赛段 种子排位赛",
+            "time": "20:35",
+            "stage": "种子排位赛",
+            "teams": "TYLOO vs Xi Lai Gaming"
+          }
+        ]
+      },
+      "2026-07-26": {
+        "type": "match",
+        "manual": false,
+        "matches": [
+          {
+            "bo": "BO3",
+            "name": "VCT CN 2026 第二赛段 种子排位赛",
+            "time": "17:00",
+            "stage": "种子排位赛",
+            "teams": "FunPlus Phoenix vs Wolves Esports"
+          },
+          {
+            "bo": "BO3",
+            "name": "VCT CN 2026 第二赛段 种子排位赛",
+            "time": "19:30",
+            "stage": "种子排位赛",
+            "teams": "Nova Esports vs Bilibili Gaming"
+          }
+        ]
+      },
+      "2026-08-01": {
+        "type": "rest",
+        "manual": false,
+        "matches": []
+      },
+      "2026-08-02": {
+        "type": "rest",
+        "manual": false,
+        "matches": []
+      },
+      "2026-08-03": {
+        "type": "rest",
+        "manual": false,
+        "matches": []
+      },
+      "2026-08-04": {
+        "type": "rest",
+        "manual": false,
+        "matches": []
+      },
+      "2026-08-05": {
+        "type": "match",
+        "manual": false,
+        "matches": [
+          {
+            "bo": "BO3",
+            "name": "VCT CN 2026 第二赛段 入围赛·胜者组第一轮",
+            "time": "16:00",
+            "stage": "入围赛·胜者组第一轮",
+            "teams": "Trace Esports vs A Team"
+          },
+          {
+            "bo": "BO3",
+            "name": "VCT CN 2026 第二赛段 入围赛·胜者组第一轮",
+            "time": "18:00",
+            "stage": "入围赛·胜者组第一轮",
+            "teams": "Titan Esports Club vs KeepBest Gaming"
+          }
+        ]
+      },
+      "2026-08-06": {
+        "type": "match",
+        "manual": false,
+        "matches": [
+          {
+            "bo": "BO3",
+            "name": "VCT CN 2026 第二赛段 胜者组四分之一决赛",
+            "time": "16:00",
+            "stage": "胜者组四分之一决赛",
+            "teams": "FunPlus Phoenix vs JD Gaming"
+          },
+          {
+            "bo": "BO3",
+            "name": "VCT CN 2026 第二赛段 胜者组四分之一决赛",
+            "time": "19:00",
+            "stage": "胜者组四分之一决赛",
+            "teams": "Wolves Esports vs Dragon Ranger Gaming"
+          }
+        ]
+      },
+      "2026-08-07": {
+        "type": "match",
+        "manual": false,
+        "matches": [
+          {
+            "bo": "BO3",
+            "name": "VCT CN 2026 第二赛段 胜者组四分之一决赛",
+            "time": "16:00",
+            "stage": "胜者组四分之一决赛",
+            "teams": "All Gamers vs Trace Esports"
+          },
+          {
+            "bo": "BO3",
+            "name": "VCT CN 2026 第二赛段 胜者组四分之一决赛",
+            "time": "19:00",
+            "stage": "胜者组四分之一决赛",
+            "teams": "EDward Gaming vs Titan Esports Club"
+          }
+        ]
+      },
+      "2026-08-08": {
+        "type": "match",
+        "manual": false,
+        "matches": [
+          {
+            "bo": "BO3",
+            "name": "VCT CN 2026 第二赛段 败者组第一轮",
+            "time": "16:00",
+            "stage": "败者组第一轮",
+            "teams": "A Team vs Wolves Esports"
+          },
+          {
+            "bo": "BO3",
+            "name": "VCT CN 2026 第二赛段 败者组第一轮",
+            "time": "19:35",
+            "stage": "败者组第一轮",
+            "teams": "KeepBest Gaming vs FunPlus Phoenix"
+          }
+        ]
+      },
+      "2026-08-09": {
+        "type": "match",
+        "manual": false,
+        "matches": [
+          {
+            "bo": "BO3",
+            "name": "VCT CN 2026 第二赛段 败者组第二轮",
+            "time": "16:00",
+            "stage": "败者组第二轮",
+            "teams": "EDward Gaming vs Wolves Esports"
+          },
+          {
+            "bo": "BO3",
+            "name": "VCT CN 2026 第二赛段 败者组第二轮",
+            "time": "19:25",
+            "stage": "败者组第二轮",
+            "teams": "Trace Esports vs FunPlus Phoenix"
+          }
+        ]
+      },
+      "2026-08-10": {
+        "type": "match",
+        "manual": false,
+        "matches": [
+          {
+            "bo": "BO3",
+            "name": "VCT CN 2026 第二赛段 胜者组半决赛",
+            "time": "16:00",
+            "stage": "胜者组半决赛",
+            "teams": "All Gamers vs JD Gaming"
+          },
+          {
+            "bo": "BO3",
+            "name": "VCT CN 2026 第二赛段 胜者组半决赛",
+            "time": "18:40",
+            "stage": "胜者组半决赛",
+            "teams": "Titan Esports Club vs Dragon Ranger Gaming"
+          }
+        ]
+      },
+      "2026-08-11": {
+        "type": "match",
+        "manual": false,
+        "matches": [
+          {
+            "bo": "BO3",
+            "name": "VCT CN 2026 第二赛段 败者组第三轮",
+            "time": "16:00",
+            "stage": "败者组第三轮",
+            "teams": "JD Gaming vs EDward Gaming"
+          },
+          {
+            "bo": "BO3",
+            "name": "VCT CN 2026 第二赛段 败者组第三轮",
+            "time": "18:05",
+            "stage": "败者组第三轮",
+            "teams": "Dragon Ranger Gaming vs Trace Esports"
+          }
+        ]
+      },
+      "2026-08-12": {
+        "type": "match",
+        "manual": false,
+        "matches": [
+          {
+            "bo": "BO3",
+            "name": "VCT CN 2026 第二赛段 胜者组决赛",
+            "time": "16:00",
+            "stage": "胜者组决赛",
+            "teams": "All Gamers vs Titan Esports Club"
+          },
+          {
+            "bo": "BO5",
+            "name": "VCT CN 2026 第二赛段 败者组决赛",
+            "time": "19:45",
+            "stage": "败者组决赛",
+            "teams": "JD Gaming vs Trace Esports"
+          }
+        ]
+      },
+      "2026-08-13": {
+        "type": "rest",
+        "manual": false,
+        "matches": []
+      },
+      "2026-08-14": {
+        "type": "match",
+        "manual": false,
+        "matches": [
+          {
+            "bo": "BO3",
+            "name": "VCT CN 2026 第二赛段 胜者组四分之一决赛",
+            "time": "16:00",
+            "stage": "胜者组四分之一决赛",
+            "teams": "Nova Esports vs JD Gaming"
+          },
+          {
+            "bo": "BO3",
+            "name": "VCT CN 2026 第二赛段 胜者组四分之一决赛",
+            "time": "18:30",
+            "stage": "胜者组四分之一决赛",
+            "teams": "TYLOO vs Titan Esports Club"
+          }
+        ]
+      },
+      "2026-08-15": {
+        "type": "match",
+        "manual": false,
+        "matches": [
+          {
+            "bo": "BO3",
+            "name": "VCT CN 2026 第二赛段 胜者组四分之一决赛",
+            "time": "16:00",
+            "stage": "胜者组四分之一决赛",
+            "teams": "Bilibili Gaming vs Trace Esports"
+          },
+          {
+            "bo": "BO3",
+            "name": "VCT CN 2026 第二赛段 胜者组四分之一决赛",
+            "time": "19:30",
+            "stage": "胜者组四分之一决赛",
+            "teams": "Xi Lai Gaming vs All Gamers"
+          }
+        ]
+      },
+      "2026-08-16": {
+        "type": "match",
+        "manual": false,
+        "matches": [
+          {
+            "bo": "BO3",
+            "name": "VCT CN 2026 第二赛段 败者组第一轮",
+            "time": "16:00",
+            "stage": "败者组第一轮",
+            "teams": "Titan Esports Club vs Nova Esports"
+          },
+          {
+            "bo": "BO3",
+            "name": "VCT CN 2026 第二赛段 败者组第一轮",
+            "time": "18:35",
+            "stage": "败者组第一轮",
+            "teams": "All Gamers vs Trace Esports"
+          }
+        ]
+      },
+      "2026-08-17": {
+        "type": "rest",
+        "manual": false,
+        "matches": []
+      },
+      "2026-08-18": {
+        "type": "rest",
+        "manual": false,
+        "matches": []
+      },
+      "2026-08-19": {
+        "type": "match",
+        "manual": false,
+        "matches": [
+          {
+            "bo": "BO3",
+            "name": "VCT CN 2026 第二赛段 胜者组半决赛",
+            "time": "16:00",
+            "stage": "胜者组半决赛",
+            "teams": "TYLOO vs JD Gaming"
+          },
+          {
+            "bo": "BO3",
+            "name": "VCT CN 2026 第二赛段 胜者组半决赛",
+            "time": "19:45",
+            "stage": "胜者组半决赛",
+            "teams": "Xi Lai Gaming vs Bilibili Gaming"
+          }
+        ]
+      },
+      "2026-08-20": {
+        "type": "match",
+        "manual": false,
+        "matches": [
+          {
+            "bo": "BO3",
+            "name": "VCT CN 2026 第二赛段 败者组第二轮",
+            "time": "16:00",
+            "stage": "败者组第二轮",
+            "teams": "TYLOO vs All Gamers"
+          },
+          {
+            "bo": "BO3",
+            "name": "VCT CN 2026 第二赛段 败者组第二轮",
+            "time": "18:35",
+            "stage": "败者组第二轮",
+            "teams": "Xi Lai Gaming vs Nova Esports"
+          }
+        ]
+      },
+      "2026-08-21": {
+        "type": "match",
+        "manual": false,
+        "matches": [
+          {
+            "bo": "BO3",
+            "name": "VCT CN 2026 第二赛段 胜者组决赛",
+            "time": "16:00",
+            "stage": "胜者组决赛",
+            "teams": "JD Gaming vs Bilibili Gaming"
+          },
+          {
+            "bo": "BO3",
+            "name": "VCT CN 2026 第二赛段 败者组第三轮",
+            "time": "18:00",
+            "stage": "败者组第三轮",
+            "teams": "Nova Esports vs TYLOO"
+          }
+        ]
+      },
+      "2026-08-22": {
+        "type": "match",
+        "manual": false,
+        "matches": [
+          {
+            "bo": "BO5",
+            "name": "VCT CN 2026 第二赛段 败者组决赛",
+            "time": "16:00",
+            "stage": "败者组决赛",
+            "teams": "Bilibili Gaming vs TYLOO"
+          }
+        ]
+      },
+      "2026-08-23": {
+        "type": "match",
+        "manual": false,
+        "matches": [
+          {
+            "bo": "BO5",
+            "name": "VCT CN 2026 第二赛段 总决赛",
+            "time": "16:00",
+            "stage": "总决赛",
+            "teams": "JD Gaming vs TYLOO"
+          }
+        ]
+      },
+      "2026-08-24": {
+        "type": "rest",
+        "manual": false,
+        "matches": []
+      },
+      "2026-08-25": {
+        "type": "rest",
+        "manual": false,
+        "matches": []
+      },
+      "2026-08-26": {
+        "type": "rest",
+        "manual": false,
+        "matches": []
+      },
+      "2026-08-27": {
+        "type": "rest",
+        "manual": false,
+        "matches": []
+      },
+      "2026-08-28": {
+        "type": "rest",
+        "manual": false,
+        "matches": []
+      },
+      "2026-08-29": {
+        "type": "rest",
+        "manual": false,
+        "matches": []
+      },
+      "2026-08-30": {
+        "type": "rest",
+        "manual": false,
+        "matches": []
+      },
+      "2026-08-31": {
+        "type": "rest",
+        "manual": false,
+        "matches": []
+      },
+      "2026-09-01": {
+        "type": "rest",
+        "manual": false,
+        "matches": []
+      },
+      "2026-09-02": {
+        "type": "rest",
+        "manual": false,
+        "matches": []
+      },
+      "2026-09-03": {
+        "type": "rest",
+        "manual": false,
+        "matches": []
+      },
+      "2026-09-04": {
+        "type": "rest",
+        "manual": false,
+        "matches": []
+      },
+      "2026-09-05": {
+        "type": "rest",
+        "manual": false,
+        "matches": []
+      },
+      "2026-09-06": {
+        "type": "rest",
+        "manual": false,
+        "matches": []
+      },
+      "2026-09-07": {
+        "type": "rest",
+        "manual": false,
+        "matches": []
+      },
+      "2026-09-08": {
+        "type": "rest",
+        "manual": false,
+        "matches": []
+      },
+      "2026-09-09": {
+        "type": "rest",
+        "manual": false,
+        "matches": []
+      },
+      "2026-09-10": {
+        "type": "rest",
+        "manual": false,
+        "matches": []
+      },
+      "2026-09-11": {
+        "type": "rest",
+        "manual": false,
+        "matches": []
+      },
+      "2026-09-12": {
+        "type": "rest",
+        "manual": false,
+        "matches": []
+      },
+      "2026-09-13": {
+        "type": "rest",
+        "manual": false,
+        "matches": []
+      },
+      "2026-09-14": {
+        "type": "rest",
+        "manual": false,
+        "matches": []
+      },
+      "2026-09-15": {
+        "type": "rest",
+        "manual": false,
+        "matches": []
+      },
+      "2026-09-16": {
+        "type": "rest",
+        "manual": false,
+        "matches": []
+      },
+      "2026-09-17": {
+        "type": "rest",
+        "manual": false,
+        "matches": []
+      },
+      "2026-09-18": {
+        "type": "rest",
+        "manual": false,
+        "matches": []
+      },
+      "2026-09-19": {
+        "type": "rest",
+        "manual": false,
+        "matches": []
+      },
+      "2026-09-20": {
+        "type": "rest",
+        "manual": false,
+        "matches": []
+      },
+      "2026-09-21": {
+        "type": "rest",
+        "manual": false,
+        "matches": []
+      },
+      "2026-09-22": {
+        "type": "rest",
+        "manual": false,
+        "matches": []
+      },
+      "2026-09-23": {
+        "type": "rest",
+        "manual": false,
+        "matches": []
+      },
+      "2026-09-24": {
+        "type": "match",
+        "manual": false,
+        "matches": [
+          {
+            "bo": "BO3",
+            "name": "2026 上海全球冠军赛 小组赛·A组·胜者组第一轮",
+            "time": "15:00",
+            "stage": "小组赛·A组·胜者组第一轮",
+            "teams": "A组 1号种子 vs 4号种子"
+          },
+          {
+            "bo": "BO3",
+            "name": "2026 上海全球冠军赛 小组赛·A组·胜者组第一轮",
+            "time": "18:00",
+            "stage": "小组赛·A组·胜者组第一轮",
+            "teams": "A组 2号种子 vs 3号种子"
+          }
+        ]
+      },
+      "2026-09-25": {
+        "type": "match",
+        "manual": false,
+        "matches": [
+          {
+            "bo": "BO3",
+            "name": "2026 上海全球冠军赛 小组赛·A组·败者组第一轮",
+            "time": "15:00",
+            "stage": "小组赛·A组·败者组第一轮",
+            "teams": "A组 首轮败者对决"
+          },
+          {
+            "bo": "BO3",
+            "name": "2026 上海全球冠军赛 小组赛·A组·胜者组第二轮",
+            "time": "18:00",
+            "stage": "小组赛·A组·胜者组第二轮",
+            "teams": "A组 组内头名之战"
+          }
+        ]
+      },
+      "2026-09-26": {
+        "type": "match",
+        "manual": false,
+        "matches": [
+          {
+            "bo": "BO3",
+            "name": "2026 上海全球冠军赛 小组赛·A组·败者组第二轮",
+            "time": "15:00",
+            "stage": "小组赛·A组·败者组第二轮",
+            "teams": "A组 小组第二之争"
+          },
+          {
+            "bo": "BO3",
+            "name": "2026 上海全球冠军赛 小组赛·B组·胜者组第一轮",
+            "time": "18:00",
+            "stage": "小组赛·B组·胜者组第一轮",
+            "teams": "B组 1号种子 vs 4号种子"
+          }
+        ]
+      },
+      "2026-09-27": {
+        "type": "match",
+        "manual": false,
+        "matches": [
+          {
+            "bo": "BO3",
+            "name": "2026 上海全球冠军赛 小组赛·B组·胜者组第一轮",
+            "time": "15:00",
+            "stage": "小组赛·B组·胜者组第一轮",
+            "teams": "B组 2号种子 vs 3号种子"
+          },
+          {
+            "bo": "BO3",
+            "name": "2026 上海全球冠军赛 小组赛·B组·败者组第一轮",
+            "time": "18:00",
+            "stage": "小组赛·B组·败者组第一轮",
+            "teams": "B组 首轮败者对决"
+          }
+        ]
+      },
+      "2026-09-28": {
+        "type": "match",
+        "manual": false,
+        "matches": [
+          {
+            "bo": "BO3",
+            "name": "2026 上海全球冠军赛 小组赛·B组·胜者组第二轮",
+            "time": "15:00",
+            "stage": "小组赛·B组·胜者组第二轮",
+            "teams": "B组 组内头名之战"
+          },
+          {
+            "bo": "BO3",
+            "name": "2026 上海全球冠军赛 小组赛·B组·败者组第二轮",
+            "time": "18:00",
+            "stage": "小组赛·B组·败者组第二轮",
+            "teams": "B组 小组第二之争"
+          }
+        ]
+      },
+      "2026-09-29": {
+        "type": "match",
+        "manual": false,
+        "matches": [
+          {
+            "bo": "BO3",
+            "name": "2026 上海全球冠军赛 小组赛·C组·胜者组第一轮",
+            "time": "15:00",
+            "stage": "小组赛·C组·胜者组第一轮",
+            "teams": "C组 1号种子 vs 4号种子"
+          },
+          {
+            "bo": "BO3",
+            "name": "2026 上海全球冠军赛 小组赛·C组·胜者组第一轮",
+            "time": "18:00",
+            "stage": "小组赛·C组·胜者组第一轮",
+            "teams": "C组 2号种子 vs 3号种子"
+          }
+        ]
+      },
+      "2026-09-30": {
+        "type": "match",
+        "manual": false,
+        "matches": [
+          {
+            "bo": "BO3",
+            "name": "2026 上海全球冠军赛 小组赛·C组·败者组第一轮",
+            "time": "15:00",
+            "stage": "小组赛·C组·败者组第一轮",
+            "teams": "C组 首轮败者对决"
+          },
+          {
+            "bo": "BO3",
+            "name": "2026 上海全球冠军赛 小组赛·C组·胜者组第二轮",
+            "time": "18:00",
+            "stage": "小组赛·C组·胜者组第二轮",
+            "teams": "C组 组内头名之战"
+          }
+        ]
+      },
+      "2026-10-01": {
+        "type": "match",
+        "manual": false,
+        "matches": [
+          {
+            "bo": "BO3",
+            "name": "2026 上海全球冠军赛 小组赛·C组·败者组第二轮",
+            "time": "15:00",
+            "stage": "小组赛·C组·败者组第二轮",
+            "teams": "C组 小组第二之争"
+          },
+          {
+            "bo": "BO3",
+            "name": "2026 上海全球冠军赛 小组赛·D组·胜者组第一轮",
+            "time": "18:00",
+            "stage": "小组赛·D组·胜者组第一轮",
+            "teams": "D组 1号种子 vs 4号种子"
+          }
+        ]
+      },
+      "2026-10-02": {
+        "type": "match",
+        "manual": false,
+        "matches": [
+          {
+            "bo": "BO3",
+            "name": "2026 上海全球冠军赛 小组赛·D组·胜者组第一轮",
+            "time": "15:00",
+            "stage": "小组赛·D组·胜者组第一轮",
+            "teams": "D组 2号种子 vs 3号种子"
+          },
+          {
+            "bo": "BO3",
+            "name": "2026 上海全球冠军赛 小组赛·D组·败者组第一轮",
+            "time": "18:00",
+            "stage": "小组赛·D组·败者组第一轮",
+            "teams": "D组 首轮败者对决"
+          }
+        ]
+      },
+      "2026-10-03": {
+        "type": "match",
+        "manual": false,
+        "matches": [
+          {
+            "bo": "BO3",
+            "name": "2026 上海全球冠军赛 小组赛·D组·胜者组第二轮",
+            "time": "15:00",
+            "stage": "小组赛·D组·胜者组第二轮",
+            "teams": "D组 组内头名之战"
+          },
+          {
+            "bo": "BO3",
+            "name": "2026 上海全球冠军赛 小组赛·D组·败者组第二轮",
+            "time": "18:00",
+            "stage": "小组赛·D组·败者组第二轮",
+            "teams": "D组 小组第二之争"
+          }
+        ]
+      },
+      "2026-10-04": {
+        "type": "rest",
+        "manual": false,
+        "matches": []
+      },
+      "2026-10-05": {
+        "type": "rest",
+        "manual": false,
+        "matches": []
+      },
+      "2026-10-06": {
+        "type": "rest",
+        "manual": false,
+        "matches": []
+      },
+      "2026-10-07": {
+        "type": "rest",
+        "manual": false,
+        "matches": []
+      },
+      "2026-10-08": {
+        "type": "match",
+        "manual": false,
+        "matches": [
+          {
+            "bo": "BO3",
+            "name": "2026 上海全球冠军赛 淘汰赛·胜者组第一轮",
+            "time": "15:00",
+            "stage": "淘汰赛·胜者组第一轮",
+            "teams": "小组第一 vs 小组第二"
+          },
+          {
+            "bo": "BO3",
+            "name": "2026 上海全球冠军赛 淘汰赛·胜者组第一轮",
+            "time": "18:00",
+            "stage": "淘汰赛·胜者组第一轮",
+            "teams": "小组第一 vs 小组第二"
+          }
+        ]
+      },
+      "2026-10-09": {
+        "type": "match",
+        "manual": false,
+        "matches": [
+          {
+            "bo": "BO3",
+            "name": "2026 上海全球冠军赛 淘汰赛·胜者组第一轮",
+            "time": "15:00",
+            "stage": "淘汰赛·胜者组第一轮",
+            "teams": "小组第一 vs 小组第二"
+          },
+          {
+            "bo": "BO3",
+            "name": "2026 上海全球冠军赛 淘汰赛·胜者组第一轮",
+            "time": "18:00",
+            "stage": "淘汰赛·胜者组第一轮",
+            "teams": "小组第一 vs 小组第二"
+          }
+        ]
+      },
+      "2026-10-10": {
+        "type": "match",
+        "manual": false,
+        "matches": [
+          {
+            "bo": "BO3",
+            "name": "2026 上海全球冠军赛 淘汰赛·败者组第一轮",
+            "time": "15:00",
+            "stage": "淘汰赛·败者组第一轮",
+            "teams": "胜者组第一轮败者对决"
+          },
+          {
+            "bo": "BO3",
+            "name": "2026 上海全球冠军赛 淘汰赛·败者组第一轮",
+            "time": "18:00",
+            "stage": "淘汰赛·败者组第一轮",
+            "teams": "胜者组第一轮败者对决"
+          }
+        ]
+      },
+      "2026-10-11": {
+        "type": "match",
+        "manual": false,
+        "matches": [
+          {
+            "bo": "BO3",
+            "name": "2026 上海全球冠军赛 淘汰赛·胜者组第二轮",
+            "time": "15:00",
+            "stage": "淘汰赛·胜者组第二轮",
+            "teams": "待定 vs 待定"
+          },
+          {
+            "bo": "BO3",
+            "name": "2026 上海全球冠军赛 淘汰赛·胜者组第二轮",
+            "time": "18:00",
+            "stage": "淘汰赛·胜者组第二轮",
+            "teams": "待定 vs 待定"
+          }
+        ]
+      },
+      "2026-10-12": {
+        "type": "match",
+        "manual": false,
+        "matches": [
+          {
+            "bo": "BO3",
+            "name": "2026 上海全球冠军赛 淘汰赛·败者组第二轮",
+            "time": "15:00",
+            "stage": "淘汰赛·败者组第二轮",
+            "teams": "待定 vs 待定"
+          },
+          {
+            "bo": "BO3",
+            "name": "2026 上海全球冠军赛 淘汰赛·败者组第二轮",
+            "time": "18:00",
+            "stage": "淘汰赛·败者组第二轮",
+            "teams": "待定 vs 待定"
+          }
+        ]
+      },
+      "2026-10-13": {
+        "type": "rest",
+        "manual": false,
+        "matches": []
+      },
+      "2026-10-14": {
+        "type": "match",
+        "manual": false,
+        "matches": [
+          {
+            "bo": "BO3",
+            "name": "2026 上海全球冠军赛 淘汰赛·胜者组决赛",
+            "time": "16:00",
+            "stage": "淘汰赛·胜者组决赛",
+            "teams": "待定 vs 待定"
+          }
+        ]
+      },
+      "2026-10-15": {
+        "type": "match",
+        "manual": false,
+        "matches": [
+          {
+            "bo": "BO3",
+            "name": "2026 上海全球冠军赛 淘汰赛·败者组半决赛",
+            "time": "16:00",
+            "stage": "淘汰赛·败者组半决赛",
+            "teams": "待定 vs 待定"
+          }
+        ]
+      },
+      "2026-10-16": {
+        "type": "match",
+        "manual": false,
+        "matches": [
+          {
+            "bo": "BO5",
+            "name": "2026 上海全球冠军赛 淘汰赛·败者组决赛",
+            "time": "16:00",
+            "stage": "淘汰赛·败者组决赛",
+            "teams": "待定 vs 待定"
+          }
+        ]
+      },
+      "2026-10-17": {
+        "type": "rest",
+        "manual": false,
+        "matches": []
+      },
+      "2026-10-18": {
+        "type": "match",
+        "manual": false,
+        "matches": [
+          {
+            "bo": "BO5",
+            "name": "2026 上海全球冠军赛 总决赛",
+            "time": "17:00",
+            "stage": "总决赛",
+            "teams": "待定 vs 待定"
+          }
+        ]
+      }
+    },
+    "notifications": [
+      {
+        "id": "N103",
+        "read": false,
+        "text": "(已清理 XSS 测试残留)",
+        "time": 1787627341629,
+        "userId": "S3"
+      }
+    ],
+    "eventCategories": [
+      {
+        "id": "vct-cn",
+        "label": "VCT CN 联赛",
+        "keywords": [
+          "VCT CN"
+        ]
+      },
+      {
+        "id": "champions",
+        "label": "全球冠军赛",
+        "keywords": [
+          "全球冠军赛",
+          "Champions"
+        ]
+      },
+      {
+        "id": "promotion",
+        "label": "晋升赛",
+        "keywords": [
+          "晋升赛",
+          "Ascension"
+        ]
+      },
+      {
+        "id": "evolution",
+        "label": "进化者系列赛",
+        "keywords": [
+          "进化者"
+        ]
+      },
+      {
+        "id": "source",
+        "label": "源能邀请赛",
+        "keywords": [
+          "源能"
+        ]
+      },
+      {
+        "id": "vct-intl",
+        "label": "VCT 国际联赛",
+        "keywords": [
+          "VCT 2026",
+          "VCT"
+        ]
+      }
+    ]
+  }
+}

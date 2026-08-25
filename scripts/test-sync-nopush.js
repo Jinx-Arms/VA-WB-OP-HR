@@ -25,12 +25,12 @@ const URL = 'http://localhost:3000';
     remote.staff.push({ id:'JIN', username:'jinjin', name:'金金', role:'admin', position:'管理', status:'active', passwordHash: 'REMOTE_HASH_123', seq: remote.seq });
     remote.seq = (remote.seq || 0) + 1;
 
-    // 监控 setState 调用
+    // 监控 setState 调用（dry-run：不真写云端，避免污染生产数据）
     let setStateCalls = 0;
-    const origSet = CLOUD.setState.bind(CLOUD);
-    CLOUD.setState = async (s) => { setStateCalls++; return origSet(s); };
+    CLOUD.setState = async (s) => { setStateCalls++; return { ok:true, dryRun:true }; };
     CLOUD.getState = async () => JSON.parse(JSON.stringify(remote)); // 云端始终返回"他人数据"
     CLOUD.isCloudMode = () => true;
+    if(CLOUD.__testDryRun !== undefined) CLOUD.__testDryRun = true;
     App._autoSyncInterval = 50;
     App._pendingSave = null; // 本地无未保存改动
 
@@ -55,8 +55,7 @@ const URL = 'http://localhost:3000';
   // 场景2：本地有 pending 改动时，应推回（保留自己改动）
   const r2 = await page.evaluate(async () => {
     let setStateCalls = 0;
-    const origSet = CLOUD.setState.bind(CLOUD);
-    CLOUD.setState = async (s) => { setStateCalls++; return origSet(s); };
+    CLOUD.setState = async (s) => { setStateCalls++; return { ok:true, dryRun:true }; };  // dry-run
     // 本地改一个 staff 字段（模拟用户在编辑）
     App.state.staff[0].name = 'MODIFIED_LOCAL';
     App._pendingSave = setTimeout(() => {}, 99999); // 模拟有未保存改动

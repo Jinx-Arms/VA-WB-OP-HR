@@ -54,6 +54,8 @@ const URL = 'http://localhost:3000';
       return s;
     };
     CLOUD.isCloudMode = function(){ return true; };
+    // 测试 dry-run：拦截所有云端写入，避免污染生产 Supabase（2026-08-25 加护栏后要求开启）
+    CLOUD.__testDryRun = true;
     // 强制开启自动同步（本地原本不开启）
     App._autoSyncInterval = 30; // 30ms 高频，放大 race
     App.startAutoSync();

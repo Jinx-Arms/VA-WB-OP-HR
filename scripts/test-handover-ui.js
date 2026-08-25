@@ -78,7 +78,7 @@ const URL = 'http://localhost:3000';
 
   // 模拟自动同步高频打断（云端路径）
   await page.evaluate(() => {
-    if (CLOUD && CLOUD.getState) { CLOUD.getState = async () => JSON.parse(JSON.stringify(App.state)); CLOUD.isCloudMode = () => true; App._autoSyncInterval = 40; if (App.startAutoSync) App.startAutoSync(); }
+    if (CLOUD && CLOUD.getState) { CLOUD.getState = async () => JSON.parse(JSON.stringify(App.state)); CLOUD.isCloudMode = () => true; CLOUD.__testDryRun = true; App._autoSyncInterval = 40; if (App.startAutoSync) App.startAutoSync(); }
   });
   await page.evaluate(() => App.nav('handover'));
   await page.waitForTimeout(600);
