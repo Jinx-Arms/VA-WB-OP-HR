@@ -4240,16 +4240,6 @@
           "joined": "",
           "formerTeams": [],
           "source": "vlr"
-        },
-        {
-          "id": "p-unknown",
-          "name": "UnknowN",
-          "realName": "Minseong Kim",
-          "country": "kr",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
         }
       ],
       "matches": []
@@ -4962,5 +4952,5 @@
     }
   },
   "errors": [],
-  "fetchedAt": "2026-08-28T22:03:25.741Z"
+  "fetchedAt": "2026-08-29T22:02:56.799Z"
 }
