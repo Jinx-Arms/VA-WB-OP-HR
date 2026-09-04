@@ -2510,20 +2510,10 @@
       "vlrId": "1001",
       "roster": [
         {
-          "id": "p-boo",
-          "name": "Boo",
-          "realName": "Ričardas Lukaševičius",
-          "country": "lt",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-koshmaras",
-          "name": "koshmaras",
-          "realName": "Martynas Namikas",
-          "country": "lt",
+          "id": "p-riens",
+          "name": "RieNs",
+          "realName": "Enes Ecirli",
+          "country": "tr",
           "role": "",
           "joined": "",
           "formerTeams": [],
@@ -2540,20 +2530,20 @@
           "source": "vlr"
         },
         {
-          "id": "p-riens",
-          "name": "RieNs",
-          "realName": "Enes Ecirli",
-          "country": "tr",
+          "id": "p-benjyfishy",
+          "name": "benjyfishy",
+          "realName": "Benjamin David Fish",
+          "country": "gb",
           "role": "",
           "joined": "",
           "formerTeams": [],
           "source": "vlr"
         },
         {
-          "id": "p-benjyfishy",
-          "name": "benjyfishy",
-          "realName": "Benjamin David Fish",
-          "country": "gb",
+          "id": "p-boo",
+          "name": "Boo",
+          "realName": "Ričardas Lukaševičius",
+          "country": "lt",
           "role": "",
           "joined": "",
           "formerTeams": [],
@@ -4952,5 +4942,5 @@
     }
   },
   "errors": [],
-  "fetchedAt": "2026-09-03T22:03:48.094Z"
+  "fetchedAt": "2026-09-04T22:03:19.007Z"
 }
