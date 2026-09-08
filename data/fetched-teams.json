@@ -1551,16 +1551,6 @@
           "joined": "",
           "formerTeams": [],
           "source": "vlr"
-        },
-        {
-          "id": "p-jhein",
-          "name": "Jhein",
-          "realName": "Cristian Camaño",
-          "country": "ar",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
         }
       ],
       "matches": []
@@ -2617,16 +2607,6 @@
       "vlrId": "2593",
       "roster": [
         {
-          "id": "p-boaster",
-          "name": "Boaster",
-          "realName": "Jake Howlett",
-          "country": "gb",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
           "id": "p-crashies",
           "name": "crashies",
           "realName": "Austin Roberts",
@@ -2671,6 +2651,16 @@
           "name": "Veqaj",
           "realName": "Sylvain Pattyn",
           "country": "fr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-boaster",
+          "name": "Boaster",
+          "realName": "Jake Howlett",
+          "country": "gb",
           "role": "",
           "joined": "",
           "formerTeams": [],
@@ -4942,5 +4932,5 @@
     }
   },
   "errors": [],
-  "fetchedAt": "2026-09-07T22:04:04.729Z"
+  "fetchedAt": "2026-09-08T22:04:23.653Z"
 }
