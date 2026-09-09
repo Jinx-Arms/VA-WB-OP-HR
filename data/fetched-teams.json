@@ -2811,10 +2811,10 @@
           "source": "vlr"
         },
         {
-          "id": "p-purp0",
-          "name": "purp0",
-          "realName": "Semyon Borchev",
-          "country": "ru",
+          "id": "p-gsr",
+          "name": "GSR",
+          "realName": "Ognjen Bondžić",
+          "country": "unknown",
           "role": "",
           "joined": "",
           "formerTeams": [],
@@ -2851,10 +2851,10 @@
           "source": "vlr"
         },
         {
-          "id": "p-gsr",
-          "name": "GSR",
-          "realName": "Ognjen Bondžić",
-          "country": "unknown",
+          "id": "p-purp0",
+          "name": "purp0",
+          "realName": "Semyon Borchev",
+          "country": "ru",
           "role": "",
           "joined": "",
           "formerTeams": [],
@@ -3369,16 +3369,6 @@
           "id": "p-ara",
           "name": "ara",
           "realName": "Hanceriuc Eduard-George",
-          "country": "unknown",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-jesse",
-          "name": "Jesse",
-          "realName": "Adam Čtvrtníček",
           "country": "unknown",
           "role": "",
           "joined": "",
@@ -4598,16 +4588,6 @@
           "joined": "",
           "formerTeams": [],
           "source": "vlr"
-        },
-        {
-          "id": "p-mini",
-          "name": "Mini",
-          "realName": "Jacob Harris",
-          "country": "gb",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
         }
       ],
       "matches": []
@@ -4932,5 +4912,5 @@
     }
   },
   "errors": [],
-  "fetchedAt": "2026-09-08T22:04:23.653Z"
+  "fetchedAt": "2026-09-09T22:03:57.827Z"
 }
