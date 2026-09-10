@@ -2316,9 +2316,19 @@
           "source": "vlr"
         },
         {
-          "id": "p-demon1",
-          "name": "Demon1",
-          "realName": "Max Mazanov",
+          "id": "p-ion",
+          "name": "ion",
+          "realName": "Ayan Rastogi",
+          "country": "in",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-p0ppin",
+          "name": "P0PPIN",
+          "realName": "Matteo Weber",
           "country": "us",
           "role": "",
           "joined": "",
@@ -2356,19 +2366,9 @@
           "source": "vlr"
         },
         {
-          "id": "p-ion",
-          "name": "ion",
-          "realName": "Ayan Rastogi",
-          "country": "in",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-p0ppin",
-          "name": "P0PPIN",
-          "realName": "Matteo Weber",
+          "id": "p-demon1",
+          "name": "Demon1",
+          "realName": "Max Mazanov",
           "country": "us",
           "role": "",
           "joined": "",
@@ -4912,5 +4912,5 @@
     }
   },
   "errors": [],
-  "fetchedAt": "2026-09-09T22:03:57.827Z"
+  "fetchedAt": "2026-09-10T22:04:00.550Z"
 }
