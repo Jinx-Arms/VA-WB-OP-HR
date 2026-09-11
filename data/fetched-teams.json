@@ -2199,10 +2199,10 @@
       "vlrId": "2355",
       "roster": [
         {
-          "id": "p-saadhak",
-          "name": "saadhak",
-          "realName": "Matias Delipetro",
-          "country": "ar",
+          "id": "p-less",
+          "name": "Less",
+          "realName": "Felipe de Loyola Basso",
+          "country": "br",
           "role": "",
           "joined": "",
           "formerTeams": [],
@@ -2212,16 +2212,6 @@
           "id": "p-mwzera",
           "name": "mwzera",
           "realName": "Leonardo Serrati",
-          "country": "br",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-less",
-          "name": "Less",
-          "realName": "Felipe de Loyola Basso",
           "country": "br",
           "role": "",
           "joined": "",
@@ -2243,6 +2233,16 @@
           "name": "heat",
           "realName": "Olavo Marcelo",
           "country": "br",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-saadhak",
+          "name": "saadhak",
+          "realName": "Matias Delipetro",
+          "country": "ar",
           "role": "",
           "joined": "",
           "formerTeams": [],
@@ -3162,9 +3162,9 @@
       "vlrId": "397",
       "roster": [
         {
-          "id": "p-ros",
-          "name": "Rosé",
-          "realName": "Eren Erzan",
+          "id": "p-lar0k",
+          "name": "Lar0k",
+          "realName": "Yusuf Kaan Kanber",
           "country": "tr",
           "role": "",
           "joined": "",
@@ -3175,16 +3175,6 @@
           "id": "p-crewen",
           "name": "Crewen",
           "realName": "Ali Eren Sargin",
-          "country": "tr",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-lar0k",
-          "name": "Lar0k",
-          "realName": "Yusuf Kaan Kanber",
           "country": "tr",
           "role": "",
           "joined": "",
@@ -3205,6 +3195,16 @@
           "id": "p-loversrock",
           "name": "lovers rock",
           "realName": "Umut Pekdoğan",
+          "country": "tr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-ros",
+          "name": "Rosé",
+          "realName": "Eren Erzan",
           "country": "tr",
           "role": "",
           "joined": "",
@@ -4912,5 +4912,5 @@
     }
   },
   "errors": [],
-  "fetchedAt": "2026-09-10T22:04:00.550Z"
+  "fetchedAt": "2026-09-11T22:03:59.696Z"
 }
