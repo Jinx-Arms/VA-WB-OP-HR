@@ -3172,16 +3172,6 @@
           "source": "vlr"
         },
         {
-          "id": "p-crewen",
-          "name": "Crewen",
-          "realName": "Ali Eren Sargin",
-          "country": "tr",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
           "id": "p-loita",
           "name": "Loita",
           "realName": "Utku Kart",
@@ -3192,9 +3182,9 @@
           "source": "vlr"
         },
         {
-          "id": "p-loversrock",
-          "name": "lovers rock",
-          "realName": "Umut Pekdoğan",
+          "id": "p-ros",
+          "name": "Rosé",
+          "realName": "Eren Erzan",
           "country": "tr",
           "role": "",
           "joined": "",
@@ -3202,9 +3192,19 @@
           "source": "vlr"
         },
         {
-          "id": "p-ros",
-          "name": "Rosé",
-          "realName": "Eren Erzan",
+          "id": "p-crewen",
+          "name": "Crewen",
+          "realName": "Ali Eren Sargin",
+          "country": "tr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-loversrock",
+          "name": "lovers rock",
+          "realName": "Umut Pekdoğan",
           "country": "tr",
           "role": "",
           "joined": "",
@@ -3503,20 +3503,20 @@
           "source": "vlr"
         },
         {
-          "id": "p-zaes",
-          "name": "ZaeS",
-          "realName": "Dario Gomez",
-          "country": "es",
+          "id": "p-koyo",
+          "name": "Koyo",
+          "realName": "Koray Arpat",
+          "country": "de",
           "role": "",
           "joined": "",
           "formerTeams": [],
           "source": "vlr"
         },
         {
-          "id": "p-koyo",
-          "name": "Koyo",
-          "realName": "Koray Arpat",
-          "country": "de",
+          "id": "p-zaes",
+          "name": "ZaeS",
+          "realName": "Dario Gomez",
+          "country": "es",
           "role": "",
           "joined": "",
           "formerTeams": [],
@@ -4912,5 +4912,5 @@
     }
   },
   "errors": [],
-  "fetchedAt": "2026-09-11T22:03:59.696Z"
+  "fetchedAt": "2026-09-12T22:04:25.732Z"
 }
