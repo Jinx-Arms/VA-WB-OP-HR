@@ -3239,26 +3239,6 @@
       "vlrId": "12694",
       "roster": [
         {
-          "id": "p-starxo",
-          "name": "starxo",
-          "realName": "Patryk Kopczynski",
-          "country": "pl",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-proxh",
-          "name": "Proxh",
-          "realName": "Yusuf Emre Tunc",
-          "country": "tr",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
           "id": "p-marteen",
           "name": "marteen",
           "realName": "Martin Pátek",
@@ -3269,10 +3249,10 @@
           "source": "vlr"
         },
         {
-          "id": "p-h1ber",
-          "name": "H1ber",
-          "realName": "Joona Parviainen",
-          "country": "fi",
+          "id": "p-proxh",
+          "name": "Proxh",
+          "realName": "Yusuf Emre Tunc",
+          "country": "tr",
           "role": "",
           "joined": "",
           "formerTeams": [],
@@ -3293,6 +3273,16 @@
           "name": "bipo",
           "realName": "Taranvir Singh",
           "country": "it",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-starxo",
+          "name": "starxo",
+          "realName": "Patryk Kopczynski",
+          "country": "pl",
           "role": "",
           "joined": "",
           "formerTeams": [],
@@ -3447,16 +3437,6 @@
           "name": "qpert",
           "realName": "Mateja Mijovic",
           "country": "unknown",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-al0rante",
-          "name": "al0rante",
-          "realName": "Felix Brandl",
-          "country": "de",
           "role": "",
           "joined": "",
           "formerTeams": [],
@@ -4289,16 +4269,6 @@
           "source": "vlr"
         },
         {
-          "id": "p-jovi",
-          "name": "Jovi",
-          "realName": "Jovanni Vera",
-          "country": "unknown",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
           "id": "p-warbirds",
           "name": "Warbirds",
           "realName": "Evan Olzem",
@@ -4323,6 +4293,16 @@
           "name": "Jomengz",
           "realName": "Jonathan Hoo",
           "country": "id",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-jovi",
+          "name": "Jovi",
+          "realName": "Jovanni Vera",
+          "country": "unknown",
           "role": "",
           "joined": "",
           "formerTeams": [],
@@ -4356,16 +4336,6 @@
           "source": "vlr"
         },
         {
-          "id": "p-styron",
-          "name": "STYRON",
-          "realName": "Tidus Goh",
-          "country": "sg",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
           "id": "p-zeus",
           "name": "Zeus",
           "realName": "Jhian Vega",
@@ -4380,6 +4350,16 @@
           "name": "Sylvan",
           "realName": "Go Young-sup (고영섭)",
           "country": "kr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-styron",
+          "name": "STYRON",
+          "realName": "Tidus Goh",
+          "country": "sg",
           "role": "",
           "joined": "",
           "formerTeams": [],
@@ -4912,5 +4892,5 @@
     }
   },
   "errors": [],
-  "fetchedAt": "2026-09-13T22:03:25.910Z"
+  "fetchedAt": "2026-09-14T22:03:23.222Z"
 }
