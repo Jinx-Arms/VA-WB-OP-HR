@@ -3443,16 +3443,6 @@
           "source": "vlr"
         },
         {
-          "id": "p-ninja",
-          "name": "NINJA",
-          "realName": "Patryk Koczyba",
-          "country": "pl",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
           "id": "p-seven",
           "name": "seven",
           "realName": "Johann Hernandez",
@@ -4376,16 +4366,6 @@
           "source": "vlr"
         },
         {
-          "id": "p-spin",
-          "name": "Spin",
-          "realName": "Peter Bradford",
-          "country": "gb",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
           "id": "p-skye",
           "name": "skye",
           "realName": "Felipe Skye Lim",
@@ -4892,5 +4872,5 @@
     }
   },
   "errors": [],
-  "fetchedAt": "2026-09-14T22:03:23.222Z"
+  "fetchedAt": "2026-09-15T22:03:36.039Z"
 }
