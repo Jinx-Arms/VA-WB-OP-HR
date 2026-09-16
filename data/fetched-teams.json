@@ -329,16 +329,6 @@
           "source": "vlr"
         },
         {
-          "id": "p-balax",
-          "name": "balax",
-          "realName": "Thong Chern Kwi",
-          "country": "sg",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
           "id": "p-rain",
           "name": "Rain",
           "realName": "Deng Shiyao (邓诗耀)",
@@ -1700,16 +1690,6 @@
           "id": "p-tkzin",
           "name": "tkzin",
           "realName": "Enzo Zimiani",
-          "country": "br",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-cauanzin",
-          "name": "cauanzin",
-          "realName": "Cauan Pereira",
           "country": "br",
           "role": "",
           "joined": "",
@@ -3453,16 +3433,6 @@
           "source": "vlr"
         },
         {
-          "id": "p-waddle",
-          "name": "waddle",
-          "realName": "Wadir Taraki",
-          "country": "gb",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
           "id": "p-thinkii",
           "name": "thinkii",
           "realName": "Manuel Martínez",
@@ -4306,16 +4276,6 @@
       "vlrId": "6199",
       "roster": [
         {
-          "id": "p-kellys",
-          "name": "kellyS",
-          "realName": "Kelly Sedillo",
-          "country": "ph",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
           "id": "p-natz",
           "name": "natz",
           "realName": "Jonathan Adiputra",
@@ -4336,20 +4296,30 @@
           "source": "vlr"
         },
         {
-          "id": "p-sylvan",
-          "name": "Sylvan",
-          "realName": "Go Young-sup (고영섭)",
-          "country": "kr",
+          "id": "p-styron",
+          "name": "STYRON",
+          "realName": "Tidus Goh",
+          "country": "sg",
           "role": "",
           "joined": "",
           "formerTeams": [],
           "source": "vlr"
         },
         {
-          "id": "p-styron",
-          "name": "STYRON",
-          "realName": "Tidus Goh",
-          "country": "sg",
+          "id": "p-kellys",
+          "name": "kellyS",
+          "realName": "Kelly Sedillo",
+          "country": "ph",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-sylvan",
+          "name": "Sylvan",
+          "realName": "Go Young-sup (고영섭)",
+          "country": "kr",
           "role": "",
           "joined": "",
           "formerTeams": [],
@@ -4872,5 +4842,5 @@
     }
   },
   "errors": [],
-  "fetchedAt": "2026-09-15T22:03:36.039Z"
+  "fetchedAt": "2026-09-16T22:04:00.509Z"
 }
