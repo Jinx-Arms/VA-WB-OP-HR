@@ -3654,6 +3654,16 @@
       "vlrId": "17",
       "roster": [
         {
+          "id": "p-xiesta",
+          "name": "Xiesta",
+          "realName": "Jung Si-hwan (정시환)",
+          "country": "kr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
           "id": "p-ash",
           "name": "Ash",
           "realName": "Ha Hyun-cheol (하현철)",
@@ -3697,16 +3707,6 @@
           "id": "p-raxcal",
           "name": "Raxcal",
           "realName": "Kim Min-seok (김민석)",
-          "country": "kr",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-xiesta",
-          "name": "Xiesta",
-          "realName": "Jung Si-hwan (정시환)",
           "country": "kr",
           "role": "",
           "joined": "",
@@ -4223,16 +4223,6 @@
           "name": "SeasoNz",
           "realName": "Joe Lai",
           "country": "my",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-warbirds",
-          "name": "Warbirds",
-          "realName": "Evan Olzem",
-          "country": "us",
           "role": "",
           "joined": "",
           "formerTeams": [],
@@ -4842,5 +4832,5 @@
     }
   },
   "errors": [],
-  "fetchedAt": "2026-09-16T22:04:00.509Z"
+  "fetchedAt": "2026-09-17T22:03:39.074Z"
 }
