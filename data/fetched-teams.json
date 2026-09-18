@@ -2831,16 +2831,6 @@
           "source": "vlr"
         },
         {
-          "id": "p-purp0",
-          "name": "purp0",
-          "realName": "Semyon Borchev",
-          "country": "ru",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
           "id": "p-wayne",
           "name": "wayne",
           "realName": "Wayne Chang",
@@ -2855,6 +2845,16 @@
           "name": "MiniBoo",
           "realName": "Dominykas Lukaševičius",
           "country": "lt",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-purp0",
+          "name": "purp0",
+          "realName": "Semyon Borchev",
+          "country": "ru",
           "role": "",
           "joined": "",
           "formerTeams": [],
@@ -3049,16 +3049,6 @@
           "name": "hiro",
           "realName": "Emirhan Kat",
           "country": "tr",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-kolosha",
-          "name": "Kolosha",
-          "realName": "Herman Skrypka",
-          "country": "ua",
           "role": "",
           "joined": "",
           "formerTeams": [],
@@ -4832,5 +4822,5 @@
     }
   },
   "errors": [],
-  "fetchedAt": "2026-09-17T22:03:39.074Z"
+  "fetchedAt": "2026-09-18T22:03:44.645Z"
 }
