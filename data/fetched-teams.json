@@ -1735,6 +1735,16 @@
           "joined": "",
           "formerTeams": [],
           "source": "vlr"
+        },
+        {
+          "id": "p-balax",
+          "name": "balax",
+          "realName": "Thong Chern Kwi",
+          "country": "sg",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
         }
       ],
       "matches": []
@@ -4822,5 +4832,5 @@
     }
   },
   "errors": [],
-  "fetchedAt": "2026-09-18T22:03:44.645Z"
+  "fetchedAt": "2026-09-19T23:45:28.151Z"
 }
