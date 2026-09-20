@@ -1832,16 +1832,6 @@
           "joined": "",
           "formerTeams": [],
           "source": "vlr"
-        },
-        {
-          "id": "p-meco1e",
-          "name": "meco1e",
-          "realName": "Cole Lewis",
-          "country": "us",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
         }
       ],
       "matches": []
@@ -1894,16 +1884,6 @@
           "id": "p-jonahp",
           "name": "JonahP",
           "realName": "Jonah Pulice",
-          "country": "ca",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-marved",
-          "name": "Marved",
-          "realName": "Jimmy Nguyen",
           "country": "ca",
           "role": "",
           "joined": "",
@@ -2667,16 +2647,6 @@
           "source": "vlr"
         },
         {
-          "id": "p-engh",
-          "name": "ENGH",
-          "realName": "Andrey Sholokhov",
-          "country": "ru",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
           "id": "p-desmo",
           "name": "Desmo",
           "realName": "Casper Rasmussen",
@@ -2909,16 +2879,6 @@
           "joined": "",
           "formerTeams": [],
           "source": "vlr"
-        },
-        {
-          "id": "p-bacon9",
-          "name": "Bacon9",
-          "realName": "Jake Lloyd",
-          "country": "gb",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
         }
       ],
       "matches": []
@@ -3025,26 +2985,6 @@
       "vlrId": "4915",
       "roster": [
         {
-          "id": "p-chloric",
-          "name": "chloric",
-          "realName": "Caide Heaton",
-          "country": "us",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-exit",
-          "name": "ExiT",
-          "realName": "Abdullah Al-Twaijri",
-          "country": "unknown",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
           "id": "p-ruxic",
           "name": "Ruxic",
           "realName": "Uğur Güç",
@@ -3095,6 +3035,16 @@
           "source": "vlr"
         },
         {
+          "id": "p-exit",
+          "name": "ExiT",
+          "realName": "Abdullah Al-Twaijri",
+          "country": "unknown",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
           "id": "p-ange1",
           "name": "ANGE1",
           "realName": "Kyrylo Karasov",
@@ -3119,16 +3069,6 @@
           "name": "Zuzanna",
           "realName": "Zuzanna Hejduk-Mostowy",
           "country": "pl",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-flynn",
-          "name": "Flynn",
-          "realName": "Alaa Nasrallah",
-          "country": "unknown",
           "role": "",
           "joined": "",
           "formerTeams": [],
@@ -4832,5 +4772,5 @@
     }
   },
   "errors": [],
-  "fetchedAt": "2026-09-19T23:45:28.151Z"
+  "fetchedAt": "2026-09-20T23:40:42.862Z"
 }
