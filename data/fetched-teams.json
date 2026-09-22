@@ -1406,16 +1406,6 @@
           "source": "vlr"
         },
         {
-          "id": "p-tex",
-          "name": "tex",
-          "realName": "Ian Botsch",
-          "country": "de",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
           "id": "p-mazino",
           "name": "Mazino",
           "realName": "Roberto Rivas",
@@ -1440,6 +1430,16 @@
           "name": "aspas",
           "realName": "Erick Santos",
           "country": "br",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-tex",
+          "name": "tex",
+          "realName": "Ian Botsch",
+          "country": "de",
           "role": "",
           "joined": "",
           "formerTeams": [],
@@ -1861,16 +1861,6 @@
           "source": "vlr"
         },
         {
-          "id": "p-jerrwin",
-          "name": "Jerrwin",
-          "realName": "Gurjiwan Gill",
-          "country": "in",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
           "id": "p-cortezia",
           "name": "cortezia",
           "realName": "Gabriel Cortez",
@@ -1885,6 +1875,16 @@
           "name": "JonahP",
           "realName": "Jonah Pulice",
           "country": "ca",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-jerrwin",
+          "name": "Jerrwin",
+          "realName": "Gurjiwan Gill",
+          "country": "in",
           "role": "",
           "joined": "",
           "formerTeams": [],
@@ -2189,16 +2189,6 @@
           "source": "vlr"
         },
         {
-          "id": "p-dantedeu5",
-          "name": "Dantedeu5",
-          "realName": "Jesús Federico Larrosa",
-          "country": "ar",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
           "id": "p-heat",
           "name": "heat",
           "realName": "Olavo Marcelo",
@@ -2212,6 +2202,16 @@
           "id": "p-saadhak",
           "name": "saadhak",
           "realName": "Matias Delipetro",
+          "country": "ar",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-dantedeu5",
+          "name": "Dantedeu5",
+          "realName": "Jesús Federico Larrosa",
           "country": "ar",
           "role": "",
           "joined": "",
@@ -2247,16 +2247,6 @@
           "joined": "",
           "formerTeams": [],
           "source": "vlr"
-        },
-        {
-          "id": "p-psiarthurleon",
-          "name": "Psiarthurleon",
-          "realName": "Arthur Leon",
-          "country": "br",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
         }
       ],
       "matches": []
@@ -2269,16 +2259,6 @@
           "id": "p-eggsterr",
           "name": "Eggsterr",
           "realName": "Evan Grady",
-          "country": "us",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-nightz",
-          "name": "nightz",
-          "realName": "Christian Smith",
           "country": "us",
           "role": "",
           "joined": "",
@@ -2339,6 +2319,16 @@
           "id": "p-demon1",
           "name": "Demon1",
           "realName": "Max Mazanov",
+          "country": "us",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-nightz",
+          "name": "nightz",
+          "realName": "Christian Smith",
           "country": "us",
           "role": "",
           "joined": "",
@@ -3373,16 +3363,6 @@
           "source": "vlr"
         },
         {
-          "id": "p-thinkii",
-          "name": "thinkii",
-          "realName": "Manuel Martínez",
-          "country": "es",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
           "id": "p-koyo",
           "name": "Koyo",
           "realName": "Koray Arpat",
@@ -3396,6 +3376,16 @@
           "id": "p-zaes",
           "name": "ZaeS",
           "realName": "Dario Gomez",
+          "country": "es",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-thinkii",
+          "name": "thinkii",
+          "realName": "Manuel Martínez",
           "country": "es",
           "role": "",
           "joined": "",
@@ -4772,5 +4762,5 @@
     }
   },
   "errors": [],
-  "fetchedAt": "2026-09-20T23:40:42.862Z"
+  "fetchedAt": "2026-09-22T00:21:26.801Z"
 }
