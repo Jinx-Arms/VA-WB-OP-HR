@@ -2179,16 +2179,6 @@
           "source": "vlr"
         },
         {
-          "id": "p-mwzera",
-          "name": "mwzera",
-          "realName": "Leonardo Serrati",
-          "country": "br",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
           "id": "p-heat",
           "name": "heat",
           "realName": "Olavo Marcelo",
@@ -2213,6 +2203,16 @@
           "name": "Dantedeu5",
           "realName": "Jesús Federico Larrosa",
           "country": "ar",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-mwzera",
+          "name": "mwzera",
+          "realName": "Leonardo Serrati",
+          "country": "br",
           "role": "",
           "joined": "",
           "formerTeams": [],
@@ -4762,5 +4762,5 @@
     }
   },
   "errors": [],
-  "fetchedAt": "2026-09-22T23:55:39.497Z"
+  "fetchedAt": "2026-09-24T00:06:19.692Z"
 }
