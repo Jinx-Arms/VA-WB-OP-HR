@@ -757,6 +757,16 @@
           "source": "vlr"
         },
         {
+          "id": "p-fayde",
+          "name": "Fayde",
+          "realName": "Chong Hoc Wah",
+          "country": "my",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
           "id": "p-coffin0",
           "name": "Coffin0",
           "realName": "Tao Yumeng (陶禹萌)",
@@ -2460,9 +2470,9 @@
       "vlrId": "1001",
       "roster": [
         {
-          "id": "p-riens",
-          "name": "RieNs",
-          "realName": "Enes Ecirli",
+          "id": "p-wo0t",
+          "name": "Wo0t",
+          "realName": "Mert Alkan",
           "country": "tr",
           "role": "",
           "joined": "",
@@ -2470,9 +2480,9 @@
           "source": "vlr"
         },
         {
-          "id": "p-wo0t",
-          "name": "Wo0t",
-          "realName": "Mert Alkan",
+          "id": "p-riens",
+          "name": "RieNs",
+          "realName": "Enes Ecirli",
           "country": "tr",
           "role": "",
           "joined": "",
@@ -2484,16 +2494,6 @@
           "name": "benjyfishy",
           "realName": "Benjamin David Fish",
           "country": "gb",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-boo",
-          "name": "Boo",
-          "realName": "Ričardas Lukaševičius",
-          "country": "lt",
           "role": "",
           "joined": "",
           "formerTeams": [],
@@ -4119,16 +4119,6 @@
           "source": "vlr"
         },
         {
-          "id": "p-xan",
-          "name": "Xan",
-          "realName": "Xan Ng",
-          "country": "my",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
           "id": "p-jemkin",
           "name": "Jemkin",
           "realName": "Maksim Batorov",
@@ -4762,5 +4752,5 @@
     }
   },
   "errors": [],
-  "fetchedAt": "2026-09-25T00:08:15.288Z"
+  "fetchedAt": "2026-09-26T00:14:55.744Z"
 }
