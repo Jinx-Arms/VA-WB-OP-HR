@@ -998,6 +998,16 @@
       "vlrId": "13576",
       "roster": [
         {
+          "id": "p-berlin",
+          "name": "BerLIN",
+          "realName": "Zhang Bolin (張柏霖)",
+          "country": "tw",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
           "id": "p-jkuro",
           "name": "jkuro",
           "realName": "Yong Haochong (杨浩聪)",
@@ -1032,16 +1042,6 @@
           "name": "crownfisher",
           "realName": "Li Ao (李翱)",
           "country": "cn",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-berlin",
-          "name": "BerLIN",
-          "realName": "Zhang Bolin (張柏霖)",
-          "country": "tw",
           "role": "",
           "joined": "",
           "formerTeams": [],
@@ -2122,10 +2122,10 @@
           "source": "vlr"
         },
         {
-          "id": "p-c0m",
-          "name": "C0M",
-          "realName": "Corbin Lee",
-          "country": "us",
+          "id": "p-eeiu",
+          "name": "eeiu",
+          "realName": "Daniel Vucenovic",
+          "country": "ca",
           "role": "",
           "joined": "",
           "formerTeams": [],
@@ -2142,10 +2142,10 @@
           "source": "vlr"
         },
         {
-          "id": "p-eeiu",
-          "name": "eeiu",
-          "realName": "Daniel Vucenovic",
-          "country": "ca",
+          "id": "p-c0m",
+          "name": "C0M",
+          "realName": "Corbin Lee",
+          "country": "us",
           "role": "",
           "joined": "",
           "formerTeams": [],
@@ -4167,16 +4167,6 @@
           "joined": "",
           "formerTeams": [],
           "source": "vlr"
-        },
-        {
-          "id": "p-jovi",
-          "name": "Jovi",
-          "realName": "Jovanni Vera",
-          "country": "unknown",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
         }
       ],
       "matches": []
@@ -4752,5 +4742,5 @@
     }
   },
   "errors": [],
-  "fetchedAt": "2026-09-28T00:06:40.446Z"
+  "fetchedAt": "2026-09-29T01:21:18.224Z"
 }
