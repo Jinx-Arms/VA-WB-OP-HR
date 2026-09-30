@@ -3363,16 +3363,6 @@
           "source": "vlr"
         },
         {
-          "id": "p-koyo",
-          "name": "Koyo",
-          "realName": "Koray Arpat",
-          "country": "de",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
           "id": "p-zaes",
           "name": "ZaeS",
           "realName": "Dario Gomez",
@@ -4742,5 +4732,5 @@
     }
   },
   "errors": [],
-  "fetchedAt": "2026-09-29T01:21:18.224Z"
+  "fetchedAt": "2026-09-30T00:51:32.343Z"
 }
