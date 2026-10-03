@@ -3276,16 +3276,6 @@
           "source": "vlr"
         },
         {
-          "id": "p-net",
-          "name": "neT",
-          "realName": "Michael Bernet",
-          "country": "us",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
           "id": "p-tomaszy",
           "name": "tomaszy",
           "realName": "Tomás Machado",
@@ -4732,5 +4722,5 @@
     }
   },
   "errors": [],
-  "fetchedAt": "2026-10-02T01:10:31.366Z"
+  "fetchedAt": "2026-10-03T00:49:27.863Z"
 }
