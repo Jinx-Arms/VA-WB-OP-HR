@@ -2006,6 +2006,16 @@
           "joined": "",
           "formerTeams": [],
           "source": "vlr"
+        },
+        {
+          "id": "p-kaimera",
+          "name": "Kaimera",
+          "realName": "Nathan McAdams",
+          "country": "us",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
         }
       ],
       "matches": []
@@ -4722,5 +4732,5 @@
     }
   },
   "errors": [],
-  "fetchedAt": "2026-10-03T00:49:27.863Z"
+  "fetchedAt": "2026-10-04T00:12:23.478Z"
 }
