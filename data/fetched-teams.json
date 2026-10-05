@@ -3025,16 +3025,6 @@
           "source": "vlr"
         },
         {
-          "id": "p-cyvoph",
-          "name": "CyvOph",
-          "realName": "Clement Millard",
-          "country": "fr",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
           "id": "p-exit",
           "name": "ExiT",
           "realName": "Abdullah Al-Twaijri",
@@ -3260,6 +3250,26 @@
           "name": "Flickless",
           "realName": "Karel Maeckelbergh",
           "country": "unknown",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-globex",
+          "name": "globeX",
+          "realName": "Michail Kostylew",
+          "country": "gb",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-cyvoph",
+          "name": "CyvOph",
+          "realName": "Clement Millard",
+          "country": "fr",
           "role": "",
           "joined": "",
           "formerTeams": [],
@@ -4732,5 +4742,5 @@
     }
   },
   "errors": [],
-  "fetchedAt": "2026-10-04T00:12:23.478Z"
+  "fetchedAt": "2026-10-05T00:19:06.436Z"
 }
