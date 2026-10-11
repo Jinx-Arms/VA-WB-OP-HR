@@ -3353,20 +3353,20 @@
       "vlrId": "3478",
       "roster": [
         {
-          "id": "p-qpert",
-          "name": "qpert",
-          "realName": "Mateja Mijovic",
-          "country": "unknown",
+          "id": "p-seven",
+          "name": "seven",
+          "realName": "Johann Hernandez",
+          "country": "mx",
           "role": "",
           "joined": "",
           "formerTeams": [],
           "source": "vlr"
         },
         {
-          "id": "p-seven",
-          "name": "seven",
-          "realName": "Johann Hernandez",
-          "country": "mx",
+          "id": "p-qpert",
+          "name": "qpert",
+          "realName": "Mateja Mijovic",
+          "country": "unknown",
           "role": "",
           "joined": "",
           "formerTeams": [],
@@ -4742,5 +4742,5 @@
     }
   },
   "errors": [],
-  "fetchedAt": "2026-10-10T01:23:36.976Z"
+  "fetchedAt": "2026-10-11T00:35:24.483Z"
 }
