@@ -650,6 +650,16 @@
           "source": "vlr"
         },
         {
+          "id": "p-anxios",
+          "name": "ANXiOS",
+          "realName": "Victor Troshkin",
+          "country": "ru",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
           "id": "p-master",
           "name": "Master",
           "realName": "Cheng Zihan (程子晗)",
@@ -4742,5 +4752,5 @@
     }
   },
   "errors": [],
-  "fetchedAt": "2026-10-12T00:49:00.614Z"
+  "fetchedAt": "2026-10-13T02:47:22.753Z"
 }
