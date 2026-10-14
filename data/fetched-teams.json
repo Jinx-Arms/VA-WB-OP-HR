@@ -747,16 +747,6 @@
           "source": "vlr"
         },
         {
-          "id": "p-hvoya",
-          "name": "hvoya",
-          "realName": "Aleksandr Eremin",
-          "country": "ru",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
           "id": "p-steady",
           "name": "steady",
           "realName": "Dmitry Prutkov",
@@ -781,6 +771,16 @@
           "name": "Coffin0",
           "realName": "Tao Yumeng (陶禹萌)",
           "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-hvoya",
+          "name": "hvoya",
+          "realName": "Aleksandr Eremin",
+          "country": "ru",
           "role": "",
           "joined": "",
           "formerTeams": [],
@@ -4752,5 +4752,5 @@
     }
   },
   "errors": [],
-  "fetchedAt": "2026-10-13T02:47:22.753Z"
+  "fetchedAt": "2026-10-14T00:43:45.764Z"
 }
