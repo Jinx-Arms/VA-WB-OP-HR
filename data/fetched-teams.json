@@ -2744,20 +2744,20 @@
           "source": "vlr"
         },
         {
-          "id": "p-vlad",
-          "name": "Vlad",
-          "realName": "Berke Kantürk",
-          "country": "tr",
+          "id": "p-bambino",
+          "name": "Bambino",
+          "realName": "Tyler Jay",
+          "country": "gb",
           "role": "",
           "joined": "",
           "formerTeams": [],
           "source": "vlr"
         },
         {
-          "id": "p-bambino",
-          "name": "Bambino",
-          "realName": "Tyler Jay",
-          "country": "gb",
+          "id": "p-vlad",
+          "name": "Vlad",
+          "realName": "Berke Kantürk",
+          "country": "tr",
           "role": "",
           "joined": "",
           "formerTeams": [],
@@ -4752,5 +4752,5 @@
     }
   },
   "errors": [],
-  "fetchedAt": "2026-10-14T00:43:45.764Z"
+  "fetchedAt": "2026-10-15T00:12:08.032Z"
 }
