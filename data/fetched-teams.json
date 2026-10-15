@@ -717,20 +717,20 @@
           "source": "vlr"
         },
         {
-          "id": "p-rarga",
-          "name": "Rarga",
-          "realName": "Arthur Churyumov",
-          "country": "ru",
+          "id": "p-happywei",
+          "name": "happywei",
+          "realName": "Deng Minwei (邓闵维)",
+          "country": "tw",
           "role": "",
           "joined": "",
           "formerTeams": [],
           "source": "vlr"
         },
         {
-          "id": "p-happywei",
-          "name": "happywei",
-          "realName": "Deng Minwei (邓闵维)",
-          "country": "tw",
+          "id": "p-rarga",
+          "name": "Rarga",
+          "realName": "Arthur Churyumov",
+          "country": "ru",
           "role": "",
           "joined": "",
           "formerTeams": [],
@@ -2771,16 +2771,6 @@
       "vlrId": "474",
       "roster": [
         {
-          "id": "p-nats",
-          "name": "nAts",
-          "realName": "Ayaz Akhmetshin",
-          "country": "ru",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
           "id": "p-gsr",
           "name": "GSR",
           "realName": "Ognjen Bondžić",
@@ -2821,29 +2811,19 @@
           "source": "vlr"
         },
         {
-          "id": "p-wayne",
-          "name": "wayne",
-          "realName": "Wayne Chang",
-          "country": "sg",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-miniboo",
-          "name": "MiniBoo",
-          "realName": "Dominykas Lukaševičius",
-          "country": "lt",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
           "id": "p-purp0",
           "name": "purp0",
           "realName": "Semyon Borchev",
+          "country": "ru",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-nats",
+          "name": "nAts",
+          "realName": "Ayaz Akhmetshin",
           "country": "ru",
           "role": "",
           "joined": "",
@@ -2885,6 +2865,16 @@
           "name": "yaotziN.",
           "realName": "Daniel Roczniak",
           "country": "pl",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-7teen",
+          "name": "7Teen",
+          "realName": "Tanner Curtis",
+          "country": "us",
           "role": "",
           "joined": "",
           "formerTeams": [],
@@ -4752,5 +4742,5 @@
     }
   },
   "errors": [],
-  "fetchedAt": "2026-10-15T00:12:08.032Z"
+  "fetchedAt": "2026-10-15T23:59:22.406Z"
 }
