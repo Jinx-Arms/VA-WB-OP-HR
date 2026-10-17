@@ -707,16 +707,6 @@
           "source": "vlr"
         },
         {
-          "id": "p-noman",
-          "name": "NoMan",
-          "realName": "James Man",
-          "country": "unknown",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
           "id": "p-happywei",
           "name": "happywei",
           "realName": "Deng Minwei (邓闵维)",
@@ -731,6 +721,16 @@
           "name": "Rarga",
           "realName": "Arthur Churyumov",
           "country": "ru",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-noman",
+          "name": "NoMan",
+          "realName": "James Man",
+          "country": "unknown",
           "role": "",
           "joined": "",
           "formerTeams": [],
@@ -4742,5 +4742,5 @@
     }
   },
   "errors": [],
-  "fetchedAt": "2026-10-15T23:59:22.406Z"
+  "fetchedAt": "2026-10-17T00:02:20.108Z"
 }
