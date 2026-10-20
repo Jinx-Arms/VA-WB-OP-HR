@@ -299,16 +299,6 @@
           "source": "vlr"
         },
         {
-          "id": "p-anaks",
-          "name": "Anaks",
-          "realName": "Ye Sang-jun (예상준)",
-          "country": "kr",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
           "id": "p-yaoxie",
           "name": "YaoXie",
           "realName": "Zhang Jihang (張繼航)",
@@ -333,6 +323,16 @@
           "name": "Rain",
           "realName": "Deng Shiyao (邓诗耀)",
           "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-anaks",
+          "name": "Anaks",
+          "realName": "Ye Sang-jun (예상준)",
+          "country": "kr",
           "role": "",
           "joined": "",
           "formerTeams": [],
@@ -1755,16 +1755,6 @@
           "joined": "",
           "formerTeams": [],
           "source": "vlr"
-        },
-        {
-          "id": "p-balax",
-          "name": "balax",
-          "realName": "Thong Chern Kwi",
-          "country": "sg",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
         }
       ],
       "matches": []
@@ -2055,16 +2045,6 @@
           "source": "vlr"
         },
         {
-          "id": "p-jackk",
-          "name": "Jackk",
-          "realName": "Jack Foote",
-          "country": "us",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
           "id": "p-oxy",
           "name": "OXY",
           "realName": "Francis Hoang",
@@ -2078,6 +2058,16 @@
           "id": "p-v1c",
           "name": "v1c",
           "realName": "Victor Truong",
+          "country": "us",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-jackk",
+          "name": "Jackk",
+          "realName": "Jack Foote",
           "country": "us",
           "role": "",
           "joined": "",
@@ -3310,16 +3300,6 @@
           "name": "Hehnal",
           "realName": "Alexandra Hehn",
           "country": "de",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-pipson",
-          "name": "pipsoN",
-          "realName": "Daniil Mesheryakov",
-          "country": "ru",
           "role": "",
           "joined": "",
           "formerTeams": [],
@@ -4742,5 +4722,5 @@
     }
   },
   "errors": [],
-  "fetchedAt": "2026-10-18T23:47:28.087Z"
+  "fetchedAt": "2026-10-20T00:48:22.382Z"
 }
