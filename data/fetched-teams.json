@@ -152,6 +152,16 @@
           "source": "vlr"
         },
         {
+          "id": "p-77even",
+          "name": "77even",
+          "realName": "Richard Venskevychius",
+          "country": "lt",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
           "id": "p-setrod",
           "name": "Setrod",
           "realName": "Ou Taigeng (欧泰赓)",
@@ -2055,16 +2065,6 @@
           "source": "vlr"
         },
         {
-          "id": "p-v1c",
-          "name": "v1c",
-          "realName": "Victor Truong",
-          "country": "us",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
           "id": "p-jackk",
           "name": "Jackk",
           "realName": "Jack Foote",
@@ -2075,9 +2075,9 @@
           "source": "vlr"
         },
         {
-          "id": "p-veer",
-          "name": "Veer",
-          "realName": "Wyatt Blevins",
+          "id": "p-v1c",
+          "name": "v1c",
+          "realName": "Victor Truong",
           "country": "us",
           "role": "",
           "joined": "",
@@ -2093,6 +2093,16 @@
           "joined": "",
           "formerTeams": [],
           "source": "vlr"
+        },
+        {
+          "id": "p-veer",
+          "name": "Veer",
+          "realName": "Wyatt Blevins",
+          "country": "us",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
         }
       ],
       "matches": []
@@ -2101,36 +2111,6 @@
       "name": "FURIA",
       "vlrId": "2406",
       "roster": [
-        {
-          "id": "p-artzin",
-          "name": "artzin",
-          "realName": "Arthur Araujo",
-          "country": "br",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-basic",
-          "name": "basic",
-          "realName": "Luis Henrique Ferlin Tessaro",
-          "country": "br",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-shyy",
-          "name": "Shyy",
-          "realName": "Fabian Usnayo",
-          "country": "cl",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
         {
           "id": "p-eeiu",
           "name": "eeiu",
@@ -3199,16 +3179,6 @@
           "source": "vlr"
         },
         {
-          "id": "p-kundikundi",
-          "name": "KUNDIKUNDI",
-          "realName": "Jiri Honkala",
-          "country": "fi",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
           "id": "p-mavera",
           "name": "Mavera",
           "realName": "Erim Sasal",
@@ -3808,9 +3778,9 @@
           "source": "vlr"
         },
         {
-          "id": "p-dambi",
-          "name": "Dambi",
-          "realName": "Lee Hyuk-kyu (이혁규)",
+          "id": "p-ivy",
+          "name": "Ivy",
+          "realName": "Park Sung-hyeon (박성현)",
           "country": "kr",
           "role": "",
           "joined": "",
@@ -3818,9 +3788,9 @@
           "source": "vlr"
         },
         {
-          "id": "p-ivy",
-          "name": "Ivy",
-          "realName": "Park Sung-hyeon (박성현)",
+          "id": "p-dambi",
+          "name": "Dambi",
+          "realName": "Lee Hyuk-kyu (이혁규)",
           "country": "kr",
           "role": "",
           "joined": "",
@@ -3841,16 +3811,6 @@
           "id": "p-yoman",
           "name": "yoman",
           "realName": "Chae Young-moon (채영문)",
-          "country": "kr",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-sungmin",
-          "name": "Sungmin",
-          "realName": "So Seong-min (소성민)",
           "country": "kr",
           "role": "",
           "joined": "",
@@ -3976,16 +3936,6 @@
           "name": "PatMen",
           "realName": "Patrick Mendoza",
           "country": "ph",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-udotan",
-          "name": "UdoTan",
-          "realName": "Go Kyung-won (고경원)",
-          "country": "kr",
           "role": "",
           "joined": "",
           "formerTeams": [],
@@ -4722,5 +4672,5 @@
     }
   },
   "errors": [],
-  "fetchedAt": "2026-10-20T00:48:22.382Z"
+  "fetchedAt": "2026-10-21T00:14:27.547Z"
 }
