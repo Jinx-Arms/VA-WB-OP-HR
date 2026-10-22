@@ -2460,16 +2460,6 @@
       "vlrId": "1001",
       "roster": [
         {
-          "id": "p-wo0t",
-          "name": "Wo0t",
-          "realName": "Mert Alkan",
-          "country": "tr",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
           "id": "p-riens",
           "name": "RieNs",
           "realName": "Enes Ecirli",
@@ -2761,16 +2751,6 @@
           "source": "vlr"
         },
         {
-          "id": "p-trexx",
-          "name": "trexx",
-          "realName": "Nikita Cherednichenko",
-          "country": "ru",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
           "id": "p-kicks",
           "name": "Kicks",
           "realName": "Kimmie Laasner",
@@ -2794,6 +2774,16 @@
           "id": "p-nats",
           "name": "nAts",
           "realName": "Ayaz Akhmetshin",
+          "country": "ru",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-trexx",
+          "name": "trexx",
+          "realName": "Nikita Cherednichenko",
           "country": "ru",
           "role": "",
           "joined": "",
@@ -3230,16 +3220,6 @@
           "name": "CyvOph",
           "realName": "Clement Millard",
           "country": "fr",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-westside",
-          "name": "westside",
-          "realName": "Miłosz Duda",
-          "country": "pl",
           "role": "",
           "joined": "",
           "formerTeams": [],
@@ -4106,16 +4086,6 @@
       "vlrId": "6199",
       "roster": [
         {
-          "id": "p-natz",
-          "name": "natz",
-          "realName": "Jonathan Adiputra",
-          "country": "id",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
           "id": "p-zeus",
           "name": "Zeus",
           "realName": "Jhian Vega",
@@ -4126,10 +4096,10 @@
           "source": "vlr"
         },
         {
-          "id": "p-styron",
-          "name": "STYRON",
-          "realName": "Tidus Goh",
-          "country": "sg",
+          "id": "p-natz",
+          "name": "natz",
+          "realName": "Jonathan Adiputra",
+          "country": "id",
           "role": "",
           "joined": "",
           "formerTeams": [],
@@ -4672,5 +4642,5 @@
     }
   },
   "errors": [],
-  "fetchedAt": "2026-10-21T00:14:27.547Z"
+  "fetchedAt": "2026-10-22T00:18:43.009Z"
 }
