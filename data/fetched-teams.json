@@ -1349,16 +1349,6 @@
           "source": "vlr"
         },
         {
-          "id": "p-keiko",
-          "name": "keiko",
-          "realName": "Georgio Sanassy",
-          "country": "gb",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
           "id": "p-brawk",
           "name": "brawk",
           "realName": "Brock Somerhalder",
@@ -3641,29 +3631,9 @@
           "source": "vlr"
         },
         {
-          "id": "p-meteor",
-          "name": "Meteor",
-          "realName": "Kim Tae-oh (김태오)",
-          "country": "kr",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
           "id": "p-buzz",
           "name": "BuZz",
           "realName": "Yu Byeong-cheol (유병철)",
-          "country": "kr",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-dh",
-          "name": "DH",
-          "realName": "Kang Dong-ho (강동호)",
           "country": "kr",
           "role": "",
           "joined": "",
@@ -3694,16 +3664,6 @@
           "id": "p-kdg",
           "name": "KDG",
           "realName": "Kim Dong-gun (김동건)",
-          "country": "kr",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-cheonggak",
-          "name": "CheongGak",
-          "realName": "Lee Il-ho (이일호)",
           "country": "kr",
           "role": "",
           "joined": "",
@@ -3805,46 +3765,6 @@
       "vlrId": "8185",
       "roster": [
         {
-          "id": "p-beyn",
-          "name": "BeYN",
-          "realName": "Kang Ha-bin (강하빈)",
-          "country": "kr",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-mako",
-          "name": "MaKo",
-          "realName": "Kim Myeong-gwan (김명관)",
-          "country": "kr",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-free1ng",
-          "name": "free1ng",
-          "realName": "No Ha-jun (노하준)",
-          "country": "kr",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-hyunmin",
-          "name": "HYUNMIN",
-          "realName": "Song Hyun-min (송현민)",
-          "country": "kr",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
           "id": "p-flicker",
           "name": "Flicker",
           "realName": "Kim Tae-hee (김태희)",
@@ -3865,29 +3785,9 @@
           "source": "vlr"
         },
         {
-          "id": "p-termi",
-          "name": "termi",
-          "realName": "Pyeon Seon-ho (편선호)",
-          "country": "kr",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
           "id": "p-glow",
           "name": "glow",
           "realName": "Kim Min-soo (김민수)",
-          "country": "kr",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-argency",
-          "name": "Argency",
-          "realName": "Kwon Soon-woo (권순우)",
           "country": "kr",
           "role": "",
           "joined": "",
@@ -4173,16 +4073,6 @@
           "source": "vlr"
         },
         {
-          "id": "p-yatsuka",
-          "name": "yatsuka",
-          "realName": "Kazuya Ikeda",
-          "country": "jp",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
           "id": "p-caedye",
           "name": "Caedye",
           "realName": "Amon Mateus Okakura",
@@ -4197,6 +4087,16 @@
           "name": "Akame",
           "realName": "Yu Gwang-hui (유광희)",
           "country": "kr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-yatsuka",
+          "name": "yatsuka",
+          "realName": "Kazuya Ikeda",
+          "country": "jp",
           "role": "",
           "joined": "",
           "formerTeams": [],
@@ -4250,6 +4150,16 @@
           "source": "vlr"
         },
         {
+          "id": "p-xdll",
+          "name": "Xdll",
+          "realName": "Yuto Mizomori",
+          "country": "jp",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
           "id": "p-absol",
           "name": "Absol",
           "realName": "Kazuki Fujinoki",
@@ -4274,16 +4184,6 @@
           "name": "eKo",
           "realName": "Yeom Wang-ryong (염왕룡)",
           "country": "kr",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-xdll",
-          "name": "Xdll",
-          "realName": "Yuto Mizomori",
-          "country": "jp",
           "role": "",
           "joined": "",
           "formerTeams": [],
@@ -4642,5 +4542,5 @@
     }
   },
   "errors": [],
-  "fetchedAt": "2026-10-22T00:18:43.009Z"
+  "fetchedAt": "2026-10-23T00:15:08.901Z"
 }
