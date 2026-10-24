@@ -1416,6 +1416,16 @@
       "vlrId": "7386",
       "roster": [
         {
+          "id": "p-tex",
+          "name": "tex",
+          "realName": "Ian Botsch",
+          "country": "de",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
           "id": "p-zekken",
           "name": "zekken",
           "realName": "Zachary Patrone",
@@ -1450,16 +1460,6 @@
           "name": "aspas",
           "realName": "Erick Santos",
           "country": "br",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-tex",
-          "name": "tex",
-          "realName": "Ian Botsch",
-          "country": "de",
           "role": "",
           "joined": "",
           "formerTeams": [],
@@ -3746,16 +3746,6 @@
           "joined": "",
           "formerTeams": [],
           "source": "vlr"
-        },
-        {
-          "id": "p-yoman",
-          "name": "yoman",
-          "realName": "Chae Young-moon (채영문)",
-          "country": "kr",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
         }
       ],
       "matches": []
@@ -4324,16 +4314,6 @@
           "source": "vlr"
         },
         {
-          "id": "p-primmie",
-          "name": "primmie",
-          "realName": "Papaphat Sriprapha",
-          "country": "th",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
           "id": "p-jitboys",
           "name": "JitBoyS",
           "realName": "Jittana Nokngam",
@@ -4542,5 +4522,5 @@
     }
   },
   "errors": [],
-  "fetchedAt": "2026-10-23T00:15:08.901Z"
+  "fetchedAt": "2026-10-24T00:08:12.707Z"
 }
