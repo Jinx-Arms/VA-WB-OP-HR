@@ -1640,9 +1640,9 @@
           "source": "vlr"
         },
         {
-          "id": "p-shhhack",
-          "name": "shhhack",
-          "realName": "Peter Belej",
+          "id": "p-robert",
+          "name": "Robert",
+          "realName": "Robert Yip",
           "country": "unknown",
           "role": "",
           "joined": "",
@@ -1650,9 +1650,9 @@
           "source": "vlr"
         },
         {
-          "id": "p-robert",
-          "name": "Robert",
-          "realName": "Robert Yip",
+          "id": "p-shhhack",
+          "name": "shhhack",
+          "realName": "Peter Belej",
           "country": "unknown",
           "role": "",
           "joined": "",
@@ -2367,16 +2367,6 @@
           "name": "PROFEK",
           "realName": "Dawid Święć",
           "country": "pl",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-derke",
-          "name": "Derke",
-          "realName": "Nikita Niko Sirmitev",
-          "country": "fi",
           "role": "",
           "joined": "",
           "formerTeams": [],
@@ -3437,20 +3427,20 @@
           "source": "vlr"
         },
         {
-          "id": "p-d4v41",
-          "name": "d4v41",
-          "realName": "Khalish Rusyaidee",
-          "country": "my",
+          "id": "p-something",
+          "name": "something",
+          "realName": "Ilya Petrov",
+          "country": "ru",
           "role": "",
           "joined": "",
           "formerTeams": [],
           "source": "vlr"
         },
         {
-          "id": "p-something",
-          "name": "something",
-          "realName": "Ilya Petrov",
-          "country": "ru",
+          "id": "p-d4v41",
+          "name": "d4v41",
+          "realName": "Khalish Rusyaidee",
+          "country": "my",
           "role": "",
           "joined": "",
           "formerTeams": [],
@@ -3471,16 +3461,6 @@
           "name": "alecks",
           "realName": "Alexandre Sallé",
           "country": "fr",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-wendler",
-          "name": "Wendler",
-          "realName": "Ashton Wendler",
-          "country": "us",
           "role": "",
           "joined": "",
           "formerTeams": [],
@@ -4522,5 +4502,5 @@
     }
   },
   "errors": [],
-  "fetchedAt": "2026-10-24T00:08:12.707Z"
+  "fetchedAt": "2026-10-24T23:51:21.954Z"
 }
