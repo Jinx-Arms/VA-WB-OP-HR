@@ -386,16 +386,6 @@
           "source": "vlr"
         },
         {
-          "id": "p-vo0kashu",
-          "name": "vo0kashu",
-          "realName": "Ilya Ushakov",
-          "country": "ru",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
           "id": "p-verse",
           "name": "Verse",
           "realName": "Zhou Zijun (周子钧)",
@@ -410,6 +400,16 @@
           "name": "SpiritZ1",
           "realName": "Lin Dingyu (林定宇)",
           "country": "tw",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-vo0kashu",
+          "name": "vo0kashu",
+          "realName": "Ilya Ushakov",
+          "country": "ru",
           "role": "",
           "joined": "",
           "formerTeams": [],
@@ -436,8 +436,8 @@
           "source": "vlr"
         },
         {
-          "id": "p-alti",
-          "name": "Alti",
+          "id": "p-melon",
+          "name": "Melon",
           "realName": "",
           "country": "cn",
           "role": "",
@@ -446,8 +446,8 @@
           "source": "vlr"
         },
         {
-          "id": "p-melon",
-          "name": "Melon",
+          "id": "p-alti",
+          "name": "Alti",
           "realName": "",
           "country": "cn",
           "role": "",
@@ -2403,16 +2403,6 @@
           "source": "vlr"
         },
         {
-          "id": "p-pal",
-          "name": "PAL",
-          "realName": "Gregor Morton",
-          "country": "unknown",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
           "id": "p-scuttt",
           "name": "Scuttt",
           "realName": "Benjamin Hutchinson",
@@ -3089,36 +3079,6 @@
       "vlrId": "12694",
       "roster": [
         {
-          "id": "p-marteen",
-          "name": "marteen",
-          "realName": "Martin Pátek",
-          "country": "unknown",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-proxh",
-          "name": "Proxh",
-          "realName": "Yusuf Emre Tunc",
-          "country": "tr",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-minny",
-          "name": "Minny",
-          "realName": "Patrik Hušek",
-          "country": "unknown",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
           "id": "p-bipo",
           "name": "bipo",
           "realName": "Taranvir Singh",
@@ -3129,30 +3089,10 @@
           "source": "vlr"
         },
         {
-          "id": "p-starxo",
-          "name": "starxo",
-          "realName": "Patryk Kopczynski",
-          "country": "pl",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
           "id": "p-manyfender",
           "name": "ManyFender",
           "realName": "Marc Kowolik",
           "country": "fr",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-mavera",
-          "name": "Mavera",
-          "realName": "Erim Sasal",
-          "country": "tr",
           "role": "",
           "joined": "",
           "formerTeams": [],
@@ -3200,16 +3140,6 @@
           "name": "CyvOph",
           "realName": "Clement Millard",
           "country": "fr",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-ara",
-          "name": "ara",
-          "realName": "Hanceriuc Eduard-George",
-          "country": "unknown",
           "role": "",
           "joined": "",
           "formerTeams": [],
@@ -4043,16 +3973,6 @@
           "source": "vlr"
         },
         {
-          "id": "p-caedye",
-          "name": "Caedye",
-          "realName": "Amon Mateus Okakura",
-          "country": "jp",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
           "id": "p-akame",
           "name": "Akame",
           "realName": "Yu Gwang-hui (유광희)",
@@ -4066,6 +3986,16 @@
           "id": "p-yatsuka",
           "name": "yatsuka",
           "realName": "Kazuya Ikeda",
+          "country": "jp",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-caedye",
+          "name": "Caedye",
+          "realName": "Amon Mateus Okakura",
           "country": "jp",
           "role": "",
           "joined": "",
@@ -4502,5 +4432,5 @@
     }
   },
   "errors": [],
-  "fetchedAt": "2026-10-25T23:41:10.379Z"
+  "fetchedAt": "2026-10-27T00:59:21.732Z"
 }
