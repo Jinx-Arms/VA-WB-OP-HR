@@ -1570,16 +1570,6 @@
       "vlrId": "11058",
       "roster": [
         {
-          "id": "p-valyn",
-          "name": "valyn",
-          "realName": "Jacob Batio",
-          "country": "us",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
           "id": "p-jawgemo",
           "name": "jawgemo",
           "realName": "Alexander Mor",
@@ -4432,5 +4422,5 @@
     }
   },
   "errors": [],
-  "fetchedAt": "2026-10-27T00:59:21.732Z"
+  "fetchedAt": "2026-10-28T00:49:36.809Z"
 }
