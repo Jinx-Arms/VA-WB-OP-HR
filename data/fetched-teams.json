@@ -1312,16 +1312,6 @@
           "source": "vlr"
         },
         {
-          "id": "p-alexrr",
-          "name": "alexRr",
-          "realName": "Alexander Frisch",
-          "country": "de",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
           "id": "p-ja7",
           "name": "Ja7",
           "realName": "",
@@ -2159,16 +2149,6 @@
           "source": "vlr"
         },
         {
-          "id": "p-heat",
-          "name": "heat",
-          "realName": "Olavo Marcelo",
-          "country": "br",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
           "id": "p-saadhak",
           "name": "saadhak",
           "realName": "Matias Delipetro",
@@ -2183,16 +2163,6 @@
           "name": "Dantedeu5",
           "realName": "Jesús Federico Larrosa",
           "country": "ar",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-mwzera",
-          "name": "mwzera",
-          "realName": "Leonardo Serrati",
-          "country": "br",
           "role": "",
           "joined": "",
           "formerTeams": [],
@@ -2691,20 +2661,20 @@
       "vlrId": "474",
       "roster": [
         {
-          "id": "p-gsr",
-          "name": "GSR",
-          "realName": "Ognjen Bondžić",
-          "country": "unknown",
+          "id": "p-kamo",
+          "name": "kamo",
+          "realName": "Kamil Frąckowiak",
+          "country": "pl",
           "role": "",
           "joined": "",
           "formerTeams": [],
           "source": "vlr"
         },
         {
-          "id": "p-kamo",
-          "name": "kamo",
-          "realName": "Kamil Frąckowiak",
-          "country": "pl",
+          "id": "p-gsr",
+          "name": "GSR",
+          "realName": "Ognjen Bondžić",
+          "country": "unknown",
           "role": "",
           "joined": "",
           "formerTeams": [],
@@ -2734,16 +2704,6 @@
           "id": "p-nats",
           "name": "nAts",
           "realName": "Ayaz Akhmetshin",
-          "country": "ru",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-trexx",
-          "name": "trexx",
-          "realName": "Nikita Cherednichenko",
           "country": "ru",
           "role": "",
           "joined": "",
@@ -3444,16 +3404,6 @@
           "source": "vlr"
         },
         {
-          "id": "p-efina",
-          "name": "Efina",
-          "realName": "Kim Nak-yeon (김낙연)",
-          "country": "kr",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
           "id": "p-raxcal",
           "name": "Raxcal",
           "realName": "Kim Min-seok (김민석)",
@@ -3467,6 +3417,16 @@
           "id": "p-zynx",
           "name": "ZynX",
           "realName": "Kim Dong-ha (김동하)",
+          "country": "kr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-efina",
+          "name": "Efina",
+          "realName": "Kim Nak-yeon (김낙연)",
           "country": "kr",
           "role": "",
           "joined": "",
@@ -4234,16 +4194,6 @@
           "source": "vlr"
         },
         {
-          "id": "p-thyy",
-          "name": "thyy",
-          "realName": "Anupong Preamsak",
-          "country": "th",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
           "id": "p-leviathan",
           "name": "Leviathan",
           "realName": "Thanyathon Nakmee",
@@ -4422,5 +4372,5 @@
     }
   },
   "errors": [],
-  "fetchedAt": "2026-10-28T00:49:36.809Z"
+  "fetchedAt": "2026-10-29T01:22:23.583Z"
 }
