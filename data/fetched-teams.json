@@ -709,7 +709,7 @@
         {
           "id": "p-lysoar",
           "name": "Lysoar",
-          "realName": "Liang Youhao (梁优��)",
+          "realName": "Liang Youhao (梁优好)",
           "country": "cn",
           "role": "",
           "joined": "",
@@ -1266,16 +1266,6 @@
           "name": "Spring",
           "realName": "Liu Jiunting (刘俊霆)",
           "country": "tw",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-deryeon",
-          "name": "Deryeon",
-          "realName": "Derrick Yee",
-          "country": "sg",
           "role": "",
           "joined": "",
           "formerTeams": [],
@@ -2477,20 +2467,20 @@
       "vlrId": "2593",
       "roster": [
         {
-          "id": "p-crashies",
-          "name": "crashies",
-          "realName": "Austin Roberts",
-          "country": "us",
+          "id": "p-kaajak",
+          "name": "kaajak",
+          "realName": "Kajetan Haremski",
+          "country": "pl",
           "role": "",
           "joined": "",
           "formerTeams": [],
           "source": "vlr"
         },
         {
-          "id": "p-kaajak",
-          "name": "kaajak",
-          "realName": "Kajetan Haremski",
-          "country": "pl",
+          "id": "p-crashies",
+          "name": "crashies",
+          "realName": "Austin Roberts",
+          "country": "us",
           "role": "",
           "joined": "",
           "formerTeams": [],
@@ -2511,16 +2501,6 @@
           "name": "Alfajer",
           "realName": "Emir Ali Beder",
           "country": "tr",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-veqaj",
-          "name": "Veqaj",
-          "realName": "Sylvain Pattyn",
-          "country": "fr",
           "role": "",
           "joined": "",
           "formerTeams": [],
@@ -2587,16 +2567,6 @@
           "id": "p-s0pp",
           "name": "s0pp",
           "realName": "Efe Tur",
-          "country": "tr",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-xeus",
-          "name": "xeus",
-          "realName": "Doğan Gözgen",
           "country": "tr",
           "role": "",
           "joined": "",
@@ -2674,16 +2644,6 @@
           "id": "p-gsr",
           "name": "GSR",
           "realName": "Ognjen Bondžić",
-          "country": "unknown",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-kicks",
-          "name": "Kicks",
-          "realName": "Kimmie Laasner",
           "country": "unknown",
           "role": "",
           "joined": "",
@@ -4372,5 +4332,5 @@
     }
   },
   "errors": [],
-  "fetchedAt": "2026-10-29T01:22:23.583Z"
+  "fetchedAt": "2026-10-30T01:26:24.107Z"
 }
