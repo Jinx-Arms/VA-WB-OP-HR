@@ -1851,26 +1851,6 @@
           "source": "vlr"
         },
         {
-          "id": "p-jonahp",
-          "name": "JonahP",
-          "realName": "Jonah Pulice",
-          "country": "ca",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-jerrwin",
-          "name": "Jerrwin",
-          "realName": "Gurjiwan Gill",
-          "country": "in",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
           "id": "p-zyto",
           "name": "Zyto",
           "realName": "Bryan Ybanez",
@@ -2070,58 +2050,7 @@
     "furia": {
       "name": "FURIA",
       "vlrId": "2406",
-      "roster": [
-        {
-          "id": "p-eeiu",
-          "name": "eeiu",
-          "realName": "Daniel Vucenovic",
-          "country": "ca",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-koalanoob",
-          "name": "koalanoob",
-          "realName": "Gianfranco Potestio",
-          "country": "ca",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-c0m",
-          "name": "C0M",
-          "realName": "Corbin Lee",
-          "country": "us",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-shaw",
-          "name": "shaW",
-          "realName": "Ian Jardim",
-          "country": "br",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-kamino",
-          "name": "Kamino",
-          "realName": "Lucas Kamino",
-          "country": "br",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        }
-      ],
+      "roster": [],
       "matches": []
     },
     "kru": {
@@ -4332,5 +4261,5 @@
     }
   },
   "errors": [],
-  "fetchedAt": "2026-10-30T01:26:24.107Z"
+  "fetchedAt": "2026-10-31T01:11:32.334Z"
 }
