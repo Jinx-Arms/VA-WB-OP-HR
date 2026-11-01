@@ -709,7 +709,7 @@
         {
           "id": "p-lysoar",
           "name": "Lysoar",
-          "realName": "Liang Youhao (梁优好)",
+          "realName": "Liang Youhao (梁优��)",
           "country": "cn",
           "role": "",
           "joined": "",
@@ -3176,16 +3176,6 @@
           "source": "vlr"
         },
         {
-          "id": "p-jinggg",
-          "name": "Jinggg",
-          "realName": "Wang Jing Jie",
-          "country": "sg",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
           "id": "p-f0rsaken",
           "name": "f0rsakeN",
           "realName": "Jason Susanto",
@@ -3200,16 +3190,6 @@
           "name": "something",
           "realName": "Ilya Petrov",
           "country": "ru",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-d4v41",
-          "name": "d4v41",
-          "realName": "Khalish Rusyaidee",
-          "country": "my",
           "role": "",
           "joined": "",
           "formerTeams": [],
@@ -4261,5 +4241,5 @@
     }
   },
   "errors": [],
-  "fetchedAt": "2026-10-31T01:11:32.334Z"
+  "fetchedAt": "2026-11-01T00:32:57.261Z"
 }
