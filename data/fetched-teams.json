@@ -650,16 +650,6 @@
           "source": "vlr"
         },
         {
-          "id": "p-ed101",
-          "name": "ED101",
-          "realName": "Han Tianqi (韩天奇)",
-          "country": "cn",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
           "id": "p-anxios",
           "name": "ANXiOS",
           "realName": "Victor Troshkin",
@@ -709,7 +699,7 @@
         {
           "id": "p-lysoar",
           "name": "Lysoar",
-          "realName": "Liang Youhao (梁优��)",
+          "realName": "Liang Youhao (梁优好)",
           "country": "cn",
           "role": "",
           "joined": "",
@@ -781,16 +771,6 @@
           "name": "Coffin0",
           "realName": "Tao Yumeng (陶禹萌)",
           "country": "cn",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-hvoya",
-          "name": "hvoya",
-          "realName": "Aleksandr Eremin",
-          "country": "ru",
           "role": "",
           "joined": "",
           "formerTeams": [],
@@ -1841,6 +1821,16 @@
           "source": "vlr"
         },
         {
+          "id": "p-oxy",
+          "name": "OXY",
+          "realName": "Francis Hoang",
+          "country": "us",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
           "id": "p-cortezia",
           "name": "cortezia",
           "realName": "Gabriel Cortez",
@@ -1975,16 +1965,6 @@
       "vlrId": "188",
       "roster": [
         {
-          "id": "p-zellsis",
-          "name": "Zellsis",
-          "realName": "Jordan Montemurro",
-          "country": "us",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
           "id": "p-fireballops",
           "name": "FireBallOps",
           "realName": "Cameron Tomaselli",
@@ -1995,10 +1975,10 @@
           "source": "vlr"
         },
         {
-          "id": "p-oxy",
-          "name": "OXY",
-          "realName": "Francis Hoang",
-          "country": "us",
+          "id": "p-glyph",
+          "name": "GLYPH",
+          "realName": "Conner Garcia",
+          "country": "ph",
           "role": "",
           "joined": "",
           "formerTeams": [],
@@ -2169,16 +2149,6 @@
           "name": "keznit",
           "realName": "Angelo Mori",
           "country": "cl",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-glyph",
-          "name": "GLYPH",
-          "realName": "Conner Garcia",
-          "country": "ph",
           "role": "",
           "joined": "",
           "formerTeams": [],
@@ -2541,16 +2511,6 @@
           "joined": "",
           "formerTeams": [],
           "source": "vlr"
-        },
-        {
-          "id": "p-vlad",
-          "name": "Vlad",
-          "realName": "Berke Kantürk",
-          "country": "tr",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
         }
       ],
       "matches": []
@@ -2899,16 +2859,6 @@
           "joined": "",
           "formerTeams": [],
           "source": "vlr"
-        },
-        {
-          "id": "p-viento",
-          "name": "Viento",
-          "realName": "Göktuğ Alp Çebi",
-          "country": "tr",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
         }
       ],
       "matches": []
@@ -3243,16 +3193,6 @@
           "source": "vlr"
         },
         {
-          "id": "p-ash",
-          "name": "Ash",
-          "realName": "Ha Hyun-cheol (하현철)",
-          "country": "kr",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
           "id": "p-karon",
           "name": "Karon",
           "realName": "Kim Won-tae (김원태)",
@@ -3340,16 +3280,6 @@
       "vlrId": "14",
       "roster": [
         {
-          "id": "p-munchkin",
-          "name": "Munchkin",
-          "realName": "Byeon Sang-beom (변상범)",
-          "country": "kr",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
           "id": "p-stax",
           "name": "stax",
           "realName": "Kim Gu-taek (김구택)",
@@ -3383,16 +3313,6 @@
           "id": "p-norman",
           "name": "Norman",
           "realName": "Shin Jun-ho",
-          "country": "kr",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-kdg",
-          "name": "KDG",
-          "realName": "Kim Dong-gun (김동건)",
           "country": "kr",
           "role": "",
           "joined": "",
@@ -3678,16 +3598,6 @@
           "source": "vlr"
         },
         {
-          "id": "p-rebecca",
-          "name": "Rebecca",
-          "realName": "Rebecca Wong",
-          "country": "my",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
           "id": "p-jomengz",
           "name": "Jomengz",
           "realName": "Jonathan Hoo",
@@ -3775,76 +3685,6 @@
           "id": "p-ssees",
           "name": "SSeeS",
           "realName": "Tomonori Okimura",
-          "country": "jp",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-meiy",
-          "name": "Meiy",
-          "realName": "Ibuki Seki",
-          "country": "jp",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-akame",
-          "name": "Akame",
-          "realName": "Yu Gwang-hui (유광희)",
-          "country": "kr",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-yatsuka",
-          "name": "yatsuka",
-          "realName": "Kazuya Ikeda",
-          "country": "jp",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-caedye",
-          "name": "Caedye",
-          "realName": "Amon Mateus Okakura",
-          "country": "jp",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-vorz",
-          "name": "Vorz",
-          "realName": "Kakeru Ikarashi",
-          "country": "jp",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-melofovia",
-          "name": "Melofovia",
-          "realName": "Hirotaka Okazaki",
-          "country": "jp",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-northernlights",
-          "name": "NorthernLights",
-          "realName": "Tsubasa Ando",
           "country": "jp",
           "role": "",
           "joined": "",
@@ -4241,5 +4081,5 @@
     }
   },
   "errors": [],
-  "fetchedAt": "2026-11-02T01:07:12.041Z"
+  "fetchedAt": "2026-11-03T03:09:16.517Z"
 }
