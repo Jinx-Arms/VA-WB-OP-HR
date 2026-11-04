@@ -1309,16 +1309,6 @@
           "source": "vlr"
         },
         {
-          "id": "p-brawk",
-          "name": "brawk",
-          "realName": "Brock Somerhalder",
-          "country": "us",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
           "id": "p-mada",
           "name": "mada",
           "realName": "Adam Pampuch",
@@ -1534,16 +1524,6 @@
           "name": "jawgemo",
           "realName": "Alexander Mor",
           "country": "unknown",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-babybay",
-          "name": "BABYBAY",
-          "realName": "Andrej Francisty",
-          "country": "us",
           "role": "",
           "joined": "",
           "formerTeams": [],
@@ -1831,6 +1811,16 @@
           "source": "vlr"
         },
         {
+          "id": "p-brawk",
+          "name": "brawk",
+          "realName": "Brock Somerhalder",
+          "country": "us",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
           "id": "p-cortezia",
           "name": "cortezia",
           "realName": "Gabriel Cortez",
@@ -1979,16 +1969,6 @@
           "name": "GLYPH",
           "realName": "Conner Garcia",
           "country": "ph",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-jackk",
-          "name": "Jackk",
-          "realName": "Jack Foote",
-          "country": "us",
           "role": "",
           "joined": "",
           "formerTeams": [],
@@ -2424,26 +2404,6 @@
           "joined": "",
           "formerTeams": [],
           "source": "vlr"
-        },
-        {
-          "id": "p-desmo",
-          "name": "Desmo",
-          "realName": "Casper Rasmussen",
-          "country": "dk",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-szed",
-          "name": "Szed",
-          "realName": "Philipp Schickor",
-          "country": "de",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
         }
       ],
       "matches": []
@@ -2452,26 +2412,6 @@
       "name": "FUT Esports",
       "vlrId": "1184",
       "roster": [
-        {
-          "id": "p-sociablee",
-          "name": "sociablEE",
-          "realName": "Volkan Yonal",
-          "country": "tr",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-s0pp",
-          "name": "s0pp",
-          "realName": "Efe Tur",
-          "country": "tr",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
         {
           "id": "p-yetujey",
           "name": "yetujey",
@@ -2534,16 +2474,6 @@
           "name": "GSR",
           "realName": "Ognjen Bondžić",
           "country": "unknown",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-purp0",
-          "name": "purp0",
-          "realName": "Semyon Borchev",
-          "country": "ru",
           "role": "",
           "joined": "",
           "formerTeams": [],
@@ -2905,36 +2835,6 @@
       "vlrId": "14419",
       "roster": [
         {
-          "id": "p-flickless",
-          "name": "Flickless",
-          "realName": "Karel Maeckelbergh",
-          "country": "unknown",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-globex",
-          "name": "globeX",
-          "realName": "Michail Kostylew",
-          "country": "gb",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-cyvoph",
-          "name": "CyvOph",
-          "realName": "Clement Millard",
-          "country": "fr",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
           "id": "p-tomaszy",
           "name": "tomaszy",
           "realName": "Tomás Machado",
@@ -3183,9 +3083,9 @@
       "vlrId": "17",
       "roster": [
         {
-          "id": "p-xiesta",
-          "name": "Xiesta",
-          "realName": "Jung Si-hwan (정시환)",
+          "id": "p-karon",
+          "name": "Karon",
+          "realName": "Kim Won-tae (김원태)",
           "country": "kr",
           "role": "",
           "joined": "",
@@ -3193,9 +3093,9 @@
           "source": "vlr"
         },
         {
-          "id": "p-karon",
-          "name": "Karon",
-          "realName": "Kim Won-tae (김원태)",
+          "id": "p-xiesta",
+          "name": "Xiesta",
+          "realName": "Jung Si-hwan (정시환)",
           "country": "kr",
           "role": "",
           "joined": "",
@@ -3226,16 +3126,6 @@
           "id": "p-zynx",
           "name": "ZynX",
           "realName": "Kim Dong-ha (김동하)",
-          "country": "kr",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-efina",
-          "name": "Efina",
-          "realName": "Kim Nak-yeon (김낙연)",
           "country": "kr",
           "role": "",
           "joined": "",
@@ -3370,16 +3260,6 @@
           "id": "p-ivy",
           "name": "Ivy",
           "realName": "Park Sung-hyeon (박성현)",
-          "country": "kr",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-dambi",
-          "name": "Dambi",
-          "realName": "Lee Hyuk-kyu (이혁규)",
           "country": "kr",
           "role": "",
           "joined": "",
@@ -3709,16 +3589,6 @@
           "source": "vlr"
         },
         {
-          "id": "p-xdll",
-          "name": "Xdll",
-          "realName": "Yuto Mizomori",
-          "country": "jp",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
           "id": "p-absol",
           "name": "Absol",
           "realName": "Kazuki Fujinoki",
@@ -3784,88 +3654,7 @@
     "varrel": {
       "name": "VARREL",
       "vlrId": "11229",
-      "roster": [
-        {
-          "id": "p-c1nder",
-          "name": "C1ndeR",
-          "realName": "Ko Jae-hyuk (고재혁)",
-          "country": "kr",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-foxy9",
-          "name": "Foxy9",
-          "realName": "Jung Jae-sung (정재성)",
-          "country": "kr",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-klaus",
-          "name": "Klaus",
-          "realName": "Kim Min-hyuk (김민혁)",
-          "country": "kr",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-xuna",
-          "name": "XuNa",
-          "realName": "Kim Tae-geon (김태건)",
-          "country": "kr",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-oonzmlp",
-          "name": "oonzmlp",
-          "realName": "Shin Sang-beom (신상범)",
-          "country": "kr",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-zexy",
-          "name": "Zexy",
-          "realName": "Jang Suk-hyun (장석현)",
-          "country": "kr",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-tk9",
-          "name": "TK9",
-          "realName": "Goo Tae-kyun (구태균)",
-          "country": "kr",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-r3thme",
-          "name": "R3THME",
-          "realName": "Kim Ki-woon (김기운)",
-          "country": "kr",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        }
-      ],
+      "roster": [],
       "matches": []
     },
     "fs": {
@@ -4081,5 +3870,5 @@
     }
   },
   "errors": [],
-  "fetchedAt": "2026-11-03T03:09:16.517Z"
+  "fetchedAt": "2026-11-04T01:46:09.739Z"
 }
