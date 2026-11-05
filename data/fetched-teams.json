@@ -610,16 +610,6 @@
           "source": "vlr"
         },
         {
-          "id": "p-bai",
-          "name": "Bai",
-          "realName": "Zhang Zeyang (张泽洋)",
-          "country": "cn",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
           "id": "p-f4ngeer",
           "name": "f4ngeer",
           "realName": "Roman Smirnov",
@@ -1095,26 +1085,6 @@
       "vlrId": "14137",
       "roster": [
         {
-          "id": "p-haodong",
-          "name": "Haodong",
-          "realName": "Guo Haodong (郭浩东)",
-          "country": "cn",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-lucas",
-          "name": "lucas",
-          "realName": "Yunkun Lu (路昀昆)",
-          "country": "cn",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
           "id": "p-dynamite",
           "name": "Dynamite",
           "realName": "Zhao Zihao (赵梓浩)",
@@ -1158,36 +1128,6 @@
           "id": "p-gazero",
           "name": "Gazero",
           "realName": "Li Zhe (李哲)",
-          "country": "cn",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-after",
-          "name": "AfteR",
-          "realName": "Lo Wen-Hsin (罗文信)",
-          "country": "tw",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-muggle",
-          "name": "Muggle",
-          "realName": "Tang Shijun (唐时俊)",
-          "country": "cn",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-3water",
-          "name": "3water",
-          "realName": "Liu Miao (刘淼)",
           "country": "cn",
           "role": "",
           "joined": "",
@@ -2028,26 +1968,6 @@
           "source": "vlr"
         },
         {
-          "id": "p-saadhak",
-          "name": "saadhak",
-          "realName": "Matias Delipetro",
-          "country": "ar",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-dantedeu5",
-          "name": "Dantedeu5",
-          "realName": "Jesús Federico Larrosa",
-          "country": "ar",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
           "id": "p-torito",
           "name": "torito",
           "realName": "Cristobal Quintana",
@@ -2346,30 +2266,20 @@
       "vlrId": "2593",
       "roster": [
         {
-          "id": "p-kaajak",
-          "name": "kaajak",
-          "realName": "Kajetan Haremski",
-          "country": "pl",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-crashies",
-          "name": "crashies",
-          "realName": "Austin Roberts",
-          "country": "us",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
           "id": "p-cloud",
           "name": "Cloud",
           "realName": "Kirill Nehozhin",
           "country": "ru",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-kaajak",
+          "name": "kaajak",
+          "realName": "Kajetan Haremski",
+          "country": "pl",
           "role": "",
           "joined": "",
           "formerTeams": [],
@@ -3151,16 +3061,6 @@
           "joined": "",
           "formerTeams": [],
           "source": "vlr"
-        },
-        {
-          "id": "p-peri",
-          "name": "peri",
-          "realName": "Jung Bum-ki (정범기)",
-          "country": "kr",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
         }
       ],
       "matches": []
@@ -3208,6 +3108,16 @@
           "joined": "",
           "formerTeams": [],
           "source": "vlr"
+        },
+        {
+          "id": "p-sungmin",
+          "name": "Sungmin",
+          "realName": "So Seong-min (소성민)",
+          "country": "kr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
         }
       ],
       "matches": []
@@ -3240,6 +3150,16 @@
           "id": "p-xross",
           "name": "Xross",
           "realName": "Jeonghwan (정환)",
+          "country": "kr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-udotan",
+          "name": "UdoTan",
+          "realName": "Go Kyung-won (고경원)",
           "country": "kr",
           "role": "",
           "joined": "",
@@ -3870,5 +3790,5 @@
     }
   },
   "errors": [],
-  "fetchedAt": "2026-11-04T01:46:09.739Z"
+  "fetchedAt": "2026-11-05T01:54:21.520Z"
 }
