@@ -707,16 +707,6 @@
           "source": "vlr"
         },
         {
-          "id": "p-rarga",
-          "name": "Rarga",
-          "realName": "Arthur Churyumov",
-          "country": "ru",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
           "id": "p-noman",
           "name": "NoMan",
           "realName": "James Man",
@@ -1577,16 +1567,6 @@
           "source": "vlr"
         },
         {
-          "id": "p-tkzin",
-          "name": "tkzin",
-          "realName": "Enzo Zimiani",
-          "country": "br",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
           "id": "p-wenty",
           "name": "Wenty",
           "realName": "Carlos Lira Portela",
@@ -2286,16 +2266,6 @@
           "source": "vlr"
         },
         {
-          "id": "p-alfajer",
-          "name": "Alfajer",
-          "realName": "Emir Ali Beder",
-          "country": "tr",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
           "id": "p-boaster",
           "name": "Boaster",
           "realName": "Jake Howlett",
@@ -2790,48 +2760,7 @@
     "pcific": {
       "name": "PCIFIC",
       "vlrId": "3478",
-      "roster": [
-        {
-          "id": "p-seven",
-          "name": "seven",
-          "realName": "Johann Hernandez",
-          "country": "mx",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-qpert",
-          "name": "qpert",
-          "realName": "Mateja Mijovic",
-          "country": "unknown",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-zaes",
-          "name": "ZaeS",
-          "realName": "Dario Gomez",
-          "country": "es",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-thinkii",
-          "name": "thinkii",
-          "realName": "Manuel Martínez",
-          "country": "es",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        }
-      ],
+      "roster": [],
       "matches": []
     },
     "ulf": {
@@ -3195,6 +3124,26 @@
           "joined": "",
           "formerTeams": [],
           "source": "vlr"
+        },
+        {
+          "id": "p-persia",
+          "name": "Persia",
+          "realName": "Yang Zi-on (양지온)",
+          "country": "kr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-hype",
+          "name": "Hype",
+          "realName": "Park Min-soo (박민수)",
+          "country": "kr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
         }
       ],
       "matches": []
@@ -3414,16 +3363,6 @@
       "name": "Team Secret",
       "vlrId": "6199",
       "roster": [
-        {
-          "id": "p-zeus",
-          "name": "Zeus",
-          "realName": "Jhian Vega",
-          "country": "ph",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
         {
           "id": "p-natz",
           "name": "natz",
@@ -3790,5 +3729,5 @@
     }
   },
   "errors": [],
-  "fetchedAt": "2026-11-05T01:54:21.520Z"
+  "fetchedAt": "2026-11-06T01:53:28.196Z"
 }
