@@ -1450,16 +1450,6 @@
       "vlrId": "11058",
       "roster": [
         {
-          "id": "p-jawgemo",
-          "name": "jawgemo",
-          "realName": "Alexander Mor",
-          "country": "unknown",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
           "id": "p-trent",
           "name": "trent",
           "realName": "Trent Cairns",
@@ -1734,6 +1724,16 @@
           "id": "p-brawk",
           "name": "brawk",
           "realName": "Brock Somerhalder",
+          "country": "us",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-canezerra",
+          "name": "canezerra",
+          "realName": "Alex Banyasz",
           "country": "us",
           "role": "",
           "joined": "",
@@ -2246,16 +2246,6 @@
       "vlrId": "2593",
       "roster": [
         {
-          "id": "p-cloud",
-          "name": "Cloud",
-          "realName": "Kirill Nehozhin",
-          "country": "ru",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
           "id": "p-kaajak",
           "name": "kaajak",
           "realName": "Kajetan Haremski",
@@ -2266,10 +2256,10 @@
           "source": "vlr"
         },
         {
-          "id": "p-boaster",
-          "name": "Boaster",
-          "realName": "Jake Howlett",
-          "country": "gb",
+          "id": "p-cloud",
+          "name": "Cloud",
+          "realName": "Kirill Nehozhin",
+          "country": "ru",
           "role": "",
           "joined": "",
           "formerTeams": [],
@@ -2306,6 +2296,16 @@
           "id": "p-krostaly",
           "name": "KROSTALY",
           "realName": "Okan Alaçam",
+          "country": "tr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-wo0t",
+          "name": "Wo0t",
+          "realName": "Mert Alkan",
           "country": "tr",
           "role": "",
           "joined": "",
@@ -2922,9 +2922,9 @@
       "vlrId": "17",
       "roster": [
         {
-          "id": "p-karon",
-          "name": "Karon",
-          "realName": "Kim Won-tae (김원태)",
+          "id": "p-xiesta",
+          "name": "Xiesta",
+          "realName": "Jung Si-hwan (정시환)",
           "country": "kr",
           "role": "",
           "joined": "",
@@ -2932,9 +2932,9 @@
           "source": "vlr"
         },
         {
-          "id": "p-xiesta",
-          "name": "Xiesta",
-          "realName": "Jung Si-hwan (정시환)",
+          "id": "p-karon",
+          "name": "Karon",
+          "realName": "Kim Won-tae (김원태)",
           "country": "kr",
           "role": "",
           "joined": "",
@@ -2955,6 +2955,26 @@
           "id": "p-raxcal",
           "name": "Raxcal",
           "realName": "Kim Min-seok (김민석)",
+          "country": "kr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-dambi",
+          "name": "Dambi",
+          "realName": "Lee Hyuk-kyu (이혁규)",
+          "country": "kr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-mako",
+          "name": "MaKo",
+          "realName": "Kim Myeong-gwan (김명관)",
           "country": "kr",
           "role": "",
           "joined": "",
@@ -3729,5 +3749,5 @@
     }
   },
   "errors": [],
-  "fetchedAt": "2026-11-06T01:53:28.196Z"
+  "fetchedAt": "2026-11-07T01:24:00.781Z"
 }
