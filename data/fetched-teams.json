@@ -667,10 +667,10 @@
       "vlrId": "13581",
       "roster": [
         {
-          "id": "p-wsleo",
-          "name": "WsLeo",
-          "realName": "Huang Pinwei (黄品维)",
-          "country": "tw",
+          "id": "p-lysoar",
+          "name": "Lysoar",
+          "realName": "Liang Youhao (梁优好)",
+          "country": "cn",
           "role": "",
           "joined": "",
           "formerTeams": [],
@@ -680,16 +680,6 @@
           "id": "p-sharks",
           "name": "Sharks",
           "realName": "Qiu Ge (邱戈)",
-          "country": "cn",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-lysoar",
-          "name": "Lysoar",
-          "realName": "Liang Youhao (梁优��)",
           "country": "cn",
           "role": "",
           "joined": "",
@@ -711,6 +701,16 @@
           "name": "NoMan",
           "realName": "James Man",
           "country": "unknown",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-wsleo",
+          "name": "WsLeo",
+          "realName": "Huang Pinwei (黄品维)",
+          "country": "tw",
           "role": "",
           "joined": "",
           "formerTeams": [],
@@ -1751,6 +1751,16 @@
           "source": "vlr"
         },
         {
+          "id": "p-zellsis",
+          "name": "Zellsis",
+          "realName": "Jordan Montemurro",
+          "country": "us",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
           "id": "p-zyto",
           "name": "Zyto",
           "realName": "Bryan Ybanez",
@@ -1889,6 +1899,36 @@
           "name": "GLYPH",
           "realName": "Conner Garcia",
           "country": "ph",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-alym",
+          "name": "alym",
+          "realName": "Torogul Baidyldaev",
+          "country": "unknown",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-derrek",
+          "name": "Derrek",
+          "realName": "Derrek Ha",
+          "country": "us",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-nightz",
+          "name": "nightz",
+          "realName": "Christian Smith",
+          "country": "us",
           "role": "",
           "joined": "",
           "formerTeams": [],
@@ -2038,16 +2078,6 @@
           "id": "p-demon1",
           "name": "Demon1",
           "realName": "Max Mazanov",
-          "country": "us",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-nightz",
-          "name": "nightz",
-          "realName": "Christian Smith",
           "country": "us",
           "role": "",
           "joined": "",
@@ -3541,9 +3571,19 @@
       "vlrId": "4050",
       "roster": [
         {
-          "id": "p-killua",
-          "name": "Killua",
-          "realName": "Tanate Teerasawad",
+          "id": "p-seph1roth",
+          "name": "seph1roth",
+          "realName": "Chinnakrit Phoojaroen",
+          "country": "th",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-leviathan",
+          "name": "Leviathan",
+          "realName": "Thanyathon Nakmee",
           "country": "th",
           "role": "",
           "joined": "",
@@ -3561,19 +3601,9 @@
           "source": "vlr"
         },
         {
-          "id": "p-seph1roth",
-          "name": "seph1roth",
-          "realName": "Chinnakrit Phoojaroen",
-          "country": "th",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-leviathan",
-          "name": "Leviathan",
-          "realName": "Thanyathon Nakmee",
+          "id": "p-killua",
+          "name": "Killua",
+          "realName": "Tanate Teerasawad",
           "country": "th",
           "role": "",
           "joined": "",
@@ -3749,5 +3779,5 @@
     }
   },
   "errors": [],
-  "fetchedAt": "2026-11-08T00:59:02.737Z"
+  "fetchedAt": "2026-11-09T01:18:32.908Z"
 }
