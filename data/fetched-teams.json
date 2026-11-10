@@ -182,16 +182,6 @@
           "source": "vlr"
         },
         {
-          "id": "p-legija",
-          "name": "LEGIJA",
-          "realName": "Nikola Ninić",
-          "country": "de",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
           "id": "p-york",
           "name": "York",
           "realName": "Yao Kun (姚堃)",
@@ -3414,16 +3404,6 @@
       "vlrId": "6199",
       "roster": [
         {
-          "id": "p-natz",
-          "name": "natz",
-          "realName": "Jonathan Adiputra",
-          "country": "id",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
           "id": "p-kellys",
           "name": "kellyS",
           "realName": "Kelly Sedillo",
@@ -3779,5 +3759,5 @@
     }
   },
   "errors": [],
-  "fetchedAt": "2026-11-09T01:18:32.908Z"
+  "fetchedAt": "2026-11-10T03:54:02.569Z"
 }
