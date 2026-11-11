@@ -35,16 +35,6 @@
           "source": "vlr"
         },
         {
-          "id": "p-smoggy",
-          "name": "Smoggy",
-          "realName": "Zhang Zhao (张钊)",
-          "country": "cn",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
           "id": "p-jieni7",
           "name": "Jieni7",
           "realName": "Zhang Juntai (张君泰)",
@@ -175,16 +165,6 @@
           "id": "p-9hr",
           "name": "9hr",
           "realName": "Guan Haoran (管豪然)",
-          "country": "cn",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-york",
-          "name": "York",
-          "realName": "Yao Kun (姚堃)",
           "country": "cn",
           "role": "",
           "joined": "",
@@ -1691,16 +1671,6 @@
           "source": "vlr"
         },
         {
-          "id": "p-reduxx",
-          "name": "Reduxx",
-          "realName": "Yassin Aboulalazm",
-          "country": "us",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
           "id": "p-oxy",
           "name": "OXY",
           "realName": "Francis Hoang",
@@ -1725,16 +1695,6 @@
           "name": "canezerra",
           "realName": "Alex Banyasz",
           "country": "us",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-cortezia",
-          "name": "cortezia",
-          "realName": "Gabriel Cortez",
-          "country": "br",
           "role": "",
           "joined": "",
           "formerTeams": [],
@@ -2166,6 +2126,16 @@
           "name": "slk",
           "realName": "Aleksey Lynksov",
           "country": "ru",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-szed",
+          "name": "Szed",
+          "realName": "Philipp Schickor",
+          "country": "de",
           "role": "",
           "joined": "",
           "formerTeams": [],
@@ -3759,5 +3729,5 @@
     }
   },
   "errors": [],
-  "fetchedAt": "2026-11-10T03:54:02.569Z"
+  "fetchedAt": "2026-11-11T01:33:56.252Z"
 }
