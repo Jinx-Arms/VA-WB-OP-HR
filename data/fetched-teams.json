@@ -249,6 +249,16 @@
           "source": "vlr"
         },
         {
+          "id": "p-smoggy",
+          "name": "Smoggy",
+          "realName": "Zhang Zhao (张钊)",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
           "id": "p-ft",
           "name": "FT",
           "realName": "Yan Shuaibo (闫帅博)",
@@ -303,16 +313,6 @@
           "name": "Rain",
           "realName": "Deng Shiyao (邓诗耀)",
           "country": "cn",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-anaks",
-          "name": "Anaks",
-          "realName": "Ye Sang-jun (예상준)",
-          "country": "kr",
           "role": "",
           "joined": "",
           "formerTeams": [],
@@ -516,16 +516,6 @@
           "id": "p-destroyer",
           "name": "destroyeR",
           "realName": "Gu Jiaming (顾佳鸣)",
-          "country": "cn",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-yiyee",
-          "name": "Yiyee",
-          "realName": "Zhang Tianyuan (张天元)",
           "country": "cn",
           "role": "",
           "joined": "",
@@ -1089,6 +1079,16 @@
           "name": "Gazero",
           "realName": "Li Zhe (李哲)",
           "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-anaks",
+          "name": "Anaks",
+          "realName": "Ye Sang-jun (예상준)",
+          "country": "kr",
           "role": "",
           "joined": "",
           "formerTeams": [],
@@ -2072,6 +2072,16 @@
           "source": "vlr"
         },
         {
+          "id": "p-jawgemo",
+          "name": "jawgemo",
+          "realName": "Alexander Mor",
+          "country": "unknown",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
           "id": "p-profek",
           "name": "PROFEK",
           "realName": "Dawid Święć",
@@ -3039,6 +3049,16 @@
           "source": "vlr"
         },
         {
+          "id": "p-crashies",
+          "name": "crashies",
+          "realName": "Austin Roberts",
+          "country": "us",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
           "id": "p-norman",
           "name": "Norman",
           "realName": "Shin Jun-ho",
@@ -3729,5 +3749,5 @@
     }
   },
   "errors": [],
-  "fetchedAt": "2026-11-11T01:33:56.252Z"
+  "fetchedAt": "2026-11-12T02:36:15.847Z"
 }
