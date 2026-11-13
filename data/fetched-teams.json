@@ -3029,6 +3029,16 @@
           "source": "vlr"
         },
         {
+          "id": "p-tenz",
+          "name": "TenZ",
+          "realName": "Tyson Ngo",
+          "country": "ca",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
           "id": "p-buzz",
           "name": "BuZz",
           "realName": "Yu Byeong-cheol (유병철)",
@@ -3749,5 +3759,5 @@
     }
   },
   "errors": [],
-  "fetchedAt": "2026-11-12T02:36:15.847Z"
+  "fetchedAt": "2026-11-13T02:14:13.484Z"
 }
