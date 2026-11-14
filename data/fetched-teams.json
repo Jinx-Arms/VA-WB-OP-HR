@@ -5,29 +5,9 @@
       "vlrId": "1120",
       "roster": [
         {
-          "id": "p-nobody",
-          "name": "nobody",
-          "realName": "Wang Senxu (王森旭)",
-          "country": "cn",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
           "id": "p-zmjjkk",
           "name": "ZmjjKK",
           "realName": "Zheng Yongkang (郑永康)",
-          "country": "cn",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-chichoo",
-          "name": "CHICHOO",
-          "realName": "Wan Shunzhi (万顺治)",
           "country": "cn",
           "role": "",
           "joined": "",
@@ -262,6 +242,16 @@
           "id": "p-ft",
           "name": "FT",
           "realName": "Yan Shuaibo (闫帅博)",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-alvinboy",
+          "name": "alvinboy",
+          "realName": "Alvin Hong",
           "country": "cn",
           "role": "",
           "joined": "",
@@ -744,16 +734,6 @@
           "source": "vlr"
         },
         {
-          "id": "p-scales",
-          "name": "Scales",
-          "realName": "Zhang Zhen (张震)",
-          "country": "cn",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
           "id": "p-erv",
           "name": "Erv",
           "realName": "Shen Zhiwei",
@@ -1035,6 +1015,26 @@
       "vlrId": "14137",
       "roster": [
         {
+          "id": "p-yoze",
+          "name": "Yoze",
+          "realName": "Zhou Bohan (周博晗)",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-spitfires",
+          "name": "Spitfires",
+          "realName": "Xin Mingyan (辛明阳)",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
           "id": "p-dynamite",
           "name": "Dynamite",
           "realName": "Zhao Zihao (赵梓浩)",
@@ -1058,16 +1058,6 @@
           "id": "p-coco",
           "name": "Coco",
           "realName": "Ding Dajian (丁达建)",
-          "country": "cn",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-spitfires",
-          "name": "Spitfires",
-          "realName": "Xin Mingyan (辛明阳)",
           "country": "cn",
           "role": "",
           "joined": "",
@@ -1352,16 +1342,6 @@
       "name": "Leviatán",
       "vlrId": "2359",
       "roster": [
-        {
-          "id": "p-kingg",
-          "name": "kiNgg",
-          "realName": "Francisco Aravena",
-          "country": "cl",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
         {
           "id": "p-spike",
           "name": "spike",
@@ -2303,6 +2283,26 @@
           "source": "vlr"
         },
         {
+          "id": "p-hezacoil",
+          "name": "hezacoil",
+          "realName": "Berkay Doğar",
+          "country": "tr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-batujnax",
+          "name": "batujnax",
+          "realName": "Mehmet Batu Özaslan",
+          "country": "tr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
           "id": "p-wo0t",
           "name": "Wo0t",
           "realName": "Mert Alkan",
@@ -2477,16 +2477,6 @@
           "source": "vlr"
         },
         {
-          "id": "p-chaza",
-          "name": "Chaza",
-          "realName": "Charlie Phillips",
-          "country": "gb",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
           "id": "p-sheydos",
           "name": "sheydos",
           "realName": "Bogdan Naumov",
@@ -2511,6 +2501,16 @@
           "name": "simoz",
           "realName": "Simone Giovannini",
           "country": "it",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-youenn",
+          "name": "Youenn",
+          "realName": "Youenn Rocaboy",
+          "country": "fr",
           "role": "",
           "joined": "",
           "formerTeams": [],
@@ -2922,6 +2922,16 @@
       "vlrId": "17",
       "roster": [
         {
+          "id": "p-ray",
+          "name": "Ray",
+          "realName": "Oh Eun-hyuk (오은혁)",
+          "country": "kr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
           "id": "p-xiesta",
           "name": "Xiesta",
           "realName": "Jung Si-hwan (정시환)",
@@ -3073,6 +3083,16 @@
           "name": "Norman",
           "realName": "Shin Jun-ho",
           "country": "kr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-sacy",
+          "name": "Sacy",
+          "realName": "Gustavo Rossi",
+          "country": "br",
           "role": "",
           "joined": "",
           "formerTeams": [],
@@ -3685,6 +3705,16 @@
       "vlrId": "12784",
       "roster": [
         {
+          "id": "p-coldfish",
+          "name": "coldfish",
+          "realName": "Xiang Pengzhi (向鹏志)",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
           "id": "p-akeman",
           "name": "Akeman",
           "realName": "Zhang Haoran (张浩然)",
@@ -3715,16 +3745,6 @@
           "source": "vlr"
         },
         {
-          "id": "p-ying",
-          "name": "Ying",
-          "realName": "Wang Chenxu (王晨旭)",
-          "country": "cn",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
           "id": "p-krst1ng",
           "name": "Krst1Ng",
           "realName": "",
@@ -3735,9 +3755,9 @@
           "source": "vlr"
         },
         {
-          "id": "p-coldfish",
-          "name": "coldfish",
-          "realName": "Xiang Pengzhi (向鹏志)",
+          "id": "p-ying",
+          "name": "Ying",
+          "realName": "Wang Chenxu (王晨旭)",
           "country": "cn",
           "role": "",
           "joined": "",
@@ -3759,5 +3779,5 @@
     }
   },
   "errors": [],
-  "fetchedAt": "2026-11-13T02:14:13.484Z"
+  "fetchedAt": "2026-11-14T01:55:08.160Z"
 }
