@@ -102,6 +102,16 @@
           "source": "vlr"
         },
         {
+          "id": "p-zhubibi",
+          "name": "Zhubibi",
+          "realName": "",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
           "id": "p-coconut",
           "name": "coconut",
           "realName": "Colin Patrick Chung (钟弘祖)",
@@ -639,7 +649,7 @@
         {
           "id": "p-happywei",
           "name": "happywei",
-          "realName": "Deng Minwei (邓闵维)",
+          "realName": "Deng Minwei (邓闵��)",
           "country": "tw",
           "role": "",
           "joined": "",
@@ -1256,16 +1266,6 @@
       "vlrId": "7386",
       "roster": [
         {
-          "id": "p-tex",
-          "name": "tex",
-          "realName": "Ian Botsch",
-          "country": "de",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
           "id": "p-zekken",
           "name": "zekken",
           "realName": "Zachary Patrone",
@@ -1491,16 +1491,6 @@
           "name": "DaviH",
           "realName": "David Cruz",
           "country": "pt",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-darker",
-          "name": "Darker",
-          "realName": "Sebastián Castro Cicuamia",
-          "country": "co",
           "role": "",
           "joined": "",
           "formerTeams": [],
@@ -3779,5 +3769,5 @@
     }
   },
   "errors": [],
-  "fetchedAt": "2026-11-14T01:55:08.160Z"
+  "fetchedAt": "2026-11-15T01:25:46.140Z"
 }
