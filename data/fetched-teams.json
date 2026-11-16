@@ -92,16 +92,6 @@
       "vlrId": "11328",
       "roster": [
         {
-          "id": "p-aaaay",
-          "name": "AAAAY",
-          "realName": "Zhang Yang (张杨)",
-          "country": "cn",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
           "id": "p-zhubibi",
           "name": "Zhubibi",
           "realName": "",
@@ -968,6 +958,16 @@
           "source": "vlr"
         },
         {
+          "id": "p-glacier",
+          "name": "glacier",
+          "realName": "Liang Zhekai (梁哲恺)",
+          "country": "tw",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
           "id": "p-crownfisher",
           "name": "crownfisher",
           "realName": "Li Ao (李翱)",
@@ -1122,39 +1122,9 @@
       "vlrId": "13790",
       "roster": [
         {
-          "id": "p-glacier",
-          "name": "glacier",
-          "realName": "Liang Zhekai (梁哲恺)",
-          "country": "tw",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
           "id": "p-yosemite",
           "name": "yosemite",
           "realName": "Wang Lei (王磊)",
-          "country": "cn",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-spring",
-          "name": "Spring",
-          "realName": "Liu Jiunting (刘俊霆)",
-          "country": "tw",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-aluba",
-          "name": "aluba",
-          "realName": "Zhong Haojun (钟皓钧)",
           "country": "cn",
           "role": "",
           "joined": "",
@@ -3769,5 +3739,5 @@
     }
   },
   "errors": [],
-  "fetchedAt": "2026-11-15T01:25:46.140Z"
+  "fetchedAt": "2026-11-16T01:29:20.298Z"
 }
