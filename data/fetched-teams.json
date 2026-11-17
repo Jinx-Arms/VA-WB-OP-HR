@@ -639,7 +639,7 @@
         {
           "id": "p-happywei",
           "name": "happywei",
-          "realName": "Deng Minwei (邓闵��)",
+          "realName": "Deng Minwei (邓闵维)",
           "country": "tw",
           "role": "",
           "joined": "",
@@ -1410,9 +1410,9 @@
           "source": "vlr"
         },
         {
-          "id": "p-robert",
-          "name": "Robert",
-          "realName": "Robert Yip",
+          "id": "p-shhhack",
+          "name": "shhhack",
+          "realName": "Peter Belej",
           "country": "unknown",
           "role": "",
           "joined": "",
@@ -1420,9 +1420,9 @@
           "source": "vlr"
         },
         {
-          "id": "p-shhhack",
-          "name": "shhhack",
-          "realName": "Peter Belej",
+          "id": "p-robert",
+          "name": "Robert",
+          "realName": "Robert Yip",
           "country": "unknown",
           "role": "",
           "joined": "",
@@ -1605,6 +1605,16 @@
           "name": "johnqt",
           "realName": "Mohamed Amine Ouarid",
           "country": "unknown",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-keiko",
+          "name": "keiko",
+          "realName": "Georgio Sanassy",
+          "country": "gb",
           "role": "",
           "joined": "",
           "formerTeams": [],
@@ -2226,16 +2236,6 @@
           "id": "p-yetujey",
           "name": "yetujey",
           "realName": "Eray Budak",
-          "country": "tr",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-krostaly",
-          "name": "KROSTALY",
-          "realName": "Okan Alaçam",
           "country": "tr",
           "role": "",
           "joined": "",
@@ -3060,7 +3060,7 @@
         },
         {
           "id": "p-sungmin",
-          "name": "Sungmin",
+          "name": "sungmin",
           "realName": "So Seong-min (소성민)",
           "country": "kr",
           "role": "",
@@ -3739,5 +3739,5 @@
     }
   },
   "errors": [],
-  "fetchedAt": "2026-11-16T01:29:20.298Z"
+  "fetchedAt": "2026-11-17T04:15:04.388Z"
 }
