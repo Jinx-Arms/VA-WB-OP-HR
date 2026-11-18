@@ -1266,16 +1266,6 @@
           "source": "vlr"
         },
         {
-          "id": "p-aspas",
-          "name": "aspas",
-          "realName": "Erick Santos",
-          "country": "br",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
           "id": "p-nandinnn",
           "name": "Nandinnn",
           "realName": "",
@@ -1461,16 +1451,6 @@
           "name": "DaviH",
           "realName": "David Cruz",
           "country": "pt",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-wenty",
-          "name": "Wenty",
-          "realName": "Carlos Lira Portela",
-          "country": "br",
           "role": "",
           "joined": "",
           "formerTeams": [],
@@ -2237,6 +2217,16 @@
           "name": "yetujey",
           "realName": "Eray Budak",
           "country": "tr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-aspas",
+          "name": "aspas",
+          "realName": "Erick Santos",
+          "country": "br",
           "role": "",
           "joined": "",
           "formerTeams": [],
@@ -3571,6 +3561,16 @@
           "source": "vlr"
         },
         {
+          "id": "p-crws",
+          "name": "Crws",
+          "realName": "Thanamethk Mahatthananuyut",
+          "country": "th",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
           "id": "p-frost",
           "name": "FrosT",
           "realName": "Hector Rosario",
@@ -3739,5 +3739,5 @@
     }
   },
   "errors": [],
-  "fetchedAt": "2026-11-17T04:15:04.388Z"
+  "fetchedAt": "2026-11-18T03:13:54.262Z"
 }
