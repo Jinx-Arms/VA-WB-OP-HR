@@ -1189,6 +1189,16 @@
           "source": "vlr"
         },
         {
+          "id": "p-eeiu",
+          "name": "eeiu",
+          "realName": "Daniel Vucenovic",
+          "country": "ca",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
           "id": "p-skuba",
           "name": "skuba",
           "realName": "Logan Jenkins",
@@ -3739,5 +3749,5 @@
     }
   },
   "errors": [],
-  "fetchedAt": "2026-11-18T03:13:54.262Z"
+  "fetchedAt": "2026-11-19T02:54:08.691Z"
 }
