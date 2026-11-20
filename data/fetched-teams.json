@@ -5,16 +5,6 @@
       "vlrId": "1120",
       "roster": [
         {
-          "id": "p-zmjjkk",
-          "name": "ZmjjKK",
-          "realName": "Zheng Yongkang (郑永康)",
-          "country": "cn",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
           "id": "p-jieni7",
           "name": "Jieni7",
           "realName": "Zhang Juntai (张君泰)",
@@ -92,16 +82,6 @@
       "vlrId": "11328",
       "roster": [
         {
-          "id": "p-zhubibi",
-          "name": "Zhubibi",
-          "realName": "",
-          "country": "cn",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
           "id": "p-coconut",
           "name": "coconut",
           "realName": "Colin Patrick Chung (钟弘祖)",
@@ -142,9 +122,29 @@
           "source": "vlr"
         },
         {
+          "id": "p-ye",
+          "name": "Ye",
+          "realName": "Liu Bocai (刘博才)",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
           "id": "p-9hr",
           "name": "9hr",
           "realName": "Guan Haoran (管豪然)",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-ann",
+          "name": "Ann",
+          "realName": "Chen Jianan (陈建安)",
           "country": "cn",
           "role": "",
           "joined": "",
@@ -1245,16 +1245,6 @@
       "name": "MIBR",
       "vlrId": "7386",
       "roster": [
-        {
-          "id": "p-zekken",
-          "name": "zekken",
-          "realName": "Zachary Patrone",
-          "country": "us",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
         {
           "id": "p-mazino",
           "name": "Mazino",
@@ -2675,10 +2665,50 @@
       "vlrId": "14419",
       "roster": [
         {
-          "id": "p-tomaszy",
-          "name": "tomaszy",
-          "realName": "Tomás Machado",
-          "country": "pt",
+          "id": "p-vitie",
+          "name": "Vitie",
+          "realName": "Viktor Kukushkin",
+          "country": "ru",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-globex",
+          "name": "globeX",
+          "realName": "Michail Kostylew",
+          "country": "gb",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-zachkappa",
+          "name": "ZachKappa",
+          "realName": "",
+          "country": "gb",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-sickrey",
+          "name": "sickrey",
+          "realName": "Nikolay Novozhilov",
+          "country": "ru",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-wackie",
+          "name": "wackie",
+          "realName": "Rikardo Birjukov",
+          "country": "unknown",
           "role": "",
           "joined": "",
           "formerTeams": [],
@@ -2695,20 +2725,20 @@
           "source": "vlr"
         },
         {
-          "id": "p-waylander",
-          "name": "wayLander",
-          "realName": "Jan Rahkonen",
-          "country": "fi",
+          "id": "p-aska",
+          "name": "Aska",
+          "realName": "Antonio Lozano",
+          "country": "es",
           "role": "",
           "joined": "",
           "formerTeams": [],
           "source": "vlr"
         },
         {
-          "id": "p-mew",
-          "name": "Mew",
-          "realName": "Théo Ponzoni",
-          "country": "fr",
+          "id": "p-jtay",
+          "name": "jtay",
+          "realName": "Josh Taylor",
+          "country": "gb",
           "role": "",
           "joined": "",
           "formerTeams": [],
@@ -2720,7 +2750,68 @@
     "pcific": {
       "name": "PCIFIC",
       "vlrId": "3478",
-      "roster": [],
+      "roster": [
+        {
+          "id": "p-envex",
+          "name": "envex",
+          "realName": "",
+          "country": "tr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-vdekjenn",
+          "name": "VdekJeNN",
+          "realName": "Furkan Hacışerifoğlu",
+          "country": "tr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-gloomy",
+          "name": "Gloomy",
+          "realName": "Mercan Özalp",
+          "country": "tr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-sh1ngo",
+          "name": "sh1ngo",
+          "realName": "Serhat Ali Kalburan",
+          "country": "tr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-sh0ut",
+          "name": "sh0ut",
+          "realName": "Muhammet Sefa Altıntaş",
+          "country": "tr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-pedro7",
+          "name": "pedro7",
+          "realName": "Yusuf Akkuş",
+          "country": "tr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        }
+      ],
       "matches": []
     },
     "ulf": {
@@ -2839,6 +2930,26 @@
           "name": "something",
           "realName": "Ilya Petrov",
           "country": "ru",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-primmie",
+          "name": "primmie",
+          "realName": "Papaphat Sriprapha",
+          "country": "th",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-patmen",
+          "name": "PatMen",
+          "realName": "Patrick Mendoza",
+          "country": "ph",
           "role": "",
           "joined": "",
           "formerTeams": [],
@@ -3599,16 +3710,6 @@
           "joined": "",
           "formerTeams": [],
           "source": "vlr"
-        },
-        {
-          "id": "p-sushiboys",
-          "name": "Sushiboys",
-          "realName": "Panyawat Subsiriroj",
-          "country": "th",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
         }
       ],
       "matches": []
@@ -3749,5 +3850,5 @@
     }
   },
   "errors": [],
-  "fetchedAt": "2026-11-19T02:54:08.691Z"
+  "fetchedAt": "2026-11-20T02:45:14.970Z"
 }
