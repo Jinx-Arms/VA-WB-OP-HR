@@ -443,6 +443,26 @@
           "source": "vlr"
         },
         {
+          "id": "p-chichoo",
+          "name": "CHICHOO",
+          "realName": "Wan Shunzhi (万顺治)",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-nobody",
+          "name": "nobody",
+          "realName": "Wang Senxu (王森旭)",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
           "id": "p-fengf",
           "name": "FengF",
           "realName": "Song Xuefeng (宋学锋)",
@@ -639,7 +659,7 @@
         {
           "id": "p-happywei",
           "name": "happywei",
-          "realName": "Deng Minwei (邓闵维)",
+          "realName": "Deng Minwei (邓闵��)",
           "country": "tw",
           "role": "",
           "joined": "",
@@ -1333,16 +1353,6 @@
           "source": "vlr"
         },
         {
-          "id": "p-sato",
-          "name": "Sato",
-          "realName": "Eduardo Kenzo Nagahama Sato",
-          "country": "br",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
           "id": "p-onur",
           "name": "Onur",
           "realName": "Rodrigo Dalmagro",
@@ -1815,16 +1825,6 @@
           "source": "vlr"
         },
         {
-          "id": "p-v1c",
-          "name": "v1c",
-          "realName": "Victor Truong",
-          "country": "us",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
           "id": "p-immi",
           "name": "Immi",
           "realName": "Ian Harding",
@@ -1905,9 +1905,39 @@
       "vlrId": "427",
       "roster": [
         {
-          "id": "p-eggsterr",
-          "name": "Eggsterr",
-          "realName": "Evan Grady",
+          "id": "p-paincakes",
+          "name": "Paincakes",
+          "realName": "Jake Hass",
+          "country": "us",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-xeppaa",
+          "name": "Xeppaa",
+          "realName": "Erick Bach",
+          "country": "us",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-exa",
+          "name": "exa",
+          "realName": "Kim Lee-hwan (김이환)",
+          "country": "kr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-v1c",
+          "name": "v1c",
+          "realName": "Victor Truong",
           "country": "us",
           "role": "",
           "joined": "",
@@ -1925,60 +1955,10 @@
           "source": "vlr"
         },
         {
-          "id": "p-p0ppin",
-          "name": "P0PPIN",
-          "realName": "Matteo Weber",
-          "country": "us",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-rossy",
-          "name": "Rossy",
-          "realName": "Daniel Abedrabbo",
-          "country": "us",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-keznit",
-          "name": "keznit",
-          "realName": "Angelo Mori",
-          "country": "cl",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-demon1",
-          "name": "Demon1",
-          "realName": "Max Mazanov",
-          "country": "us",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
           "id": "p-stunner",
           "name": "Stunner",
           "realName": "Dakota MacLeod",
           "country": "ca",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-wkn",
-          "name": "WKN",
-          "realName": "Alvaro Bustos",
-          "country": "cl",
           "role": "",
           "joined": "",
           "formerTeams": [],
@@ -3559,16 +3539,6 @@
       "vlrId": "5448",
       "roster": [
         {
-          "id": "p-sugarz3ro",
-          "name": "SugarZ3ro",
-          "realName": "Shota Watanabe",
-          "country": "jp",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
           "id": "p-absol",
           "name": "Absol",
           "realName": "Kazuki Fujinoki",
@@ -3593,16 +3563,6 @@
           "name": "eKo",
           "realName": "Yeom Wang-ryong (염왕룡)",
           "country": "kr",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-ryota",
-          "name": "ryota-",
-          "realName": "Ryota Okayama",
-          "country": "jp",
           "role": "",
           "joined": "",
           "formerTeams": [],
@@ -3686,16 +3646,6 @@
           "name": "Crws",
           "realName": "Thanamethk Mahatthananuyut",
           "country": "th",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-frost",
-          "name": "FrosT",
-          "realName": "Hector Rosario",
-          "country": "us",
           "role": "",
           "joined": "",
           "formerTeams": [],
@@ -3850,5 +3800,5 @@
     }
   },
   "errors": [],
-  "fetchedAt": "2026-11-20T02:45:14.970Z"
+  "fetchedAt": "2026-11-21T02:55:12.464Z"
 }
