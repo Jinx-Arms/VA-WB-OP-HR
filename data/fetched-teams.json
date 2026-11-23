@@ -659,7 +659,7 @@
         {
           "id": "p-happywei",
           "name": "happywei",
-          "realName": "Deng Minwei (邓闵��)",
+          "realName": "Deng Minwei (邓闵维)",
           "country": "tw",
           "role": "",
           "joined": "",
@@ -1829,16 +1829,6 @@
           "name": "Immi",
           "realName": "Ian Harding",
           "country": "gb",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-veer",
-          "name": "Veer",
-          "realName": "Wyatt Blevins",
-          "country": "us",
           "role": "",
           "joined": "",
           "formerTeams": [],
@@ -3800,5 +3790,5 @@
     }
   },
   "errors": [],
-  "fetchedAt": "2026-11-22T01:45:03.108Z"
+  "fetchedAt": "2026-11-23T02:04:17.818Z"
 }
