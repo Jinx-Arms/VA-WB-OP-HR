@@ -316,16 +316,6 @@
       "vlrId": "11981",
       "roster": [
         {
-          "id": "p-nicc",
-          "name": "Nicc",
-          "realName": "Shao Yi-qun (邵逸群)",
-          "country": "tw",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
           "id": "p-flex1n",
           "name": "Flex1n",
           "realName": "Lo Rui (罗瑞)",
@@ -437,6 +427,16 @@
           "name": "Kai",
           "realName": "Lu Zhinan (卢智楠)",
           "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-nicc",
+          "name": "Nicc",
+          "realName": "Shao Yi-qun (邵逸群)",
+          "country": "tw",
           "role": "",
           "joined": "",
           "formerTeams": [],
@@ -659,7 +659,7 @@
         {
           "id": "p-happywei",
           "name": "happywei",
-          "realName": "Deng Minwei (邓闵维)",
+          "realName": "Deng Minwei (邓闵��)",
           "country": "tw",
           "role": "",
           "joined": "",
@@ -2657,7 +2657,7 @@
         {
           "id": "p-zachkappa",
           "name": "ZachKappa",
-          "realName": "",
+          "realName": "Zachary Neal",
           "country": "gb",
           "role": "",
           "joined": "",
@@ -3790,5 +3790,5 @@
     }
   },
   "errors": [],
-  "fetchedAt": "2026-11-23T02:04:17.818Z"
+  "fetchedAt": "2026-11-24T05:41:04.229Z"
 }
