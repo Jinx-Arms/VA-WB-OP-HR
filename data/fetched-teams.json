@@ -523,6 +523,16 @@
           "source": "vlr"
         },
         {
+          "id": "p-after",
+          "name": "AfteR",
+          "realName": "Lo Wen-Hsin (罗文信)",
+          "country": "tw",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
           "id": "p-destroyer",
           "name": "destroyeR",
           "realName": "Gu Jiaming (顾佳鸣)",
@@ -536,6 +546,26 @@
           "id": "p-viva",
           "name": "Viva",
           "realName": "Lifan Ran (冉立凡)",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-muggle",
+          "name": "Muggle",
+          "realName": "Tang Shijun (唐时俊)",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-3water",
+          "name": "3water",
+          "realName": "Liu Miao (刘淼)",
           "country": "cn",
           "role": "",
           "joined": "",
@@ -915,16 +945,6 @@
           "name": "24K",
           "realName": "Shao Yubo (邵玉波)",
           "country": "cn",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-onbush",
-          "name": "OnbusH",
-          "realName": "Kim Taek-soo (김택수)",
-          "country": "kr",
           "role": "",
           "joined": "",
           "formerTeams": [],
@@ -2598,16 +2618,6 @@
       "vlrId": "12694",
       "roster": [
         {
-          "id": "p-bipo",
-          "name": "bipo",
-          "realName": "Taranvir Singh",
-          "country": "it",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
           "id": "p-manyfender",
           "name": "ManyFender",
           "realName": "Marc Kowolik",
@@ -3592,6 +3602,16 @@
       "vlrId": "4050",
       "roster": [
         {
+          "id": "p-killua",
+          "name": "Killua",
+          "realName": "Tanate Teerasawad",
+          "country": "th",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
           "id": "p-seph1roth",
           "name": "seph1roth",
           "realName": "Chinnakrit Phoojaroen",
@@ -3615,16 +3635,6 @@
           "id": "p-jitboys",
           "name": "JitBoyS",
           "realName": "Jittana Nokngam",
-          "country": "th",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-killua",
-          "name": "Killua",
-          "realName": "Tanate Teerasawad",
           "country": "th",
           "role": "",
           "joined": "",
@@ -3790,5 +3800,5 @@
     }
   },
   "errors": [],
-  "fetchedAt": "2026-11-24T05:41:04.229Z"
+  "fetchedAt": "2026-11-25T04:40:21.323Z"
 }
