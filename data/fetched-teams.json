@@ -600,6 +600,16 @@
           "source": "vlr"
         },
         {
+          "id": "p-spring",
+          "name": "Spring",
+          "realName": "Liu Jiunting (刘俊霆)",
+          "country": "tw",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
           "id": "p-k1ra",
           "name": "K1ra",
           "realName": "Huang Zhihao (黄志豪)",
@@ -633,6 +643,16 @@
           "id": "p-aaron0",
           "name": "AaRon0",
           "realName": "Xu Maoxiao (徐茂蕭)",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-septem7",
+          "name": "Septem7",
+          "realName": "Liu Zhening (刘哲宁)",
           "country": "cn",
           "role": "",
           "joined": "",
@@ -689,7 +709,7 @@
         {
           "id": "p-happywei",
           "name": "happywei",
-          "realName": "Deng Minwei (邓闵��)",
+          "realName": "Deng Minwei (邓闵维)",
           "country": "tw",
           "role": "",
           "joined": "",
@@ -2166,6 +2186,16 @@
       "vlrId": "2593",
       "roster": [
         {
+          "id": "p-marteen",
+          "name": "marteen",
+          "realName": "Martin Pátek",
+          "country": "unknown",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
           "id": "p-kaajak",
           "name": "kaajak",
           "realName": "Kajetan Haremski",
@@ -2551,6 +2581,16 @@
       "vlrId": "397",
       "roster": [
         {
+          "id": "p-oroni",
+          "name": "oroni",
+          "realName": "Ömer Açar",
+          "country": "tr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
           "id": "p-lar0k",
           "name": "Lar0k",
           "realName": "Yusuf Kaan Kanber",
@@ -2618,10 +2658,50 @@
       "vlrId": "12694",
       "roster": [
         {
-          "id": "p-manyfender",
-          "name": "ManyFender",
-          "realName": "Marc Kowolik",
-          "country": "fr",
+          "id": "p-boaster",
+          "name": "Boaster",
+          "realName": "Jake Howlett",
+          "country": "gb",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-alfajer",
+          "name": "Alfajer",
+          "realName": "Emir Ali Beder",
+          "country": "tr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-ruxic",
+          "name": "Ruxic",
+          "realName": "Uğur Güç",
+          "country": "tr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-kozzy",
+          "name": "kozzy",
+          "realName": "Denis Stefan Aionitoaei",
+          "country": "unknown",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-magnum",
+          "name": "MAGNUM",
+          "realName": "Martin Penkov",
+          "country": "unknown",
           "role": "",
           "joined": "",
           "formerTeams": [],
@@ -2632,6 +2712,36 @@
           "name": "Luinwess",
           "realName": "Sinan Koyuncu",
           "country": "tr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-kaplan",
+          "name": "kaplan",
+          "realName": "Adam Kaplan",
+          "country": "us",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-desmo",
+          "name": "Desmo",
+          "realName": "Casper Rasmussen",
+          "country": "dk",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-zuzanna",
+          "name": "Zuzanna",
+          "realName": "Zuzanna Hejduk-Mostowy",
+          "country": "pl",
           "role": "",
           "joined": "",
           "formerTeams": [],
@@ -3398,16 +3508,6 @@
       "vlrId": "878",
       "roster": [
         {
-          "id": "p-crazyguy",
-          "name": "crazyguy",
-          "realName": "Ngô Công Anh",
-          "country": "vn",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
           "id": "p-monyet",
           "name": "Monyet",
           "realName": "Cahya Nugraha",
@@ -3800,5 +3900,5 @@
     }
   },
   "errors": [],
-  "fetchedAt": "2026-11-25T04:40:21.323Z"
+  "fetchedAt": "2026-11-26T03:51:10.030Z"
 }
