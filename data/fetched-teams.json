@@ -610,6 +610,16 @@
           "source": "vlr"
         },
         {
+          "id": "p-jinggg",
+          "name": "Jinggg",
+          "realName": "Wang Jing Jie",
+          "country": "sg",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
           "id": "p-k1ra",
           "name": "K1ra",
           "realName": "Huang Zhihao (黄志豪)",
@@ -687,6 +697,16 @@
       "vlrId": "13581",
       "roster": [
         {
+          "id": "p-sharks",
+          "name": "Sharks",
+          "realName": "Qiu Ge (邱戈)",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
           "id": "p-lysoar",
           "name": "Lysoar",
           "realName": "Liang Youhao (梁优好)",
@@ -697,10 +717,10 @@
           "source": "vlr"
         },
         {
-          "id": "p-sharks",
-          "name": "Sharks",
-          "realName": "Qiu Ge (邱戈)",
-          "country": "cn",
+          "id": "p-wsleo",
+          "name": "WsLeo",
+          "realName": "Huang Pinwei (黄��维)",
+          "country": "tw",
           "role": "",
           "joined": "",
           "formerTeams": [],
@@ -721,16 +741,6 @@
           "name": "NoMan",
           "realName": "James Man",
           "country": "unknown",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-wsleo",
-          "name": "WsLeo",
-          "realName": "Huang Pinwei (黄品维)",
-          "country": "tw",
           "role": "",
           "joined": "",
           "formerTeams": [],
@@ -1477,26 +1487,6 @@
       "vlrId": "6961",
       "roster": [
         {
-          "id": "p-erde",
-          "name": "erde",
-          "realName": "Roberto Lobos",
-          "country": "cl",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
-          "id": "p-lukxo",
-          "name": "lukxo",
-          "realName": "Lucca Travaioli",
-          "country": "br",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
           "id": "p-davih",
           "name": "DaviH",
           "realName": "David Cruz",
@@ -2186,6 +2176,16 @@
       "vlrId": "2593",
       "roster": [
         {
+          "id": "p-valyn",
+          "name": "valyn",
+          "realName": "Jacob Batio",
+          "country": "us",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
           "id": "p-marteen",
           "name": "marteen",
           "realName": "Martin Pátek",
@@ -2286,6 +2286,16 @@
           "id": "p-mighty",
           "name": "Mighty",
           "realName": "Berkalp Kaan Yılmazoğlu",
+          "country": "tr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-mavera",
+          "name": "Mavera",
+          "realName": "Erim Sasal",
           "country": "tr",
           "role": "",
           "joined": "",
@@ -2584,6 +2594,16 @@
           "id": "p-oroni",
           "name": "oroni",
           "realName": "Ömer Açar",
+          "country": "tr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-comeback",
+          "name": "ComeBack",
+          "realName": "Berkcan Şentürk",
           "country": "tr",
           "role": "",
           "joined": "",
@@ -3900,5 +3920,5 @@
     }
   },
   "errors": [],
-  "fetchedAt": "2026-11-26T03:51:10.030Z"
+  "fetchedAt": "2026-11-27T03:52:13.813Z"
 }
