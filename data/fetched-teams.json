@@ -289,16 +289,6 @@
           "source": "vlr"
         },
         {
-          "id": "p-jexen",
-          "name": "Jexen",
-          "realName": "Wang Lin Xiao (王林骁)",
-          "country": "cn",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
           "id": "p-rain",
           "name": "Rain",
           "realName": "Deng Shiyao (邓诗耀)",
@@ -350,6 +340,16 @@
           "name": "SpiritZ1",
           "realName": "Lin Dingyu (林定宇)",
           "country": "tw",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-lucas",
+          "name": "lucas",
+          "realName": "Yunkun Lu (路昀昆)",
+          "country": "cn",
           "role": "",
           "joined": "",
           "formerTeams": [],
@@ -719,7 +719,7 @@
         {
           "id": "p-wsleo",
           "name": "WsLeo",
-          "realName": "Huang Pinwei (黄��维)",
+          "realName": "Huang Pinwei (黄品维)",
           "country": "tw",
           "role": "",
           "joined": "",
@@ -1071,6 +1071,16 @@
           "id": "p-desire",
           "name": "Desire",
           "realName": "Peng Siji (彭思骥)",
+          "country": "cn",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-jexen",
+          "name": "Jexen",
+          "realName": "Wang Lin Xiao (王林骁)",
           "country": "cn",
           "role": "",
           "joined": "",
@@ -2216,6 +2226,16 @@
           "source": "vlr"
         },
         {
+          "id": "p-minny",
+          "name": "Minny",
+          "realName": "Patrik Hušek",
+          "country": "unknown",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
           "id": "p-cojo",
           "name": "CoJo",
           "realName": "Colin Johnson",
@@ -3143,16 +3163,6 @@
           "source": "vlr"
         },
         {
-          "id": "p-raxcal",
-          "name": "Raxcal",
-          "realName": "Kim Min-seok (김민석)",
-          "country": "kr",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
           "id": "p-dambi",
           "name": "Dambi",
           "realName": "Lee Hyuk-kyu (이혁규)",
@@ -3176,6 +3186,16 @@
           "id": "p-zynx",
           "name": "ZynX",
           "realName": "Kim Dong-ha (김동하)",
+          "country": "kr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-raxcal",
+          "name": "Raxcal",
+          "realName": "Kim Min-seok (김민석)",
           "country": "kr",
           "role": "",
           "joined": "",
@@ -3394,16 +3414,6 @@
       "vlrId": "8185",
       "roster": [
         {
-          "id": "p-flicker",
-          "name": "Flicker",
-          "realName": "Kim Tae-hee (김태희)",
-          "country": "kr",
-          "role": "",
-          "joined": "",
-          "formerTeams": [],
-          "source": "vlr"
-        },
-        {
           "id": "p-yong",
           "name": "yong",
           "realName": "Kim Ho-yong (김호용)",
@@ -3414,9 +3424,59 @@
           "source": "vlr"
         },
         {
+          "id": "p-flicker",
+          "name": "Flicker",
+          "realName": "Kim Tae-hee (김태희)",
+          "country": "kr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-xons",
+          "name": "XoNs",
+          "realName": "",
+          "country": "kr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-apex",
+          "name": "apeX",
+          "realName": "Lee Chan-min (이찬민)",
+          "country": "kr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-ngen",
+          "name": "NGen",
+          "realName": "Lee Jae-hong (이재홍)",
+          "country": "kr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
           "id": "p-glow",
           "name": "glow",
           "realName": "Kim Min-soo (김민수)",
+          "country": "kr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-xeta",
+          "name": "xeta",
+          "realName": "Son Seon-ho (손선호)",
           "country": "kr",
           "role": "",
           "joined": "",
@@ -3689,9 +3749,49 @@
           "source": "vlr"
         },
         {
+          "id": "p-ken",
+          "name": "KEN",
+          "realName": "Kim Yun-seung (김윤승)",
+          "country": "kr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-yatsuka",
+          "name": "yatsuka",
+          "realName": "Kazuya Ikeda",
+          "country": "jp",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-astell",
+          "name": "Astell",
+          "realName": "Moon Ji-won (문지원)",
+          "country": "kr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
           "id": "p-xqq",
           "name": "XQQ",
           "realName": "Motoyama Hibiki",
+          "country": "jp",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-junior",
+          "name": "JUNiOR",
+          "realName": "Sawada Yuya",
           "country": "jp",
           "role": "",
           "joined": "",
@@ -3714,7 +3814,78 @@
     "varrel": {
       "name": "VARREL",
       "vlrId": "11229",
-      "roster": [],
+      "roster": [
+        {
+          "id": "p-raxcal",
+          "name": "Raxcal",
+          "realName": "Kim Min-seok (김민석)",
+          "country": "kr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-xuna",
+          "name": "XuNa",
+          "realName": "Kim Tae-geon (김태건)",
+          "country": "kr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-ash",
+          "name": "Ash",
+          "realName": "Ha Hyun-cheol (하현철)",
+          "country": "kr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-foxy9",
+          "name": "Foxy9",
+          "realName": "Jung Jae-sung (정재성)",
+          "country": "kr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-jinboong",
+          "name": "Jinboong",
+          "realName": "Kim Jin-won (김진원)",
+          "country": "kr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-tk9",
+          "name": "TK9",
+          "realName": "Goo Tae-kyun (구태균)",
+          "country": "kr",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        },
+        {
+          "id": "p-jovi",
+          "name": "Jovi",
+          "realName": "Jovanni Vera",
+          "country": "unknown",
+          "role": "",
+          "joined": "",
+          "formerTeams": [],
+          "source": "vlr"
+        }
+      ],
       "matches": []
     },
     "fs": {
@@ -3920,5 +4091,5 @@
     }
   },
   "errors": [],
-  "fetchedAt": "2026-11-27T03:52:13.813Z"
+  "fetchedAt": "2026-11-28T03:38:14.339Z"
 }
